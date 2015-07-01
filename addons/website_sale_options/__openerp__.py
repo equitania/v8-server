@@ -15,7 +15,7 @@ OpenERP E-Commerce
         'views/templates.xml',
     ],
     'demo': [
-        'data/demo.xml',
+     #   'data/demo.xml',
     ],
     'qweb': ['static/src/xml/*.xml'],
     'installable': True,
