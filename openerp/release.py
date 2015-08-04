@@ -31,7 +31,11 @@ RELEASE_LEVELS_DISPLAY = {ALPHA: ALPHA,
 #  (6,1,0,'beta',0) < (6,1,0,'candidate',1) < (6,1,0,'candidate',2)
 #  (6,1,0,'candidate',2) < (6,1,0,'final',0) < (6,1,2,'final',0)
 version_info = (8, 0, 0, FINAL, 0)
-version = '.'.join(map(str, version_info[:2])) + RELEASE_LEVELS_DISPLAY[version_info[3]] + str(version_info[4] or '')
+
+# myBuild add from MyOdoo in format YYMMCOUNT for Releasemanager
+myBuild = '1508001' 
+
+version = '.'.join(map(str, version_info[:2])) + RELEASE_LEVELS_DISPLAY[version_info[3]] + str(version_info[4] or '') + ' Build ' + myBuild
 series = serie = major_version = '.'.join(map(str, version_info[:2]))
 
 product_name = 'Odoo'
