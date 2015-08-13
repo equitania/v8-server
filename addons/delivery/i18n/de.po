@@ -1,7 +1,7 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
 # * delivery
-# 
+#
 # Translators:
 # FIRST AUTHOR <EMAIL@ADDRESS>, 2014
 msgid ""
@@ -9,14 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:08+0000\n"
-"PO-Revision-Date: 2015-07-17 07:04+0000\n"
-"Last-Translator: Martin Trigaux\n"
+"PO-Revision-Date: 2015-08-13 22:09+0200\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.de>\n"
 "Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.4\n"
 
 #. module: delivery
 #: selection:delivery.grid.line,operator:0
@@ -36,7 +37,18 @@ msgid ""
 "                country defined by a postal code range.\n"
 "              </p>\n"
 "            "
-msgstr "<p class=\"oe_view_nocontent_create\">\n\nKlicken Sie, um eine Preisliste für spezifische Regionen zu definieren.\n              </p><p>\n                Der Preis für Auslieferungen ermöglicht die Berechnung von Kosten\nund Verkaufspreisen auf der Basis von Gewichten und weiterer Kriterien bei der \nAuslieferung. Sie können verschiedene  Preislisten für Liefermethoden anlegen: \nPro Land oder Region in einem spezifischen Land durch einen bestimmten \nBereich der PLZ.\n</p>\n            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"\n"
+"Klicken Sie, um eine Preisliste für spezifische Regionen zu definieren.\n"
+"              </p><p>\n"
+"                Der Preis für Auslieferungen ermöglicht die Berechnung von Kosten\n"
+"und Verkaufspreisen auf der Basis von Gewichten und weiterer Kriterien bei der \n"
+"Auslieferung. Sie können verschiedene  Preislisten für Liefermethoden anlegen: \n"
+"Pro Land oder Region in einem spezifischen Land durch einen bestimmten \n"
+"Bereich der PLZ.\n"
+"</p>\n"
+"            "
 
 #. module: delivery
 #: model:ir.actions.act_window,help:delivery.action_delivery_carrier_form
@@ -53,7 +65,18 @@ msgid ""
 "                quotation) or the invoice (based on the delivery orders).\n"
 "              </p>\n"
 "            "
-msgstr "<p class=\"oe_view_nocontent_create\">\n                Klicken Sie hier zur Erstellung einer neuen Auslieferungsmethode.\n              </p><p>\n                Jeder Frachtführer (z.B. UPS) kann verschiedene Auslieferungsmethoden (e.g.\n                UPS Express, UPS Standard) mit unterschiedlichen Tarifbedingungen anbieten.\n              </p><p>\n                Die Auslieferungsmethode ermöglicht eine  genaue Kalkulation der Frachtkosten\n                nach Ihren Einstellungen; wahlweise beim Angebot (auf Basis\n                eines Angebots) oder spätestens bei der Rechnung (auf Basis von Auslieferungen).\n              </p>\n            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Klicken Sie hier zur Erstellung einer neuen Auslieferungsmethode.\n"
+"              </p><p>\n"
+"                Jeder Frachtführer (z.B. UPS) kann verschiedene Auslieferungsmethoden (e.g.\n"
+"                UPS Express, UPS Standard) mit unterschiedlichen Tarifbedingungen anbieten.\n"
+"              </p><p>\n"
+"                Die Auslieferungsmethode ermöglicht eine  genaue Kalkulation der Frachtkosten\n"
+"                nach Ihren Einstellungen; wahlweise beim Angebot (auf Basis\n"
+"                eines Angebots) oder spätestens bei der Rechnung (auf Basis von Auslieferungen).\n"
+"              </p>\n"
+"            "
 
 #. module: delivery
 #: selection:delivery.grid.line,operator:0
@@ -87,9 +110,7 @@ msgstr "Betrag"
 
 #. module: delivery
 #: help:delivery.carrier,amount:0
-msgid ""
-"Amount of the order to benefit from a free shipping, expressed in the "
-"company currency"
+msgid "Amount of the order to benefit from a free shipping, expressed in the company currency"
 msgstr "Betrag (in Unternehmenswährung) des Auftrags ab dem kostenfrei geliefert wird"
 
 #. module: delivery
@@ -98,11 +119,7 @@ msgid "Available"
 msgstr "Verfügbar"
 
 #. module: delivery
-#: view:delivery.carrier:delivery.view_delivery_carrier_form
-#: view:delivery.carrier:delivery.view_delivery_carrier_tree
-#: field:delivery.grid,carrier_id:0
-#: model:ir.model,name:delivery.model_delivery_carrier
-#: field:stock.picking,carrier_id:0 view:website:stock.report_picking
+#: view:delivery.carrier:delivery.view_delivery_carrier_form view:delivery.carrier:delivery.view_delivery_carrier_tree field:delivery.grid,carrier_id:0 model:ir.model,name:delivery.model_delivery_carrier field:stock.picking,carrier_id:0 view:website:stock.report_picking
 msgid "Carrier"
 msgstr "Frachtführer"
 
@@ -118,15 +135,12 @@ msgstr "Frachtführer Referenz"
 
 #. module: delivery
 #: help:delivery.carrier,use_detailed_pricelist:0
-msgid ""
-"Check this box if you want to manage delivery prices that depends on the "
-"destination, the weight, the total of the order, etc."
+msgid "Check this box if you want to manage delivery prices that depends on the destination, the weight, the total of the order, etc."
 msgstr "Ankreuzen, wenn Ihre Lieferpreise von Ziel, Gewicht, Gesamtbetrag, etc abhängen"
 
 #. module: delivery
 #: help:sale.order,carrier_id:0
-msgid ""
-"Complete this field if you plan to invoice the shipping based on picking."
+msgid "Complete this field if you plan to invoice the shipping based on picking."
 msgstr "Tragen Sie in diesem Feld etwas ein, wenn Sie die Fracht bei Rechnungsstellung über den Lieferauftrag mit abrechnen möchten."
 
 #. module: delivery
@@ -137,23 +151,20 @@ msgstr "Bedingung"
 #. module: delivery
 #: field:delivery.grid.line,standard_price:0
 msgid "Cost Price"
-msgstr "Anschaffungspreis"
+msgstr "Einstandspreis"
 
 #. module: delivery
-#: view:delivery.grid:delivery.view_delivery_grid_form
-#: field:delivery.grid,country_ids:0
+#: view:delivery.grid:delivery.view_delivery_grid_form field:delivery.grid,country_ids:0
 msgid "Countries"
 msgstr "Länder"
 
 #. module: delivery
-#: field:delivery.carrier,create_uid:0 field:delivery.grid,create_uid:0
-#: field:delivery.grid.line,create_uid:0
+#: field:delivery.carrier,create_uid:0 field:delivery.grid,create_uid:0 field:delivery.grid.line,create_uid:0
 msgid "Created by"
 msgstr "Erstellt von"
 
 #. module: delivery
-#: field:delivery.carrier,create_date:0 field:delivery.grid,create_date:0
-#: field:delivery.grid.line,create_date:0
+#: field:delivery.carrier,create_date:0 field:delivery.grid,create_date:0 field:delivery.grid.line,create_date:0
 msgid "Created on"
 msgstr "Erstellt am"
 
@@ -184,20 +195,17 @@ msgid "Delivery Grids"
 msgstr "Frachttarifmodelle"
 
 #. module: delivery
-#: field:delivery.carrier,name:0 field:res.partner,property_delivery_carrier:0
-#: field:sale.order,carrier_id:0
+#: field:delivery.carrier,name:0 field:res.partner,property_delivery_carrier:0 field:sale.order,carrier_id:0
 msgid "Delivery Method"
 msgstr "Auslieferungsmethode"
 
 #. module: delivery
-#: model:ir.actions.act_window,name:delivery.action_delivery_carrier_form
-#: model:ir.ui.menu,name:delivery.menu_action_delivery_carrier_form
+#: model:ir.actions.act_window,name:delivery.action_delivery_carrier_form model:ir.ui.menu,name:delivery.menu_action_delivery_carrier_form
 msgid "Delivery Methods"
 msgstr "Auslieferungsmethoden"
 
 #. module: delivery
-#: model:ir.actions.act_window,name:delivery.action_delivery_grid_form
-#: model:ir.ui.menu,name:delivery.menu_action_delivery_grid_form
+#: model:ir.actions.act_window,name:delivery.action_delivery_grid_form model:ir.ui.menu,name:delivery.menu_action_delivery_grid_form
 msgid "Delivery Pricelist"
 msgstr "Auslieferungstarife"
 
@@ -212,15 +220,12 @@ msgid "Delivery by Poste"
 msgstr "Auslieferung durch DHL"
 
 #. module: delivery
-#: view:delivery.carrier:delivery.view_delivery_carrier_form
-#: view:delivery.grid:delivery.view_delivery_grid_form
-#: view:delivery.grid:delivery.view_delivery_grid_tree
+#: view:delivery.carrier:delivery.view_delivery_carrier_form view:delivery.grid:delivery.view_delivery_grid_form view:delivery.grid:delivery.view_delivery_grid_tree
 msgid "Delivery grids"
 msgstr "Auslieferungstarif"
 
 #. module: delivery
-#: view:delivery.carrier:delivery.view_delivery_carrier_form
-#: view:delivery.grid:delivery.view_delivery_grid_form
+#: view:delivery.carrier:delivery.view_delivery_carrier_form view:delivery.grid:delivery.view_delivery_grid_form
 msgid "Destination"
 msgstr "Lieferziel"
 
@@ -266,8 +271,7 @@ msgid "Grid Line"
 msgstr "Tarifpositionen"
 
 #. module: delivery
-#: view:delivery.grid.line:delivery.view_delivery_grid_line_form
-#: view:delivery.grid.line:delivery.view_delivery_grid_line_tree
+#: view:delivery.grid.line:delivery.view_delivery_grid_line_form view:delivery.grid.line:delivery.view_delivery_grid_line_tree
 msgid "Grid Lines"
 msgstr "Tarifpositionen"
 
@@ -277,43 +281,33 @@ msgid "Grid Name"
 msgstr "Tarifbezeichnung"
 
 #. module: delivery
-#: view:delivery.carrier:delivery.view_delivery_carrier_form
-#: view:delivery.grid:delivery.view_delivery_grid_form
+#: view:delivery.carrier:delivery.view_delivery_carrier_form view:delivery.grid:delivery.view_delivery_grid_form
 msgid "Grid definition"
 msgstr "Definition Auslieferungstarif"
 
 #. module: delivery
-#: field:delivery.carrier,id:0 field:delivery.grid,id:0
-#: field:delivery.grid.line,id:0
+#: field:delivery.carrier,id:0 field:delivery.grid,id:0 field:delivery.grid.line,id:0
 msgid "ID"
 msgstr "ID"
 
 #. module: delivery
 #: help:delivery.carrier,active:0
-msgid ""
-"If the active field is set to False, it will allow you to hide the delivery "
-"carrier without removing it."
+msgid "If the active field is set to False, it will allow you to hide the delivery carrier without removing it."
 msgstr "Durch Deaktivierung dieses Feldes, können Sie diesen Frachtführer ausblenden."
 
 #. module: delivery
 #: help:delivery.grid,active:0
-msgid ""
-"If the active field is set to False, it will allow you to hide the delivery "
-"grid without removing it."
+msgid "If the active field is set to False, it will allow you to hide the delivery grid without removing it."
 msgstr "Durch Deaktivierung können Sie die  Liefertarife ausblenden"
 
 #. module: delivery
 #: help:delivery.carrier,free_if_more_than:0
-msgid ""
-"If the order is more expensive than a certain amount, the customer can "
-"benefit from a free shipping"
+msgid "If the order is more expensive than a certain amount, the customer can benefit from a free shipping"
 msgstr "Wenn der Verkaufsauftrag einen bestimmten  Betrag übersteigt, kann der Kunde eine kostenfreie Lieferung erhalten"
 
 #. module: delivery
 #: view:sale.order:delivery.view_order_withcarrier_form
-msgid ""
-"If you don't 'Add in Quote', the exact price will be computed when invoicing"
-" based on delivery order(s)."
+msgid "If you don't 'Add in Quote', the exact price will be computed when invoicing based on delivery order(s)."
 msgstr "Wenn Sie nicht 'Dem Angebot hinzufügen' nutzen, wird der genaue Preis bei der durch Lieferung ausgelösten Abrechnung berechnet."
 
 #. module: delivery
@@ -328,19 +322,16 @@ msgstr "Ist diese Frachtmethode für den Auftrag möglich."
 
 #. module: delivery
 #: help:delivery.carrier,normal_price:0
-msgid ""
-"Keep empty if the pricing depends on the advanced pricing per destination"
+msgid "Keep empty if the pricing depends on the advanced pricing per destination"
 msgstr "Leer lassen, wenn der Preis vom Lieferziel abhängt"
 
 #. module: delivery
-#: field:delivery.carrier,write_uid:0 field:delivery.grid,write_uid:0
-#: field:delivery.grid.line,write_uid:0
+#: field:delivery.carrier,write_uid:0 field:delivery.grid,write_uid:0 field:delivery.grid.line,write_uid:0
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert durch"
 
 #. module: delivery
-#: field:delivery.carrier,write_date:0 field:delivery.grid,write_date:0
-#: field:delivery.grid.line,write_date:0
+#: field:delivery.carrier,write_date:0 field:delivery.grid,write_date:0 field:delivery.grid.line,write_date:0
 msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
@@ -413,8 +404,7 @@ msgid "Picking to be invoiced"
 msgstr "Abzurechnende Lieferungen"
 
 #. module: delivery
-#: field:delivery.carrier,price:0 selection:delivery.grid.line,type:0
-#: selection:delivery.grid.line,variable_factor:0
+#: field:delivery.carrier,price:0 selection:delivery.grid.line,type:0 selection:delivery.grid.line,variable_factor:0
 msgid "Price"
 msgstr "Preis"
 
@@ -429,8 +419,7 @@ msgid "Pricing Information"
 msgstr "Preisinformation"
 
 #. module: delivery
-#: selection:delivery.grid.line,type:0
-#: selection:delivery.grid.line,variable_factor:0
+#: selection:delivery.grid.line,type:0 selection:delivery.grid.line,variable_factor:0
 msgid "Quantity"
 msgstr "Menge"
 
@@ -452,9 +441,7 @@ msgstr "Auftragsposition"
 #. module: delivery
 #: code:addons/delivery/delivery.py:237
 #, python-format
-msgid ""
-"Selected product in the delivery method doesn't fulfill any of the delivery "
-"grid(s) criteria."
+msgid "Selected product in the delivery method doesn't fulfill any of the delivery grid(s) criteria."
 msgstr "Das ausgewählte Produkt zu dieser Auslieferungsmethode erfüllt keine der Tarif Kriterien."
 
 #. module: delivery
@@ -468,8 +455,7 @@ msgid "Start Zip"
 msgstr "Start PLZ"
 
 #. module: delivery
-#: view:delivery.grid:delivery.view_delivery_grid_form
-#: field:delivery.grid,state_ids:0
+#: view:delivery.grid:delivery.view_delivery_grid_form field:delivery.grid,state_ids:0
 msgid "States"
 msgstr "Staaten"
 
@@ -523,8 +509,7 @@ msgstr "Einheit"
 
 #. module: delivery
 #: help:stock.move,weight_uom_id:0
-msgid ""
-"Unit of Measure (Unit of Measure) is the unit of measurement for Weight"
+msgid "Unit of Measure (Unit of Measure) is the unit of measurement for Weight"
 msgstr "Mengeneinheit (ME) ist die Einheit für die Ermittlung des Gewichts"
 
 #. module: delivery
@@ -543,8 +528,7 @@ msgid "Variable Factor"
 msgstr "Variabl. Faktor"
 
 #. module: delivery
-#: selection:delivery.grid.line,type:0
-#: selection:delivery.grid.line,variable_factor:0 field:stock.picking,volume:0
+#: selection:delivery.grid.line,type:0 selection:delivery.grid.line,variable_factor:0 field:stock.picking,volume:0
 msgid "Volume"
 msgstr "Volumen"
 
@@ -555,16 +539,12 @@ msgid "Warning!"
 msgstr "Warnung!"
 
 #. module: delivery
-#: selection:delivery.grid.line,type:0
-#: selection:delivery.grid.line,variable_factor:0 field:stock.move,weight:0
-#: view:stock.picking:delivery.view_picking_withcarrier_out_form
-#: field:stock.picking,weight:0 view:website:stock.report_picking
+#: selection:delivery.grid.line,type:0 selection:delivery.grid.line,variable_factor:0 field:stock.move,weight:0 view:stock.picking:delivery.view_picking_withcarrier_out_form field:stock.picking,weight:0 view:website:stock.report_picking
 msgid "Weight"
 msgstr "Gewicht"
 
 #. module: delivery
-#: selection:delivery.grid.line,type:0
-#: selection:delivery.grid.line,variable_factor:0
+#: selection:delivery.grid.line,type:0 selection:delivery.grid.line,variable_factor:0
 msgid "Weight * Volume"
 msgstr "Gewicht * Volumen"
 
