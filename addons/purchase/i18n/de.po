@@ -1932,7 +1932,7 @@ msgstr "Lieferanten Angebote"
 #. module: purchase
 #: view:res.partner:purchase.res_partner_view_purchase_account_buttons
 msgid "Supplier Inv."
-msgstr "Lieferanten Rechnung"
+msgstr "Lief. Rechnung"
 
 #. module: purchase
 #: code:addons/purchase/purchase.py:444 code:addons/purchase/wizard/purchase_line_invoice.py:115 model:ir.actions.act_window,name:purchase.act_res_partner_2_supplier_invoices view:res.partner:purchase.res_partner_view_purchase_account_buttons
