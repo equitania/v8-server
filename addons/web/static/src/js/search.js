@@ -436,13 +436,13 @@ instance.web.SearchView = instance.web.Widget.extend(/** @lends instance.web.Sea
                 view_manager && view_manager.getParent) {
             view_manager = view_manager.getParent();
         }
-
-        if (view_manager) {
-            this.view_manager = view_manager;
-            view_manager.on('switch_mode', this, function (e) {
-                self.drawer.toggle(e === 'graph');
-            });
-        }
+// Equitania: Add for Salepaerson change with eq_pos
+//        if (view_manager) {
+//            this.view_manager = view_manager;
+//            view_manager.on('switch_mode', this, function (e) {
+//                self.drawer.toggle(e === 'graph');
+//            });
+//        }
         return $.when(p, this.ready);
     },
 
