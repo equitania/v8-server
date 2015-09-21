@@ -2004,7 +2004,7 @@ msgstr "Werbung"
 #: code:addons/website/static/src/xml/website.seo.xml:14
 #, python-format
 msgid "Promote This Page"
-msgstr "Werbung für diese Seite"
+msgstr "SEO für diese Seite"
 
 #. module: website
 #. openerp-web
@@ -2012,7 +2012,7 @@ msgstr "Werbung für diese Seite"
 #: view:website:website.layout
 #, python-format
 msgid "Promote page on the web"
-msgstr "Werbung für diese Seite im Web"
+msgstr "SEO für diese Seite im Web"
 
 #. module: website
 #: field:website,partner_id:0
