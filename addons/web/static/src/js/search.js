@@ -439,9 +439,12 @@ instance.web.SearchView = instance.web.Widget.extend(/** @lends instance.web.Sea
 
         if (view_manager) {
             this.view_manager = view_manager;
-            view_manager.on('switch_mode', this, function (e) {
-                self.drawer.toggle(e === 'graph');
-            });
+            // Equitania: simple solution for problem with missing .on in view_manager
+            if (view_manager.on != undefined){
+	            view_manager.on('switch_mode', this, function (e) {
+	                self.drawer.toggle(e === 'graph');
+	            });
+            }
         }
         return $.when(p, this.ready);
     },
