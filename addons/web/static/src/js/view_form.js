@@ -2921,6 +2921,9 @@ instance.web.form.FieldText = instance.web.form.AbstractField.extend(instance.we
     },
 });
 
+
+
+
 /**
  * FieldTextHtml Widget
  * Intended for FieldText widgets meant to display HTML content. This
@@ -2975,7 +2978,21 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
             this.$cleditor.updateFrame();
             this._updating_editor = false;
         } else {
-            this.$el.html(this.get('value'));
+        	
+        	//-------------------- start of Equitania change ---------------------
+        	/*
+        	 * Goal: Show in read only mode maximal 250 characters
+        	 */
+        	var html_text = "";
+        	if (this.get('value') != false){
+        		html_text = this.get('value');
+        		//console.log(html_text);
+        		html_text = html_text.substr(0, 250) + "...";
+        	}        	
+        	this.$el.html(html_text);
+        	//-------------------- end of Equitania change ---------------------
+        	      	
+            //this.$el.html(this.get('value'));			// standard
         }
     },
 });
@@ -6354,7 +6371,7 @@ instance.web.form.widgets = new instance.web.Registry({
     'email' : 'instance.web.form.FieldEmail',
     'url' : 'instance.web.form.FieldUrl',
     'text' : 'instance.web.form.FieldText',
-    'html' : 'instance.web.form.FieldTextHtml',
+    'html' : 'instance.web.form.FieldTextHtml',    
     'char_domain': 'instance.web.form.FieldCharDomain',
     'date' : 'instance.web.form.FieldDate',
     'datetime' : 'instance.web.form.FieldDatetime',
@@ -6386,6 +6403,7 @@ instance.web.form.widgets = new instance.web.Registry({
     'kanban_state_selection':'instance.web.form.KanbanSelection',
     'statinfo': 'instance.web.form.StatInfo',
 });
+
 
 /**
  * Registry of widgets usable in the form view that can substitute to any possible
