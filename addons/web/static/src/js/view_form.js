@@ -2566,6 +2566,15 @@ instance.web.form.FieldCharDomain = instance.web.form.AbstractField.extend(insta
         this.on("change:effective_readonly", this, function () {
             this.display_field();
         });
+        if (this.options.model_field){
+            this.field_manager.fields[this.options.model_field].on("change:value", this, function(){
+                if (self.view && self.view.onchanges_mutex){
+                    self.view.onchanges_mutex.def.then(function(){
+                        self.display_field();
+                    });
+                }
+            });
+        }
         this.display_field();
         return this._super();
     },
@@ -2582,7 +2591,7 @@ instance.web.form.FieldCharDomain = instance.web.form.AbstractField.extend(insta
             var domain = instance.web.pyeval.eval('domain', this.get('value'));
             var ds = new instance.web.DataSetStatic(self, model, self.build_context());
             ds.call('search_count', [domain, self.build_context()]).then(function (results) {
-                $('.oe_domain_count', self.$el).text(results + ' records selected');
+                $('.oe_domain_count', self.$el).text(results + _t(' records selected'));
                 if (self.get('effective_readonly')) {
                     $('button span', self.$el).text(' See selection');
                 }
@@ -2921,9 +2930,6 @@ instance.web.form.FieldText = instance.web.form.AbstractField.extend(instance.we
     },
 });
 
-
-
-
 /**
  * FieldTextHtml Widget
  * Intended for FieldText widgets meant to display HTML content. This
@@ -2978,21 +2984,7 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
             this.$cleditor.updateFrame();
             this._updating_editor = false;
         } else {
-        	
-        	//-------------------- start of Equitania change ---------------------
-        	/*
-        	 * Goal: Show in read only mode maximal 250 characters
-        	 */
-        	var html_text = "";
-        	if (this.get('value') != false){
-        		html_text = this.get('value');
-        		//console.log(html_text);
-        		html_text = html_text.substr(0, 250) + "...";
-        	}        	
-        	this.$el.html(html_text);
-        	//-------------------- end of Equitania change ---------------------
-        	      	
-            //this.$el.html(this.get('value'));			// standard
+            this.$el.html(this.get('value'));
         }
     },
 });
@@ -4393,7 +4385,7 @@ instance.web.form.One2ManyViewManager = instance.web.ViewManager.extend({
                 });
             },
             write_function: function(id, data, options) {
-                return self.o2m.dataset.write(id, data, {}).done(function() {
+                return self.o2m.dataset.write(id, data, options).done(function() {
                     self.o2m.reload_current_view();
                 });
             },
@@ -4513,8 +4505,8 @@ instance.web.form.One2ManyListView = instance.web.ListView.extend({
         var pop = new instance.web.form.FormOpenPopup(self);
         pop.show_element(self.o2m.field.relation, id, self.o2m.build_context(), {
             title: _t("Open: ") + self.o2m.string,
-            write_function: function(id, data) {
-                return self.o2m.dataset.write(id, data, {}).done(function() {
+            write_function: function(id, data, options) {
+                return self.o2m.dataset.write(id, data, options).done(function() {
                     self.o2m.reload_current_view();
                 });
             },
@@ -5132,7 +5124,7 @@ instance.web.form.FieldMany2ManyKanban = instance.web.form.AbstractField.extend(
             pop.show_element(self.field.relation, id, self.build_context(), {
                 title: _t("Open: ") + self.string,
                 write_function: function(id, data, options) {
-                    return self.dataset.write(id, data, {}).done(function() {
+                    return self.dataset.write(id, data, options).done(function() {
                         self.render_value();
                     });
                 },
@@ -6371,7 +6363,7 @@ instance.web.form.widgets = new instance.web.Registry({
     'email' : 'instance.web.form.FieldEmail',
     'url' : 'instance.web.form.FieldUrl',
     'text' : 'instance.web.form.FieldText',
-    'html' : 'instance.web.form.FieldTextHtml',    
+    'html' : 'instance.web.form.FieldTextHtml',
     'char_domain': 'instance.web.form.FieldCharDomain',
     'date' : 'instance.web.form.FieldDate',
     'datetime' : 'instance.web.form.FieldDatetime',
@@ -6403,7 +6395,6 @@ instance.web.form.widgets = new instance.web.Registry({
     'kanban_state_selection':'instance.web.form.KanbanSelection',
     'statinfo': 'instance.web.form.StatInfo',
 });
-
 
 /**
  * Registry of widgets usable in the form view that can substitute to any possible
