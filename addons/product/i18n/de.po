@@ -835,6 +835,7 @@ msgstr "Der Kategorie Typ Ansicht kann als übergeordnete virtuelle Kategorie zu
 
 #. module: product
 #: help:product.template,description_sale:0
+#: help:product.product,description_sale:0
 msgid "A description of the Product that you want to communicate to your customers. This description will be copied to every Sale Order, Delivery Order and Customer Invoice/Refund"
 msgstr "Die Kunden Produktbeschreibung für  Angebot, Lieferschein und Ausgangsrechnung."
 
@@ -1153,6 +1154,7 @@ msgstr "Verbrauchswaren"
 
 #. module: product
 #: help:product.template,type:0
+#: help:product.product,type:0
 msgid ""
 "Consumable: Will not imply stock management for this product. \n"
 "Stockable product: Will imply stock management for this product."
@@ -1271,11 +1273,13 @@ msgstr "Standard Mengeneinheit"
 
 #. module: product
 #: help:product.template,uom_id:0
+#: help:product.product,uom_id:0
 msgid "Default Unit of Measure used for all stock operation."
 msgstr "Standard Mengeneinheit (ME) für alle Bestandsbuchungen."
 
 #. module: product
 #: help:product.template,uom_po_id:0
+#: help:product.product,uom_po_id:0
 msgid "Default Unit of Measure used for purchase orders. It must be in the same category than the default unit of measure."
 msgstr "Einkauf Mengeneinheit (ME) wird genutzt für Beschaffungsauftrag. Diese sollte in der gleichen Kategorie  sein, wie die Standard Mengeneinheit (ME)."
 
@@ -2643,6 +2647,7 @@ msgstr ""
 
 #. module: product
 #: help:product.template,categ_id:0
+#: help:product.product,categ_id:0
 msgid "Select category for the current product"
 msgstr "Kategorie für das neue Produkt wählen"
 
@@ -2730,6 +2735,7 @@ msgstr "Definieren Sie hier eine Mengeneinheit, wenn sich diese bei Abrechnung u
 
 #. module: product
 #: help:product.template,sale_ok:0
+#: help:product.product,sale_ok:0
 msgid "Specify if the product can be selected in a sales order line."
 msgstr "Spezifizieren Sie hier, ob dieses Produkt verkauft werden darf."
 

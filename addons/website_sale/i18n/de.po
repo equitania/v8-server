@@ -76,11 +76,13 @@ msgstr "Alternative Produkte"
 
 #. module: website_sale
 #: help:product.template,alternative_product_ids:0
+#: help:product.product,alternative_product_ids:0
 msgid "Appear on the product page"
 msgstr "Auf der Produktseite anzeigen"
 
 #. module: website_sale
 #: help:product.template,accessory_product_ids:0
+#: help:product.product,accessory_product_ids:0
 msgid "Appear on the shopping cart"
 msgstr "Im Warenkorb anzeigen"
 
@@ -310,6 +312,7 @@ msgstr "Beschreiben Sie das Produkt"
 
 #. module: website_sale
 #: help:product.template,website_sequence:0
+#: help:product.product_sequence:0
 msgid "Determine the display order in the Website E-commerce"
 msgstr "Legt die Reihenfolge auf der E-commerce Webseite fest"
 
@@ -947,6 +950,7 @@ msgstr "Diese Seite enthält alle Informationen mit Bezug zum neuen Produkt."
 
 #. module: website_sale
 #: help:product.template,public_categ_ids:0
+#: help:product.product,public_categ_ids:0
 msgid "Those categories are used to group similar products for e-commerce."
 msgstr "Diese Kategorien werden für die Gruppierung vergleichbarer Produkte im E-Commerce benötigt."
 

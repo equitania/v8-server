@@ -1891,6 +1891,7 @@ msgstr "Referenzbeleg"
 
 #. module: purchase
 #: help:product.template,purchase_ok:0
+#: help:product.product,purchase_ok:0
 msgid "Specify if the product can be selected in a purchase order line."
 msgstr "Legen Sie fest, ob dieses Produkt bestellt werden darf"
 

@@ -114,6 +114,8 @@ msgstr "Auftragsposition"
 #: help:product.template,sale_line_warn:0 help:res.partner,invoice_warn:0
 #: help:res.partner,picking_warn:0 help:res.partner,purchase_warn:0
 #: help:res.partner,sale_warn:0
+#: help:product.product,purchase_line_warn:0
+#: help:product.product,sale_line_warn:0 help:res.partner,invoice_warn:0
 #, python-format
 msgid ""
 "Selecting the \"Warning\" option will notify user with the message, "
