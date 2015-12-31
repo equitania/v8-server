@@ -340,7 +340,7 @@ msgstr "Anzeige Auslieferauftrag"
 #. module: sale_stock
 #: field:sale.order,warehouse_id:0 field:sale.report,warehouse_id:0
 msgid "Warehouse"
-msgstr "Zentrallager"
+msgstr "Lagerorte"
 
 #. module: sale_stock
 #: help:sale.config.settings,default_order_policy:0

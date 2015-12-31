@@ -2077,7 +2077,7 @@ msgstr "Sehr dringend"
 #. module: mrp
 #: model:ir.model,name:mrp.model_stock_warehouse
 msgid "Warehouse"
-msgstr "Zentrallager"
+msgstr "Lagerort"
 
 #. module: mrp
 #: code:addons/mrp/mrp.py:333 code:addons/mrp/mrp.py:421
