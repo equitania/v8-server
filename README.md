@@ -1,39 +1,39 @@
-[![Build Status](http://runbot.odoo.com/runbot/badge/flat/1/8.0.svg)](http://runbot.odoo.com/runbot)
-[![Tech Doc](http://img.shields.io/badge/8.0-docs-8f8f8f.svg?style=flat)](http://www.odoo.com/documentation/8.0) 
-[![Help](http://img.shields.io/badge/8.0-help-8f8f8f.svg?style=flat)](https://www.odoo.com/forum/help-1)
-[![Nightly Builds](http://img.shields.io/badge/8.0-nightly-8f8f8f.svg?style=flat)](http://nightly.odoo.com/)
-
-Odoo
+MyOdoo
 ----
 
-Odoo is a suite of web based open source business apps.
+MyOdoo ist ein "Fork" von Odoo, einem Browser gestützten Open Source Projekt für ERP, Warenwirtschaft, Lagerverwaltung, Webshop, CMS Anwendungen mit über 5.000 Zusatzmodule.
 
-The main Odoo Apps include an <a href="https://www.odoo.com/page/crm">Open Source CRM</a>, <a href="https://www.odoo.com/page/website-builder">Website Builder</a>, <a href="https://www.odoo.com/page/e-commerce">eCommerce</a>, <a href="https://www.odoo.com/page/project-management">Project Management</a>, <a href="https://www.odoo.com/page/accounting">Billing &amp; Accounting</a>, <a href="https://www.odoo.com/page/point-of-sale">Point of Sale</a>, <a href="https://www.odoo.com/page/employees">Human Resources</a>, Marketing, Manufacturing, Purchase Management, ...  
+MyOdoo ist für den deutschsprachigen Raum optimiert. Deshalb werden nur die Sprachen Deutsch und Englisch unterstützt.
+Die deutschen Sprachpakete unterscheiden sich in Details von den Standardpaketen, da diese aus unserer Sicht teilweise falsch, mißverständlich oder gar nicht übersetzt sind.
 
-Odoo Apps can be used as stand-alone applications, but they also integrate seamlessly so you get
-a full-featured <a href="https://www.odoo.com">Open Source ERP</a> when you install several Apps.
+Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
+
+`Aktuelle Buildversion: 1512005`
+
+`Letzer Abgleich: 31.12.2015`
+
+Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 
 
-Getting started with Odoo
+Mit MyOdoo starten 
 -------------------------
-For a standard installation please follow the <a href="https://www.odoo.com/documentation/8.0/setup/install.html">Setup instructions</a>
-from the documentation.
+Für eine Installation .
 
-If you are a developer you may type the following command at your terminal:
+Dazu haben wir einige Installationsskripte vorbereitet.
 
-    wget -O- https://raw.githubusercontent.com/odoo/odoo/8.0/odoo.py | python
+Vorbereitung von Debian 8 oder Ubuntu:
 
-Then follow <a href="https://www.odoo.com/documentation/8.0/tutorials.html">the developer tutorials</a>
+	https://github.com/equitania/odoo-addons/blob/8.0/scripts/prepare-odoo-server-debian8.sh
+	https://github.com/equitania/odoo-addons/blob/8.0/scripts/prepare-odoo-server-ubuntu.sh
+
+Zur Installation des Servers:
+
+	https://github.com/equitania/odoo-addons/blob/8.0/scripts/install-odoo-server-debian8.sh
+	https://github.com/equitania/odoo-addons/blob/8.0/scripts/install-odoo-server-ubuntu.sh
 
 
-For Odoo employees
-------------------
+Weitere Informationen unter <a href="https://www.myoodoo.de">Myodoo.de</a>
 
-To add the odoo-dev remote use this command:
 
-    $ ./odoo.py setup_git_dev
 
-To fetch odoo merge pull requests refs use this command:
-
-    $ ./odoo.py setup_git_review
 

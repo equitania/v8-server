@@ -1,475 +1,955 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# * account_analytic_plans
-# 
-# Translators:
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2014
+# 	* account_analytic_analysis
+#
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 8.0\n"
+"Project-Id-Version: Odoo Server 8.0 Build 1512004\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2015-07-17 06:39+0000\n"
-"Last-Translator: Martin Trigaux\n"
-"Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
+"POT-Creation-Date: 2015-12-31 10:48+0000\n"
+"PO-Revision-Date: 2016-01-03 10:46+0100\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.de>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
 "Language: de\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.8.6\n"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/account_analytic_plans.py:218
-#, python-format
-msgid "A model with this name and code already exists."
-msgstr "Ein Modul mit ähnlichem Name und Kürzel existiert bereits."
+#. module: account_analytic_analysis
+#: model:email.template,body_html:account_analytic_analysis.account_analytic_cron_email_template
+msgid ""
+"\n"
+"Hello ${object.name},\n"
+"\n"
+"% macro account_table(values):\n"
+"<table cellspacing=\"1\" border=\"1\" cellpadding=\"4\">\n"
+"    <tr>\n"
+"        <th>Customer</th>\n"
+"        <th>Contract</th>\n"
+"        <th>Dates</th>\n"
+"        <th>Prepaid Units</th>\n"
+"        <th>Contact</th>\n"
+"    </tr>\n"
+"    % for partner, accounts in values:\n"
+"        % for account in accounts:\n"
+"        <tr>\n"
+"            <td>${partner.name}</td>\n"
+"            <td><a href=\"${ctx[\"base_url\"]}/#action=${ctx[\"action_id\"]}&id=${account.id}&view_type=form\">${account.name}</a></td>\n"
+"            <td>${account.date_start} to ${account.date and account.date or '???'}</td>\n"
+"            <td>\n"
+"            % if account.quantity_max != 0.0:\n"
+"                ${account.remaining_hours}/${account.quantity_max} units\n"
+"            % endif\n"
+"            </td>\n"
+"            <td>${account.partner_id.phone or ''}, ${account.partner_id.email or ''}</td>\n"
+"        </tr>\n"
+"        % endfor\n"
+"    % endfor\n"
+"</table>\n"
+"% endmacro \n"
+"\n"
+"% if \"new\" in ctx[\"data\"]:\n"
+"    <h2>The following contracts just expired: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"new\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"% if \"old\" in ctx[\"data\"]:\n"
+"    <h2>The following expired contracts are still not processed: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"old\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"% if \"future\" in ctx[\"data\"]:\n"
+"    <h2>The following contracts will expire in less than one month: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"future\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"<p>\n"
+"    You can check all contracts to be renewed using the menu:\n"
+"</p>\n"
+"<ul>\n"
+"    <li>Sales / Invoicing / Contracts to Renew</li>\n"
+"</ul>\n"
+"<p>\n"
+"    Thanks,\n"
+"</p>\n"
+"\n"
+"<pre>\n"
+"-- \n"
+"Odoo Automatic Email\n"
+"</pre>\n"
+"\n"
+"            "
+msgstr ""
+"\n"
+"${object.partner_id.title.name or ''} ${object.partner_id.name},\n"
+"\n"
+"% macro account_table(values):\n"
+"<table cellspacing=\"1\" border=\"1\" cellpadding=\"4\">\n"
+"    <tr>\n"
+"        <th>Kunde</th>\n"
+"        <th>Vertrag</th>\n"
+"        <th>Datum</th>\n"
+"        <th>Bereits bezahlte EInheiten</th>\n"
+"        <th>Ansprechpartner</th>\n"
+"    </tr>\n"
+"    % Für folgende Kunden-Konten:\n"
+"        % für Konto aus Konten:\n"
+"        <tr>\n"
+"            <td>${partner.name}</td>\n"
+"            <td><a href=\"${ctx[\"base_url\"]}/#action=${ctx[\"action_id\"]}&id=${account.id}&view_type=form\">${account.name}</a></td>\n"
+"            <td>${account.date_start} to ${account.date and account.date or '???'}</td>\n"
+"            <td>\n"
+"            % if account.quantity_max != 0.0:\n"
+"                ${account.remaining_hours}/${account.quantity_max} units\n"
+"            % endif\n"
+"            </td>\n"
+"            <td>${account.partner_id.phone or ''}, ${account.partner_id.email or ''}</td>\n"
+"        </tr>\n"
+"        % endfor\n"
+"    % endfor\n"
+"</table>\n"
+"% endmacro \n"
+"\n"
+"% if \"new\" in ctx[\"data\"]:\n"
+"    <h2>Die folgenden Verträge sind gerade ausgelaufen: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"new\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"% if \"old\" in ctx[\"data\"]:\n"
+"    <h2>Die folgenden Verträge sind ausgelaufen, aber noch nicht abgeschlossen: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"old\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"% if \"future\" in ctx[\"data\"]:\n"
+"    <h2>Die folgenden Verträge laufen innerhalb des nächsten Monats aus: </h2>\n"
+"    ${account_table(ctx[\"data\"][\"future\"].iteritems())}\n"
+"% endif\n"
+"\n"
+"<p>\n"
+"    Sie können alle zu erneuerten Verträge mit diesen Menüs erreichen:\n"
+"</p>\n"
+"<ul>\n"
+"    <li>Aufträge / Rechnungen / Verträge zu erneuern</li>\n"
+"</ul>\n"
+"<p>\n"
+"    Vielen Dank,\n"
+"</p>\n"
+"\n"
+"<pre>\n"
+"-- \n"
+"MyOdoo Automatic Email\n"
+"</pre>\n"
+"\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account_ids:0
-msgid "Account Id"
-msgstr "Konten ID"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,toinvoice_total:0
+msgid " Sum of everything that could be invoiced for this contract."
+msgstr "Summe von allem, was für diesen Auftrag in Rechnung gestellt werden könnte."
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Account Name"
-msgstr "Konto Bez."
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,help:account_analytic_analysis.template_of_contract_action
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click here to create a template of contract.\n"
+"                </p><p>\n"
+"                    Templates are used to prefigure contract/project that \n"
+"                    can be selected by the salespeople to quickly configure the\n"
+"                    terms and conditions of the contract.\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Klicken Sie hier um eine Vorlage aus dem Vertrag zu erzeugen.\n"
+"                </p><p>\n"
+"                   Vorlagen können als schnelle Konfiguration von Verträgen dienen. \n"
+"                </p>\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account1_ids:0
-msgid "Account1 Id"
-msgstr "Konto1 ID"
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,help:account_analytic_analysis.action_account_analytic_overdue_all
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Click to create a new contract.\n"
+"                </p><p>\n"
+"                    Use contracts to follow tasks, issues, timesheets or invoicing based on\n"
+"                    work done, expenses and/or sales orders. Odoo will automatically manage\n"
+"                    the alerts for the renewal of the contracts to the right salesperson.\n"
+"                </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                    Anklicken um einen neuen Vertrag zu erzeugen\n"
+"                </p><p>\n"
+"                    Use contracts to follow tasks, issues, timesheets or invoicing based on\n"
+"                    work done, expenses and/or sales orders. MyOdoo will automatically manage\n"
+"                    the alerts for the renewal of the contracts to the right salesperson.\n"
+"                </p>\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account2_ids:0
-msgid "Account2 Id"
-msgstr "Konto2 ID"
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,help:account_analytic_analysis.action_sales_order
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Click to create a quotation that can be converted into a sales\n"
+"                order.\n"
+"              </p><p>\n"
+"                Use sale orders to track everything that should be invoiced\n"
+"                at a fix price on a contract.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Anklicken um ein Angebot erzeugen, das danach\n"
+"                in einen Auftrag gewandelt werden kann.\n"
+"              </p><p>\n"
+"                Benutzen Sie die Verkaufsaufträge um alles zu verbuchen, \n"
+"                das innerhalb des Vetrages zu einem Festpreis verbucht werden soll.\n"
+"              </p>\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account3_ids:0
-msgid "Account3 Id"
-msgstr "Konto3 ID"
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,help:account_analytic_analysis.action_account_analytic_overdue
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Click to define a new contract.\n"
+"              </p><p>\n"
+"                You will find here the contracts to be renewed because the\n"
+"                end date is passed or the working effort is higher than the\n"
+"                maximum authorized one.\n"
+"              </p><p>\n"
+"                Odoo automatically sets contracts to be renewed in a pending\n"
+"                state. After the negociation, the salesman should close or renew\n"
+"                pending contracts.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Anklicken um einen neuen Vertrag zu definieren.\n"
+"              </p><p>\n"
+"                Hier werden Sie Verträge finden, die zu erneuern sind,\n"
+"                das Enddatum überschritten ist oder das geplante Kontigent\n"
+"                überschritten ist.\n"
+"              </p><p>\n"
+"                Das System setzt Verträge automatisch auf den Status 'zu erneuern'.\n"
+"                Die Vertriebsperson muss den Vertrag entweder neu verhandeln und erneuern\n"
+"                oder ihn schließen.\n"
+"              </p>\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account4_ids:0
-msgid "Account4 Id"
-msgstr "Konto4 ID"
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,help:account_analytic_analysis.action_hr_tree_invoiced_all
+msgid ""
+"<p>\n"
+"                You will find here timesheets and purchases you did for\n"
+"                contracts that can be reinvoiced to the customer.  If you want\n"
+"                to record new activities to invoice, you should use the timesheet\n"
+"                menu instead.\n"
+"              </p>\n"
+"            "
+msgstr ""
+"<p>\n"
+"                Hier finden Sie Stundenzettel und Einkäufe für die\n"
+"                Verträge des Kunden, die wieder in Rechnung gestellt werden können.\n"
+"                Wenn Sie neue Aufwände zur Fakturierung aufzeichnen wollen, sollten Sie stattdessen\n"
+"                das Menü Stundenzettel verwenden.\n"
+"              </p>\n"
+"            "
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account5_ids:0
-msgid "Account5 Id"
-msgstr "Konto5 ID"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Account Analytic Lines"
+msgstr "Kostenstellen-Buchungen"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,account6_ids:0
-msgid "Account6 Id"
-msgstr "Konto6 Id"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Account Manager"
+msgstr "Kundenbetreuer"
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Amount"
-msgstr "Betrag"
+#. module: account_analytic_analysis
+#: help:sale.config.settings,group_template_required:0
+msgid "Allows you to set the template field as required when creating an analytic account or a contract."
+msgstr "Hier können Sie die Feldvorlage erstellen, die bei der Erstellung einer analytischen Rechnung oder eines Vertrages genutzt werden kann."
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance.line,analytic_account_id:0
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,analytic_account_id:0
+#: field:account_analytic_analysis.summary.month,account_id:0
+#: field:account_analytic_analysis.summary.user,account_id:0
+#: model:ir.model,name:account_analytic_analysis.model_account_analytic_account
 msgid "Analytic Account"
 msgstr "Kostenstelle"
 
-#. module: account_analytic_plans
-#: field:account.crossovered.analytic,ref:0
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Analytic Account Reference"
-msgstr "Analyt. Kontenreferenz"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,ca_theorical:0
+msgid "Based on the costs you had on the project, what would have been the revenue if all these costs have been invoiced at the normal sale price provided by the pricelist."
+msgstr "Auf der Grundlage der Kosten dieses Projektes würde der Umsatz basierend  auf den Einnahmen des normalen Verkaufspreises gemäß der Preisliste in Rechnung gestellt werden."
 
-#. module: account_analytic_plans
-#. openerp-web
-#: field:account.analytic.default,analytics_id:0
-#: view:account.analytic.plan.instance:account_analytic_plans.account_analytic_plan_instance_form
-#: view:account.analytic.plan.instance:account_analytic_plans.account_analytic_plan_instance_tree
-#: field:account.analytic.plan.instance,name:0
-#: field:account.bank.statement.line,analytics_id:0
-#: field:account.invoice.line,analytics_id:0
-#: field:account.move.line,analytics_id:0
-#: code:addons/account_analytic_plans/static/src/js/account_bank_reconciliation.js:16
-#: code:addons/account_analytic_plans/static/src/js/account_bank_reconciliation.js:23
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_default
-#, python-format
-msgid "Analytic Distribution"
-msgstr "Kostenstellen Distribution"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Cancelled"
+msgstr "Storniert"
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan.instance.line:account_analytic_plans.account_analytic_plan_instance_line_form
-msgid "Analytic Distribution Line"
-msgstr "Analyt. Verrechnungsvorlage"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Cancelled contracts"
+msgstr "Stornierte Verträge"
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan.instance.line:account_analytic_plans.account_analytic_plan_instance_line_tree
-msgid "Analytic Distribution Lines"
-msgstr "Analyt. Verrechnungspositionen"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Closed"
+msgstr "Geschlossen"
 
-#. module: account_analytic_plans
-#: model:ir.actions.act_window,name:account_analytic_plans.account_analytic_plan_instance_action
-msgid "Analytic Distribution's Models"
-msgstr "Analyt. Verrechnungsvorlagen"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Closed contracts"
+msgstr "Geschlossenen Verträge"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_plan_instance_line
-msgid "Analytic Instance Line"
-msgstr "Analyt. Buchungspositionen"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,remaining_hours_to_invoice:0
+msgid "Computed using the formula: Expected on timesheets - Total invoiced on timesheets"
+msgstr "Berechnet nach der Formel: Basierend auf Stundenzetteln - Fakturierte Summe der Stundenzettel"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,journal_id:0
-#: view:account.crossovered.analytic:account_analytic_plans.view_account_crossovered_analytic
-#: field:account.crossovered.analytic,journal_ids:0
-msgid "Analytic Journal"
-msgstr "Analytisches Journal"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,real_margin:0
+msgid "Computed using the formula: Invoiced Amount - Total Costs."
+msgstr "Berechnet nach der Formel: Rechnungsbetrag - Gesamtkosten."
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_line
-msgid "Analytic Line"
-msgstr "Analytischer Buchungssatz"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,revenue_per_hour:0
+msgid "Computed using the formula: Invoiced Amount / Total Time"
+msgstr "Berechnet nach der Formel: Rechnungsbetrag / Gesamtzeit"
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan:account_analytic_plans.account_analytic_plan_form
-#: view:account.analytic.plan:account_analytic_plans.account_analytic_plan_search
-#: field:account.analytic.plan,name:0
-#: field:account.analytic.plan.line,plan_id:0
-#: model:ir.actions.act_window,name:account_analytic_plans.account_analytic_plan_form_action
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_plan
-#: model:ir.ui.menu,name:account_analytic_plans.menu_account_analytic_plan_action
-msgid "Analytic Plan"
-msgstr "Kostenstellenverrechnung"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,remaining_ca:0
+msgid "Computed using the formula: Max Invoice Price - Invoiced Amount."
+msgstr "Berechnet nach der Formel: Max Rechnung Preis - Rechnungsbetrag."
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_plan_instance
-msgid "Analytic Plan Instance"
-msgstr "Analyt. Verrechnungsvorgang"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,remaining_hours:0
+msgid "Computed using the formula: Maximum Time - Total Worked Time"
+msgstr "Berechnet nach der Formel: Maximale Zeit - Gesamtzeit gearbeitet"
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan.line:account_analytic_plans.account_analytic_plan_line_form
-#: model:ir.model,name:account_analytic_plans.model_account_analytic_plan_line
-msgid "Analytic Plan Line"
-msgstr "Analyt. Verrechnungspositionen"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,theorical_margin:0
+msgid "Computed using the formula: Theoretical Revenue - Total Costs"
+msgstr "Berechnet nach der Formel: Theoretischer Umsatz - Gesamtkosten"
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan.line:account_analytic_plans.account_analytic_plan_line_tree
-msgid "Analytic Plan Lines"
-msgstr "Analyt. Verrechnung Positionen"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,real_margin_rate:0
+msgid "Computes using the formula: (Real Margin / Total Costs) * 100."
+msgstr "Berechnet nach der Formel: (Tatsächliche Marge / Gesamtkosten) * 100."
 
-#. module: account_analytic_plans
-#: view:account.analytic.plan:account_analytic_plans.account_analytic_plan_search
-#: view:account.analytic.plan:account_analytic_plans.account_analytic_plan_tree
-#: field:account.analytic.plan,plan_ids:0 field:account.journal,plan_id:0
-msgid "Analytic Plans"
-msgstr "Analyt. Verrechnung"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Contract"
+msgstr "Vertrag"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.line,name:0
-msgid "Axis Name"
-msgstr "Name der Koordinate"
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,name:account_analytic_analysis.template_of_contract_action
+#: model:ir.ui.menu,name:account_analytic_analysis.menu_template_of_contract_action
+msgid "Contract Template"
+msgstr "Vertragsvorlage"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_bank_statement
-msgid "Bank Statement"
-msgstr "Bank Auszug"
+#. module: account_analytic_analysis
+#: model:email.template,subject:account_analytic_analysis.account_analytic_cron_email_template
+msgid "Contract expiration reminder ${user.company_id.name}"
+msgstr "Vertragende Erinnerung $ {user.company_id.name}"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_bank_statement_line
-msgid "Bank Statement Line"
-msgstr "Bankauszug Buchungen"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+#: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_overdue_all
+#: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_overdue_all
+msgid "Contracts"
+msgstr "Verträge"
 
-#. module: account_analytic_plans
-#: view:account.crossovered.analytic:account_analytic_plans.view_account_crossovered_analytic
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model_msg
-msgid "Cancel"
-msgstr "Abbrechen"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Contracts assigned to a customer."
+msgstr "Verträge zu einem Kunden zugeordnet."
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Code"
-msgstr "Kürzel"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Contracts in progress (open, draft)"
+msgstr "Verträge in Prozess (Offen, Entwurf)"
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Company:"
-msgstr "Unternehmen:"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Contracts not assigned"
+msgstr "Nicht zugeordnete Verträge"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,create_uid:0
-#: field:account.analytic.plan.instance,create_uid:0
-#: field:account.analytic.plan.instance.line,create_uid:0
-#: field:account.analytic.plan.line,create_uid:0
-#: field:account.crossovered.analytic,create_uid:0
-#: field:analytic.plan.create.model,create_uid:0
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Contracts that are not assigned to an account manager."
+msgstr "Verträge, die keinem Account-Manager zugeordnet sind."
+
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,name:account_analytic_analysis.action_account_analytic_overdue
+#: model:ir.ui.menu,name:account_analytic_analysis.menu_action_account_analytic_overdue
+msgid "Contracts to Renew"
+msgstr "Zu erneuernde Verträge"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,create_uid:0
 msgid "Created by"
 msgstr "Erstellt von"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,create_date:0
-#: field:account.analytic.plan.instance,create_date:0
-#: field:account.analytic.plan.instance.line,create_date:0
-#: field:account.analytic.plan.line,create_date:0
-#: field:account.crossovered.analytic,create_date:0
-#: field:analytic.plan.create.model,create_date:0
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,create_date:0
 msgid "Created on"
 msgstr "Erstellt am"
 
-#. module: account_analytic_plans
-#: view:account.crossovered.analytic:account_analytic_plans.view_account_crossovered_analytic
-#: model:ir.actions.act_window,name:account_analytic_plans.action_account_crossovered_analytic
-#: model:ir.actions.report.xml,name:account_analytic_plans.action_account_analytic_account_crossovered_analytic
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Crossovered Analytic"
-msgstr "Quervergleich Analyse"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Customer Contracts"
+msgstr "Kundenverträge"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,default_instance_id:0
-msgid "Default Entries"
-msgstr "Verrechnungsvorlage"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,last_worked_date:0
+msgid "Date of Last Cost/Work"
+msgstr "Datum der letzten Kosten / Arbeiten"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,code:0
-msgid "Distribution Code"
-msgstr "Verteilungs-Schlüssel"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,last_worked_invoiced_date:0
+msgid "Date of Last Invoiced Cost"
+msgstr "Datum der letzten in Rechnung gestellte Kosten"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/wizard/analytic_plan_create_model.py:47
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model_msg
-#, python-format
-msgid "Distribution Model Saved"
-msgstr "Verrechnungsvorlage gespeichert"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,recurring_next_date:0
+msgid "Date of Next Invoice"
+msgstr "Datum der nächsten Rechnungsstellung"
 
-#. module: account_analytic_plans
-#: model:ir.actions.act_window,name:account_analytic_plans.account_analytic_instance_model_open
-msgid "Distribution Models"
-msgstr "Verrechnungsvorlage"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,last_worked_date:0
+msgid "Date of the latest work done on this account."
+msgstr "Datum der letzten Arbeiten, die auf diesem Konto erfolgt."
 
-#. module: account_analytic_plans
-#: field:account.crossovered.analytic,empty_line:0
-msgid "Dont show empty lines"
-msgstr "Keine leeren Zeilen anzeigen"
+#. module: account_analytic_analysis
+#: selection:account.analytic.account,recurring_rule_type:0
+msgid "Day(s)"
+msgstr "Tag(e)"
 
-#. module: account_analytic_plans
-#: field:account.crossovered.analytic,date2:0
-msgid "End Date"
-msgstr "Enddatum"
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,name:0
+msgid "Description"
+msgstr "Beschreibung"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/account_analytic_plans.py:218
-#: code:addons/account_analytic_plans/account_analytic_plans.py:231
-#: code:addons/account_analytic_plans/wizard/analytic_plan_create_model.py:38
-#: code:addons/account_analytic_plans/wizard/analytic_plan_create_model.py:41
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "End Month"
+msgstr "Endmonat"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "End date is in the next month"
+msgstr "Enddatum im nächsten Monat"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "End date passed or prepaid unit consumed"
+msgstr "Enddatum abgelaufen oder Einheit per Vorlasse verbraucht."
+
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:683
 #, python-format
 msgid "Error!"
 msgstr "Fehler!"
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "From Date:"
-msgstr "Von:"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,hours_qtt_est:0
+msgid "Estimation of Hours to Invoice"
+msgstr "Schätzung der Stunden zur Abrechnung"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,id:0 field:account.analytic.plan.instance,id:0
-#: field:account.analytic.plan.instance.line,id:0
-#: field:account.analytic.plan.line,id:0
-#: field:account.crossovered.analytic,id:0
-#: field:analytic.plan.create.model,id:0
-#: field:report.account_analytic_plans.report_crossoveredanalyticplans,id:0
+#. module: account_analytic_analysis
+#: help:account.analytic.account,remaining_total:0
+msgid "Expectation of remaining income for this contract. Computed as the sum of remaining subtotals which, in turn, are computed as the maximum between '(Estimation - Invoiced)' and 'To Invoice' amounts"
+msgstr "Prognose des restlichen Ertrages für diesen Vertrag. Berechnet auf der Summe der offenen Zwischensumme des Maximum aus 'zu fakturieren' und 'fakturiert'"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Expected"
+msgstr "Erwartet"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Expired or consumed"
+msgstr "Abgelaufen oder verbraucht"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Expiring soon"
+msgstr "Ablauf in Kürze"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,fix_price_invoices:0
+msgid "Fixed Price"
+msgstr "Festpreis"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,recurring_invoices:0
+msgid "Generate recurring invoices automatically"
+msgstr "Generieren Sie wiederkehrende Rechnungen automatisch"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Group By"
+msgstr "Gruppierung"
+
+#. module: account_analytic_analysis
+#: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_user
+msgid "Hours Summary by User"
+msgstr "Stunden-Zusammenfassung nach Benutzer"
+
+#. module: account_analytic_analysis
+#: model:ir.model,name:account_analytic_analysis.model_account_analytic_analysis_summary_month
+msgid "Hours summary by month"
+msgstr "Summe der Stunde des Monats"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,id:0
+#: field:account_analytic_analysis.summary.month,id:0
+#: field:account_analytic_analysis.summary.user,id:0
 msgid "ID"
 msgstr "ID"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_invoice
-msgid "Invoice"
-msgstr "Rechnung"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,ca_to_invoice:0
+msgid "If invoice from analytic account, the remaining amount you can invoice to the customer based on the total costs."
+msgstr "Sie könnten dem Kunden den offenen Betrag für diese Kostenstelle/Projekt in Rechnung stellen."
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_invoice_line
-msgid "Invoice Line"
-msgstr "Rechnungszeile"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,last_invoice_date:0
+msgid "If invoice from the costs, this is the date of the latest invoiced."
+msgstr "Sie könnten die Aufwände ab dem letzten Rechnungsdatum in Rechnung stellen."
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_journal
-msgid "Journal"
-msgstr "Journal"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,last_worked_invoiced_date:0
+msgid "If invoice from the costs, this is the date of the latest work or cost that have been invoiced."
+msgstr "Sie könnten die Aufwände ab dem letzten Rechnungsdatum oder der offenen Aufwände in Rechnung stellen."
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_move_line
-msgid "Journal Items"
-msgstr "Journal Einträge"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "In Progress"
+msgstr "In Bearbeitung"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,write_uid:0
-#: field:account.analytic.plan.instance,write_uid:0
-#: field:account.analytic.plan.instance.line,write_uid:0
-#: field:account.analytic.plan.line,write_uid:0
-#: field:account.crossovered.analytic,write_uid:0
-#: field:analytic.plan.create.model,write_uid:0
+#. module: account_analytic_analysis
+#: field:account.analytic.account,recurring_invoice_line_ids:0
+msgid "Invoice Lines"
+msgstr "Rechnungspositionen"
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,recurring_rule_type:0
+msgid "Invoice automatically repeat at specified interval"
+msgstr "Rechnung automatisch zu festgelegten Intervall erzeugen"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Invoiced"
+msgstr "Fakturiert"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,ca_invoiced:0
+msgid "Invoiced Amount"
+msgstr "Fakturierter Betrag"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,hours_qtt_invoiced:0
+msgid "Invoiced Time"
+msgstr "In Rechnung gestellte Arbeitszeit"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Invoicing"
+msgstr "Rechnungsstellung"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,last_invoice_date:0
+msgid "Last Invoice Date"
+msgstr "Letztes Rechnungsdatum"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,write_uid:0
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert durch"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan,write_date:0
-#: field:account.analytic.plan.instance,write_date:0
-#: field:account.analytic.plan.instance.line,write_date:0
-#: field:account.analytic.plan.line,write_date:0
-#: field:account.crossovered.analytic,write_date:0
-#: field:analytic.plan.create.model,write_date:0
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,write_date:0
 msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.line,max_required:0
-msgid "Maximum Allowed (%)"
-msgstr "Max. erlaubt (100%)"
+#. module: account_analytic_analysis
+#: model:res.groups,name:account_analytic_analysis.group_template_required
+msgid "Mandatory use of templates in contracts"
+msgstr "Obligatorische Verwendung von Vorlagen in Verträgen"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.line,min_required:0
-msgid "Minimum Allowed (%)"
-msgstr "Min. erlaubt (%)"
+#. module: account_analytic_analysis
+#: field:sale.config.settings,group_template_required:0
+msgid "Mandatory use of templates."
+msgstr "Obligatorische Verwendung von Vorlagen."
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance,plan_id:0
-msgid "Model's Plan"
-msgstr "Verrechnungsvorgabe"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,month_ids:0
+#: field:account_analytic_analysis.summary.month,month:0
+msgid "Month"
+msgstr "Monat"
 
-#. module: account_analytic_plans
-#: model:ir.ui.menu,name:account_analytic_plans.menu_account_analytic_multi_plan_action
-msgid "Multi Plans"
-msgstr "Analytische Verrechnung"
+#. module: account_analytic_analysis
+#: selection:account.analytic.account,recurring_rule_type:0
+msgid "Month(s)"
+msgstr "Monat(e)"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/account_analytic_plans.py:335
-#: code:addons/account_analytic_plans/account_analytic_plans.py:471
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:678
 #, python-format
-msgid "No Analytic Journal!"
-msgstr "Es existiert kein Kostenjournal !"
+msgid "No Customer Defined!"
+msgstr "Kein Kunde definiert!"
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Perc(%)"
-msgstr "Proz (%)"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "No order to invoice, create"
+msgstr "Kein Auftrag zu fakturieren, erzeuge"
 
-#. module: account_analytic_plans
-#: field:account.analytic.line,percentage:0
-msgid "Percentage"
-msgstr "Prozentsatz"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Nothing to invoice, create"
+msgstr "Nichts zu berechnen, erzeuge"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance.line,plan_id:0
-msgid "Plan Id"
-msgstr "Plan ID"
+#. module: account_analytic_analysis
+#: help:account.analytic.account,hours_qtt_non_invoiced:0
+msgid "Number of time (hours/days) (from journal of type 'general') that can be invoiced if you invoice based on analytic account."
+msgstr "Summe der Zeiten (Stunden / Tage) (des Journals Typ 'Allgemein'), die in Rechnung gestellt werden könnten basierend auf der Kostenstelle."
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/wizard/analytic_plan_create_model.py:38
+#. module: account_analytic_analysis
+#: help:account.analytic.account,hours_qtt_invoiced:0
+msgid "Number of time (hours/days) that can be invoiced plus those that already have been invoiced."
+msgstr "Summe der Zeiten (Stunden / Tage), die in Rechnung gestellt werden können, sowie diejenigen, die bereits in Rechnung gestellt wurden."
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,hours_quantity:0
+msgid "Number of time you spent on the analytic account (from timesheet). It computes quantities on all journal of type 'general'."
+msgstr "Summe der Zeiten, die Sie auf der Kostenstelle (von Arbeitszeittabelle) gesammelt haben basierend auf dem Journal Typ \"Allgemein\"."
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,invoice_on_timesheets:0
+msgid "On Timesheets"
+msgstr "Auf Stundenzetteln"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,is_overdue_quantity:0
+msgid "Overdue Quantity"
+msgstr "Überfällige Menge"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Parent"
+msgstr "Übergeordnet"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Partner"
+msgstr "Partner (Kunden)"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Pending contracts"
+msgstr "Ausstehende Verträge"
+
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:684
 #, python-format
-msgid "Please put a name and a code before saving the model."
-msgstr "Bitte tragen Sie eine Bezeichnung und ein Kürzel vor dem Speichern ein."
+msgid "Please define a sale journal for the company \"%s\"."
+msgstr "Bitte definieren Sie ein Verkaufsjournal für das Unternehmen \"%s\"."
 
-#. module: account_analytic_plans
-#: view:account.crossovered.analytic:account_analytic_plans.view_account_crossovered_analytic
-msgid "Print"
-msgstr "Drucken"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Pricelist"
+msgstr "Preisliste"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_account_crossovered_analytic
-msgid "Print Crossovered Analytic"
-msgstr "Kreuzanalyse drucken"
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,product_id:0
+msgid "Product"
+msgstr "Produkt"
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "Printing Date:"
-msgstr "Druckdatum:"
-
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,quantity:0
 msgid "Quantity"
 msgstr "Anzahl"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.instance.line,rate:0
-msgid "Rate (%)"
-msgstr "Anteil (%)"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,real_margin:0
+msgid "Real Margin"
+msgstr "Gewinnspanne"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.line,root_analytic_id:0
-msgid "Root Account"
-msgstr "Oberstes Konto"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,real_margin_rate:0
+msgid "Real Margin Rate (%)"
+msgstr "Rate inkl. Marge"
 
-#. module: account_analytic_plans
-#: help:account.analytic.plan.line,root_analytic_id:0
-msgid "Root account of this plan."
-msgstr "Basiskonto der Verrechnung"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,recurring_rule_type:0
+msgid "Recurrency"
+msgstr "Wiederkehrend"
 
-#. module: account_analytic_plans
-#: model:ir.model,name:account_analytic_plans.model_sale_order_line
-msgid "Sales Order Line"
-msgstr "Auftragsposition"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Recurring Invoices"
+msgstr "Wiederkehrende Rechnungen"
 
-#. module: account_analytic_plans
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model_msg
-msgid "Save This Distribution as a Model"
-msgstr "Verrechnung als Vorlage speichern"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Remaining"
+msgstr "Verbleibend"
 
-#. module: account_analytic_plans
-#: field:account.analytic.plan.line,sequence:0
-msgid "Sequence"
-msgstr "Nummernfolge"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,remaining_ca:0
+msgid "Remaining Revenue"
+msgstr "Restlicher Umsatz"
 
-#. module: account_analytic_plans
-#: field:account.crossovered.analytic,date1:0
-msgid "Start Date"
-msgstr "Startdatum"
+#. module: account_analytic_analysis
+#: field:account.analytic.account,fix_price_to_invoice:0
+#: field:account.analytic.account,remaining_hours:0
+#: field:account.analytic.account,remaining_hours_to_invoice:0
+#: field:account.analytic.account,timesheet_ca_invoiced:0
+msgid "Remaining Time"
+msgstr "Restlaufzeit:"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/account_analytic_plans.py:231
+#. module: account_analytic_analysis
+#: field:account.analytic.account,recurring_interval:0
+msgid "Repeat Every"
+msgstr "Wiederholen alle"
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,recurring_interval:0
+msgid "Repeat every (Days/Week/Month/Year)"
+msgstr "Wiederholung alle (Tage / Woche / Monat / Jahr)"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,revenue_per_hour:0
+msgid "Revenue per Time (real)"
+msgstr "Der Umsatz pro Zeit (real)"
+
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:550
 #, python-format
-msgid "The total should be between %s and %s."
-msgstr "Die Summe sollte zwischen %s und %s sein."
+msgid "Sales Order Lines to Invoice of %s"
+msgstr "Auftragspositionen zur Abrechnung von %s"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/wizard/account_crossovered_analytic.py:62
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+#: model:ir.actions.act_window,name:account_analytic_analysis.action_sales_order
+msgid "Sales Orders"
+msgstr "Aufträge"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Start Month"
+msgstr "Anfangsmonat"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Status"
+msgstr "Status"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,price_subtotal:0
+msgid "Sub Total"
+msgstr "Zwischensumme"
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,fix_price_to_invoice:0
+msgid "Sum of quotations for this contract."
+msgstr "Summe der Angebote für diesen Vertrag."
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,timesheet_ca_invoiced:0
+msgid "Sum of timesheet lines invoiced for this contract."
+msgstr "Summe in Rechnung gestellter Arbeitszeitpositionen innerhalb dieses Vertrages."
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "Template"
+msgstr "Vorlage"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,theorical_margin:0
+msgid "Theoretical Margin"
+msgstr "Theoretische Gewinnspanne"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,ca_theorical:0
+msgid "Theoretical Revenue"
+msgstr "Theoretische Einnahmen"
+
+#. module: account_analytic_analysis
+#: model:ir.actions.act_window,name:account_analytic_analysis.action_hr_tree_invoiced_all
+#: model:ir.ui.menu,name:account_analytic_analysis.menu_action_hr_tree_invoiced_all
+msgid "Time & Materials to Invoice"
+msgstr "Abzurechnende Arbeitszeiten und Materialien "
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Timesheets"
+msgstr "Stundenzettel"
+
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:659
 #, python-format
-msgid "There are no analytic lines related to account %s."
-msgstr "Es gibt keine Kostenstellenbuchungen für das Konto %s."
+msgid "Timesheets to Invoice of %s"
+msgstr "Abzurechnende Stundenzettel von  %s"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/wizard/analytic_plan_create_model.py:41
-#, python-format
-msgid "There is no analytic plan defined."
-msgstr "Es existieren Kostenstellen und ein Plan."
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "To Invoice"
+msgstr "Zur Abrechnung"
 
-#. module: account_analytic_plans
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_overdue_search
+msgid "To Renew"
+msgstr "Zu erneuern"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Total"
+msgstr "Summe"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,total_cost:0
+msgid "Total Costs"
+msgstr "Gesamtkosten"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,est_total:0
+msgid "Total Estimation"
+msgstr "Summe Kostenschätzung"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,invoiced_total:0
+msgid "Total Invoiced"
+msgstr "Gesamter Rechnungsumsatz"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,remaining_total:0
+msgid "Total Remaining"
+msgstr "Summe verbleibend"
+
+#. module: account_analytic_analysis
+#: field:account_analytic_analysis.summary.month,unit_amount:0
+#: field:account_analytic_analysis.summary.user,unit_amount:0
+msgid "Total Time"
+msgstr "Gesamtzeit"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,hours_quantity:0
+msgid "Total Worked Time"
+msgstr "Summe der Arbeitszeit"
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,ca_invoiced:0
+msgid "Total customer invoiced amount for this account."
+msgstr "Summe, der dem Kunden in Rechnung gestellten Beträge für dieses Konto."
+
+#. module: account_analytic_analysis
+#: help:account.analytic.account,total_cost:0
+msgid "Total of costs for this account. It includes real costs (from invoices) and indirect costs, like time spent on timesheets."
+msgstr "Insgesamt Kosten für dieses Konto. Es umfasst die tatsächlichen Kosten (von Rechnungen) und indirekten Kosten, wie die Zeit auf den Stundenzetteln."
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,toinvoice_total:0
+msgid "Total to Invoice"
+msgstr "Summe zur Abrechnung"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,ca_to_invoice:0
+msgid "Uninvoiced Amount"
+msgstr "Nicht in Rechnung gestellter Betrag"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,hours_qtt_non_invoiced:0
+msgid "Uninvoiced Time"
+msgstr "Nicht in Rechnung gestellte Zeit"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,price_unit:0
+msgid "Unit Price"
+msgstr "Stück-Preis"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.invoice.line,uom_id:0
+msgid "Unit of Measure"
+msgstr "Maßeinheit"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Units Consumed"
+msgstr "Verbrauchte Einheiten"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "Units Remaining"
+msgstr "Verbleibende Einheiten"
+
+#. module: account_analytic_analysis
+#: field:account.analytic.account,user_ids:0
+#: field:account_analytic_analysis.summary.user,user:0
+msgid "User"
+msgstr "Benutzer"
+
+#. module: account_analytic_analysis
+#: selection:account.analytic.account,recurring_rule_type:0
+msgid "Week(s)"
+msgstr "Woche(n)"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
 msgid ""
-"This distribution model has been saved.You will be able to reuse it later."
-msgstr "Die Verrechnungsvorlage wurde gesichert und ist nunmehr verwendbar."
+"When reinvoicing costs, Odoo uses the\n"
+"                            pricelist of the contract which uses the price\n"
+"                            defined on the product related (e.g timesheet \n"
+"                            products are defined on each employee)."
+msgstr ""
+"Wenn Kosten wieder in Rechnung gestellt werden, verwendet des System\n"
+"                            die dem Vertrag zu Grunde liegende Preisliste unter Berücksichtigung des Preises\n"
+"                            des Produktes  (z.B. Stundenzettel \n"
+"                            dies kann für jeden Benutzer individuell bestimmt werden)."
 
-#. module: account_analytic_plans
-#: view:website:account_analytic_plans.report_crossoveredanalyticplans
-msgid "To Date:"
-msgstr "Bis Datum:"
+#. module: account_analytic_analysis
+#: selection:account.analytic.account,recurring_rule_type:0
+msgid "Year(s)"
+msgstr "Jahr(e)"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/wizard/account_crossovered_analytic.py:62
+#. module: account_analytic_analysis
+#: code:addons/account_analytic_analysis/account_analytic_analysis.py:678
 #, python-format
-msgid "User Error!"
-msgstr "Benutzerfehler !"
+msgid "You must first select a Customer for Contract %s!"
+msgstr "Müssen Sie zuerst einen Kunden für den Vertrag %s auswählen!"
 
-#. module: account_analytic_plans
-#: code:addons/account_analytic_plans/account_analytic_plans.py:335
-#: code:addons/account_analytic_plans/account_analytic_plans.py:471
-#, python-format
-msgid "You have to define an analytic journal on the '%s' journal."
-msgstr "Sie müssen eine Kostenstelle für das Journal '%s' eintragen"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "or view"
+msgstr "oder Ansicht"
 
-#. module: account_analytic_plans
-#: model:ir.actions.act_window,name:account_analytic_plans.action_analytic_plan_create_model
-msgid "analytic.plan.create.model.action"
-msgstr "analytic.plan.create.model.action"
+#. module: account_analytic_analysis
+#: model:res.groups,comment:account_analytic_analysis.group_template_required
+msgid "the field template of the analytic accounts and contracts will be required."
+msgstr "Das Feld Vorlage der Kostenstelle und Verträge ist erforderlich."
 
-#. module: account_analytic_plans
-#: view:account.crossovered.analytic:account_analytic_plans.view_account_crossovered_analytic
-#: view:analytic.plan.create.model:account_analytic_plans.view_analytic_plan_create_model_msg
-msgid "or"
-msgstr "oder"
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "{'required': [('type','=','contract'),'|','|',('fix_price_invoices','=',True), ('invoice_on_timesheets', '=', True), ('recurring_invoices', '=', True)]}"
+msgstr "{'required': [('type','=','contract'),'|','|',('fix_price_invoices','=',True), ('invoice_on_timesheets', '=', True), ('recurring_invoices', '=', True)]}"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.view_account_analytic_account_template_required
+msgid "{'required': [('type','=','contract')], 'invisible': [('type','in',['view', 'normal','template'])]}"
+msgstr "{'required': [('type','=','contract')], 'invisible': [('type','in',['view', 'normal','template'])]}"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "⇒ Invoice"
+msgstr "⇒ Rechnung"
+
+#. module: account_analytic_analysis
+#: view:account.analytic.account:account_analytic_analysis.account_analytic_account_form_form
+msgid "⇒ create invoices"
+msgstr "⇒ Erstelle Rechnung"
