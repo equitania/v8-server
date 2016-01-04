@@ -1058,7 +1058,7 @@ msgstr "Mahnungen senden"
 #. module: account_followup
 #: field:account_followup.followup.line,sequence:0
 msgid "Sequence"
-msgstr "Folge"
+msgstr "Reihenfolge"
 
 #. module: account_followup
 #: field:account_followup.print,summary:0

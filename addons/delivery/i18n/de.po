@@ -447,7 +447,7 @@ msgstr "Das ausgewählte Produkt zu dieser Auslieferungsmethode erfüllt keine d
 #. module: delivery
 #: field:delivery.grid,sequence:0 field:delivery.grid.line,sequence:0
 msgid "Sequence"
-msgstr "Folge"
+msgstr "Reihenfolge"
 
 #. module: delivery
 #: field:delivery.grid,zip_from:0
