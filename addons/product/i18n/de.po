@@ -1139,7 +1139,7 @@ msgstr "Computer"
 #. module: product
 #: view:product.template:product.product_template_form_view
 msgid "Configurations"
-msgstr ""
+msgstr "Konfigurationen"
 
 #. module: product
 #: view:product.template:product.product_template_search_view
@@ -1447,6 +1447,7 @@ msgstr ""
 
 #. module: product
 #: help:product.template,packaging_ids:0
+#: help:product.product,packaging_ids:0
 msgid "Gives the different ways to package the same product. This has no impact on the picking order and is mainly used if you use the EDI module."
 msgstr "Sie können verschiedene Verpackungen für  dasselbe Produkt verwenden. Für den Pickauftrag hat dies keine Auswirkung. Hauptsächlich kann dies für EDI Anwendungen relevant sein."
 
