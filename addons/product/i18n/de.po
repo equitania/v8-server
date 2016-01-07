@@ -1479,6 +1479,7 @@ msgstr "Vorlagen Grafiken"
 
 #. module: product
 #: field:product.template,weight:0
+#: field:product.product,weight:0
 msgid "Gross Weight"
 msgstr "Bruttogewicht"
 
@@ -1984,6 +1985,7 @@ msgstr "Bezeichnung für diese Preisart."
 
 #. module: product
 #: field:product.template,weight_net:0
+#: field:product.product,weight_net:0
 msgid "Net Weight"
 msgstr "Nettogewicht"
 
@@ -2881,6 +2883,7 @@ msgstr "Die Währung dieses Feldes."
 
 #. module: product
 #: help:product.template,weight:0
+#: help:product.product,weight:0
 msgid "The gross weight in Kg."
 msgstr "Bruttogewicht in kg"
 
@@ -2906,6 +2909,7 @@ msgstr "Die minimale Bestandsmenge, die in der Einkaufseinheit angezeigt wird un
 
 #. module: product
 #: help:product.template,weight_net:0
+#: help:product.product,weight_net:0
 msgid "The net weight in Kg."
 msgstr "Nettogewicht in Kg"
 
