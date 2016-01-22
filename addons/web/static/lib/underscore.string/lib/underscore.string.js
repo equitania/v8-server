@@ -113,7 +113,21 @@
             case 'c': arg = String.fromCharCode(arg); break;
             case 'd': arg = parseInt(arg, 10); break;
             case 'e': arg = match[7] ? arg.toExponential(match[7]) : arg.toExponential(); break;
-            case 'f': arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg); break;
+            //case 'f': arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg); break;			// original
+            case 'f':																							// EQUITANIA
+            	try{
+            		arg = match[7] ? parseFloat(arg).toFixed(match[7]) : parseFloat(arg); break;
+            	}
+            	catch(err){
+            		/*
+            		 * EQITANIA - solution for default error in chrome
+            		 * As soon as the function toFixed() gets called with value bigger than 20 this exception happens.
+            		 * By default supports toFixed() the range 0 - 20
+            		 */            		
+            		arg = match[7] ? parseFloat(arg).toFixed(2) : parseFloat(arg); break;						// use max 2 by default
+            	}
+            	
+            	
             case 'o': arg = arg.toString(8); break;
             case 's': arg = ((arg = String(arg)) && match[7] ? arg.substring(0, match[7]) : arg); break;
             case 'u': arg = Math.abs(arg); break;
