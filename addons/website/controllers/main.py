@@ -354,22 +354,14 @@ class Website(openerp.addons.web.controllers.main.Home):
 
     @http.route(['/website/seo_suggest/<keywords>'], type='http', auth="public", website=True)
     def seo_suggest(self, keywords):
-        """
-            Get suggested combinations for given keyword using google search api
-            @keywords: actual keyword
-            @return: combinations as json
-        """        
-        #url = "https://www.google.com/complete/search"                      # old url - EQUITANIA (https)
-        url = "https://suggestqueries.google.com/complete/search"            # new url - EQUITANIA (https)
+        url = "http://google.com/complete/search"
         try:
             req = urllib2.Request("%s?%s" % (url, werkzeug.url_encode({
                 'ie': 'utf8', 'oe': 'utf8', 'output': 'toolbar', 'q': keywords})))
-                        
             request = urllib2.urlopen(req)
-            
         except (urllib2.HTTPError, urllib2.URLError):
             return []
-        xmlroot = ET.fromstring(request.read())        
+        xmlroot = ET.fromstring(request.read())
         return json.dumps([sugg[0].attrib['data'] for sugg in xmlroot if len(sugg) and sugg[0].attrib['data']])
 
     #------------------------------------------------------
