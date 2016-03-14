@@ -1086,7 +1086,7 @@ msgstr "Abweichungen bei der Saldoabstimmung"
 #: code:addons/point_of_sale/static/src/xml/pos.xml:162
 #, python-format
 msgid "Disc"
-msgstr "Rabatt"
+msgstr "Rab"
 
 #. module: point_of_sale
 #: view:website:point_of_sale.report_detailsofsales
