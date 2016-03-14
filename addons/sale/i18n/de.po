@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2015-08-13 22:08+0200\n"
-"Last-Translator: Martin Schmid <m.schmid@equitania.de>\n"
+"PO-Revision-Date: 2016-03-14 10:14+0100\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.7\n"
 
 #. module: sale
 #: model:email.template,body_html:sale.email_template_edi_sale
@@ -96,14 +96,15 @@ msgid ""
 "    </div>\n"
 "</div>\n"
 "            "
-msgstr "\n"
+msgstr ""
+"\n"
 "<div style=\"font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); \">\n"
 "\n"
 "        % if object.partner_id.is_company:\n"
-"    		<p>Sehr geehrte Damen & Herren,</p>\n"
+"    \t\t<p>Sehr geehrte Damen & Herren,</p>\n"
 "        % endif\n"
 "        % if object.partner_id.is_company == False:\n"
-"    		<p>Sehr geehrte(r) ${object.partner_id.title.name} ${object.partner_id.name},</p>\n"
+"    \t\t<p>Sehr geehrte(r) ${object.partner_id.title.name} ${object.partner_id.name},</p>\n"
 "        % endif\n"
 "    \n"
 "    <p>&nbsp;${object.state in ('draft', 'sent') and 'wir haben Ihre Anfrage erhalten und melden uns umgehend wegen der Bestellbestätigung bei Ihnen.' or 'hiermit bestägigen wir Ihnen folgende Bestellung.'}</p>\n"
@@ -169,7 +170,6 @@ msgstr "\n"
 "        <p></p>\n"
 "    </div>\n"
 "</div>"
-
 
 #. module: sale
 #: field:product.product,sales_count:0 field:product.template,sales_count:0
@@ -294,7 +294,8 @@ msgstr ""
 "            "
 
 #. module: sale
-#: model:ir.actions.act_window,help:sale.action_quotations model:ir.actions.act_window,help:sale.action_quotations_salesteams
+#: model:ir.actions.act_window,help:sale.action_quotations
+#: model:ir.actions.act_window,help:sale.action_quotations_salesteams
 msgid ""
 "<p class=\"oe_view_nocontent_create\">\n"
 "                Click to create a quotation, the first step of a new sale.\n"
@@ -550,7 +551,9 @@ msgid "By Salesteam"
 msgstr "Nach Verkaufsteam"
 
 #. module: sale
-#: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv view:sale.make.invoice:sale.view_sale_order_make_invoice view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
+#: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv
+#: view:sale.make.invoice:sale.view_sale_order_make_invoice
+#: view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -570,7 +573,8 @@ msgid "Cancel Quotation"
 msgstr "Angebot abbrechen"
 
 #. module: sale
-#: selection:sale.order,state:0 selection:sale.order.line,state:0 selection:sale.report,state:0
+#: selection:sale.order,state:0 selection:sale.order.line,state:0
+#: selection:sale.report,state:0
 msgid "Cancelled"
 msgstr "Abgebrochen"
 
@@ -637,12 +641,16 @@ msgid "Companies"
 msgstr "Unternehmen"
 
 #. module: sale
-#: field:sale.order,company_id:0 field:sale.order.line,company_id:0 view:sale.report:sale.view_order_product_search field:sale.report,company_id:0
+#: field:sale.order,company_id:0 field:sale.order.line,company_id:0
+#: view:sale.report:sale.view_order_product_search
+#: field:sale.report,company_id:0
 msgid "Company"
 msgstr "Unternehmen"
 
 #. module: sale
-#: code:addons/sale/sale.py:1148 code:addons/sale/wizard/sale_make_invoice_advance.py:95 code:addons/sale/wizard/sale_make_invoice_advance.py:99
+#: code:addons/sale/sale.py:1148
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:95
+#: code:addons/sale/wizard/sale_make_invoice_advance.py:99
 #, python-format
 msgid "Configuration Error!"
 msgstr "Konfigurationsfehler!"
@@ -688,12 +696,16 @@ msgid "Create & View Invoice"
 msgstr "Rechnung erstellen und anzeigen"
 
 #. module: sale
-#: model:ir.actions.act_window,name:sale.action_view_sale_order_line_make_invoice view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv view:sale.order:sale.view_order_form field:sale.order,order_policy:0 view:sale.order.line:sale.view_order_line_form2
+#: model:ir.actions.act_window,name:sale.action_view_sale_order_line_make_invoice
+#: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv
+#: view:sale.order:sale.view_order_form field:sale.order,order_policy:0
+#: view:sale.order.line:sale.view_order_line_form2
 msgid "Create Invoice"
 msgstr "Erzeuge Rechnung"
 
 #. module: sale
-#: view:sale.make.invoice:sale.view_sale_order_make_invoice view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
+#: view:sale.make.invoice:sale.view_sale_order_make_invoice
+#: view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
 msgid "Create Invoices"
 msgstr "Erzeuge Rechnungen"
 
@@ -703,17 +715,23 @@ msgid "Create and View Invoice"
 msgstr "Erzeuge und zeige Rechnung an"
 
 #. module: sale
-#: view:sale.make.invoice:sale.view_sale_order_make_invoice view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
+#: view:sale.make.invoice:sale.view_sale_order_make_invoice
+#: view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
 msgid "Create invoices"
 msgstr "Erzeuge Rechnungen"
 
 #. module: sale
-#: field:sale.advance.payment.inv,create_uid:0 field:sale.make.invoice,create_uid:0 field:sale.order,create_uid:0 field:sale.order.line,create_uid:0 field:sale.order.line.make.invoice,create_uid:0
+#: field:sale.advance.payment.inv,create_uid:0
+#: field:sale.make.invoice,create_uid:0 field:sale.order,create_uid:0
+#: field:sale.order.line,create_uid:0
+#: field:sale.order.line.make.invoice,create_uid:0
 msgid "Created by"
 msgstr "Erstellt von"
 
 #. module: sale
-#: field:sale.advance.payment.inv,create_date:0 field:sale.make.invoice,create_date:0 field:sale.order.line,create_date:0 field:sale.order.line.make.invoice,create_date:0
+#: field:sale.advance.payment.inv,create_date:0
+#: field:sale.make.invoice,create_date:0 field:sale.order.line,create_date:0
+#: field:sale.order.line.make.invoice,create_date:0
 msgid "Created on"
 msgstr "Erstellt am"
 
@@ -728,7 +746,9 @@ msgid "Currency"
 msgstr "Währung"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter field:sale.order,partner_id:0 field:sale.order.line,order_partner_id:0 view:sale.report:sale.view_order_product_search
+#: view:sale.order:sale.view_sales_order_filter field:sale.order,partner_id:0
+#: field:sale.order.line,order_partner_id:0
+#: view:sale.report:sale.view_order_product_search
 msgid "Customer"
 msgstr "Kunde"
 
@@ -844,7 +864,10 @@ msgid "Do you really want to create the invoice(s)?"
 msgstr "Wollen Sie wirklich diese Rechnung erstellen?"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter selection:sale.order,state:0 view:sale.order.line:sale.view_order_line_form2 view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter selection:sale.order.line,state:0 selection:sale.report,state:0
+#: view:sale.order:sale.view_sales_order_filter selection:sale.order,state:0
+#: view:sale.order.line:sale.view_order_line_form2
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: selection:sale.order.line,state:0 selection:sale.report,state:0
 msgid "Done"
 msgstr "Erledigt"
 
@@ -880,7 +903,9 @@ msgid "Enable Invoicing Sales order lines"
 msgstr "Einzelne Auftragspositionen abrechnen"
 
 #. module: sale
-#: code:addons/sale/sale.py:154 code:addons/sale/sale.py:390 code:addons/sale/sale.py:522 code:addons/sale/sale.py:605 code:addons/sale/sale.py:934 code:addons/sale/sale.py:951
+#: code:addons/sale/sale.py:154 code:addons/sale/sale.py:390
+#: code:addons/sale/sale.py:522 code:addons/sale/sale.py:605
+#: code:addons/sale/sale.py:934 code:addons/sale/sale.py:951
 #, python-format
 msgid "Error!"
 msgstr "Fehler!"
@@ -974,7 +999,10 @@ msgstr ""
 "In den 'Warteliste'  Zustand gelangt ein Auftrag, wenn korrespondierende Rechnungen schon bestätigt wurden und \"nur\" noch der Auftrag auf seine Ausführung zum Bestelldatum wartet."
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter view:sale.order.line:sale.view_sales_order_line_filter view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter view:sale.report:sale.view_order_product_search
+#: view:sale.order:sale.view_sales_order_filter
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: view:sale.report:sale.view_order_product_search
 msgid "Group By"
 msgstr "Gruppierung"
 
@@ -995,7 +1023,9 @@ msgid "Hour"
 msgstr "Stunde"
 
 #. module: sale
-#: field:sale.advance.payment.inv,id:0 field:sale.make.invoice,id:0 field:sale.order,id:0 field:sale.order.line,id:0 field:sale.order.line.make.invoice,id:0 field:sale.report,id:0
+#: field:sale.advance.payment.inv,id:0 field:sale.make.invoice,id:0
+#: field:sale.order,id:0 field:sale.order.line,id:0
+#: field:sale.order.line.make.invoice,id:0 field:sale.report,id:0
 msgid "ID"
 msgstr "ID"
 
@@ -1033,13 +1063,16 @@ msgid "Incorrect Data"
 msgstr "Fehlerhafte Daten"
 
 #. module: sale
-#: code:addons/sale/sale.py:274 code:addons/sale/sale.py:990 code:addons/sale/sale.py:1171
+#: code:addons/sale/sale.py:274 code:addons/sale/sale.py:990
+#: code:addons/sale/sale.py:1171
 #, python-format
 msgid "Invalid Action!"
 msgstr "Ungültige Aktion!"
 
 #. module: sale
-#: code:addons/sale/wizard/sale_line_invoice.py:127 model:ir.model,name:sale.model_account_invoice view:sale.order:sale.view_order_form
+#: code:addons/sale/wizard/sale_line_invoice.py:127
+#: model:ir.model,name:sale.model_account_invoice
+#: view:sale.order:sale.view_order_form
 #, python-format
 msgid "Invoice"
 msgstr "Rechnung"
@@ -1129,7 +1162,8 @@ msgid "Invoice the whole sales order"
 msgstr "Auftrag komplett abrechnen"
 
 #. module: sale
-#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban field:sale.order,invoice_exists:0 field:sale.order.line,invoiced:0
+#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
+#: field:sale.order,invoice_exists:0 field:sale.order.line,invoiced:0
 msgid "Invoiced"
 msgstr "Abgerechnet"
 
@@ -1139,7 +1173,9 @@ msgid "Invoiced Ratio"
 msgstr "Abgerechneter Anteil"
 
 #. module: sale
-#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban model:ir.actions.act_window,name:sale.action_invoice_salesteams field:sale.order,invoice_ids:0
+#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
+#: model:ir.actions.act_window,name:sale.action_invoice_salesteams
+#: field:sale.order,invoice_ids:0
 msgid "Invoices"
 msgstr "Alle Rechnungen"
 
@@ -1179,12 +1215,18 @@ msgid "Last Message Date"
 msgstr "Datum der letzten Nachricht"
 
 #. module: sale
-#: field:sale.advance.payment.inv,write_uid:0 field:sale.make.invoice,write_uid:0 field:sale.order,write_uid:0 field:sale.order.line,write_uid:0 field:sale.order.line.make.invoice,write_uid:0
+#: field:sale.advance.payment.inv,write_uid:0
+#: field:sale.make.invoice,write_uid:0 field:sale.order,write_uid:0
+#: field:sale.order.line,write_uid:0
+#: field:sale.order.line.make.invoice,write_uid:0
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert durch"
 
 #. module: sale
-#: field:sale.advance.payment.inv,write_date:0 field:sale.make.invoice,write_date:0 field:sale.order,write_date:0 field:sale.order.line,write_date:0 field:sale.order.line.make.invoice,write_date:0
+#: field:sale.advance.payment.inv,write_date:0
+#: field:sale.make.invoice,write_date:0 field:sale.order,write_date:0
+#: field:sale.order.line,write_date:0
+#: field:sale.order.line.make.invoice,write_date:0
 msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
@@ -1214,7 +1256,8 @@ msgid "My Sales"
 msgstr "Meine Verkäufe"
 
 #. module: sale
-#: view:sale.order.line:sale.view_sales_order_line_filter view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 msgid "My Sales Order Lines"
 msgstr "Meine Verkaufsauftragspositionen"
 
@@ -1288,7 +1331,8 @@ msgid "Open Sale Menu"
 msgstr "Öffne Menü Verkauf"
 
 #. module: sale
-#: view:sale.order.line:sale.view_sales_order_line_filter view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
 msgid "Order"
 msgstr "Auftrag"
 
@@ -1303,7 +1347,8 @@ msgid "Order Lines to Invoice"
 msgstr "Auftragszeilen für Rechnung"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter view:sale.report:sale.view_order_product_search
+#: view:sale.order:sale.view_sales_order_filter
+#: view:sale.report:sale.view_order_product_search
 msgid "Order Month"
 msgstr "Auftragsdatum"
 
@@ -1355,7 +1400,7 @@ msgstr "Bezahlt"
 #. module: sale
 #: model:ir.model,name:sale.model_res_partner field:sale.report,partner_id:0
 msgid "Partner"
-msgstr "Partner"
+msgstr "Kunde"
 
 #. module: sale
 #: field:sale.order,payment_term:0
@@ -1441,7 +1486,10 @@ msgid "Procurements"
 msgstr "Beschaffung"
 
 #. module: sale
-#: model:ir.model,name:sale.model_product_product field:sale.order,product_id:0 view:sale.order.line:sale.view_sales_order_line_filter view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter field:sale.order.line,product_id:0 field:sale.report,product_id:0
+#: model:ir.model,name:sale.model_product_product field:sale.order,product_id:0
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: field:sale.order.line,product_id:0 field:sale.report,product_id:0
 msgid "Product"
 msgstr "Produkt"
 
@@ -1476,7 +1524,9 @@ msgid "Qty"
 msgstr "Anz."
 
 #. module: sale
-#: field:sale.advance.payment.inv,qtty:0 field:sale.order.line,product_uom_qty:0 view:website:sale.report_saleorder_document
+#: field:sale.advance.payment.inv,qtty:0
+#: field:sale.order.line,product_uom_qty:0
+#: view:website:sale.report_saleorder_document
 msgid "Quantity"
 msgstr "Menge"
 
@@ -1486,7 +1536,8 @@ msgid "Quantity (UoS)"
 msgstr "Menge (Verkaufseinheit)"
 
 #. module: sale
-#: view:sale.order:sale.view_order_form view:sale.order:sale.view_quotation_tree selection:sale.report,state:0
+#: view:sale.order:sale.view_order_form
+#: view:sale.order:sale.view_quotation_tree selection:sale.report,state:0
 msgid "Quotation"
 msgstr "Angebot"
 
@@ -1532,12 +1583,18 @@ msgid "Quotation created"
 msgstr "Angebot erstellt"
 
 #. module: sale
-#: model:mail.message.subtype,description:sale.mt_order_sent model:mail.message.subtype,name:sale.mt_order_sent
+#: model:mail.message.subtype,description:sale.mt_order_sent
+#: model:mail.message.subtype,name:sale.mt_order_sent
 msgid "Quotation sent"
 msgstr "Angebot gesendet"
 
 #. module: sale
-#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban field:crm.case.section,use_quotations:0 model:ir.actions.act_window,name:sale.action_quotations model:ir.actions.act_window,name:sale.action_quotations_salesteams model:ir.ui.menu,name:sale.menu_sale_quotations view:sale.order:sale.view_sales_order_filter
+#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
+#: field:crm.case.section,use_quotations:0
+#: model:ir.actions.act_window,name:sale.action_quotations
+#: model:ir.actions.act_window,name:sale.action_quotations_salesteams
+#: model:ir.ui.menu,name:sale.menu_sale_quotations
+#: view:sale.order:sale.view_sales_order_filter
 msgid "Quotations"
 msgstr "Angebote"
 
@@ -1612,7 +1669,13 @@ msgid "Sale to Invoice"
 msgstr "Abzurechnende Aufträge"
 
 #. module: sale
-#: view:product.product:sale.product_form_view_sale_order_button view:product.template:sale.product_template_form_view_sale_order_button view:res.company:sale.view_company_inherit_form2 view:res.partner:sale.crm_lead_partner_kanban_view view:res.partner:sale.res_partner_view_buttons view:sale.order:sale.view_sales_order_filter view:sale.report:sale.view_order_product_search
+#: view:product.product:sale.product_form_view_sale_order_button
+#: view:product.template:sale.product_template_form_view_sale_order_button
+#: view:res.company:sale.view_company_inherit_form2
+#: view:res.partner:sale.crm_lead_partner_kanban_view
+#: view:res.partner:sale.res_partner_view_buttons
+#: view:sale.order:sale.view_sales_order_filter
+#: view:sale.report:sale.view_order_product_search
 msgid "Sales"
 msgstr "Verkäufe"
 
@@ -1622,7 +1685,11 @@ msgid "Sales Advance Payment Invoice"
 msgstr "Anzahlungsrechnung"
 
 #. module: sale
-#: model:ir.actions.act_window,name:sale.action_order_report_all model:ir.actions.act_window,name:sale.action_order_report_so_salesteam model:ir.ui.menu,name:sale.menu_report_product_all view:sale.report:sale.view_order_product_graph view:sale.report:sale.view_order_product_search
+#: model:ir.actions.act_window,name:sale.action_order_report_all
+#: model:ir.actions.act_window,name:sale.action_order_report_so_salesteam
+#: model:ir.ui.menu,name:sale.menu_report_product_all
+#: view:sale.report:sale.view_order_product_graph
+#: view:sale.report:sale.view_order_product_search
 msgid "Sales Analysis"
 msgstr "Statistik Verkäufe"
 
@@ -1637,13 +1704,18 @@ msgid "Sales Make Invoice"
 msgstr "Verkauf erstellt Rechnung"
 
 #. module: sale
-#: code:addons/sale/sale.py:284 model:ir.model,name:sale.model_sale_order field:res.partner,sale_order_ids:0 model:res.request.link,name:sale.req_link_sale_order view:sale.order:sale.view_order_form view:sale.order:sale.view_sales_order_filter selection:sale.order,state:0
+#: code:addons/sale/sale.py:284 model:ir.model,name:sale.model_sale_order
+#: field:res.partner,sale_order_ids:0
+#: model:res.request.link,name:sale.req_link_sale_order
+#: view:sale.order:sale.view_order_form
+#: view:sale.order:sale.view_sales_order_filter selection:sale.order,state:0
 #, python-format
 msgid "Sales Order"
 msgstr "Verkaufsauftrag"
 
 #. module: sale
-#: model:mail.message.subtype,name:sale.mt_order_confirmed model:mail.message.subtype,name:sale.mt_salesteam_order_confirmed
+#: model:mail.message.subtype,name:sale.mt_order_confirmed
+#: model:mail.message.subtype,name:sale.mt_salesteam_order_confirmed
 msgid "Sales Order Confirmed"
 msgstr "Auftragsbestätigung"
 
@@ -1653,7 +1725,10 @@ msgid "Sales Order Line"
 msgstr "Auftragsposition"
 
 #. module: sale
-#: model:ir.actions.act_window,name:sale.action_order_line_product_tree view:sale.order:sale.view_order_form view:sale.order.line:sale.view_order_line_form2 view:sale.order.line:sale.view_order_line_tree
+#: model:ir.actions.act_window,name:sale.action_order_line_product_tree
+#: view:sale.order:sale.view_order_form
+#: view:sale.order.line:sale.view_order_line_form2
+#: view:sale.order.line:sale.view_order_line_tree
 msgid "Sales Order Lines"
 msgstr "Verkaufsauftragpositionen"
 
@@ -1698,7 +1773,13 @@ msgid "Sales Order that haven't yet been confirmed"
 msgstr "Nicht bestätigte Verkaufsaufträge"
 
 #. module: sale
-#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban model:ir.actions.act_window,name:sale.action_orders model:ir.actions.act_window,name:sale.action_orders_salesteams model:ir.ui.menu,name:sale.menu_sale_order view:sale.order:sale.view_order_tree view:sale.order:sale.view_sale_order_calendar view:sale.order:sale.view_sale_order_graph
+#: view:crm.case.section:sale.crm_case_section_salesteams_view_kanban
+#: model:ir.actions.act_window,name:sale.action_orders
+#: model:ir.actions.act_window,name:sale.action_orders_salesteams
+#: model:ir.ui.menu,name:sale.menu_sale_order
+#: view:sale.order:sale.view_order_tree
+#: view:sale.order:sale.view_sale_order_calendar
+#: view:sale.order:sale.view_sale_order_graph
 msgid "Sales Orders"
 msgstr "Aufträge"
 
@@ -1708,7 +1789,14 @@ msgid "Sales Orders Statistics"
 msgstr "Statistik Verkaufsauftrag"
 
 #. module: sale
-#: view:account.invoice:sale.account_invoice_groupby_inherit view:account.invoice:sale.account_invoice_tree field:account.invoice,section_id:0 view:account.invoice.report:sale.view_account_invoice_report_search_inherit field:account.invoice.report,section_id:0 view:sale.order:sale.view_sales_order_filter field:sale.order,section_id:0 view:sale.report:sale.view_order_product_search field:sale.report,section_id:0
+#: view:account.invoice:sale.account_invoice_groupby_inherit
+#: view:account.invoice:sale.account_invoice_tree
+#: field:account.invoice,section_id:0
+#: view:account.invoice.report:sale.view_account_invoice_report_search_inherit
+#: field:account.invoice.report,section_id:0
+#: view:sale.order:sale.view_sales_order_filter field:sale.order,section_id:0
+#: view:sale.report:sale.view_order_product_search
+#: field:sale.report,section_id:0
 msgid "Sales Team"
 msgstr "Verkaufsteam"
 
@@ -1728,7 +1816,10 @@ msgid "Sales order lines done"
 msgstr "Erledigte Auftragspositionen"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter field:sale.order,user_id:0 view:sale.order.line:sale.view_sales_order_line_filter field:sale.order.line,salesman_id:0 view:sale.report:sale.view_order_product_search field:sale.report,user_id:0
+#: view:sale.order:sale.view_sales_order_filter field:sale.order,user_id:0
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: field:sale.order.line,salesman_id:0
+#: view:sale.report:sale.view_order_product_search field:sale.report,user_id:0
 msgid "Salesperson"
 msgstr "Verkäufer"
 
@@ -1738,7 +1829,8 @@ msgid "Salesperson:"
 msgstr "Verkäufer:"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order:sale.view_sales_order_filter
+#: view:sale.order.line:sale.view_sales_order_line_filter
 msgid "Search Sales Order"
 msgstr "Suche Verkaufsaufträge"
 
@@ -1808,7 +1900,11 @@ msgid "Source Document"
 msgstr "Belegreferenz"
 
 #. module: sale
-#: field:sale.order,state:0 view:sale.order.line:sale.view_sales_order_line_filter view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter field:sale.order.line,state:0 view:sale.report:sale.view_order_product_search
+#: field:sale.order,state:0
+#: view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter
+#: field:sale.order.line,state:0
+#: view:sale.report:sale.view_order_product_search
 msgid "Status"
 msgstr "Status"
 
@@ -1832,7 +1928,8 @@ msgstr ""
 "den das Team in diesem Monat abrechnen soll."
 
 #. module: sale
-#: field:sale.order,amount_tax:0 field:sale.order.line,tax_id:0 view:website:sale.report_saleorder_document
+#: field:sale.order,amount_tax:0 field:sale.order.line,tax_id:0
+#: view:website:sale.report_saleorder_document
 msgid "Taxes"
 msgstr "Umsatzsteuer"
 
@@ -1962,7 +2059,8 @@ msgid "To Do"
 msgstr "Zu erledigen"
 
 #. module: sale
-#: view:sale.order:sale.view_sales_order_filter view:sale.order.line:sale.view_sales_order_line_filter
+#: view:sale.order:sale.view_sales_order_filter
+#: view:sale.order.line:sale.view_sales_order_line_filter
 msgid "To Invoice"
 msgstr "Abzurechnen"
 
@@ -1972,7 +2070,9 @@ msgid "To allow your salesman to make invoices for sales order lines using the m
 msgstr "Ermöglichen Sie einem Verkäufer das Menü 'Abzurechnende Positionen' anzuwenden"
 
 #. module: sale
-#: field:sale.order,amount_total:0 view:sale.order.line:sale.view_order_line_tree view:website:sale.report_saleorder_document
+#: field:sale.order,amount_total:0
+#: view:sale.order.line:sale.view_order_line_tree
+#: view:website:sale.report_saleorder_document
 msgid "Total"
 msgstr "Bruttobetrag"
 
@@ -1982,7 +2082,8 @@ msgid "Total Price"
 msgstr "Gesamtpreis"
 
 #. module: sale
-#: view:sale.order:sale.view_order_tree view:sale.order:sale.view_quotation_tree
+#: view:sale.order:sale.view_order_tree
+#: view:sale.order:sale.view_quotation_tree
 msgid "Total Tax Included"
 msgstr "Bruttobetrag"
 
@@ -2007,12 +2108,14 @@ msgid "Uninvoiced and Delivered Lines"
 msgstr "Abzurechnende Auslieferungen"
 
 #. module: sale
-#: field:sale.order.line,price_unit:0 view:website:sale.report_saleorder_document
+#: field:sale.order.line,price_unit:0
+#: view:website:sale.report_saleorder_document
 msgid "Unit Price"
 msgstr "Preis/ME"
 
 #. module: sale
-#: view:sale.order.line:sale.view_order_line_tree field:sale.report,product_uom:0
+#: view:sale.order.line:sale.view_order_line_tree
+#: field:sale.report,product_uom:0
 msgid "Unit of Measure"
 msgstr "Maßeinheit"
 
@@ -2096,7 +2199,9 @@ msgid "Warehouse Features"
 msgstr "Lagereigenschaften"
 
 #. module: sale
-#: code:addons/sale/wizard/sale_line_invoice.py:113 code:addons/sale/wizard/sale_make_invoice.py:42 code:addons/sale/wizard/sale_make_invoice.py:55
+#: code:addons/sale/wizard/sale_line_invoice.py:113
+#: code:addons/sale/wizard/sale_make_invoice.py:42
+#: code:addons/sale/wizard/sale_make_invoice.py:55
 #, python-format
 msgid "Warning!"
 msgstr "Warnung!"
@@ -2165,7 +2270,9 @@ msgid "Your Reference:"
 msgstr "Ihre Referenz:"
 
 #. module: sale
-#: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv view:sale.make.invoice:sale.view_sale_order_make_invoice view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
+#: view:sale.advance.payment.inv:sale.view_sale_advance_payment_inv
+#: view:sale.make.invoice:sale.view_sale_order_make_invoice
+#: view:sale.order.line.make.invoice:sale.view_sale_order_line_make_invoice
 msgid "or"
 msgstr "oder"
 
