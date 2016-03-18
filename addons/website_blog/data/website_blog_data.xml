@@ -7,7 +7,7 @@
             <field name="description">Presentation of new Odoo features</field>
         </record>
 
-        <record id="menu_news" model="website.menu">
+        <record id="menu_news" model="website.menu" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete nav-link News, it remain deleted if you update  -->
             <field name="name">News</field>
             <field name="url" eval="'/blog/'+str(ref('website_blog.blog_blog_1'))"/>
             <field name="parent_id" ref="website.main_menu"/>
