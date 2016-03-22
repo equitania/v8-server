@@ -726,7 +726,7 @@ msgstr "Leeren"
 #. module: website_quote
 #: view:website:website_quote.so_quotation
 msgid "Contact us"
-msgstr "Kontaktieren Sie uns"
+msgstr "Kontakt"
 
 #. module: website_quote
 #: view:website:website_quote.so_quotation
@@ -1266,7 +1266,7 @@ msgstr "und"
 #. module: website_quote
 #: view:website:website_quote.so_quotation
 msgid "contact us"
-msgstr "kontaktieren Sie uns"
+msgstr "Kontakt"
 
 #. module: website_quote
 #: view:website:website_quote.so_quotation

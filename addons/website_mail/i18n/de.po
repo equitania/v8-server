@@ -143,12 +143,12 @@ msgstr "Ziehen Sie in Betracht\n                                        eine Ges
 #. module: website_mail
 #: view:website:website_mail.email_designer_snippets
 msgid "Contact us"
-msgstr "Kontaktieren Sie uns"
+msgstr "Kontaktieren"
 
 #. module: website_mail
 #: view:website:website_mail.email_designer
 msgid "Design Your Email"
-msgstr "Design Ihrer E-Mail"
+msgstr "Aussehen Ihrer E-Mail"
 
 #. module: website_mail
 #: model:mail.group,name:website_mail.group_all_employees
