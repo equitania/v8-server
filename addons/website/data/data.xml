@@ -20,7 +20,7 @@
             <field name="sequence" type="int">10</field>
         </record>
 
-        <record id="menu_contactus" model="website.menu">
+        <record id="menu_contactus" model="website.menu" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete nav-link Contact us, it remain deleted if you update  -->
             <field name="name">Contact us</field>
             <field name="url">/page/contactus</field>
             <field name="parent_id" ref="website.main_menu"/>
