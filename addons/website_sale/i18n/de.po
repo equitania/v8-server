@@ -780,7 +780,7 @@ msgstr "Versand"
 #: view:website:website_sale.cart view:website:website_sale.checkout
 #: view:website:website_sale.confirmation view:website:website_sale.payment
 msgid "Shipping & Billing"
-msgstr "Liefern & Abrechnen"
+msgstr "Liefer- & Rechnungsadresse"
 
 #. module: website_sale
 #: view:website:website_sale.checkout
@@ -796,17 +796,17 @@ msgstr "Shop"
 #. module: website_sale
 #: view:website:website_sale.checkout
 msgid "Shop - Checkout"
-msgstr "Shop-Abmelden"
+msgstr "Bestellung abschliessen"
 
 #. module: website_sale
 #: view:website:website_sale.confirmation
 msgid "Shop - Confirmed"
-msgstr "Shop-Bestätigung"
+msgstr "Shop - Bestätigung"
 
 #. module: website_sale
 #: view:website:website_sale.payment
 msgid "Shop - Select Payment Mode"
-msgstr "Shop-Selektiere Zahlungsmodus"
+msgstr "Shop - Selektiere Zahlungsmodus"
 
 #. module: website_sale
 #: view:website:website_sale.cart
@@ -1056,7 +1056,7 @@ msgstr "Sie haben das E-Commerce Modul erfolgreich installiert. Diese Anleitung 
 #. module: website_sale
 #: view:website:website_sale.checkout
 msgid "Your Address"
-msgstr "Deine Adresse"
+msgstr "Ihre Adresse"
 
 #. module: website_sale
 #: view:website:website_sale.checkout
