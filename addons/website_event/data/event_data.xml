@@ -2,7 +2,7 @@
 <openerp>
     <data noupdate="1">
 
-        <record id="menu_events" model="website.menu">
+        <record id="menu_events" model="website.menu" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete nav-link Events, it remain deleted if you update  -->
             <field name="name">Events</field>
             <field name="url">/event</field>
             <field name="parent_id" ref="website.main_menu"/>
