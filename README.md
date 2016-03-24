@@ -4,7 +4,7 @@ MyOdoo
 MyOdoo ist ein "Fork" von Odoo, einem Browser gestützten Open Source Projekt für ERP, Warenwirtschaft, Lagerverwaltung, Webshop, CMS Anwendungen mit über 5.000 Zusatzmodule.
 
 MyOdoo ist für den deutschsprachigen Raum optimiert. Deshalb werden nur die Sprachen Deutsch und Englisch unterstützt.
-Die deutschen Sprachpakete unterscheiden sich in Details von den Standardpaketen, da diese aus unserer Sicht teilweise falsch, mißverständlich oder gar nicht übersetzt sind.
+Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den Standardpaketen, da diese aus unserer Sicht teilweise falsch, mißverständlich oder gar nicht übersetzt sind.
 
 **Bugfixes & Änderungen abweichend vom Hauptfork Stand März 2016**
 
@@ -26,15 +26,14 @@ Die deutschen Sprachpakete unterscheiden sich in Details von den Standardpaketen
 
 - addons/website_sale/data/data.xml -> Website Menü-Eintrag Shop wird beim Update nicht mehr geändert
 
-24. März 2016
 
 ![image](myodoo-server-fork-differences.png)
 
 Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
-`Aktuelle Buildversion: 160302`
+`Aktuelle Buildversion: 160303`
 
-`Letzer Abgleich: 22.03.2016`
+`Letzer Abgleich: 24.03.2016`
 
 Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 
