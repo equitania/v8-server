@@ -26,7 +26,9 @@ Die deutschen Sprachpakete unterscheiden sich in Details von den Standardpaketen
 
 - addons/website_sale/data/data.xml -> Website Menü-Eintrag Shop wird beim Update nicht mehr geändert
 
+24. März 2016
 
+![image](myodoo-server-fork-differences.png)
 
 Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
