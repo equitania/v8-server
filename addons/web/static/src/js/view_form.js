@@ -78,6 +78,8 @@ instance.web.FormView = instance.web.View.extend(instance.web.form.FieldManagerM
     template: "FormView",
     display_name: _lt('Form'),
     view_type: "form",
+    eq_sequence_no: -1,				// EQUITANIA - our helper variable to be able to calculate and set last next sequence no
+    
     /**
      * @constructs instance.web.FormView
      * @extends instance.web.View
@@ -849,16 +851,30 @@ instance.web.FormView = instance.web.View.extend(instance.web.form.FieldManagerM
                     // on 'create' : save all non readonly fields
                     // on 'edit' : save non readonly modified fields
                     if (!f.get("readonly")) {
-                        values[f.name] = f.get_value();
+                    	values[f.name] = f.get_value();			// DEFAULT - stick ALWAYS to this...
+                        // EQUITANIA - BUGFIX from 23.03.2016
+                    	// check if eq_use_manual_position_numbering is deactivated and that we're dealing with sale.order.line....set automatically sequence only in this case
+                    	if (!readonly_values.eq_use_manual_position_numbering && this.model == "sale.order.line"){
+                    		if (f.name == "sequence"){
+                            	if (self.eq_sequence_no == -1){
+                            		self.eq_sequence_no = f.get_value();
+                            	}
+                            	else{
+                            		self.eq_sequence_no = self.eq_sequence_no + 1;
+                            	}
+                            	values[f.name] = self.eq_sequence_no;
+                            }
+                    	}
                     } else {
                         readonly_values[f.name] = f.get_value();
                     }
                 }
             }
+            
             // Heuristic to assign a proper sequence number for new records that
             // are added in a dataset containing other lines with existing sequence numbers
             if (!self.datarecord.id && self.fields.sequence &&
-                !_.has(values, 'sequence') && !_.isEmpty(self.dataset.cache)) {
+                !_.has(values, 'sequence') && !_.isEmpty(self.dataset.cache)) {            	
                 // Find current max or min sequence (editable top/bottom)
                 var current = _[prepend_on_create ? "min" : "max"](
                     _.map(self.dataset.cache, function(o){return o.values.sequence})
@@ -5322,6 +5338,8 @@ instance.web.form.AbstractFormPopup = instance.web.Widget.extend({
                         self.view_form.on_button_new();
                     });
                 });
+                
+                
             });
             var $sbutton = self.$buttonpane.find(".oe_abstractformpopup-form-save");
             $sbutton.click(function() {

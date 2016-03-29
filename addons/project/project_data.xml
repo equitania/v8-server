@@ -26,7 +26,8 @@
         <function id="parent_project_default_set" model="ir.values" name="set" eval="('default',False,'parent_id', [('project.project', False)], all_projects_account, True, False, False, False, True)"/>
 
         <!-- Task Stages -->
-
+		<!-- EQUITANIA: Add forcecreate="False" -->
+		<!-- now change task stages, it remain changes if you update  -->
         <record id="project_tt_analysis" model="project.task.type" forcecreate="False">
             <field name="sequence">1</field>
             <field name="name">Analysis</field>
