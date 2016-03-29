@@ -15524,7 +15524,7 @@ msgstr "Ziel-Modell nutzt den need_action Mechanismus"
 #. module: base
 #: field:res.company,vat:0
 msgid "Tax ID"
-msgstr "Steuer-Nr."
+msgstr "USt-IdNr."
 
 #. module: base
 #: help:res.partner,vat:0
