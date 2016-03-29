@@ -15456,7 +15456,7 @@ msgstr ""
 #: code:addons/base/res/res_company.py:167 field:res.partner,vat:0
 #, python-format
 msgid "TIN"
-msgstr "Steuer-ID"
+msgstr "USt-IdNr."
 
 #. module: base
 #: selection:ir.mail_server,smtp_encryption:0
