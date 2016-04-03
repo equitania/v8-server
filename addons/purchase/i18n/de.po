@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2016-03-14 10:13+0100\n"
+"PO-Revision-Date: 2016-04-03 12:19+0200\n"
 "Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -465,6 +465,12 @@ msgid ""
 "              </p>\n"
 "            "
 msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"                Anklicken um eine Angebotsanfrage zu erstellen\n"
+"              </p><p>\n"
+"                Diese Anfrage beinhaltet den kompletten Kommunikationsverlauf mit Ihrem Lieferanten.\n"
+"                Sobald die Anfrage bestätigt ist, wird sie zu einer Bestellung umgewandelt.\n"
+"              </p><p>"
 
 #. module: purchase
 #: model:ir.actions.act_window,help:purchase.action_invoice_pending
@@ -738,7 +744,7 @@ msgstr "Kann eingekauft werden"
 #: code:addons/purchase/purchase.py:1189
 #, python-format
 msgid "Can not cancel this procurement as the related purchase order has been confirmed already.  Please cancel the purchase order first. "
-msgstr ""
+msgstr "Kann nicht diese Beschaffung zu annullieren, da diese im Zusammenhang mit Bestellung bereits bestätigt wurde. Bitte brechen Sie die Bestellung zuerst ab."
 
 #. module: purchase
 #: code:addons/purchase/stock.py:195
@@ -1279,7 +1285,7 @@ msgstr "Lagerort & Lager"
 #: code:addons/purchase/purchase.py:159
 #, python-format
 msgid "Make sure you have at least an incoming picking type defined"
-msgstr ""
+msgstr "Stellen Sie sicher, dass Sie den Kommissionierungstyp definiert haben."
 
 #. module: purchase
 #: field:purchase.config.settings,module_purchase_requisition:0
