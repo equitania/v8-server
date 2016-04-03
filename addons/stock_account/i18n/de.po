@@ -370,7 +370,7 @@ msgstr "Periodisch (manuell)"
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_picking
 msgid "Picking List"
-msgstr "Pickliste"
+msgstr "Kommissionierungsliste"
 
 #. module: stock_account
 #: field:stock.change.standard.price,new_price:0

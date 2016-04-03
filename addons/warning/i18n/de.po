@@ -78,7 +78,7 @@ msgstr "Partner"
 #. module: warning
 #: model:ir.model,name:warning.model_stock_picking
 msgid "Picking List"
-msgstr "Pickliste"
+msgstr "Kommissionierungsliste"
 
 #. module: warning
 #: model:ir.model,name:warning.model_product_template
@@ -126,7 +126,7 @@ msgstr "Die Auswahl \r\n    \"Warnung\" wird dem Benutzer die Meldung zeigen.\r\
 #. module: warning
 #: field:res.partner,picking_warn:0
 msgid "Stock Picking"
-msgstr "Pickauftrag"
+msgstr "Kommissionierungsauftrag"
 
 #. module: warning
 #: selection:product.template,purchase_line_warn:0

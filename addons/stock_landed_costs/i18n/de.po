@@ -396,7 +396,7 @@ msgid ""
 "landed costs. Landed costs are only possible for products configured in real"
 " time valuation with real price costing method. Please make sure it is the "
 "case, or you selected the correct picking"
-msgstr "Der gewählte Pickauftrag enthält keine Buchung, die durch Einstandskosten beeinträchtigt würden. Einstandskosten entstehen nur für Produkte, die in Echtzeit-Bewertung unter realer Kostenkalkulation eingestellt sind. Stellen Sie sicher, dass dies der Fall ist oder wählen Sie den korrekten Pickauftrag."
+msgstr "Der gewählte Kommissionierungsauftrag enthält keine Buchung, die durch Einstandskosten beeinträchtigt würden. Einstandskosten entstehen nur für Produkte, die in Echtzeit-Bewertung unter realer Kostenkalkulation eingestellt sind. Stellen Sie sicher, dass dies der Fall ist oder wählen Sie den korrekten Pickauftrag."
 
 #. module: stock_landed_costs
 #: field:stock.landed.cost,amount_total:0

@@ -4731,7 +4731,7 @@ msgid ""
 "    "
 msgstr ""
 "\n"
-"Dieses Modul fügt dem Lager-Modul die Möglichkeit Picklisten zu verwenden hinzu.\n"
+"Dieses Modul fügt dem Lager-Modul die Möglichkeit Kommissionierungslisten zu verwenden hinzu.\n"
 "====================================================================\n"
 "    "
 
