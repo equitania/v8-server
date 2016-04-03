@@ -27,4 +27,4 @@ msgstr "Rechnung erstellen"
 #. module: stock_invoice_directly
 #: model:ir.model,name:stock_invoice_directly.model_stock_picking
 msgid "Picking List"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"

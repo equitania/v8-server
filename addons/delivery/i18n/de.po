@@ -396,7 +396,7 @@ msgstr "Partner"
 #. module: delivery
 #: model:ir.model,name:delivery.model_stock_picking
 msgid "Picking List"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"
 
 #. module: delivery
 #: model:ir.actions.act_window,name:delivery.action_picking_tree

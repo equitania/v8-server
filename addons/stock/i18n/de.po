@@ -3158,7 +3158,7 @@ msgstr "Kommissionierungsauftrag"
 #: model:ir.model,name:stock.model_stock_picking
 #: view:stock.picking:stock.view_picking_internal_search
 msgid "Picking List"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"
 
 #. module: stock
 #: view:stock.picking:stock.view_picking_internal_search
@@ -3203,7 +3203,7 @@ msgstr "Picktypen"
 #. module: stock
 #: view:stock.picking:stock.vpicktree
 msgid "Picking list"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_transfer_details

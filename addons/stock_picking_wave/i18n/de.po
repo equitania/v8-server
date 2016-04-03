@@ -190,7 +190,7 @@ msgstr "Verantwortlicher Mitarbeiter für diese Welle"
 #. module: stock_picking_wave
 #: model:ir.model,name:stock_picking_wave.model_stock_picking
 msgid "Picking List"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"
 
 #. module: stock_picking_wave
 #: model:ir.model,name:stock_picking_wave.model_stock_picking_wave

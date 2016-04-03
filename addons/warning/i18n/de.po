@@ -78,7 +78,7 @@ msgstr "Partner"
 #. module: warning
 #: model:ir.model,name:warning.model_stock_picking
 msgid "Picking List"
-msgstr "Kommissionierungsliste"
+msgstr "Kommissionierungsliste/Lieferschein"
 
 #. module: warning
 #: model:ir.model,name:warning.model_product_template
