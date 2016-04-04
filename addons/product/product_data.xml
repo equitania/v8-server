@@ -229,6 +229,7 @@ parameter) will see those record just disappear.
             <field name="price_version_id" ref="ver0"/>
             <field name="base" ref="list_price"/>
             <field name="sequence">1000</field>
+            <!-- Equitania - better for German systems -->
             <field name="name">Basis Verkaufspreislistenversionsposition - NICHT löschen</field>
         </record>
 

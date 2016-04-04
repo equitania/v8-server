@@ -34,6 +34,7 @@
         <record id="item0" model="product.pricelist.item">
             <field name="price_version_id" ref="ver0"/>
             <field name="base" ref="product.standard_price"/>
+             <!-- Equitania - better for German systems -->
             <field name="name">Basis Einkaufspreislistenversionsposition - NICHT löschen</field>
         </record>
         

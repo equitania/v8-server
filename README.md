@@ -12,6 +12,14 @@ Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den 
 
 - /odoo/openerp/addons/base/res/res_config.py -> Erweiterung der Rechte-Gruppen um einen Managed Admin
 
+- /odoo/addons/product/product_data.xml -> Bessere deutsche Grundbegriffe für Lager und Preislisten
+
+- /odoo/addons/project/project_data.xml -> Projektstatt werden nicht mehr überschrieben bei Update
+
+- /odoo/addons/purchase/purchase_data.xml-> Bessere deutsche Grundbegriffe für Preislisten
+
+- /odoo/addons/stock/stock_data.xml -> Bessere deutsche Grundbegriffe für Lager
+
 - /odoo/addons/web/static/src/js/search.js -> Fehlerbeseitigung in der Suche
 
 - /odoo/addons/web/static/lib/underscore.string/lib.underscore.string.js -> Fehlerbeseitigung
@@ -31,9 +39,9 @@ Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den 
 
 Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
-`Aktuelle Buildversion: 160303`
+`Aktuelle Buildversion: 160401`
 
-`Letzer Abgleich: 24.03.2016`
+`Letzer Abgleich: 04.04.2016`
 
 Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 
@@ -54,7 +62,3 @@ Zur Installation des Servers:
 
 
 Weitere Informationen unter <a href="https://www.myoodoo.de">Myodoo.de</a>
-
-
-
-
