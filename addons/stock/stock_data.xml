@@ -15,24 +15,24 @@
     Resource: stock.location
     -->
         <record id="stock_location_locations" model="stock.location">
-            <field name="name">Physical Locations</field>
+            <field name="name">Reelle Lagerorte</field>
             <field name="usage">view</field>
             <field name="company_id"></field>
         </record>
         <record id="stock_location_locations_partner" model="stock.location">
-            <field name="name">Partner Locations</field>
+            <field name="name">Partner Lagerorte</field>
             <field name="usage">view</field>
             <field name="posz">1</field>
             <field name="company_id"></field>
         </record>
         <record id="stock_location_locations_virtual" model="stock.location">
-            <field name="name">Virtual Locations</field>
+            <field name="name">Virtuelle Lagerorte</field>
             <field name="usage">view</field>
             <field name="posz">1</field>
             <field name="company_id"></field>
         </record>
         <record id="stock_location_scrapped" model="stock.location">
-            <field name="name">Scrapped</field>
+            <field name="name">Ausschusslager</field>
             <field name="location_id" ref="stock_location_locations_virtual"/>
             <field name="scrap_location">True</field>
             <field name="usage">inventory</field>
@@ -40,31 +40,31 @@
         </record>
 
         <record id="location_inventory" model="stock.location">
-            <field name="name">Inventory loss</field>
+            <field name="name">Inventurverluste</field>
             <field name="location_id" ref="stock_location_locations_virtual"/>
             <field name="usage">inventory</field>
             <field name="company_id"></field>
         </record>
         <record id="location_procurement" model="stock.location">
-            <field name="name">Procurements</field>
+            <field name="name">Beschaffung</field>
             <field name="location_id" ref="stock_location_locations_virtual"/>
             <field name="usage">procurement</field>
             <field name="company_id"></field>
         </record>
         <record id="location_production" model="stock.location">
-            <field name="name">Production</field>
+            <field name="name">Fertigung</field>
             <field name="location_id" ref="stock_location_locations_virtual"/>
             <field name="usage">production</field>
             <field name="company_id"></field>
         </record>
         <record id="stock_location_suppliers" model="stock.location">
-            <field name="name">Suppliers</field>
+            <field name="name">Lieferanten</field>
             <field name="location_id" ref="stock_location_locations_partner"/>
             <field name="usage">supplier</field>
             <field name="company_id"></field>
         </record>
         <record id="stock_location_customers" model="stock.location">
-            <field name="name">Customers</field>
+            <field name="name">Kunden</field>
             <field name="location_id" ref="stock_location_locations_partner"/>
             <field name="usage">customer</field>
             <field name="company_id"></field>
