@@ -3304,19 +3304,3 @@ msgstr ""
 msgid "unknown"
 msgstr ""
 
-
-
-#. module: product
-#: field:product.price.history,company_id:0
-msgid "unknaaaaaown"
-msgstr ""
-
-#. module: product
-#: field:product.price.history,company_id:0
-msgid "xxx"
-msgstr ""
-
-#. module: product
-#: field:product.price.history,company_id:0
-msgid "asdasdas"
-msgstr ""
