@@ -3059,7 +3059,7 @@ msgstr "Packvorgang"
 #: model:stock.location,name:stock.location_pack_zone
 #, python-format
 msgid "Packing Zone"
-msgstr "Packungszone"
+msgstr "Verpackungszone"
 
 #. module: stock
 #: field:stock.transfer_details,packop_ids:0
@@ -3117,7 +3117,7 @@ msgstr "Inventur nach Monaten"
 #. module: stock
 #: model:stock.location,name:stock.stock_location_locations
 msgid "Physical Locations"
-msgstr "tatsächliche Lagerorte"
+msgstr "Reelle Lagerorte"
 
 #. module: stock
 #: model:ir.model,name:stock.model_stock_quant_package
@@ -3128,7 +3128,7 @@ msgstr "Verpackungen"
 #: code:addons/stock/stock.py:3302
 #, python-format
 msgid "Pick"
-msgstr "Picken"
+msgstr "Kommissionieren"
 
 #. module: stock
 #: code:addons/stock/stock.py:3395
