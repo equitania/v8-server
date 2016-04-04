@@ -1264,7 +1264,7 @@ msgstr "Tag(e)"
 #. module: product
 #: model:product.pricelist.version,name:product.ver0
 msgid "Default Public Pricelist Version"
-msgstr "Standard öffentliche Preisliste"
+msgstr "Basisversion - Allgemeine Verkaufspreisliste"
 
 #. module: product
 #: view:product.template:product.product_template_search_view
@@ -1363,7 +1363,7 @@ msgstr "Fehler ! Die  minimale Spanne sollte kleiner sein als die maximale Spann
 #. module: product
 #: constraint:product.pricelist.item:0
 msgid "Error! You cannot assign the Main Pricelist as Other Pricelist in PriceList Item!"
-msgstr "Fehler! Sie können nicht die 'Allgemeine Preisliste' als 'Andere Preisliste' in einer Preislistenposition zuordnen!"
+msgstr "Fehler! Sie können nicht die 'Allgemeine Verkaufspreisliste' als 'Andere Preisliste' in einer Preislistenversionsposition zuordnen!"
 
 #. module: product
 #: constraint:res.currency:0
@@ -2490,7 +2490,7 @@ msgstr "Allgemeiner Preis"
 #. module: product
 #: model:product.pricelist,name:product.list0
 msgid "Public Pricelist"
-msgstr "Allgemeine Preisliste"
+msgstr "Allgemeine Verkaufspreisliste"
 
 #. module: product
 #: view:product.template:product.product_template_form_view

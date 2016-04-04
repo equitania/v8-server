@@ -921,12 +921,12 @@ msgstr "Tage zur Bestätigung"
 #. module: purchase
 #: model:product.pricelist,name:purchase.list0
 msgid "Default Purchase Pricelist"
-msgstr "Standard Einkaufspreisliste"
+msgstr "Allgemeine Einkaufspreisliste"
 
 #. module: purchase
 #: model:product.pricelist.version,name:purchase.ver0
 msgid "Default Purchase Pricelist Version"
-msgstr "Standard Preislistenversion"
+msgstr "Basisversion - Allgemeine Einkaufspreisliste"
 
 #. module: purchase
 #: field:purchase.config.settings,default_invoice_method:0

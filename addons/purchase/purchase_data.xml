@@ -34,7 +34,7 @@
         <record id="item0" model="product.pricelist.item">
             <field name="price_version_id" ref="ver0"/>
             <field name="base" ref="product.standard_price"/>
-            <field name="name">Default Purchase Pricelist Line</field>
+            <field name="name">Basis Einkaufspreislistenversionsposition - NICHT löschen</field>
         </record>
         
         <record forcecreate="True" id="property_product_pricelist_purchase" model="ir.property">
