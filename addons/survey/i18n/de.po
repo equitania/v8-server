@@ -1470,7 +1470,7 @@ msgstr "Nummernfolge"
 #. module: survey
 #: sql_constraint:survey.stage:0
 msgid "Sequence number MUST be a natural"
-msgstr "Sequenznummern müssen natürliche Zahlen sein"
+msgstr "Positionsnummern müssen natürliche Zahlen sein"
 
 #. module: survey
 #: view:survey.survey:survey.survey_kanban

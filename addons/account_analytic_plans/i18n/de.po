@@ -414,7 +414,7 @@ msgstr "Verrechnung als Vorlage speichern"
 #. module: account_analytic_plans
 #: field:account.analytic.plan.line,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: account_analytic_plans
 #: field:account.crossovered.analytic,date1:0

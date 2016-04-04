@@ -2659,7 +2659,7 @@ msgstr "Kategorie für das neue Produkt wählen"
 #: field:product.packaging,sequence:0 field:product.pricelist.item,sequence:0
 #: field:product.supplierinfo,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: product
 #: model:product.public.category,name:product.server

@@ -3141,7 +3141,7 @@ msgstr "Self-Checkout Zahlungsmethode"
 #. module: point_of_sale
 #: field:pos.category,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: point_of_sale
 #: field:pos.order,sequence_number:0

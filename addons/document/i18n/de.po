@@ -678,7 +678,7 @@ msgstr "Seq."
 #. module: document
 #: field:document.directory.content,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: document
 #: view:document.directory:document.view_document_directory_filter

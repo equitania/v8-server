@@ -4692,12 +4692,12 @@ msgstr "Geschäftsjahr"
 #. module: account
 #: view:ir.sequence:account.sequence_inherit_form
 msgid "Fiscal Year Sequence"
-msgstr "Geschäftsjahr Sequenz"
+msgstr "Geschäftsjahr Reihenfolge"
 
 #. module: account
 #: view:ir.sequence:account.sequence_inherit_form
 msgid "Fiscal Year Sequences"
-msgstr "Geschäftsjahr Sequenz"
+msgstr "Geschäftsjahr Reihenfolge"
 
 #. module: account
 #: field:account.fiscalyear.close.state,fy_id:0
@@ -4964,7 +4964,7 @@ msgstr "Anzeigereihenfolge der Rechnungspositionen"
 #. module: account
 #: help:account.bank.statement.line,sequence:0
 msgid "Gives the sequence order when displaying a list of bank statement lines."
-msgstr "Erzeugt Sequenz für Anzeige der Bankdetails bei Buchungen"
+msgstr "Erzeugt eine Reihenfolge für Anzeige der Bankdetails bei Buchungen"
 
 #. module: account
 #: help:account.invoice.tax,sequence:0
@@ -6318,7 +6318,7 @@ msgstr "DIV"
 #. module: account
 #: field:account.sequence.fiscalyear,sequence_main_id:0
 msgid "Main Sequence"
-msgstr "Hauptsequenz"
+msgstr "Hauptreihenfolgez"
 
 #. module: account
 #: sql_constraint:account.sequence.fiscalyear:0
@@ -9820,7 +9820,7 @@ msgstr "Die ausgewählte Mengeneinheit ist nicht mit derjenigen für das Produkt
 #. module: account
 #: help:account.model.line,sequence:0
 msgid "The sequence field is used to order the resources from lower sequences to higher ones."
-msgstr "Die Einträge werden entsprechend Ihrer Sequenz aufsteigend sortiert"
+msgstr "Die Einträge werden entsprechend Ihrer Reihenfolge aufsteigend sortiert"
 
 #. module: account
 #: help:account.tax,sequence:0
@@ -9830,7 +9830,7 @@ msgstr "Des Feld \"Reihenfolge\" wird benutzt, um die Steuerzeilen aufsteigend z
 #. module: account
 #: help:account.tax.template,sequence:0
 msgid "The sequence field is used to order the taxes lines from lower sequences to higher ones. The order is important if you have a tax that has several tax children. In this case, the evaluation order is important."
-msgstr "Die Sequenz dient der Sortierung einzelner Steuerpositionen. Die Sequenz ist wichtig, wenn mehrere untergeordnete Steuern zu einer übergeordneten Steuer vorliegen."
+msgstr "Die Reihenfolge dient der Sortierung einzelner Steuerpositionen. Die Reihenfolge ist wichtig, wenn mehrere untergeordnete Steuern zu einer übergeordneten Steuer vorliegen."
 
 #. module: account
 #: code:addons/account/account_bank_statement.py:309

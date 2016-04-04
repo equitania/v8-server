@@ -649,7 +649,7 @@ msgstr "Die ausgewählte Mengeneinheit gehört nicht zur selben Kategorie wie di
 #. module: hr_expense
 #: field:hr.expense.line,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: hr_expense
 #: view:hr.expense.expense:hr_expense.view_expenses_form

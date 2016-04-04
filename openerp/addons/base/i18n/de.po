@@ -5434,7 +5434,7 @@ msgstr ""
 "Dieses Modul verwaltet die interne Nummernreihenfolge für die Buchhaltung.\n"
 "================================================================\n"
 "\n"
-"Es ist möglich die folgenden Attribute für diese Sequenz anzupassen:\n"
+"Es ist möglich die folgenden Attribute für diese Reihenfolge anzupassen:\n"
 "    *Präfix\n"
 "    *Suffix\n"
 "    *Nächste Nummer\n"
@@ -9342,7 +9342,7 @@ msgstr "Geben Sie Pyhton-Code hier ein. Hife zu Python-Ausdrücken ist in der Hi
 #. module: base
 #: model:ir.module.module,shortdesc:base.module_account_sequence
 msgid "Entries Sequence Numbering"
-msgstr "Buchungszeilen Sequenznummern"
+msgstr "Buchungszeile Positionsnummern"
 
 #. module: base
 #: model:res.country,name:base.gq
@@ -12596,7 +12596,7 @@ msgstr "Nächste Nummer zuweisen"
 #. module: base
 #: help:ir.sequence,number_next:0
 msgid "Next number of this sequence"
-msgstr "Nächste Nummer dieser Sequenz"
+msgstr "Nächste Nummer dieser Reihenfolge"
 
 #. module: base
 #: help:ir.sequence,number_next_actual:0
@@ -13617,7 +13617,7 @@ msgstr "Prefix"
 #. module: base
 #: help:ir.sequence,prefix:0
 msgid "Prefix value of the record for the sequence"
-msgstr "Präfixwert des Datensatzes für Sequenz"
+msgstr "Präfixwert des Datensatzes für die Reihenfolge"
 
 #. module: base
 #: model:ir.module.module,summary:base.module_website_instantclick
@@ -14677,7 +14677,7 @@ msgstr "Nummerncode"
 #: view:ir.sequence.type:base.sequence_type_tree_view
 #: view:ir.sequence.type:base.view_sequence_type_search
 msgid "Sequence Type"
-msgstr "Sequenz Typ"
+msgstr "Reihenfolge Typ"
 
 #. module: base
 #: model:ir.actions.act_window,name:base.ir_sequence_form
@@ -15289,7 +15289,7 @@ msgstr "Suffix"
 #. module: base
 #: help:ir.sequence,suffix:0
 msgid "Suffix value of the record for the sequence"
-msgstr "Endung (Suffix) einer Sequenz"
+msgstr "Endung (Suffix) einer Reihenfolge"
 
 #. module: base
 #: field:ir.module.module,summary:0

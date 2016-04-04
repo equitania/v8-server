@@ -1867,7 +1867,7 @@ msgstr "E-mail senden"
 #. module: sale
 #: field:sale.order.line,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: sale
 #: view:sale.order.line:sale.view_sales_order_uninvoiced_line_filter

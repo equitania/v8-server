@@ -657,7 +657,7 @@ msgstr "Mitteilung Bezeichnung"
 #. module: crm_partner_assign
 #: field:res.partner.activation,sequence:0 field:res.partner.grade,sequence:0
 msgid "Sequence"
-msgstr "Sequenz"
+msgstr "Reihenfolge"
 
 #. module: crm_partner_assign
 #: code:addons/crm_partner_assign/partner_geo_assign.py:37
