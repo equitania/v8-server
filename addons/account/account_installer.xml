@@ -1,5 +1,7 @@
 <openerp>
-    <data>
+    <data noupdate="1"> 
+    	<!-- EQUITANIA: Add noupdate="1" -->
+		<!-- now if you change the type of the record "Configure Accounting Data" in the installationassistant, it remain changes if you update  -->
         <record id="view_account_configuration_installer" model="ir.ui.view">
             <field name="name">account.installer.form</field>
             <field name="model">account.installer</field>

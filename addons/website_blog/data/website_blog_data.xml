@@ -15,8 +15,9 @@
         </record>
     </data>
 
-    <data>
-
+    <data noupdate="1">
+    <!-- EQUITANIA: Add noupdate="1" -->
+		<!-- now if you change the type of the record "Website Blogs" in the installationassistant, it remain changes if you update  -->
         <!-- jump to blog at install -->
         <record id="action_open_website" model="ir.actions.act_url">
             <field name="name">Website Blogs</field>
