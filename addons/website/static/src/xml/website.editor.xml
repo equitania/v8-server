@@ -205,6 +205,8 @@
                     <div class="form-group pull-left">
                         <input type="file" name="upload" accept="image/*" style="position: absolute; opacity: 0; width: 1px; height: 1px;"/>
                         <input type="hidden" name="disable_optimization" value=""/>
+                        <input type="hidden" name="optimization_1024" 	 value=""/>		<!-- EQUITANIA -->
+                        <input type="hidden" name="optimization_600" 	 value=""/>		<!-- EQUITANIA -->
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary filepicker">Upload an image from your computer</button>
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
@@ -213,6 +215,8 @@
                             </button>
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="#" class="js_disable_optimization">Upload image without optimization</a></li>
+                                <li><a href="#" class="js_optimization_1024">Max 1024x1024</a></li>		<!-- EQUITANIA -->
+                                <li><a href="#" class="js_optimization_600">Max 600x600</a></li>		<!-- EQUITANIA -->
                             </ul>
                         </div>
                         <button type="button" class="btn hidden wait" disabled="disabled">Uploading...</button>

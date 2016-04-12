@@ -1396,6 +1396,7 @@
             'click button.filepicker': function () {
                 var filepicker = this.$('input[type=file]');
                 if (!_.isEmpty(filepicker)){
+                	debugger;
                     filepicker[0].click();
                 }
             },
@@ -1403,9 +1404,29 @@
                 this.$('input[name="disable_optimization"]').val('1');
                 var filepicker = this.$('button.filepicker');
                 if (!_.isEmpty(filepicker)){
+                	debugger;
                     filepicker[0].click();
                 }
             },
+            
+            'click .js_optimization_1024': function () {					// EQUITANIA - support for optimization of pictures to 1024x1024
+            	this.$('input[name="disable_optimization"]').val('1024');
+                var filepicker = this.$('button.filepicker');
+                if (!_.isEmpty(filepicker)){
+                	debugger;
+                    filepicker[0].click();
+                }
+            },
+            
+            'click .js_optimization_600': function () {						// EQUITANIA - support for optimization of pictures to 600x600
+            	this.$('input[name="disable_optimization"]').val('600');
+                var filepicker = this.$('button.filepicker');
+                if (!_.isEmpty(filepicker)){
+                	debugger;
+                    filepicker[0].click();
+                }
+            },
+            
             'change input[type=file]': 'file_selection',
             'submit form': 'form_submit',
             'change input.url': "change_input",
