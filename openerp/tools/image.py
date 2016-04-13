@@ -205,8 +205,8 @@ def image_resize_and_sharpen(image, size, preserve_aspect_ratio=False, factor=2.
         :param preserve_aspect_ratio: boolean (default: False)
         :param factor: Sharpen factor (default: 2.0)
     """
-    print "* 2. image_resize_and_sharpen"
-    print "* preserve_aspect_ratio: ", preserve_aspect_ratio
+    #print "* 2. image_resize_and_sharpen"
+    #print "* preserve_aspect_ratio: ", preserve_aspect_ratio
     
     if image.mode != 'RGBA':
         image = image.convert('RGBA')
@@ -219,6 +219,40 @@ def image_resize_and_sharpen(image, size, preserve_aspect_ratio=False, factor=2.
     image = Image.new('RGBA', size, (255, 255, 255, 0))
     image.paste(resized_image, ((size[0] - resized_image.size[0]) / 2, (size[1] - resized_image.size[1]) / 2))
     return image
+
+def eq_image_save_for_web(image, fp=None, format=None, convertPNGToJPEG=False):
+    """
+        Save image optimized for web usage.
+
+        :param image: PIL.Image.Image()
+        :param fp: File name or file object. If not specified, a bytestring is returned.
+        :param format: File format if could not be deduced from image.
+    """
+    #print "* 3. image_save_for_web"
+    opt = dict(format=image.format or format)
+    if image.format == 'PNG':
+        opt.update(optimize=True)
+        alpha = False
+        if image.mode in ('RGBA', 'LA') or (image.mode == 'P' and 'transparency' in image.info):
+            alpha = image.convert('RGBA').split()[-1]
+            
+        if image.mode != 'P':
+            image = image.convert('RGBA', palette=Image.WEB)                                    # EQUITANIA - for better quality of png pictures
+            if convertPNGToJPEG:
+                opt['format'] = 'JPEG'
+                                                     
+        if alpha:
+            image.putalpha(alpha)            
+    elif image.format == 'JPEG':
+        opt.update(optimize=True, quality=80)
+        
+    if fp:
+        image.save(fp, **opt)
+    else:        
+        img = StringIO.StringIO()
+        image.save(img, **opt)
+        return img.getvalue()
+
 
 def image_save_for_web(image, fp=None, format=None):
     """
@@ -234,19 +268,21 @@ def image_save_for_web(image, fp=None, format=None):
         opt.update(optimize=True)
         alpha = False
         if image.mode in ('RGBA', 'LA') or (image.mode == 'P' and 'transparency' in image.info):
-            alpha = image.convert('RGBA').split()[-1]
+            alpha = image.convert('RGBA').split()[-1]            
         if image.mode != 'P':
             # Floyd Steinberg dithering by default
-            image = image.convert('RGBA').convert('P', palette=Image.WEB, colors=256)
+            image = image.convert('RGBA').convert('P', palette=Image.WEB, colors=256)        # default                        
         if alpha:
-            image.putalpha(alpha)
+            image.putalpha(alpha)            
     elif image.format == 'JPEG':
         opt.update(optimize=True, quality=80)
+        
     if fp:
         image.save(fp, **opt)
-    else:
+    else:        
         img = StringIO.StringIO()
         image.save(img, **opt)
+        result = img.getvalue()
         return img.getvalue()
 
 def image_resize_image_big(base64_source, size=(1024, 1024), encoding='base64', filetype=None, avoid_if_small=True):

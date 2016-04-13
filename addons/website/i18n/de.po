@@ -4539,16 +4539,33 @@ msgstr "-oder-"
 msgid "← Previous"
 msgstr "Zurück"
 
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:218
-#, python-format
-msgid "Max 1024x1024"
-msgstr "Maximale Größe 1024 Pixel"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:219
+#: code:addons/website/static/src/xml/website.editor.xml:222
+#, python-format
+msgid "Max 1024x1024"
+msgstr "Upload groß mit Transparenz (verkleinert auf max 1024 Pixel)"
+
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:223
 #, python-format
 msgid "Max 600x600"
-msgstr "Maximale Größe 600 Pixel"
+msgstr "Upload normal mit Transparenz (verkleinert auf max 600 Pixel)"
+
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:220
+#, python-format
+msgid "Max 1024x1024 without transparent"
+msgstr "Upload groß (verkleinert auf max 1024 Pixel in JPG)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:221
+#, python-format
+msgid "Max 600x600 with transparent"
+msgstr "Upload normal (verkleinert auf max 600 Pixel in JPG)"
