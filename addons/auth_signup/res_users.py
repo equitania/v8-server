@@ -125,7 +125,20 @@ class res_partner(osv.Model):
                 token = random_token()
                 while self._signup_retrieve_partner(cr, uid, token, context=context):
                     token = random_token()
-                partner.write({'signup_token': token, 'signup_type': signup_type, 'signup_expiration': expiration})
+                ###Test: signup_url aus fields entfernen, damit es während der Protokollierung nicht gelesen wird
+                old_val = None
+                key_found = False
+                if 'signup_url' in self._fields:
+                    key_found = True
+                    old_val = self._fields['signup_url']
+                    del self._fields['signup_url']
+                
+                try:
+                    partner.write({'signup_token': token, 'signup_type': signup_type, 'signup_expiration': expiration})
+                except:
+                    pass
+                if key_found:
+                    self._fields['signup_url'] = old_val
         return True
 
     def _signup_retrieve_partner(self, cr, uid, token,
