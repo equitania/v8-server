@@ -208,9 +208,14 @@
                         <input type="hidden" name="optimization_1024" 	 value=""/>		<!-- EQUITANIA -->
                         <input type="hidden" name="optimization_600" 	 value=""/>		<!-- EQUITANIA -->
                         <input type="hidden" name="optimization_1024_to_jpeg" 	 value=""/>		<!-- EQUITANIA -->
-                        <input type="hidden" name="optimization_600_to_jpeg" 	 value=""/>		<!-- EQUITANIA -->
+                        <input type="hidden" name="optimization_600_to_jpeg" 	 value=""/>		<!-- EQUITANIA -->                        
                         <div class="btn-group">
-                            <button type="button" class="btn btn-primary filepicker">Upload an image from your computer</button>
+                                                     
+                         	<!-- DEFAULT
+                         	<button type="button" class="btn btn-primary filepicker">Upload an image from your computer</button>
+                         	 -->
+                         	<button type="button" class="btn-primary filepicker" style="visibility: hidden;"></button>		<!-- EQUITANIA -->
+                         	<button type="button" class="btn btn-primary" style="width:300px;height:28px;"></button>		<!-- EQUITANIA -->
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span>
                                 <span class="sr-only">Alternate Upload</span>
