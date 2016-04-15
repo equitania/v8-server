@@ -152,10 +152,11 @@
                         <h3 class="modal-title">Select a Media</h3>
                     </div>
                     <div class="modal-body">
+                    	<input type="hidden" id="hfActualTabIndex"></input>
                         <ul class="nav nav-tabs">
-                            <li class="active"><a href="#editor-media-image" data-toggle="tab">Image</a></li>
-                            <li><a href="#editor-media-icon" data-toggle="tab">Pictogram</a></li>
-                            <li><a href="#editor-media-video" data-toggle="tab">Video</a></li>
+                            <li class="active eq_tab"><a href="#editor-media-image" data-toggle="tab">Image</a></li>
+                            <li class="eq_tab"><a href="#editor-media-icon" data-toggle="tab">Pictogram</a></li>
+                            <li class="eq_tab"><a href="#editor-media-video" data-toggle="tab">Video</a></li>
                             <li class="search" style="float: right;">
                                 <ul class="pager mb0 mt0">
                                     <li class="previous disabled"><a href="#">← Previous</a></li>
@@ -238,8 +239,10 @@
                             <input type="text" name="url" class="form-control url pull-left" style="width: 320px;" id="iamgeurl" placeholder="http://openerp.com/logo.png"/>
                             <button class="btn btn-default" type="submit">Add</button>
                         </div>
-                        <button type="button" class="btn btn-primary btn-normalView">Normalview</button>
-                        <button type="button" class="btn btn-primary btn-listView">Listview</button>
+                        <div class="pull-right">                        
+	                        <button type="button" class="btn btn-primary btn-normalView"><span class="fa fa-picture-o fa-2x"></span></button>
+ 							<button type="button" class="btn btn-default btn-listView"><span class="fa fa-list fa-2x"></span></button>
+                        </div>
                     </div>
                 </div>
                 <input type="hidden" name="func"/>

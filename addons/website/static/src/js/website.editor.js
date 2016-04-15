@@ -1395,6 +1395,7 @@
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = false;
+    var ACTUALTAB = 0;
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -1443,13 +1444,23 @@
                     filepicker[0].click();
                 }
             },                       
-            'click .btn-normalView': function () {									// EQUITANIA - change back to normal view
-            	self.SHOWLISTVIEW = false;
+            'click .btn-normalView': function () {									// EQUITANIA - change back to normal view            
+            	$(".btn-normalView").addClass("btn-primary");
+            	$(".btn-normalView").removeClass("btn-default");
+            	$(".btn-listView").removeClass("btn-primary");
+            	$(".btn-listView").addClass("btn-default");            	            
             	$(".existing-attachments-listview").hide();
             	$(".existing-attachments").show();            	
-            	$(".help-block").hide();											// EQUITANIA - hide warnings            	
+            	$(".help-block").hide();											// EQUITANIA - hide warnings
+            	self.SHOWLISTVIEW = false;
             },            
             'click .btn-listView': function () {									// EQUITANIA - change to listview
+            	$(".btn-listView").addClass("btn-primary");
+            	$(".btn-listView").removeClass("btn-default");            	
+            	$(".btn-normalView").removeClass("btn-primary");
+            	$(".btn-normalView").addClass("btn-default");
+            	
+            	
             	self.SHOWLISTVIEW = true;
             	$(".existing-attachments").hide();
             	$(".help-block").hide();											// EQUITANIA - hide warnings            	
@@ -1472,28 +1483,35 @@
             'click .existing-attachment-remove_listview': 'try_remove_listview',
         }),
 
-        init: function (parent, editor, media) {
+        init: function (parent, editor, media) {        	
             this.page = 0;
+            this.ACTUALTAB = 0;            
             this._super(parent, editor, media);            
         },
         
-        start: function () {        	
+        start: function () {    
             var self = this;
             var res = this._super();
-                       
+            this.SHOWLISTVIEW = false;
+            
             var o = { url: null };
             // avoid typos, prevent addition of new properties to the object
             Object.preventExtensions(o);
             this.trigger('start', o);
 
-            this.parent.$(".pager > li").click(function (e) {
+            this.parent.$(".eq_tab").click(function (e) {
+            	self.ACTUALTAB = $(this).index();
+            	console.log("self.ACTUALTAB: " + self.ACTUALTAB);
+            });
+            
+            this.parent.$(".pager > li").click(function (e) {            	
                 e.preventDefault();
                 var $target = $(e.currentTarget);
                 if ($target.hasClass('disabled')) {
                     return;
                 }
                 self.page += $target.hasClass('previous') ? -1 : 1;
-                console.log("self.page: " + self.page);
+                //console.log("self.page: " + self.page);
                 //self.display_attachments();							// DEFAULT
                 self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
             });
@@ -1600,13 +1618,13 @@
         },
         fetched_existing: function (records) {
             this.records = records;
-            //this.display_attachments();									// DEFAULT            
-            this.display_attachments(self.SHOWLISTVIEW);					// EQUITANIA - refresh page and stay on default view            	
+            //this.display_attachments();									// DEFAULT
+            this.display_attachments(this.SHOWLISTVIEW);					// EQUITANIA - refresh page and stay on default view            	
         },
         
         // display_attachments: function () {								// DEFAULT
         display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh        	
-        	console.log("CORE - display_attachments");
+        	console.log("CORE - display_attachments");        	
             this.$('.help-block').empty();
             var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
 
@@ -1619,9 +1637,7 @@
                 .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_ROW); })
                 .values()
                 .value();
-
-            
-            
+                       
             // replace result html by defined template
             //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default
             this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: records}));	// EQUITANIA
