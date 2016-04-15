@@ -1368,6 +1368,13 @@
         }
     });
 
+    
+    
+    
+    
+    
+    
+    
     /**
      * ImageDialog widget. Lets users change an image, including uploading a
      * new image in OpenERP or selecting the image style (if supported by
@@ -1387,6 +1394,7 @@
      */
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
+    var SHOWLISTVIEW = false;
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -1436,11 +1444,13 @@
                 }
             },                       
             'click .btn-normalView': function () {									// EQUITANIA - change back to normal view
+            	self.SHOWLISTVIEW = false;
             	$(".existing-attachments-listview").hide();
             	$(".existing-attachments").show();            	
             	$(".help-block").hide();											// EQUITANIA - hide warnings            	
             },            
-            'click .btn-listView': function () {									// EQUITANIA - change to listview            	
+            'click .btn-listView': function () {									// EQUITANIA - change to listview
+            	self.SHOWLISTVIEW = true;
             	$(".existing-attachments").hide();
             	$(".help-block").hide();											// EQUITANIA - hide warnings            	
             	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
@@ -1466,6 +1476,7 @@
             this.page = 0;
             this._super(parent, editor, media);            
         },
+        
         start: function () {        	
             var self = this;
             var res = this._super();
@@ -1482,6 +1493,7 @@
                     return;
                 }
                 self.page += $target.hasClass('previous') ? -1 : 1;
+                console.log("self.page: " + self.page);
                 //self.display_attachments();							// DEFAULT
                 self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
             });
@@ -1489,7 +1501,7 @@
             this.set_image(o.url);
 
             return res;
-        },
+        },        
         save: function () {
             if (!this.link) {
                 this.link = this.$(".existing-attachments img:first").attr('src');
@@ -1507,7 +1519,6 @@
         cancel: function () {
             this.trigger('cancel');
         },
-
         change_input: function (e) {
             var $input = $(e.target);
             var $button = $input.parent().find("button");
@@ -1517,14 +1528,12 @@
                 $button.removeClass("btn-default").addClass("btn-primary");
             }
         },
-
         search: function (needle) {
             var self = this;
             this.fetch_existing(needle).then(function () {
                 self.selected_existing(self.$('input.url').val());
             });
         },
-
         set_image: function (url, error) {
             var self = this;
             if (url) this.link = url;
@@ -1533,7 +1542,6 @@
                 self.selected_existing(url);
             });
         },
-
         form_submit: function (event) {
             var self = this;
             var $form = this.$('form[action="/website/attach"]');
@@ -1571,7 +1579,6 @@
             // auto save and close popup
             this.parent.save();
         },
-
         fetch_existing: function (needle) {
             var domain = [['res_model', '=', 'ir.ui.view'], '|',
                         ['mimetype', '=', false], ['mimetype', '=like', 'image/%']];
@@ -1593,12 +1600,13 @@
         },
         fetched_existing: function (records) {
             this.records = records;
-            //this.display_attachments();									// DEFAULT
-            this.display_attachments(false);								// EQUITANIA - refresh page and stay on default view
+            //this.display_attachments();									// DEFAULT            
+            this.display_attachments(self.SHOWLISTVIEW);					// EQUITANIA - refresh page and stay on default view            	
         },
         
         // display_attachments: function () {								// DEFAULT
-        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh
+        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh        	
+        	console.log("CORE - display_attachments");
             this.$('.help-block').empty();
             var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
 
@@ -1638,19 +1646,20 @@
             }
                                    
             
-        },
-        
-        select_existing: function (e) {
+        },        
+        select_existing: function (e) {        	
             var link = $(e.currentTarget).attr('src');
             this.link = link;
             this.selected_existing(link);
         },
+        
         selected_existing: function (link) {
             this.$('.existing-attachment-cell.media_selected').removeClass("media_selected");
             var $select = this.$('.existing-attachment-cell img').filter(function () {
                 return $(this).attr("src") == link;
             }).first();
             $select.parent().addClass("media_selected");
+            
             return $select;
         },
 
@@ -1723,6 +1732,29 @@
         
     });
 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     website.editor.RTEImageDialog = website.editor.ImageDialog.extend({
         init: function (parent, editor, media) {
             this._super(parent, editor, media);

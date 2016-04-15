@@ -1,4 +1,9 @@
 ### 15.04.2016
+### website, 1.0.2
+#### Erweiterung
+- Mediacenter, Kontextbezogene Bildsuche auf im Normalview und Listview und Anzeige der Treffersuche verbesser. Ab jetzt wird immer die aktuelle ansicht (view) korrekt angezeigt und Benutzer wird nicht mehr zurück auf Normalview umgeleitet
+
+### 15.04.2016
 ### website, 1.0.1
 #### Erweiterung
 - Mediacenter, Bildupload um Listview erweitert
