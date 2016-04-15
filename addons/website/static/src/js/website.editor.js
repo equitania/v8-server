@@ -1394,7 +1394,7 @@
      */
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
-    var SHOWLISTVIEW = false;
+    var SHOWLISTVIEW = true;
     var ACTUALTAB = 0;
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
@@ -1452,7 +1452,7 @@
             	$(".existing-attachments-listview").hide();
             	$(".existing-attachments").show();            	
             	$(".help-block").hide();											// EQUITANIA - hide warnings
-            	self.SHOWLISTVIEW = false;
+            	this.SHOWLISTVIEW = false;
             },            
             'click .btn-listView': function () {									// EQUITANIA - change to listview
             	$(".btn-listView").addClass("btn-primary");
@@ -1461,7 +1461,7 @@
             	$(".btn-normalView").addClass("btn-default");
             	
             	
-            	self.SHOWLISTVIEW = true;
+            	this.SHOWLISTVIEW = true;
             	$(".existing-attachments").hide();
             	$(".help-block").hide();											// EQUITANIA - hide warnings            	
             	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
@@ -1492,7 +1492,7 @@
         start: function () {    
             var self = this;
             var res = this._super();
-            this.SHOWLISTVIEW = false;
+            this.SHOWLISTVIEW = true;
             
             var o = { url: null };
             // avoid typos, prevent addition of new properties to the object
@@ -1511,8 +1511,6 @@
                     return;
                 }
                 self.page += $target.hasClass('previous') ? -1 : 1;
-                //console.log("self.page: " + self.page);
-                //self.display_attachments();							// DEFAULT
                 self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
             });
 
@@ -1623,7 +1621,7 @@
         },
         
         // display_attachments: function () {								// DEFAULT
-        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh        	
+        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh
         	console.log("CORE - display_attachments");        	
             this.$('.help-block').empty();
             var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
