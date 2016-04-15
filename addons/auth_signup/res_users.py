@@ -125,6 +125,7 @@ class res_partner(osv.Model):
                 token = random_token()
                 while self._signup_retrieve_partner(cr, uid, token, context=context):
                     token = random_token()
+                ###Equitania     
                 ###Test: signup_url aus fields entfernen, damit es während der Protokollierung nicht gelesen wird
                 old_val = None
                 key_found = False
