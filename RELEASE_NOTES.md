@@ -1,4 +1,9 @@
 ### 15.04.2016
+### website, 1.0.5
+#### Änderung
+- Migration der Funktionalität vom eq_website_customerportal in Kern
+
+### 15.04.2016
 ### website, 1.0.4
 #### Änderung
 - Änderung der kontextbezogene Suche + Änderung der Defaultansicht

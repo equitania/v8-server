@@ -4590,3 +4590,26 @@ msgstr "Bild"
 #, python-format
 msgid "Click here to upload"
 msgstr "zur Bildauswahl hier anklicken"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:292
+#, python-format
+msgid "Filename"
+msgstr "Dateiname"
+
+#. modules: website, web, web_kanban, web_calendar, note, crm, sales_team, stock
+#. openerp-web
+#: view:crm.lead:crm.crm_case_kanban_view_leads
+#: view:note.note:note.view_note_note_kanban
+#: view:crm.case.section:sales_team.crm_case_section_salesteams_view_kanban
+#: view:stock.picking.type:stock.stock_picking_type_kanban
+#: code:addons/web/static/src/js/view_form.js:207
+#: code:addons/web/static/src/js/view_list.js:354
+#: code:addons/web/static/src/xml/base.xml:1912
+#: code:addons/web_calendar/static/src/js/web_calendar.js:846
+#: code:addons/web_kanban/static/src/xml/web_kanban.xml:49
+#: code:addons/website/static/src/xml/website.editor.xml:295
+#, python-format
+msgid "Delete"
+msgstr "Löschen"

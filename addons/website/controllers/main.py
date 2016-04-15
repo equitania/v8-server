@@ -1,5 +1,10 @@
 # -*- coding: utf-8 -*-
 import cStringIO
+import os
+import base64
+#from PIL import Image
+import PIL
+
 import datetime
 from itertools import islice
 import json
@@ -17,7 +22,7 @@ import openerp
 from openerp.addons.web.controllers.main import WebClient
 from openerp.addons.web import http
 from openerp.http import request, STATIC_CACHE
-from openerp.tools import image_save_for_web
+from openerp.tools import image_save_for_web, eq_image_save_for_web, image_resize_image, eq_image_resize_image
 
 logger = logging.getLogger(__name__)
 
@@ -290,8 +295,9 @@ class Website(openerp.addons.web.controllers.main.Home):
         modules = [x['name'] for x in module_obj.read(request.cr, request.uid, module_ids, ['name'], context=request.context)]
         return WebClient().translations(mods=modules, lang=lang)
 
-    @http.route('/website/attach', type='http', auth='user', methods=['POST'], website=True)
-    def attach(self, func, upload=None, url=None, disable_optimization=None):
+    @http.route('/website/attach', type='http', auth='user', methods=['POST'], website=True)    
+    def attach(self, func, upload=None, url=None, disable_optimization=None, optimization_600=None, optimization_1024=None, optimization_600_to_jpeg=None, optimization_1024_to_jpeg=None):
+    #def attach(self, func, upload=None, url=None, disable_optimization=None):
         Attachments = request.registry['ir.attachment']
 
         website_url = message = None
@@ -314,27 +320,61 @@ class Website(openerp.addons.web.controllers.main.Home):
                         u"Image size excessive, uploaded images must be smaller "
                         u"than 42 million pixel")
 
-                if not disable_optimization and image.format in ('PNG', 'JPEG'):
-                    image_data = image_save_for_web(image)
+                if not disable_optimization and image.format in ('PNG', 'JPEG'):        # optimization is NOT disabled               
+                    #print "# DEFAULT: optimize image #"                                        
+                    image_data = eq_image_save_for_web(image, None, None, True)
+                    # finally save our attachment
+                    attachment_id = Attachments.create(request.cr, request.uid, {
+                        'name': upload.filename,
+                        'datas': image_data.encode('base64'),
+                        'datas_fname': upload.filename,
+                        'res_model': 'ir.ui.view',
+                    }, request.context)                
+                elif disable_optimization == "1":
+                    #print "# DEFAULT - disabled optimization #"
+                    attachment_id = Attachments.create(request.cr, request.uid, {
+                        'name': upload.filename,
+                        'datas': image_data.encode('base64'),
+                        'datas_fname': upload.filename,
+                        'res_model': 'ir.ui.view',
+                    }, request.context)
+                else:
+                    #print "* disable_optimization: ", disable_optimization
+                    convert_to_jpeg = False
+                    if "_to_jpeg" in disable_optimization:
+                        convert_to_jpeg = True         
+                        disable_optimization = disable_optimization.replace("_to_jpeg", "")                       
+                    
+                    #print "EQUITANIA - optimization"
+                    image_data = eq_image_save_for_web(image, None, None, convert_to_jpeg)
+                    encoded_image = base64.b64encode(image_data)                                                # encode image to base64
+                    if disable_optimization == "600":                                            
+                        image_data = eq_image_resize_image(encoded_image, (600, 600), "base64", None, False)       # resize image                        
+                    elif disable_optimization == "1024":
+                        image_data = eq_image_resize_image(encoded_image, (1024, 1024), "base64", None, False)       # resize image
 
-                attachment_id = Attachments.create(request.cr, request.uid, {
-                    'name': upload.filename,
-                    'datas': image_data.encode('base64'),
-                    'datas_fname': upload.filename,
-                    'res_model': 'ir.ui.view',
-                }, request.context)
+                    # finally save our attachment
+                    attachment_id = Attachments.create(request.cr, request.uid, {
+                        'name': upload.filename,
+                        'datas': image_data,
+                        'datas_fname': upload.filename,
+                        'res_model': 'ir.ui.view',
+                    }, request.context)
 
-                [attachment] = Attachments.read(
-                    request.cr, request.uid, [attachment_id], ['website_url'],
-                    context=request.context)
+                #print "* attachment_id: ", attachment_id
+                
+                [attachment] = Attachments.read(request.cr, request.uid, [attachment_id], ['website_url'], context=request.context)
                 website_url = attachment['website_url']
             except Exception, e:
-                logger.exception("Failed to upload image to attachment")
+                _logger.exception("Failed to upload image to attachment")
                 message = unicode(e)
 
         return """<script type='text/javascript'>
             window.parent['%s'](%s, %s);
         </script>""" % (func, json.dumps(website_url), json.dumps(message))
+
+
+
 
     @http.route(['/website/publish'], type='json', auth="public", website=True)
     def publish(self, id, object):
