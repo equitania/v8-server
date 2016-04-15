@@ -1405,16 +1405,14 @@
                 if (!_.isEmpty(filepicker)){
                     filepicker[0].click();
                 }
-            },
-            
+            },            
             'click .js_optimization_1024': function () {					// EQUITANIA - support for optimization of pictures to 1024x1024
             	this.$('input[name="disable_optimization"]').val('1024');
                 var filepicker = this.$('button.filepicker');
                 if (!_.isEmpty(filepicker)){
                     filepicker[0].click();
                 }
-            },
-            
+            },            
             'click .js_optimization_600': function () {						// EQUITANIA - support for optimization of pictures to 600x600
             	this.$('input[name="disable_optimization"]').val('600');
                 var filepicker = this.$('button.filepicker');
@@ -1422,29 +1420,38 @@
                     filepicker[0].click();
                 }
             },
-            
-            
+                        
             'click .js_optimization_1024_to_jpeg': function () {					// EQUITANIA - support for optimization of pictures to 1024x1024
             	this.$('input[name="disable_optimization"]').val('1024_to_jpeg');
                 var filepicker = this.$('button.filepicker');
                 if (!_.isEmpty(filepicker)){
                     filepicker[0].click();
                 }
-            },
-            
+            },            
             'click .js_optimization_600_to_jpeg': function () {						// EQUITANIA - support for optimization of pictures to 600x600
             	this.$('input[name="disable_optimization"]').val('600_to_jpeg');
                 var filepicker = this.$('button.filepicker');
                 if (!_.isEmpty(filepicker)){
                     filepicker[0].click();
                 }
+            },                       
+            'click .btn-normalView': function () {									// EQUITANIA - change back to normal view
+            	$(".existing-attachments-listview").hide();
+            	$(".existing-attachments").show();            	
+            	$(".help-block").hide();											// EQUITANIA - hide warnings            	
+            },            
+            'click .btn-listView': function () {									// EQUITANIA - change to listview            	
+            	$(".existing-attachments").hide();
+            	$(".help-block").hide();											// EQUITANIA - hide warnings            	
+            	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
+            	if (numItems > 1){													// over and over again...so let's remove all duplicities and display only ONE view
+            		$('.existing-attachments-listview:gt(0)').remove();
+            	}            	
+            	
+            	$(".existing-attachments-listview").removeAttr("style");
+            	$(".existing-attachments-listview").show();
             },
-            
-            
-            
-            
-            
-            
+                                              
             'change input[type=file]': 'file_selection',
             'submit form': 'form_submit',
             'change input.url': "change_input",
@@ -1452,16 +1459,17 @@
             //'change select.image-style': 'preview_image',
             'click .existing-attachments img': 'select_existing',
             'click .existing-attachment-remove': 'try_remove',
+            'click .existing-attachment-remove_listview': 'try_remove_listview',
         }),
 
         init: function (parent, editor, media) {
             this.page = 0;
-            this._super(parent, editor, media);
+            this._super(parent, editor, media);            
         },
-        start: function () {
+        start: function () {        	
             var self = this;
             var res = this._super();
-
+                       
             var o = { url: null };
             // avoid typos, prevent addition of new properties to the object
             Object.preventExtensions(o);
@@ -1474,7 +1482,8 @@
                     return;
                 }
                 self.page += $target.hasClass('previous') ? -1 : 1;
-                self.display_attachments();
+                //self.display_attachments();							// DEFAULT
+                self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
             });
 
             this.set_image(o.url);
@@ -1574,7 +1583,8 @@
                 method: 'search_read',
                 args: [],
                 kwargs: {
-                    fields: ['name', 'website_url'],
+                    //fields: ['name', 'website_url'],						// DEFAULT
+                	fields: ['name', 'website_url', 'file_size'],			// EQUITANIA
                     domain: domain,
                     order: 'id desc',
                     context: website.get_context(),
@@ -1583,9 +1593,12 @@
         },
         fetched_existing: function (records) {
             this.records = records;
-            this.display_attachments();
+            //this.display_attachments();									// DEFAULT
+            this.display_attachments(false);								// EQUITANIA - refresh page and stay on default view
         },
-        display_attachments: function () {
+        
+        // display_attachments: function () {								// DEFAULT
+        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh
             this.$('.help-block').empty();
             var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
 
@@ -1599,13 +1612,34 @@
                 .values()
                 .value();
 
-            this.$('.existing-attachments').replaceWith(
-                openerp.qweb.render(
-                    'website.editor.dialog.image.existing.content', {rows: rows}));
+            
+            
+            // replace result html by defined template
+            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default
+            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: records}));	// EQUITANIA
+
             this.parent.$('.pager')
                 .find('li.previous').toggleClass('disabled', (from === 0)).end()
                 .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));
+            
+            
+            // check if we should show listview or defaultview and stay after refresh on active view
+            if (!showListView){
+            	this.$(".existing-attachments-listview").hide();					// nope, display default view
+            }
+            else{
+            	$(".existing-attachments").hide();            						// yes, show list view
+            	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
+            	if (numItems > 1){													// over and over again...so let's remove all duplicities and display only ONE view
+            		$('.existing-attachments-listview:gt(0)').remove();
+            	}
+            	$(".existing-attachments-listview").removeAttr("style");
+            	$(".existing-attachments-listview").show();            	
+            }
+                                   
+            
         },
+        
         select_existing: function (e) {
             var link = $(e.currentTarget).attr('src');
             this.link = link;
@@ -1641,7 +1675,8 @@
             }).then(function (prevented) {
                 if (_.isEmpty(prevented)) {
                     self.records = _.without(self.records, attachment);
-                    self.display_attachments();
+                    // self.display_attachments();									// DEFAULT
+                    self.display_attachments(false);								// EQUITANIA - refresh page and stay on default view
                     return;
                 }
                 $both.css({borderWidth: "", borderColor: ""});
@@ -1649,9 +1684,43 @@
                     'website.editor.dialog.image.existing.error', {
                         views: prevented[id]
                     }
-                ));
+                ));         
             });
         },
+        
+        try_remove_listview: function (e) {
+            var $help_block = this.$('.help-block').empty();
+            var self = this;
+            var $a = $(e.target);
+            var id = parseInt($a.data('id'), 10);
+            var attachment = _.findWhere(this.records, {id: id});
+            var $both = $a.parent().children();
+
+            $both.css({borderWidth: "5px", borderColor: "#f00"});
+
+            return openerp.jsonRpc('/web/dataset/call_kw', 'call', {
+                model: 'ir.attachment',
+                method: 'try_remove',
+                args: [],
+                kwargs: {
+                    ids: [id],
+                    context: website.get_context()
+                }
+            }).then(function (prevented) {
+                if (_.isEmpty(prevented)) {
+                    self.records = _.without(self.records, attachment);                    
+                    self.display_attachments(true);							// EQUITANIA - refresh page and stay on list view
+                    return;
+                }
+                $both.css({borderWidth: "", borderColor: ""});
+                $help_block.replaceWith(openerp.qweb.render(
+                    'website.editor.dialog.image.existing.error', {
+                        views: prevented[id]
+                    }
+                ));                        
+            });
+        },
+        
     });
 
     website.editor.RTEImageDialog = website.editor.ImageDialog.extend({

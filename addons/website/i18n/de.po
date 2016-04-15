@@ -4569,3 +4569,24 @@ msgstr "Upload groß (verkleinert auf max 1024 Pixel in JPG)"
 #, python-format
 msgid "Max 600x600 with transparent"
 msgstr "Upload normal (verkleinert auf max 600 Pixel in JPG)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:290
+#, python-format
+msgid "Size (KB)"
+msgstr "Dateigröße (KB)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:288
+#, python-format
+msgid "Mini Image"
+msgstr "Bild"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:217
+#, python-format
+msgid "Click here to upload"
+msgstr "zur Bildauswahl hier anklicken"
