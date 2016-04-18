@@ -842,7 +842,7 @@ msgstr "Die Kunden Produktbeschreibung für  Angebot, Lieferschein und Ausgangsr
 #. module: product
 #: help:product.template,description_purchase:0
 msgid "A description of the Product that you want to communicate to your suppliers. This description will be copied to every Purchase Order, Receipt and Supplier Invoice/Refund."
-msgstr "Die Lieferanten Produktbeschreibung für Angebotsanfrage, Bestellung, Eingangslieferschein und Lieferantenrechnung / Gutschrift."
+msgstr "Die Lieferanten Produktbeschreibung für Angebotsanfrage, Bestellung, Eingangslieferschein und Lieferantenrechnung / Rechnungskorrektur."
 
 #. module: product
 #: help:product.template,description:0

@@ -430,12 +430,12 @@ msgstr "Echtzeit (automatisch)"
 #. module: stock_account
 #: selection:stock.invoice.onshipping,journal_type:0
 msgid "Refund Purchase"
-msgstr "Einkaufsgutschrift"
+msgstr "Einkaufs-Rechnungskorrektur"
 
 #. module: stock_account
 #: selection:stock.invoice.onshipping,journal_type:0
 msgid "Refund Sale"
-msgstr "Kundengutschrift"
+msgstr "Kunden-Rechnungskorrektur"
 
 #. module: stock_account
 #: view:wizard.valuation.history:stock_account.view_wizard_valuation_history
