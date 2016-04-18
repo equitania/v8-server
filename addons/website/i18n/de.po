@@ -4613,3 +4613,31 @@ msgstr "Dateiname"
 #, python-format
 msgid "Delete"
 msgstr "Löschen"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:32
+#, python-format
+msgid "Upload new file"
+msgstr "Neue Datei hochladen"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:37
+#, python-format
+msgid "Overwrite existing file"
+msgstr "Existierende Datei überschreiben"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:57
+#, python-format
+msgid "Upload"
+msgstr "Hochladen"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:58
+#, python-format
+msgid "Used"
+msgstr "Verwendet"

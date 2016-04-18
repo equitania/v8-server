@@ -1,5 +1,10 @@
 ### 18.04.2016
 ### website, 1.0.6
+#### Erweiterung
+- Kern um Ivan's (Fileupload) und Sody's (Paging für jede Seite im Kontext) Anpassungen erweitert
+
+### 18.04.2016
+### website, 1.0.6
 #### Änderung
 - MediaCenter - Paging für Bilder verbessert. Ab jetzt funktioniert es korrekt mit Kontext jeder Seite
 
