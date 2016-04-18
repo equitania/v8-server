@@ -1,3 +1,8 @@
+### 18.04.2016
+### website, 1.0.6
+#### Änderung
+- MediaCenter - Paging für Bilder verbessert. Ab jetzt funktioniert es korrekt mit Kontext jeder Seite
+
 ### 15.04.2016
 ### website, 1.0.5
 #### Änderung

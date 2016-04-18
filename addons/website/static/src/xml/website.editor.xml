@@ -152,7 +152,6 @@
                         <h3 class="modal-title">Select a Media</h3>
                     </div>
                     <div class="modal-body">
-                    	<input type="hidden" id="hfActualTabIndex"></input>
                         <ul class="nav nav-tabs">
                             <li class="active eq_tab"><a href="#editor-media-image" data-toggle="tab">Image</a></li>
                             <li class="eq_tab"><a href="#editor-media-icon" data-toggle="tab">Pictogram</a></li>

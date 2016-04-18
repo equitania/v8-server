@@ -1395,7 +1395,8 @@
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = true;
-    var ACTUALTAB = 0;
+    var IMAGES_PER_PAGE_LISTVIEW = 80;
+    var ACTUALTAB = 0;    
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -1500,18 +1501,21 @@
             this.trigger('start', o);
 
             this.parent.$(".eq_tab").click(function (e) {
-            	self.ACTUALTAB = $(this).index();
-            	console.log("self.ACTUALTAB: " + self.ACTUALTAB);
+            	ACTUALTAB = $(this).index();
+            	self.display_attachments();
             });
             
             this.parent.$(".pager > li").click(function (e) {            	
-                e.preventDefault();
-                var $target = $(e.currentTarget);
-                if ($target.hasClass('disabled')) {
-                    return;
-                }
-                self.page += $target.hasClass('previous') ? -1 : 1;
-                self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
+            	if (ACTUALTAB < 3){
+            		//console.log("DEFAULT");
+	                e.preventDefault();
+	                var $target = $(e.currentTarget);
+	                if ($target.hasClass('disabled')) {
+	                    return;
+	                }
+	                self.page += $target.hasClass('previous') ? -1 : 1;
+	                self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
+            	}
             });
 
             this.set_image(o.url);
@@ -1620,47 +1624,67 @@
             this.display_attachments(this.SHOWLISTVIEW);					// EQUITANIA - refresh page and stay on default view            	
         },
         
+        /*
+        get_actual_tab : function(){
+        	this.parent.$(".eq_tab").each(function(index){        		
+        		if ($(this).hasClass("active")){
+        			console.log(index);
+        			console.log($(this).text());
+        			
+        			if ($(this).text() == 'Datei')
+        				return 3;
+        			return 0;
+        		}
+        	});
+        	return 0;
+        },
+        */
+        
         // display_attachments: function () {								// DEFAULT
-        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh
-        	console.log("CORE - display_attachments");        	
-            this.$('.help-block').empty();
-            var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
+        display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh        	        	
+        	if (ACTUALTAB < 3){
+        		//console.log("CORE - display_attachments");        	            	
+            	//console.log("check: " + ACTUALTAB);
+            	
+	            this.$('.help-block').empty();
+	            var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
+	
+	            var from = this.page * per_screen;
+	            var records = this.records;
+	
+	            // Create rows of 3 records
+	            var rows = _(records).chain()
+	                .slice(from, from + per_screen)
+	                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_ROW); })
+	                .values()
+	                .value();
+	                       
+	            // replace result html by defined template
+	            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default
+	            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: records}));	// EQUITANIA
+	
 
-            var from = this.page * per_screen;
-            var records = this.records;
-
-            // Create rows of 3 records
-            var rows = _(records).chain()
-                .slice(from, from + per_screen)
-                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_ROW); })
-                .values()
-                .value();
-                       
-            // replace result html by defined template
-            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default
-            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: records}));	// EQUITANIA
-
-            this.parent.$('.pager')
-                .find('li.previous').toggleClass('disabled', (from === 0)).end()
-                .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));
-            
-            
-            // check if we should show listview or defaultview and stay after refresh on active view
-            if (!showListView){
-            	this.$(".existing-attachments-listview").hide();					// nope, display default view
-            }
-            else{
-            	$(".existing-attachments").hide();            						// yes, show list view
-            	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
-            	if (numItems > 1){													// over and over again...so let's remove all duplicities and display only ONE view
-            		$('.existing-attachments-listview:gt(0)').remove();
-            	}
-            	$(".existing-attachments-listview").removeAttr("style");
-            	$(".existing-attachments-listview").show();            	
-            }
-                                   
+	            this.parent.$('.pager')
+	                .find('li.previous').toggleClass('disabled', (from === 0)).end()
+	                .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));
+	            
+	            // check if we should show listview or defaultview and stay after refresh on active view
+	            if (!showListView){
+	            	this.$(".existing-attachments-listview").hide();					// nope, display default view
+	            }
+	            else{
+	            	$(".existing-attachments").hide();            						// yes, show list view
+	            	var numItems = $(".existing-attachments-listview").length;			// EQUITANIA - from some reasson Odoo is creating our custom view after click on pager
+	            	if (numItems > 1){													// over and over again...so let's remove all duplicities and display only ONE view
+	            		$('.existing-attachments-listview:gt(0)').remove();
+	            	}
+	            	$(".existing-attachments-listview").removeAttr("style");
+	            	$(".existing-attachments-listview").show();            	
+	            }
+        	}
             
         },        
+        
         select_existing: function (e) {        	
             var link = $(e.currentTarget).attr('src');
             this.link = link;
