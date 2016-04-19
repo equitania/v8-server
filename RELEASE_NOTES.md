@@ -1,3 +1,9 @@
+### 19.04.2016
+### website_sale_options, 1.0.1
+#### FIX
+- Übersetzung "Produkt zum verschieben in Einkaufskorb" mit "Produkt zum Warenkorb hinzufügen" ersetzt
+
+
 ### 18.04.2016
 ### website, 1.0.6
 #### Erweiterung

@@ -110,7 +110,7 @@ msgstr "Das Produkt ist nicht verfügbar."
 #. module: website_sale_options
 #: view:website:website_sale_options.modal
 msgid "Product to add in your shopping cart"
-msgstr "Produkt zum verschieben in Einkaufskorb"
+msgstr "Produkt zum Warenkorb hinzufügen"
 
 #. module: website_sale_options
 #: help:product.template,optional_product_ids:0
