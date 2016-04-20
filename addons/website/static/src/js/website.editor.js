@@ -1397,6 +1397,7 @@
     var SHOWLISTVIEW = true;
     var IMAGES_PER_PAGE_LISTVIEW = 80;
     var SORT_TYPE = "asc";				// sorting order of records on one page in listview
+    var SORT_TYPE_DATE = "None";
     var ACTUALTAB = 0;    
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
@@ -1485,8 +1486,11 @@
             'click .existing-attachment-remove': 'try_remove',
             'click .existing-attachment-remove_listview': 'try_remove_listview',
             'click .sortRecords': 'sort_records',
+            'click .sortRecordsByDate': 'sort_records_date',
         }),
         sort_records: function(){
+        	this.SORT_TYPE_DATE = "None";			// deactivate sorting by name - we'll support only ONE sorting
+        	
         	if (this.SORT_TYPE == "desc")
         		this.SORT_TYPE = "asc";
         	else
@@ -1494,10 +1498,21 @@
         	
         	this.display_attachments();        	
         },
+        sort_records_date: function(){
+        	this.SORT_TYPE = "None";			// deactivate sorting by name - we'll support only ONE sorting
+        	
+        	if (this.SORT_TYPE_DATE == "desc")
+        		this.SORT_TYPE_DATE = "asc";
+        	else
+        		this.SORT_TYPE_DATE = "desc";
+        	
+        	this.display_attachments();
+        },
         init: function (parent, editor, media) {        	
             this.page = 0;
             this.pageListView = 0;
             this.SORT_TYPE = "None";				// to be able to support default initial sorting, use this as default
+            this.SORT_TYPE_DATE = "None";
             this.ACTUALTAB = 0;            
             this._super(parent, editor, media);            
         },        
@@ -1651,10 +1666,6 @@
         		}
         		
 	            this.$('.help-block').empty();
-	            
-	            //console.log("this.page: " + this.page);
-	            //console.log("this.pageListView: " + this.pageListView);
-	            
 	            // get rows for default view
 	            var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;	
 	            var from = this.page * per_screen;
@@ -1691,7 +1702,18 @@
 	            		sorted_result_list_view = sorted_result_list_view.reverse();
 	            	}
 	            }
-                
+
+	            if (this.SORT_TYPE_DATE != "None"){															            // sort result list. if None is selected (it's default), don't sort
+	            	// SORTING COLUMN "WRITE_DATE"
+	            	sorted_result_list_view = _.sortBy(sorted_result_list_view, function(record) {
+						return record.write_date;
+					});
+	            	
+	            	if (this.SORT_TYPE_DATE != "desc"){
+	            		sorted_result_list_view = sorted_result_list_view.reverse();
+	            	}
+	            }
+	            
 	            // replace result html by defined template
 	            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default	            	           
                 this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: sorted_result_list_view}));	// EQUITANIA

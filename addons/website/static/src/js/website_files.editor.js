@@ -77,6 +77,7 @@
 
     var FILES_PER_PAGE = 80;			// max count of records on one page in listview
     var SORT_TYPE = "asc";				// sorting order of records on one page in listview
+    var SORT_TYPE_DATE = "None";
     website.editor.FileDialog = website.editor.Media.extend({	
         template: 'website.editor.dialog.file',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -91,8 +92,11 @@
             'click .existing-attachments-files tr.file': 'select_existing',
             'click .existing-attachment-file-remove': 'try_remove',
             'click .sortRecords': 'sort_records',
+            'click .sortRecordsByDate': 'sort_records_date',
         }),
-        sort_records: function(){
+        sort_records: function(){        	
+        	this.SORT_TYPE_DATE = "None";			// deactivate sorting by name - we'll support only ONE sorting
+        	
         	if (this.SORT_TYPE == "desc")
         		this.SORT_TYPE = "asc";
         	else
@@ -100,10 +104,20 @@
         	
         	this.display_attachments();        	
         },        
+        sort_records_date: function(){
+        	this.SORT_TYPE = "None";			// deactivate sorting by name - we'll support only ONE sorting
+        	if (this.SORT_TYPE_DATE == "desc")
+        		this.SORT_TYPE_DATE = "asc";
+        	else
+        		this.SORT_TYPE_DATE = "desc";
+        	
+        	this.display_attachments();        	
+        },
         init: function (parent, editor, media) {
             this.page = 0;
             this._super(parent, editor, media);
             this.SORT_TYPE = "None";				// to be able to support default initial sorting, use this as default
+            this.SORT_TYPE_DATE = "None";
         },        
         start: function () {        	        	
             var self = this;
@@ -257,12 +271,12 @@
         		this.$('.help-block').empty();
                 var per_screen = FILES_PER_PAGE;            
                 var from = this.page * per_screen;
-                var records = this.records;
+                var records = this.records;                
+                var cur_records = _(records).chain().slice(from, from + per_screen).value();
                 
-                var cur_records = _(records).chain().slice(from, from + per_screen).value();                                
-	            //console.log("this.SORT_TYPE: " + this.SORT_TYPE);
-	            // sort result list. if None is selected (it's default), don't sort
-	            if (this.SORT_TYPE != "None"){	            		            
+                // prepare sorterd result - we'll support only ONE kind of sort at once, no combinations
+	            if (this.SORT_TYPE != "None"){																		     // sort result list. if None is selected (it's default), don't sort
+	            	// SORTING COLUMN "NAME"
 	            	// ok, sorting order was already set...by default sort as ASC
 	            	cur_records = _.sortBy(cur_records, function(record) {
 						return record.name.toLowerCase();
@@ -273,9 +287,18 @@
 	            		cur_records = cur_records.reverse();
 	            	}
 	            }
-                
-                
-                
+	            	           
+	            if (this.SORT_TYPE_DATE != "None"){															            // sort result list. if None is selected (it's default), don't sort
+	            	// SORTING COLUMN "WRITE_DATE"
+	            	cur_records = _.sortBy(cur_records, function(record) {
+						return record.write_date;
+					});
+	            	
+	            	if (this.SORT_TYPE_DATE != "desc"){
+	            		cur_records = cur_records.reverse();
+	            	}
+	            }
+                                
                 this.$('.existing-attachments-files').replaceWith(openerp.qweb.render('website.editor.dialog.file.existing.content', {cur_records: cur_records}));
                                
                 // set pager buttons
