@@ -1396,6 +1396,7 @@
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = true;
     var IMAGES_PER_PAGE_LISTVIEW = 80;
+    var SORT_TYPE = "asc";				// sorting order of records on one page in listview
     var ACTUALTAB = 0;    
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
@@ -1483,20 +1484,27 @@
             'click .existing-attachments img': 'select_existing',
             'click .existing-attachment-remove': 'try_remove',
             'click .existing-attachment-remove_listview': 'try_remove_listview',
+            'click .sortRecords': 'sort_records',
         }),
-
+        sort_records: function(){
+        	if (this.SORT_TYPE == "desc")
+        		this.SORT_TYPE = "asc";
+        	else
+        		this.SORT_TYPE = "desc";
+        	
+        	this.display_attachments();        	
+        },
         init: function (parent, editor, media) {        	
             this.page = 0;
             this.pageListView = 0;
+            this.SORT_TYPE = "None";				// to be able to support default initial sorting, use this as default
             this.ACTUALTAB = 0;            
             this._super(parent, editor, media);            
-        },
-        
+        },        
         start: function () {    
             var self = this;
             var res = this._super();
-            this.SHOWLISTVIEW = true;
-            
+            this.SHOWLISTVIEW = true;            
             var o = { url: null };
             // avoid typos, prevent addition of new properties to the object
             Object.preventExtensions(o);
@@ -1661,18 +1669,32 @@
 	            
 	            
 	            // get rows for listview
-	            //IMAGES_PER_PAGE_LISTVIEW
 	            var per_screen_listView = IMAGES_PER_PAGE_LISTVIEW;
 	            var from_listView = this.pageListView * per_screen_listView
 	            var rows_listView = _(records).chain()
-	                .slice(from_listView, from_listView + per_screen_listView)
-	                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_PAGE_LISTVIEW); })
-	                .values()
-	                .value();
+                .slice(from_listView, from_listView + per_screen_listView)                
+                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_PAGE_LISTVIEW); })                
+                .values()                
+                .value();
 	            
+	            var sorted_result_list_view = rows_listView[0];
+	            //console.log("this.SORT_TYPE: " + this.SORT_TYPE);
+	            // sort result list. if None is selected (it's default), don't sort
+	            if (this.SORT_TYPE != "None"){	            		            
+	            	// ok, sorting order was already set...by default sort as ASC
+	            	sorted_result_list_view = _.sortBy(rows_listView[0], function(record) {
+						return record.name.toLowerCase();
+					});	
+	            	
+	            	// if we need to show our result as DESC, just reverse data
+	            	if (this.SORT_TYPE != "desc"){
+	            		sorted_result_list_view = sorted_result_list_view.reverse();
+	            	}
+	            }
+                
 	            // replace result html by defined template
 	            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default	            	           
-	            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: rows_listView[0]}));	// EQUITANIA
+                this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: sorted_result_list_view}));	// EQUITANIA
 	            
 	            /*
 	             * DEFAULT

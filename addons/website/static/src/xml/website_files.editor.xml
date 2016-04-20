@@ -55,7 +55,7 @@
 	                <!-- 
 	                    <th class="text-left">Filename</th>
 	                 -->
-	                 <th class="text-left"><a href="#">Filename</a></th>
+	                 	<th class="text-left"><a href="#" class="sortRecords">Filename</a></th>
 	                    <th class="text-right">Size (KB)</th>
 	                    <th class="text-right">Last update</th>
 	                    <th class="text-center">Used</th>

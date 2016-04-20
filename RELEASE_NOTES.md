@@ -1,4 +1,9 @@
 ### 20.04.2016
+### website, 1.0.10
+#### Erweiterung
+- Mediacenter, beide Listviews (Bilder und Dateien) wurde um Sortierung (im Moment nur in der Spalte Dateiname) erweitert 
+
+### 20.04.2016
 ### website, 1.0.9
 #### Änderung
 - Mediacenter, Listviews -> max. Anzahl der Zeile pro Seite auf 80 gesetzt

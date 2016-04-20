@@ -75,7 +75,8 @@
         }
     })
 
-    var FILES_PER_PAGE = 80;
+    var FILES_PER_PAGE = 80;			// max count of records on one page in listview
+    var SORT_TYPE = "asc";				// sorting order of records on one page in listview
     website.editor.FileDialog = website.editor.Media.extend({	
         template: 'website.editor.dialog.file',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -89,13 +90,21 @@
             'submit form': 'form_submit',
             'click .existing-attachments-files tr.file': 'select_existing',
             'click .existing-attachment-file-remove': 'try_remove',
+            'click .sortRecords': 'sort_records',
         }),
-
+        sort_records: function(){
+        	if (this.SORT_TYPE == "desc")
+        		this.SORT_TYPE = "asc";
+        	else
+        		this.SORT_TYPE = "desc";
+        	
+        	this.display_attachments();        	
+        },        
         init: function (parent, editor, media) {
             this.page = 0;
             this._super(parent, editor, media);
-        },
-        
+            this.SORT_TYPE = "None";				// to be able to support default initial sorting, use this as default
+        },        
         start: function () {        	        	
             var self = this;
             var res = this._super();        
@@ -110,7 +119,7 @@
             	ACTUALTAB = $(this).index();            	
             	self.display_attachments();
             });
-            
+                                    
             // register click on pager handler
             this.parent.$(".pager > li").click(function (e) {            	
             	if (ACTUALTAB == 3){
@@ -241,25 +250,35 @@
             this.records = records;
             this.display_attachments();
         },                
+        
         display_attachments: function () {        	        
         	if (ACTUALTAB == 3){
-        		console.log("IVAN - display_attachments");
-
-        		//this.page = 0;
-        		//console.log("this.page: " + this.page);
+        		//console.log("IVAN - display_attachments");
         		this.$('.help-block').empty();
                 var per_screen = FILES_PER_PAGE;            
                 var from = this.page * per_screen;
                 var records = this.records;
                 
-               
+                var cur_records = _(records).chain().slice(from, from + per_screen).value();                                
+	            //console.log("this.SORT_TYPE: " + this.SORT_TYPE);
+	            // sort result list. if None is selected (it's default), don't sort
+	            if (this.SORT_TYPE != "None"){	            		            
+	            	// ok, sorting order was already set...by default sort as ASC
+	            	cur_records = _.sortBy(cur_records, function(record) {
+						return record.name.toLowerCase();
+					});	
+	            	
+	            	// if we need to show our result as DESC, just reverse data
+	            	if (this.SORT_TYPE != "desc"){
+	            		cur_records = cur_records.reverse();
+	            	}
+	            }
                 
-                //console.log("this.records: " + this.records);
                 
-                var cur_records = _(records).chain().slice(from, from + per_screen).value();
+                
                 this.$('.existing-attachments-files').replaceWith(openerp.qweb.render('website.editor.dialog.file.existing.content', {cur_records: cur_records}));
-                
-
+                               
+                // set pager buttons
                 this.parent.$('.pager')
                     .find('li.previous').toggleClass('disabled', (from === 0)).end()
                     .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));

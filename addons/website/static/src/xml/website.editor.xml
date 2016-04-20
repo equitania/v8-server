@@ -213,8 +213,8 @@
                          	<!-- DEFAULT
                          	<button type="button" class="btn btn-primary filepicker">Upload an image from your computer</button>
                          	 -->
-                         	<button type="button" class="btn-primary filepicker" style="visibility: hidden;"></button>		<!-- EQUITANIA -->
-                         	<button type="button" class="btn btn-primary" style="width:300px;height:28px;">Click here to upload</button>		<!-- EQUITANIA -->
+                         	<button type="button" class="btn-primary filepicker" style="visibility: hidden;"></button>		<!-- EQUITANIA -->                         	
+                         	<button type="button" class="btn btn-primary" style="width:300px;height:34px;">Click here to upload</button>		<!-- EQUITANIA -->
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span>
                                 <span class="sr-only">Alternate Upload</span>
@@ -288,7 +288,7 @@
 		            <thead>
 		                <tr>
 		                    <th class="text-left">Mini Image</th>
-		                    <th class="text-left">Filename</th>
+		                    <th class="text-left"><a href="#" class="sortRecords">Filename</a></th>
 		                    <th class="text-left">Alt-Text</th>                 
 		                    <th class="text-right">Size (KB)</th>
 		                    <th class="text-right">Last update</th>			                    
