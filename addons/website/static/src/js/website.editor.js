@@ -1395,7 +1395,7 @@
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = true;
-    var IMAGES_PER_PAGE_LISTVIEW = 4;
+    var IMAGES_PER_PAGE_LISTVIEW = 80;
     var ACTUALTAB = 0;    
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',

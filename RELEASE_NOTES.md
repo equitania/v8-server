@@ -1,4 +1,9 @@
 ### 20.04.2016
+### website, 1.0.9
+#### Änderung
+- Mediacenter, Listviews -> max. Anzahl der Zeile pro Seite auf 80 gesetzt
+
+### 20.04.2016
 ### website, 1.0.8
 #### Erweiterung
 - Mediacenter um diese Features erweitert:

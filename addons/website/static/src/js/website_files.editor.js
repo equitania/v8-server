@@ -75,7 +75,7 @@
         }
     })
 
-    var FILES_PER_PAGE = 4;
+    var FILES_PER_PAGE = 80;
     website.editor.FileDialog = website.editor.Media.extend({	
         template: 'website.editor.dialog.file',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
