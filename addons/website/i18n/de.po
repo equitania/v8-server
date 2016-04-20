@@ -4641,3 +4641,11 @@ msgstr "Hochladen"
 #, python-format
 msgid "Used"
 msgstr "Verwendet"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:294
+#: code:addons/website/static/src/xml/website_files.editor.xml:57
+#, python-format
+msgid "Last update"
+msgstr "Letzte Änderung"

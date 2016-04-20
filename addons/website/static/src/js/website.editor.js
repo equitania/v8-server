@@ -1395,7 +1395,7 @@
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = true;
-    var IMAGES_PER_PAGE_LISTVIEW = 80;
+    var IMAGES_PER_PAGE_LISTVIEW = 4;
     var ACTUALTAB = 0;    
     website.editor.ImageDialog = website.editor.Media.extend({
         template: 'website.editor.dialog.image',
@@ -1429,8 +1429,7 @@
                 if (!_.isEmpty(filepicker)){                	
                     filepicker[0].click();
                 }
-            },
-                        
+            },                       
             'click .js_optimization_1024_to_jpeg': function () {					// EQUITANIA - support for optimization of pictures to 1024x1024
             	this.$('input[name="disable_optimization"]').val('1024_to_jpeg');
                 var filepicker = this.$('button.filepicker');
@@ -1454,6 +1453,7 @@
             	$(".existing-attachments").show();            	
             	$(".help-block").hide();											// EQUITANIA - hide warnings
             	this.SHOWLISTVIEW = false;
+            	this.display_attachments(false);
             },            
             'click .btn-listView': function () {									// EQUITANIA - change to listview
             	$(".btn-listView").addClass("btn-primary");
@@ -1472,6 +1472,7 @@
             	
             	$(".existing-attachments-listview").removeAttr("style");
             	$(".existing-attachments-listview").show();
+            	this.display_attachments(true);
             },
                                               
             'change input[type=file]': 'file_selection',
@@ -1486,6 +1487,7 @@
 
         init: function (parent, editor, media) {        	
             this.page = 0;
+            this.pageListView = 0;
             this.ACTUALTAB = 0;            
             this._super(parent, editor, media);            
         },
@@ -1503,18 +1505,24 @@
             this.parent.$(".eq_tab").click(function (e) {
             	ACTUALTAB = $(this).index();
             	self.display_attachments();
-            });
-            
+            });            
             this.parent.$(".pager > li").click(function (e) {            	
             	if (ACTUALTAB < 3){
-            		//console.log("DEFAULT");
 	                e.preventDefault();
 	                var $target = $(e.currentTarget);
 	                if ($target.hasClass('disabled')) {
 	                    return;
 	                }
-	                self.page += $target.hasClass('previous') ? -1 : 1;
-	                self.display_attachments(false);						// EQUITANIA - refresh page and stay on default view
+	                //self.page += $target.hasClass('previous') ? -1 : 1;				// DEFAULT
+	                
+	                // set actual page only for active viewtype							// EQUITANIA
+	                if (self.SHOWLISTVIEW)
+	                	self.pageListView += $target.hasClass('previous') ? -1 : 1;
+	                else
+	                	self.page += $target.hasClass('previous') ? -1 : 1;
+	                	
+	                // show attachments on actual page
+	                self.display_attachments(self.SHOWLISTVIEW);						// EQUITANIA - refresh page and stay on default view
             	}
             });
 
@@ -1611,7 +1619,7 @@
                 args: [],
                 kwargs: {
                     //fields: ['name', 'website_url'],						// DEFAULT
-                	fields: ['name', 'website_url', 'file_size'],			// EQUITANIA
+                	fields: ['name', 'website_url', 'file_size', 'write_date'],			// EQUITANIA
                     domain: domain,
                     order: 'id desc',
                     context: website.get_context(),
@@ -1623,32 +1631,24 @@
             //this.display_attachments();									// DEFAULT
             this.display_attachments(this.SHOWLISTVIEW);					// EQUITANIA - refresh page and stay on default view            	
         },
-        
-        /*
-        get_actual_tab : function(){
-        	this.parent.$(".eq_tab").each(function(index){        		
-        		if ($(this).hasClass("active")){
-        			console.log(index);
-        			console.log($(this).text());
-        			
-        			if ($(this).text() == 'Datei')
-        				return 3;
-        			return 0;
-        		}
-        	});
-        	return 0;
-        },
-        */
-        
+
         // display_attachments: function () {								// DEFAULT
         display_attachments: function (showListView) {						// EQUITANIA - to be able to stay on actual view even afte refresh        	        	
         	if (ACTUALTAB < 3){
         		//console.log("CORE - display_attachments");        	            	
             	//console.log("check: " + ACTUALTAB);
             	
+        		if (showListView == undefined){
+        			showListView = true;
+        		}
+        		
 	            this.$('.help-block').empty();
-	            var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;
-	
+	            
+	            //console.log("this.page: " + this.page);
+	            //console.log("this.pageListView: " + this.pageListView);
+	            
+	            // get rows for default view
+	            var per_screen = IMAGES_PER_ROW * IMAGES_ROWS;	
 	            var from = this.page * per_screen;
 	            var records = this.records;
 	
@@ -1658,15 +1658,42 @@
 	                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_ROW); })
 	                .values()
 	                .value();
-	                       
+	            
+	            
+	            // get rows for listview
+	            //IMAGES_PER_PAGE_LISTVIEW
+	            var per_screen_listView = IMAGES_PER_PAGE_LISTVIEW;
+	            var from_listView = this.pageListView * per_screen_listView
+	            var rows_listView = _(records).chain()
+	                .slice(from_listView, from_listView + per_screen_listView)
+	                .groupBy(function (_, index) { return Math.floor(index / IMAGES_PER_PAGE_LISTVIEW); })
+	                .values()
+	                .value();
+	            
 	            // replace result html by defined template
-	            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default
-	            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: records}));	// EQUITANIA
-	
-
+	            //this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows}));		// default	            	           
+	            this.$('.existing-attachments').replaceWith(openerp.qweb.render('website.editor.dialog.image.existing.content', {rows: rows, all_records: rows_listView[0]}));	// EQUITANIA
+	            
+	            /*
+	             * DEFAULT
 	            this.parent.$('.pager')
 	                .find('li.previous').toggleClass('disabled', (from === 0)).end()
 	                .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));
+	            */
+	            
+	            if (!showListView){
+	            	//console.log("* PAGER - normal view");
+	            	this.parent.$('.pager')
+	                .find('li.previous').toggleClass('disabled', (from === 0)).end()
+	                .find('li.next').toggleClass('disabled', (from + per_screen >= records.length));
+	            }
+	            else{
+	            	//console.log("* PAGER - list view");
+	            	this.parent.$('.pager')
+	            	.find('li.previous').toggleClass('disabled', (from_listView === 0)).end()
+	            	.find('li.next').toggleClass('disabled', (from_listView + per_screen_listView >= records.length));
+	            }
+	            
 	            
 	            // check if we should show listview or defaultview and stay after refresh on active view
 	            if (!showListView){
@@ -1681,26 +1708,21 @@
 	            	$(".existing-attachments-listview").removeAttr("style");
 	            	$(".existing-attachments-listview").show();            	
 	            }
-        	}
-            
-        },        
-        
+        	}            
+        },                
         select_existing: function (e) {        	
             var link = $(e.currentTarget).attr('src');
             this.link = link;
             this.selected_existing(link);
-        },
-        
+        },        
         selected_existing: function (link) {
             this.$('.existing-attachment-cell.media_selected').removeClass("media_selected");
             var $select = this.$('.existing-attachment-cell img').filter(function () {
                 return $(this).attr("src") == link;
             }).first();
-            $select.parent().addClass("media_selected");
-            
+            $select.parent().addClass("media_selected");            
             return $select;
         },
-
         try_remove: function (e) {
             var $help_block = this.$('.help-block').empty();
             var self = this;
@@ -1733,8 +1755,7 @@
                     }
                 ));         
             });
-        },
-        
+        },        
         try_remove_listview: function (e) {
             var $help_block = this.$('.help-block').empty();
             var self = this;

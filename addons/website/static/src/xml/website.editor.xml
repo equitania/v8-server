@@ -290,7 +290,8 @@
 		                    <th class="text-left">Mini Image</th>
 		                    <th class="text-left">Filename</th>
 		                    <th class="text-left">Alt-Text</th>                 
-		                    <th class="text-left">Size (KB)</th>	
+		                    <th class="text-right">Size (KB)</th>
+		                    <th class="text-right">Last update</th>			                    
 		                    <th class="text-center">Delete</th>                    
 		                </tr>
 		            </thead>
@@ -300,7 +301,11 @@
 		            			<td class="text-left"><img t-att-src="attachment.website_url" t-att-alt="attachment.name" t-att-title="attachment.name" style="max-width:40px; max-height:40px;"/></td>
 		            			<td class="text-left"><t t-esc="attachment.name"/></td>
 		            			<td class="text-left"></td>	                		
-		                		<td class="text-left"><t t-esc="attachment.file_size / 1000"/></td>
+		                		<td class="text-right"><t t-esc="(attachment.file_size / 1000).toString().replace('.', ',')"/></td>
+		                		<!-- 		                		
+		                		 <td class="text-right"><t t-esc="new Date().toString(attachment.write_date)"/></td>
+		                		 -->
+		                		 <td class="text-right"><t t-esc="attachment.write_date"/></td>		                		 
 		                		<td class="text-center"><a href="#"><i class="fa fa-times existing-attachment-remove_listview" t-att-data-id="attachment.id"></i></a></td>	                		
 		            		</tr>	            		
 		            	</t>	                

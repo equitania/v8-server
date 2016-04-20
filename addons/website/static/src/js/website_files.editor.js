@@ -75,7 +75,7 @@
         }
     })
 
-    var FILES_PER_PAGE = 80;
+    var FILES_PER_PAGE = 4;
     website.editor.FileDialog = website.editor.Media.extend({	
         template: 'website.editor.dialog.file',
         events: _.extend({}, website.editor.Dialog.prototype.events, {
@@ -109,7 +109,6 @@
             this.parent.$(".eq_tab").click(function (e) {
             	ACTUALTAB = $(this).index();            	
             	self.display_attachments();
-            	self.reset_pager();
             });
             
             // register click on pager handler
@@ -241,22 +240,21 @@
         fetched_existing: function (records) {
             this.records = records;
             this.display_attachments();
-        },
-               
-        reset_pager: function(){
-        	console.log("IVAN - Reset pager");
-        },
-        
+        },                
         display_attachments: function () {        	        
         	if (ACTUALTAB == 3){
         		console.log("IVAN - display_attachments");
 
         		//this.page = 0;
-        		console.log("this.page: " + this.page);
+        		//console.log("this.page: " + this.page);
         		this.$('.help-block').empty();
                 var per_screen = FILES_PER_PAGE;            
                 var from = this.page * per_screen;
                 var records = this.records;
+                
+               
+                
+                //console.log("this.records: " + this.records);
                 
                 var cur_records = _(records).chain().slice(from, from + per_screen).value();
                 this.$('.existing-attachments-files').replaceWith(openerp.qweb.render('website.editor.dialog.file.existing.content', {cur_records: cur_records}));

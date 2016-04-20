@@ -52,9 +52,12 @@
 	        <table class="table table-striped">
 	            <thead>
 	                <tr>
+	                <!-- 
 	                    <th class="text-left">Filename</th>
-	                    <th class="text-right">Size</th>
-	                    <th class="text-right">Upload</th>
+	                 -->
+	                 <th class="text-left"><a href="#">Filename</a></th>
+	                    <th class="text-right">Size (KB)</th>
+	                    <th class="text-right">Last update</th>
 	                    <th class="text-center">Used</th>
 	                    <th class="text-center">Preview</th>
 	                    <th class="text-center">Delete</th>
@@ -63,7 +66,7 @@
 	            <tbody>
 	                <tr class="file" t-foreach="cur_records" t-as="r">
 	                  <td class="text-left"><t t-esc="r.datas_fname"/></td>
-	                  <td class="text-right"><t t-esc="r.file_size"/></td>
+	                  <td class="text-right"><t t-esc="(r.file_size/1000).toString().replace('.', ',')"></t></td>	                   
 	                  <td class="text-right"><t t-esc="r.write_date"/></td>
 	                  <td class="text-center"><t t-esc="r.website_file_count and r.website_file_count + 'x' or '-'"/></td>
 	                  <td class="text-center"><a class="download" t-att-href="r.website_file_url" t-att-title="r.datas_fname"><div><i class="fa fa-arrow-circle-down"></i></div></a></td>
