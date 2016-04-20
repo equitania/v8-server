@@ -1,8 +1,8 @@
 ### 20.04.2016
 ### website, 1.0.8
 #### Erweiterung
-- Mediacenter um diese Featueres erweitert:
-1. Beide Listviews (Bilder und Dateien) haben Zeigen max. 80 Zeilen auf einer Seite
+- Mediacenter um diese Features erweitert:
+1. Beide Listviews (Bilder und Dateien) zeigen max. 80 Zeilen auf einer Seite
 2. Die Ansicht "Images-ListView" wurde um eigene Logik für Pager erweitert
 3. Pager für die Ansicht "Images-NormalView" wurde angepasst, damit die Logik von der Ansicht "Images-ListView" getrennt ist
 4. Dateigröße ist ab jetzt immer in KB ein diesem Format angezeigt 95,22 KB
