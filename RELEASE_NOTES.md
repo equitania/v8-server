@@ -1,4 +1,9 @@
 ### 20.04.2016
+### website, 1.0.12
+#### Erweiterung
+- Mediacenter, In dem Listview kann man ab jetzt Bilder anwählen und sie werden automatisch übernommen
+
+### 20.04.2016
 ### website, 1.0.11
 #### Erweiterung
 - Mediacenter, beide Listviews (Bilder und Dateien) wurde um Sortierung in der Spalte "Letzte Änderung" erweitert

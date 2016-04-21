@@ -1487,6 +1487,7 @@
             'click .existing-attachment-remove_listview': 'try_remove_listview',
             'click .sortRecords': 'sort_records',
             'click .sortRecordsByDate': 'sort_records_date',
+            'click .existing-attachments-files-listview tr.image_file': 'select_existing_listview',
         }),
         sort_records: function(){
         	this.SORT_TYPE_DATE = "None";			// deactivate sorting by name - we'll support only ONE sorting
@@ -1554,6 +1555,31 @@
             return res;
         },        
         save: function () {
+        	console.log("this.SHOWLISTVIEW: ", this.SHOWLISTVIEW);
+        	if (!this.SHOWLISTVIEW){
+        		// use default functionality
+        		if (!this.link) {
+                    this.link = this.$(".existing-attachments img:first").attr('src');
+                }
+                this.trigger('save', {
+                    url: this.link
+                });
+                this.media.renameNode("img");
+                $(this.media).attr('src', this.link);            
+                return this._super();
+        	}
+        	else{
+        		if (!this.link) {
+                    this.link = this.$(".existing-attachments-listview img:first").attr('src');
+                }
+                this.trigger('save', {
+                    url: this.link
+                });
+                this.media.renameNode("img");
+                $(this.media).attr('src', this.link);            
+                return this._super();
+        	}
+        	/*
             if (!this.link) {
                 this.link = this.$(".existing-attachments img:first").attr('src');
             }
@@ -1561,8 +1587,22 @@
                 url: this.link
             });
             this.media.renameNode("img");
-            $(this.media).attr('src', this.link);
+            $(this.media).attr('src', this.link);            
             return this._super();
+            */
+        	
+        	/*
+        	 * if (!this.link) {
+                this.link = this.$(".existing-attachments-files img:first").attr('src');
+            }
+            this.trigger('save', {
+                url: this.link
+            });
+            this.media.renameNode("a");
+            this.media.$.innerHTML = this.file_name
+            $(this.media).attr('href', this.link);
+            return this._super();
+        	 */
         },
         clear: function () {
             this.media.$.className = this.media.$.className.replace(/(^|\s)(img(\s|$)|img-[^\s]*)/g, ' ');
@@ -1585,7 +1625,7 @@
                 self.selected_existing(self.$('input.url').val());
             });
         },
-        set_image: function (url, error) {
+        set_image: function (url, error) {        	
             var self = this;
             if (url) this.link = url;
             this.$('input.url').val('');
@@ -1766,7 +1806,25 @@
             }).first();
             $select.parent().addClass("media_selected");            
             return $select;
+        },               
+        select_existing_listview : function(e){
+        	var download = $(e.currentTarget).find('.image_link');
+        	var link = $(download).attr('src');
+        	this.link = link;							// save link (url of selected image), we'll use it during save
+        	
+        	var $a = $(e.target);
+            var id = parseInt($a.data('id'), 10);		// get selected line
+            this.selected_existing_listview(id);                                              
         },
+        selected_existing_listview: function (link) {        	
+        	this.$('.existing-attachments-files-listview .image_file.media_selected').removeClass("media_selected");		// remove selected style        	
+            var $select = this.$('.existing-attachments-files-listview .image_file').filter(function () {
+            	return $(this).find('.delete').attr("data-id") == link;														// set selected style
+            	//return $(this).find('.image_link').attr("href") == link;														// set selected style
+            }).first();
+            $select.addClass("media_selected");
+            return $select;
+        },                             
         try_remove: function (e) {
             var $help_block = this.$('.help-block').empty();
             var self = this;
@@ -1831,8 +1889,7 @@
                     }
                 ));                        
             });
-        },
-        
+        },        
     });
 
     

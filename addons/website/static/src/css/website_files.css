@@ -1,8 +1,17 @@
 .existing-attachments-files {
-	max-height: 300px;
+	max-height: 400px;
 	overflow: auto;
 }
 
 .existing-attachments-files tr.file.media_selected > td, .existing-attachments-files tr.file.media_selected > th{
+	background-color: #8aacca;
+}
+
+.existing-attachments-files-listview {
+	max-height: 400px;
+	overflow: auto;
+}
+
+.existing-attachments-files-listview tr.image_file.media_selected > td, .existing-attachments-files-listview tr.image_file.media_selected > th{
 	background-color: #8aacca;
 }
