@@ -214,7 +214,7 @@
                          	<button type="button" class="btn btn-primary filepicker">Upload an image from your computer</button>
                          	 -->
                          	<button type="button" class="btn-primary filepicker" style="visibility: hidden;"></button>		<!-- EQUITANIA -->                         	
-                         	<button type="button" class="btn btn-primary" style="width:300px;height:34px;">Click here to upload</button>		<!-- EQUITANIA -->
+                         	<button type="button" class="btn btn-primary" style="min-width:150px;min-height:28px;">Click here to upload</button>		<!-- EQUITANIA -->
                             <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
                                 <span class="caret"></span>
                                 <span class="sr-only">Alternate Upload</span>
@@ -235,12 +235,12 @@
                         <span class="text-muted"> — or — </span>
                         <label for="iamgeurl">Add an image URL</label>
                         <div class="form-group btn-group">
-                            <input type="text" name="url" class="form-control url pull-left" style="width: 320px;" id="iamgeurl" placeholder="http://openerp.com/logo.png"/>
+                            <input type="text" name="url" class="form-control url pull-left" style="min-width: 250px;" id="iamgeurl" placeholder="http://openerp.com/logo.png"/>
                             <button class="btn btn-default" type="submit">Add</button>
                         </div>
                         <div class="pull-right">                        
-	                        <button type="button" class="btn btn-default btn-normalView"><span class="fa fa-picture-o fa-2x"></span></button>
- 							<button type="button" class="btn btn-primary btn-listView"><span class="fa fa-list fa-2x"></span></button>
+	                        <button type="button" class="btn btn-default btn-normalView"><span class="fa fa-picture-o"></span></button>
+ 							<button type="button" class="btn btn-primary btn-listView"><span class="fa fa-list"></span></button>
                         </div>
                     </div>
                 </div>

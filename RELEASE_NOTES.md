@@ -1,3 +1,11 @@
+### 21.04.2016
+### website, 1.0.14
+#### Änderung
+- Mediacenter
+1. Größenangaben der Buttons verbessert (statische Größen entfernt)
+2. Ansicht der Bildmengen von 80 auf 12 verringert (12 Bilder wie in der standard Ansicht)
+3. Die Höhe der Listenansicht der Bilder ist nun dynamisch anhand des ModalPopup-Inhaltes
+
 ### 20.04.2016
 ### website, 1.0.13
 #### Änderung

@@ -1395,7 +1395,7 @@
     var IMAGES_PER_ROW = 6;
     var IMAGES_ROWS = 2;
     var SHOWLISTVIEW = true;
-    var IMAGES_PER_PAGE_LISTVIEW = 80;
+    var IMAGES_PER_PAGE_LISTVIEW = 12;
     var SORT_TYPE = "asc";				// sorting order of records on one page in listview
     var SORT_TYPE_DATE = "None";
     var ACTUALTAB = 0;    

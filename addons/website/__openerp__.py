@@ -3,7 +3,7 @@
     'category': 'Website',
     'summary': 'Build Your Enterprise Website',
     'website': 'https://www.odoo.com/page/website-builder',
-    'version': '1.0.13',
+    'version': '1.0.14',
     'description': """
 OpenERP Website CMS
 ===================

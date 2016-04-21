@@ -8,7 +8,7 @@
 }
 
 .existing-attachments-files-listview {
-	max-height: 400px;
+	max-height: inherit;
 	overflow: auto;
 }
 
