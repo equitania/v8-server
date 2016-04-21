@@ -1,4 +1,9 @@
 ### 20.04.2016
+### website, 1.0.13
+#### Änderung
+- Mediacenter, Icon "Delete" auf der Listview Ansicht auf default "Papierkorb" geändert
+
+### 20.04.2016
 ### website, 1.0.12
 #### Erweiterung
 - Mediacenter, In dem Listview kann man ab jetzt Bilder anwählen und sie werden automatisch übernommen

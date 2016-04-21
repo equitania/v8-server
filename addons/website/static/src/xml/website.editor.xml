@@ -302,7 +302,7 @@
 	            			<td class="text-left"></td>	                		
 	                		<td class="text-right"><t t-esc="(attachment.file_size / 1000).toString().replace('.', ',')"/></td>
 	                		 <td class="text-right"><t t-esc="attachment.write_date"/></td>		                		 
-	                		<td class="text-center"><a href="#"><i class="fa fa-times existing-attachment-remove_listview" t-att-data-id="attachment.id"></i></a></td>	                		
+	                		<td class="text-center"><a href="#"><i class="fa fa-trash existing-attachment-remove_listview" t-att-data-id="attachment.id"></i></a></td>	                		
 	            		</tr>	            			                
 		            </tbody>
 		        </table>
