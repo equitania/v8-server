@@ -3,13 +3,13 @@
     'category': 'Website',
     'summary': 'Build Your Enterprise Website',
     'website': 'https://www.odoo.com/page/website-builder',
-    'version': '1.0.14',
+    'version': '1.0.15',
     'description': """
 OpenERP Website CMS
 ===================
 
         """,
-    'author': 'OpenERP SA',
+    'author': 'OpenERP SA, Enhanced by Equitania Software GmbH',
     'depends': ['web', 'share', 'mail'],
     'installable': True,
     'data': [

@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 8.0 Build 160302\n"
+"Project-Id-Version: Odoo Server 8.1 Build 160403\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-03-12 17:26+0000\n"
-"PO-Revision-Date: 2016-03-14 10:44+0100\n"
+"POT-Creation-Date: 2016-04-22 07:37+0000\n"
+"PO-Revision-Date: 2016-04-22 09:42+0200\n"
 "Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -43,15 +43,10 @@ msgstr "in der Box unten, wenn Sie bestätigen wollen."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:366
+#: code:addons/website/static/src/xml/website.editor.xml:413
 #, python-format
 msgid "(Youtube, Vimeo, Dailymotion)"
 msgstr "(Youtube, Vimeo, Dailymotion)"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "* Conditions and restrictions apply."
-msgstr "* Conditions and restrictions apply."
 
 #. module: website
 #: view:website:website.info
@@ -66,10 +61,10 @@ msgstr ""
 #: view:website:website.layout
 msgid ""
 ",\n"
-"                the #1"
+"                  an awesome"
 msgstr ""
 ",\n"
-"                die #1"
+"                  an awesome"
 
 #. module: website
 #: view:website:website.info
@@ -82,24 +77,9 @@ msgid ", updated:"
 msgstr ", aktualisiert:"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "-50% OFF"
-msgstr "-50% OFF"
-
-#. module: website
 #: view:website:website.sitemap_index_xml
 msgid ".xml"
 msgstr ".xml"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "1. Big Image"
-msgstr "1. Big Image"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "1. Clean Title Block"
-msgstr "1. Clean Title Block"
 
 #. module: website
 #. openerp-web
@@ -109,61 +89,11 @@ msgid "1. Define Keywords"
 msgstr "1. Definiere Suchbegriffe"
 
 #. module: website
-#: view:website:website.demo_page_blocks
-msgid "1. Icon Box"
-msgstr "1. Icon Box"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "1. Lead Bar"
-msgstr "1. Lead Bar"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "10. Process Step"
-msgstr "10. Process Step"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "12 Font Combinations"
-msgstr "12 Font Combinations"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "2. Big Image Parallax"
-msgstr "2. Big Image Parallax"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "2. Clean Text Block"
-msgstr "2. Clean Text Block"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "2. Icon Box Circle"
-msgstr "2. Icon Box Circle"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "2. Logos Bar"
-msgstr "2. Logos Bar"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.seo.xml:40
 #, python-format
 msgid "2. Reference Your Page"
 msgstr "2. Verweise auf Deine Seite"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "3. Clean Image Text"
-msgstr "3. Clean Image Text"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "3. Icon Box Square"
-msgstr "3. Icon Box Square"
 
 #. module: website
 #. openerp-web
@@ -173,34 +103,9 @@ msgid "3. Preview"
 msgstr "3. Vorschau der Seite"
 
 #. module: website
-#: view:website:website.demo_page_blocks
-msgid "3. Slide Banner"
-msgstr "3. Slide Banner"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "3. Team Profiles"
-msgstr "3. Team Profiles"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "4. Clean Text Image"
-msgstr "4. Clean Text Image"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "4. Profile"
-msgstr "4. Profile"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "4. Separator Color"
-msgstr "4. Separator Color"
-
-#. module: website
 #: view:website:website.403
 msgid "403: Forbidden"
-msgstr "403: Verboten"
+msgstr "403: Zugriff nicht gestattet"
 
 #. module: website
 #: view:website:website.404
@@ -208,84 +113,9 @@ msgid "404: Page not found!"
 msgstr "404: Seite wurde nicht gefunden!"
 
 #. module: website
-#: view:website:website.demo_page_blocks
-msgid "5. Clean Color Blocks x2"
-msgstr "5. Clean Color Blocks x2"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "5. Separator Shade"
-msgstr "5. Separator Shade"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "5. Timeline"
-msgstr "5. Timeline"
-
-#. module: website
 #: view:website:website.snippets
 msgid "50,000+ companies run Odoo to grow their businesses."
 msgstr "Über 50.000 Unternehmen nutzen MyOdoo, um ihr Business weiterzuentwickeln"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "52% Research"
-msgstr "52% Research"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "6 Beautiful Color Schemes"
-msgstr "6 Beautiful Color Schemes"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "6. Clean Color Blocks x4"
-msgstr "6. Clean Color Blocks x4"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "6. Timeline Compact"
-msgstr "6. Timeline Compact"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "61% Development"
-msgstr "61% Development"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "7. Clean One Column"
-msgstr "7. Clean One Column"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "7. Event List"
-msgstr "7. Event List"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "8. Clean Two Columns"
-msgstr "8. Clean Two Columns"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "8. Discount"
-msgstr "8. Discount"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "80% Design"
-msgstr "80% Design"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "9. Clean Three Columns"
-msgstr "9. Clean Three Columns"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "9. Pricing"
-msgstr "9. Pricing"
 
 #. module: website
 #: model:ir.actions.act_window,help:website.action_module_website
@@ -299,24 +129,19 @@ msgstr ""
 "            "
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "A Business Theme for Odoo CMS"
-msgstr "A Business Theme for MyOdoo CMS"
-
-#. module: website
 #: view:website:website.snippets
 msgid "A Great Headline"
-msgstr "Eine große Überschrift"
+msgstr "Eine große Titelzeile"
 
 #. module: website
 #: view:website:website.snippets
 msgid "A Punchy Headline"
-msgstr "Eine auffällige Überschrift"
+msgstr "Eine auffällige Kopfzeile"
 
 #. module: website
 #: view:website:website.snippets
 msgid "A Section Subtitle"
-msgstr "Eine Bereichsüberschrift"
+msgstr "Ein Bereichsuntertitel"
 
 #. module: website
 #: view:website:website.snippets
@@ -363,11 +188,6 @@ msgid "A small explanation of this great"
 msgstr "Eine kleine Erklärung für diese große"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "ANYthing"
-msgstr "ANYthing"
-
-#. module: website
 #: view:website:website.aboutus view:website:website.layout
 msgid "About us"
 msgstr "Über uns"
@@ -385,7 +205,7 @@ msgstr ""
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:225
+#: code:addons/website/static/src/xml/website.editor.xml:239
 #: code:addons/website/static/src/xml/website.seo.xml:30
 #, python-format
 msgid "Add"
@@ -419,11 +239,11 @@ msgstr "Slogan hinzufügen"
 #. module: website
 #: view:website:website.layout
 msgid "Add a language..."
-msgstr "Sprache hinzufügen..."
+msgstr "Eine Sprache hinzufügen..."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:222
+#: code:addons/website/static/src/xml/website.editor.xml:236
 #, python-format
 msgid "Add an image URL"
 msgstr "Bild-URL hinzufügen"
@@ -450,18 +270,20 @@ msgid "Add page in menu"
 msgstr "Eine Seite in Menü erstellen"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "All Blocks Editable"
-msgstr "All Blocks Editable"
-
-#. module: website
 #: view:website:website.snippets
 msgid "All these icons are licensed under creative commons so that you can use them."
 msgstr "Alle verwendeten Icons wurden unter der Creative Commons Lizenz veröffentlicht."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:212
+#: code:addons/website/static/src/xml/website.editor.xml:292
+#, python-format
+msgid "Alt-Text"
+msgstr "Alt-Text"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:220
 #, python-format
 msgid "Alternate Upload"
 msgstr "Alternativer Upload"
@@ -470,11 +292,6 @@ msgstr "Alternativer Upload"
 #: view:website:website.themes
 msgid "Amelia"
 msgstr "Amelia"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "An Extended Set of Options!"
-msgstr "Ein erweiterter Satz von Optionen!"
 
 #. module: website
 #: view:website:website.500
@@ -490,11 +307,6 @@ msgstr "An ode to Metro"
 #: view:website:website.snippets
 msgid "And a great subtitle too"
 msgstr "Auch ein schöner Untertitel"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Anfänger"
-msgstr "Anfänger"
 
 #. module: website
 #: view:website:website.themes view:website:website.view_website_form
@@ -513,6 +325,11 @@ msgid "Attachment URL"
 msgstr "Dateianhang URL"
 
 #. module: website
+#: help:ir.attachment,website_file:0
+msgid "Attachment available at website"
+msgstr "Attachment available at website"
+
+#. module: website
 #: view:website:website.snippets
 msgid "Author of this quote"
 msgstr "Autor dieses Zitats"
@@ -526,7 +343,7 @@ msgstr "Automatisch Skalieren"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:404
+#: code:addons/website/static/src/xml/website.editor.xml:451
 #, python-format
 msgid "Autoplay"
 msgstr "Automatisch abspielen"
@@ -535,16 +352,6 @@ msgstr "Automatisch abspielen"
 #: field:ir.actions.server,website_published:0
 msgid "Available on the Website"
 msgstr "Verfügbar auf der Webseite"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "BUILD TO LOOK AWESOME"
-msgstr "BUILD TO LOOK AWESOME"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "BUILD WITH BOOTSTRAP 3 FRAMEWORK"
-msgstr "BUILD WITH BOOTSTRAP 3 FRAMEWORK"
 
 #. module: website
 #: view:website:website.snippet_options
@@ -577,16 +384,6 @@ msgstr "Banner MyOdoo Bild"
 #, python-format
 msgid "Basic"
 msgstr "Grundlagen"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Batterielaufzeit: 12 Stunden"
-msgstr "Batterielaufzeit: 12 Stunden"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Batterielaufzeit: 20 Stunden"
-msgstr "Batterielaufzeit: 20 Stunden"
 
 #. module: website
 #: view:website:website.snippets
@@ -624,16 +421,6 @@ msgid "Bigger Text"
 msgstr "Größerer Text"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Bildschirm: 2.5 inch"
-msgstr "Bildschirm: 2.5 inch"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Bildschirm: 2.8 Inch"
-msgstr "Bildschirm: 2.8 Inch"
-
-#. module: website
 #: view:website:website.snippet_options
 msgid "Black"
 msgstr "Schwarz"
@@ -651,26 +438,11 @@ msgid "Box"
 msgstr "Box"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Brand your website now"
-msgstr "Brand your website now"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Build Attractive Web Pages Without any Technical or Designer Skills"
-msgstr "Build Attractive Web Pages Without any Technical or Designer Skills"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/website.tour.banner.js:9
 #, python-format
 msgid "Build a page"
 msgstr "Erstelle eine Seite"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Build your brand. easily."
-msgstr "Build your brand. easily."
 
 #. module: website
 #: view:website:website.snippet_options
@@ -688,43 +460,13 @@ msgid "Button"
 msgstr "Schaltfläche"
 
 #. module: website
-#: view:website:website.snippet_selector
-msgid "CLEAN"
-msgstr "CLEAN"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "CLEAN THEME"
-msgstr "CLEAN THEME"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "CLEAN is SIMPLE, Fast AND EFFICIENT"
-msgstr "CLEAN is SIMPLE, Fast AND EFFICIENT"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "CLEAN was made with easy customization in mind."
-msgstr "CLEAN was made with easy customization in mind."
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "CONTENT BLOCKS"
-msgstr "CONTENT BLOCKS"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "COUPON"
-msgstr "COUPON"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Can I use it to manage projects based on agile methodologies?"
 msgstr "Kann ich das Management von agilen Projekten umsetzen ?"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:310
+#: code:addons/website/static/src/xml/website.editor.xml:357
 #: code:addons/website/static/src/xml/website.translator.xml:46
 #: code:addons/website/static/src/xml/website.xml:74 view:website:website.500
 #: view:website:website.view_website_form
@@ -740,7 +482,7 @@ msgstr "Cerulean"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:318
+#: code:addons/website/static/src/xml/website.editor.xml:365
 #, python-format
 msgid "Change"
 msgstr "Ändern"
@@ -757,7 +499,7 @@ msgstr "Ändere Symbole"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:325
+#: code:addons/website/static/src/xml/website.editor.xml:372
 #, python-format
 msgid "Change Media"
 msgstr "Ändere Medien"
@@ -776,11 +518,6 @@ msgstr "Ändere Anschrift"
 #: view:website:website.snippet_options
 msgid "Change..."
 msgstr "Ändere..."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Changing your layout is super easy with Theme Clean. You can switch from full width to boxed."
-msgstr "Changing your layout is super easy with Theme Clean. You can switch from full width to boxed."
 
 #. module: website
 #. openerp-web
@@ -821,66 +558,6 @@ msgid "Circle"
 msgstr "Kreis"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Clean - Bootstrap Theme for Odoo CMS"
-msgstr "Clean - Bootstrap Theme for MyOdoo CMS"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean HTML5"
-msgstr "Clean HTML5"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean Layout"
-msgstr "Clean Layout"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean Structure"
-msgstr "Clean Structure"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean Theme - Beautiful Flat Colors"
-msgstr "Clean Theme - Beautiful Flat Colors"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean Theme is made with easy customization in mind."
-msgstr "Clean Theme is made with easy customization in mind."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean for Odoo CMS"
-msgstr "Clean for MyOdoo CMS"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean is a professional responsive HTML5 theme, built using Bootstrap3, the most popular front-end framework for developing responsive, mobile first projects on the web."
-msgstr "Clean is a professional responsive HTML5 theme, built using Bootstrap3, the most popular front-end framework for developing responsive, mobile first projects on the web."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean is a uniquely designed theme."
-msgstr "Clean is a uniquely designed theme."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean is a uniquely designed theme. It's super easy to modify and uses advanced LESS/CSS techniques"
-msgstr "Clean is a uniquely designed theme. It's super easy to modify and uses advanced LESS/CSS techniques"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean is build with easy customization in mind. Out of the box,"
-msgstr "Clean is build with easy customization in mind. Out of the box,"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Clean is designed for mobile first so it looks great and clean on mobile devices of all sizes."
-msgstr "Clean is designed for mobile first so it looks great and clean on mobile devices of all sizes."
-
-#. module: website
 #: view:website:website.snippets
 msgid "Click Here"
 msgstr "Klicken Sie hier."
@@ -891,6 +568,13 @@ msgstr "Klicken Sie hier."
 #, python-format
 msgid "Click here to insert blocks of content in the page."
 msgstr "Klicken Sie hier, um Inhaltsblöcke in eine Seite einzufügen."
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:217
+#, python-format
+msgid "Click here to upload"
+msgstr "zur Bildauswahl hier anklicken"
 
 #. module: website
 #. openerp-web
@@ -942,11 +626,6 @@ msgstr "Farbverlauf"
 #, python-format
 msgid "Color Style"
 msgstr "Farbstil"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Combine your background color with a gradient to get more depht."
-msgstr "Combine your background color with a gradient to get more depht."
 
 #. module: website
 #: model:ir.model,name:website.model_res_company
@@ -1014,7 +693,7 @@ msgstr "Kontaktieren Sie uns jetzt"
 #: view:website:website.contactus view:website:website.layout
 #: view:website:website.snippets model:website.menu,name:website.menu_contactus
 msgid "Contact us"
-msgstr "Kontaktieren Sie uns"
+msgstr "Kontakt"
 
 #. module: website
 #: view:website:website.contactus
@@ -1064,21 +743,11 @@ msgid "Create Page"
 msgstr "Erstelle Webseite"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Create Stunning"
-msgstr "Create Stunning"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/website.editor.js:996
 #, python-format
 msgid "Create page '%s'"
 msgstr "Erstelle Seite '%s'"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Create your pages without typing a single line of code. Clean use a clean and simple HTML structure."
-msgstr "Create your pages without typing a single line of code. Clean use a clean and simple HTML structure."
 
 #. module: website
 #: field:website,create_uid:0 field:website.config.settings,create_uid:0
@@ -1101,7 +770,7 @@ msgstr "Knackig wie ein neues Blatt Papier."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:323
+#: code:addons/website/static/src/xml/website.editor.xml:370
 #: code:addons/website/static/src/xml/website.snippets.xml:31
 #: view:website:website.layout
 #, python-format
@@ -1152,14 +821,16 @@ msgid "Darken"
 msgstr "Grau"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Das Beste vom Besten"
-msgstr "Das Beste vom Besten"
-
-#. module: website
 #: field:ir.attachment,datas_checksum:0
 msgid "Datas checksum"
 msgstr "Kontrollbetrag"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:5
+#, python-format
+msgid "Datei"
+msgstr "Datei"
 
 #. module: website
 #. openerp-web
@@ -1185,6 +856,14 @@ msgstr "Standardsprache"
 #: field:website.config.settings,default_lang_code:0
 msgid "Default language code"
 msgstr "Standard Sprachcode"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:295
+#: code:addons/website/static/src/xml/website_files.editor.xml:63
+#, python-format
+msgid "Delete"
+msgstr "Löschen"
 
 #. module: website
 #: view:website:website.snippets
@@ -1229,17 +908,12 @@ msgid "Description..."
 msgstr "Beschreibung..."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Design Tip"
-msgstr "Design Tip"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.editor.xml:11
 #: code:addons/website/static/src/xml/website.editor.xml:30
 #: code:addons/website/static/src/xml/website.editor.xml:191
-#: code:addons/website/static/src/xml/website.editor.xml:249
-#: code:addons/website/static/src/xml/website.editor.xml:308
+#: code:addons/website/static/src/xml/website.editor.xml:267
+#: code:addons/website/static/src/xml/website.editor.xml:355
 #: code:addons/website/static/src/xml/website.seo.xml:71
 #, python-format
 msgid "Discard"
@@ -1247,7 +921,7 @@ msgstr "Verwerfen"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:298
+#: code:addons/website/static/src/xml/website.editor.xml:345
 #, python-format
 msgid "Discard edition"
 msgstr "Verwerfen der Ausgabe"
@@ -1256,11 +930,6 @@ msgstr "Verwerfen der Ausgabe"
 #: view:website:website.snippets
 msgid "Discover more about Odoo"
 msgstr "Entdecken Sie mehr von MyOdoo"
-
-#. module: website
-#: view:website:website.template_partner_comment
-msgid "Discuss and Comments"
-msgstr "Diskussionen und Kommentare"
 
 #. module: website
 #. openerp-web
@@ -1323,11 +992,6 @@ msgid "Drag to Move"
 msgstr "Zum verschieben ziehen"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Drop. Resize. Duplicate. ANIMATE. Customize"
-msgstr "Drop. Resize. Duplicate. ANIMATE. Customize"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Duplicate"
 msgstr "Duplizieren"
@@ -1343,31 +1007,6 @@ msgstr "Duplizieren Sie Inhaltsblöcke"
 #: view:website:website.snippets
 msgid "Duplicate blocks to add more features."
 msgstr "Duplizieren Sie Blöcke für weitere neue Funktionen."
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "EFFECT BLOCKS"
-msgstr "EFFECT BLOCKS"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "ENARK"
-msgstr "ENARK"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "ENARK THEME"
-msgstr "ENARK THEME"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Easily adapt your branding with the six color palettes you can choose with Theme Clean"
-msgstr "Easily adapt your branding with the six color palettes you can choose with Theme Clean"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Easy Customization"
-msgstr "Easy Customization"
 
 #. module: website
 #: view:website:website.layout view:website:website.publish_management
@@ -1417,31 +1056,21 @@ msgid "Effects"
 msgstr "Effekte"
 
 #. module: website
-#: view:website:website.beispiel view:website:website.homepage
+#: view:website:website.homepage
 msgid "Ein kleiner Untertitel"
 msgstr "Ein kleiner Untertitel"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Eingeschränkter Support"
-msgstr "Eingeschränkter Support"
+#: view:website:website.homepage
+msgid "Eine auffällige Überschrift"
+msgstr "Eine auffällige Überschrift"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:378
+#: code:addons/website/static/src/xml/website.editor.xml:425
 #, python-format
 msgid "Embed Video (HTML)"
 msgstr "Video einbetten (HTML)"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Enjoy the power of LESS/CSS3. Customizing your theme has never been so easy. Make it your own!"
-msgstr "Enjoy the power of LESS/CSS3. Customizing your theme has never been so easy. Make it your own!"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Enterprise Paket"
-msgstr "Enterprise Paket"
 
 #. module: website
 #: view:website:website.snippets
@@ -1459,11 +1088,6 @@ msgid "Error message:"
 msgstr "Fehlerhinweis:"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Every Building Block has its own options. You can change their style by playing with images, colors and gradients."
-msgstr "Every Building Block has its own options. You can change their style by playing with images, colors and gradients."
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/website.tour.banner.js:22
 #, python-format
@@ -1471,18 +1095,8 @@ msgid "Every page of your website can be modified through the <i>Edit</i> button
 msgstr "Jede einzelne Seite kann durch den \"Bearbeiten\" Button weiter bearbeitet werden."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Everything is customizable. Make Clean Theme your own!"
-msgstr "Everything is customizable. Make Clean Theme your own!"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Expert"
-msgstr "Experte"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Experte"
 msgstr "Experte"
 
 #. module: website
@@ -1515,11 +1129,6 @@ msgstr "Extra-Breit"
 #: view:website:website.snippets
 msgid "FAQ"
 msgstr "FAQ"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "FEATURES BLOCKS"
-msgstr "FEATURES BLOCKS"
 
 #. module: website
 #: field:website,social_facebook:0
@@ -1555,7 +1164,7 @@ msgstr "Funktionsbeschreibung"
 #. module: website
 #: view:website:website.snippets
 msgid "Feature Two"
-msgstr "Zweites Feature"
+msgstr "Funktion 2"
 
 #. module: website
 #: view:website:website.snippets
@@ -1563,9 +1172,26 @@ msgid "Features"
 msgstr "Funktionen"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Find the font that suits your business and make your content more accessible by you visitors."
-msgstr "Find the font that suits your business and make your content more accessible by you visitors."
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:16
+#, python-format
+msgid "File"
+msgstr "Datei"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/js/website_files.editor.js:16
+#, python-format
+msgid "File name"
+msgstr "Dateiname"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:291
+#: code:addons/website/static/src/xml/website_files.editor.xml:58
+#, python-format
+msgid "Filename"
+msgstr "Dateiname"
 
 #. module: website
 #: view:website:website.snippets
@@ -1598,11 +1224,6 @@ msgid "Flowers Field"
 msgstr "Blumenfeld"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Focuses on Your Content !"
-msgstr "Focuses on Your Content !"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.ace.xml:10
 #, python-format
@@ -1620,31 +1241,6 @@ msgid "From the main container, you can change the background to highlight featu
 msgstr "Aus der Perspektive des primären Inhaltsblocks können Sie den Hintergrund für eine besondere Hervorhebung ändern."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "GIFT"
-msgstr "GIFT"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "GIFT CARDS"
-msgstr "GIFT CARDS"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "GRAPHENE"
-msgstr "GRAPHENE"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "GRAPHENE THEME"
-msgstr "GRAPHENE THEME"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Get a code"
-msgstr "Get a code"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/js/website.tour.banner.js:53
 #, python-format
@@ -1657,16 +1253,6 @@ msgstr "Erhalte die Banner Merkmale"
 #, python-format
 msgid "Get this page efficiently referenced in Google to attract more visitors."
 msgstr "Referenzieren Sie diese Seite in google, um neue Benutzer anzulocken."
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Gewicht: 1.1 Unzen"
-msgstr "Gewicht: 1.1 Unzen"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Gewicht: 1.2 Unzen"
-msgstr "Gewicht: 1.2 Unzen"
 
 #. module: website
 #: field:website,social_github:0 field:website.config.settings,social_github:0
@@ -1714,7 +1300,7 @@ msgstr ""
 #. module: website
 #: view:website:website.snippets
 msgid "Great stories have personality."
-msgstr "Herausragende Geschichten mit persönlicher Ansprache."
+msgstr "Tolle Geschichten sind persönlich."
 
 #. module: website
 #: view:website:website.snippet_options
@@ -1730,11 +1316,6 @@ msgstr "Grüne Felder"
 #: view:website:website.layout
 msgid "HELP & TUTORIALS"
 msgstr "HILFE & ANLEITUNG"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "HIGHLIGHT WITH ANIMATIONS"
-msgstr "HIGHLIGHT WITH ANIMATIONS"
 
 #. module: website
 #: view:website:website.layout
@@ -1782,7 +1363,7 @@ msgstr "Homepage"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:331
+#: code:addons/website/static/src/xml/website.editor.xml:378
 #, python-format
 msgid "Horizontal flip"
 msgstr "Horizontaler Wechsel"
@@ -1815,7 +1396,7 @@ msgstr "Wenn der Fehler durch eine Änderung in der Vorlage verursacht wird, hab
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:301
+#: code:addons/website/static/src/xml/website.editor.xml:348
 #, python-format
 msgid "If you discard the current edition,"
 msgstr "Wenn Sie die aktuelle Bearbeitung verwerfen,"
@@ -1856,12 +1437,7 @@ msgstr "Bildumlauf"
 #. module: website
 #: view:website:website.snippets
 msgid "Image-Text"
-msgstr "Bild-Text"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Impress Your Visitor !"
-msgstr "Impress Your Visitor !"
+msgstr "Text-Bilder"
 
 #. module: website
 #: view:website:website.snippets
@@ -1889,11 +1465,6 @@ msgstr ""
 "                            Änderung der Seitenstruktur, müssen Sie die Master Webseite \n"
 "                            ändern, um diese Anpassungen dann auch für alle Webseiten \n"
 "                            zu übernehmen."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Increase the amount of your visitors by offering them great discount."
-msgstr "Increase the amount of your visitors by offering them great discount."
 
 #. module: website
 #. openerp-web
@@ -1958,19 +1529,9 @@ msgstr ""
 "zu korrigieren oder das Problem zu fixen."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "It's super easy to modify and uses advanced LESS/CSS techniques"
-msgstr "It's super easy to modify and uses advanced LESS/CSS techniques"
-
-#. module: website
 #: view:website:website.themes
 msgid "Jet black and electric blue"
 msgstr "Jet black and electric blue"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Jetzt bestellen"
-msgstr "Jetzt bestellen"
 
 #. module: website
 #: view:website:website.snippets
@@ -1988,44 +1549,9 @@ msgid "Journal"
 msgstr "Journal"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Just drag & drop the blocks you need to easily build your layout. All layouts are made of sections, that you can easily combine to fit your specific project."
-msgstr "Just drag & drop the blocks you need to easily build your layout. All layouts are made of sections, that you can easily combine to fit your specific project."
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "KIDDO"
-msgstr "KIDDO"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "KIDDO THEME"
-msgstr "KIDDO THEME"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Kein Support"
-msgstr "Kein Support"
-
-#. module: website
-#: view:website:website.beispiel view:website:website.homepage
+#: view:website:website.homepage
 msgid "Kontaktieren Sie uns"
 msgstr "Kontaktieren Sie uns"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Kostenfreier Versand, für alle Kunden"
-msgstr "Kostenfreier Versand, für alle Kunden"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "LESS/CSS"
-msgstr "LESS/CSS"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "LV5MAY14"
-msgstr "LV5MAY14"
 
 #. module: website
 #: view:website:website.snippet_options
@@ -2065,19 +1591,17 @@ msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Layouts in Instant !"
-msgstr "Layouts in Instant !"
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:294
+#: code:addons/website/static/src/xml/website_files.editor.xml:60
+#, python-format
+msgid "Last update"
+msgstr "Letzte Änderung"
 
 #. module: website
 #: view:website:website.snippet_options
 msgid "Left"
 msgstr "Links"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Let them find the coupon code."
-msgstr "Let them find the coupon code."
 
 #. module: website
 #. openerp-web
@@ -2136,11 +1660,6 @@ msgid "Logout"
 msgstr "Abmelden"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "MAKE YOUR OWN WEBSITE"
-msgstr "MAKE YOUR OWN WEBSITE"
-
-#. module: website
 #: field:website,menu_id:0
 msgid "Main Menu"
 msgstr "Hauptmenü"
@@ -2163,6 +1682,34 @@ msgid "Margin resize"
 msgstr "Rand ändern"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:228
+#, python-format
+msgid "Max 1024x1024"
+msgstr "Upload groß mit Transparenz (verkleinert auf max 1024 Pixel)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:225
+#, python-format
+msgid "Max 1024x1024 without transparent"
+msgstr "Upload groß (verkleinert auf max 1024 Pixel in JPG)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:229
+#, python-format
+msgid "Max 600x600"
+msgstr "Upload normal mit Transparenz (verkleinert auf max 600 Pixel)"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:226
+#, python-format
+msgid "Max 600x600 with transparent"
+msgstr "Upload normal (verkleinert auf max 600 Pixel in JPG)"
+
+#. module: website
 #: view:website:website.403 view:website:website.404
 msgid "Maybe you were looking for one of these popular pages ?"
 msgstr "Vielleicht haben Sie bereits nach einer dieser populären Seiten gesucht ?"
@@ -2171,11 +1718,6 @@ msgstr "Vielleicht haben Sie bereits nach einer dieser populären Seiten gesucht
 #: view:website:website.snippet_options
 msgid "Medium"
 msgstr "Mittel"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Mein Beispiel"
-msgstr "Mein Beispiel"
 
 #. module: website
 #: view:website.config.settings:website.view_website_config_settings
@@ -2191,24 +1733,21 @@ msgid "Menu Label"
 msgstr "Menü Beschriftung"
 
 #. module: website
-#: view:website:website.template_partner_comment
-msgid "Message"
-msgstr "Nachricht"
-
-#. module: website
 #: field:ir.attachment,mimetype:0
 msgid "Mime Type"
 msgstr "Mime Typ"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:290
+#, python-format
+msgid "Mini Image"
+msgstr "Bild"
+
+#. module: website
 #: view:website:website.themes
 msgid "Mini and minimalist."
 msgstr "Klein und minimilastisch"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Minimalistic Flat Design"
-msgstr "Minimalistic Flat Design"
 
 #. module: website
 #. openerp-web
@@ -2217,11 +1756,6 @@ msgstr "Minimalistic Flat Design"
 #, python-format
 msgid "Mobile preview"
 msgstr "Mobile Anwendung Voransicht"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "More Details"
-msgstr "Mehr Informationen"
 
 #. module: website
 #: view:website:website.snippets
@@ -2252,28 +1786,13 @@ msgstr "Mein Konto"
 
 #. module: website
 #: view:website:website.homepage
-msgid "MyOdoo24.de"
-msgstr "MyOdoo24.de"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "NEW BUILDING BLOCKS"
-msgstr "NEW BUILDING BLOCKS"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "NEW EXCLUSIVE BUILDING BLOCKS"
-msgstr "NEW EXCLUSIVE BUILDING BLOCKS"
+msgid "MyOdoo CMS - a big picture"
+msgstr "MyOdoo CMS - a big picture"
 
 #. module: website
 #: view:website:website.snippet_options
 msgid "Narrow"
 msgstr "Verschmälern"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "New Odoo Bootstrap Theme: Clean Theme"
-msgstr "New MyOdoo Bootstrap Theme: Clean Theme"
 
 #. module: website
 #. openerp-web
@@ -2356,7 +1875,6 @@ msgid "Odoo CMS - Gallery sample"
 msgstr "MyOdoo CMS - Gallery sample"
 
 #. module: website
-#: view:website:website.beispiel view:website:website.homepage
 #: view:website:website.snippets
 msgid "Odoo CMS - a big picture"
 msgstr "MyOdoo CMS - a big picture"
@@ -2430,14 +1948,14 @@ msgid "Ok"
 msgstr "OK"
 
 #. module: website
+#: view:website:website.layout
+msgid "Open Source CRM"
+msgstr "Open Source CRM"
+
+#. module: website
 #: view:website:website.info
 msgid "Open Source ERP"
 msgstr "Open Source ERP"
-
-#. module: website
-#: view:website:website.layout
-msgid "Open Source eCommerce"
-msgstr "Open Source eCommerce"
 
 #. module: website
 #. openerp-web
@@ -2484,7 +2002,7 @@ msgstr "Unsere Kundenreferenzen"
 #. module: website
 #: view:website:website.snippets
 msgid "Our Offers"
-msgstr "Unsere Angebote"
+msgstr "Unsere Aufträge"
 
 #. module: website
 #: view:website:website.snippets
@@ -2520,9 +2038,11 @@ msgstr ""
 "                            zur Optimierung der Arbeitsgeschwindigkeit entwickelt."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "PLAY WITH COLORS & GRADIENTS"
-msgstr "PLAY WITH COLORS & GRADIENTS"
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:37
+#, python-format
+msgid "Overwrite existing file"
+msgstr "Existierende Datei überschreiben"
 
 #. module: website
 #. openerp-web
@@ -2584,24 +2104,9 @@ msgid "Partner"
 msgstr "Kunde"
 
 #. module: website
-#: view:website:website.template_partner_post
-msgid "Partner Detail"
-msgstr "Kundendetails"
-
-#. module: website
-#: view:website:website.template_partner_comment
-msgid "Partners"
-msgstr "Kunden"
-
-#. module: website
 #: view:website:website.snippet_options
 msgid "People"
 msgstr "Personen"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Personalize Every Element"
-msgstr "Personalize Every Element"
 
 #. module: website
 #. openerp-web
@@ -2628,8 +2133,9 @@ msgstr "Vorher"
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.editor.xml:135
-#: code:addons/website/static/src/xml/website.editor.xml:375
-#: code:addons/website/static/src/xml/website.editor.xml:386
+#: code:addons/website/static/src/xml/website.editor.xml:422
+#: code:addons/website/static/src/xml/website.editor.xml:433
+#: code:addons/website/static/src/xml/website_files.editor.xml:62
 #, python-format
 msgid "Preview"
 msgstr "Vorschau"
@@ -2642,18 +2148,8 @@ msgid "Primary"
 msgstr "Hauptsächlich"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Pro Monat"
-msgstr "Pro Monat"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Professional"
-msgstr "Professionell"
-
-#. module: website
-#: view:website:website.beispiel
-msgid "Professionell"
 msgstr "Professionell"
 
 #. module: website
@@ -2740,19 +2236,9 @@ msgid "Quotes Slider"
 msgstr "Zitatgallerien"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "RICH FEATURES"
-msgstr "RICH FEATURES"
-
-#. module: website
 #: view:website:website.themes
 msgid "Readable"
 msgstr "Lesbar"
-
-#. module: website
-#: view:website:website.template_partner_comment
-msgid "Recipient"
-msgstr "Empfänger"
 
 #. module: website
 #: view:website:website.snippet_options
@@ -2811,23 +2297,13 @@ msgid "Resized file content"
 msgstr "Angepasste Dateigröße"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Responsive"
-msgstr "Responsive"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Responsive HTML5 theme built using Bootstrap"
-msgstr "Responsive HTML5 theme built using Bootstrap"
-
-#. module: website
 #: view:website:website.snippet_options
 msgid "Right"
 msgstr "Rechts"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:328
+#: code:addons/website/static/src/xml/website.editor.xml:375
 #, python-format
 msgid "Rotation"
 msgstr "Drehung"
@@ -2841,11 +2317,6 @@ msgstr "Abgerundete Ecken"
 #: model:ir.model,name:website.model_website_seo_metadata
 msgid "SEO metadata"
 msgstr "SEO Metadaten"
-
-#. module: website
-#: view:website:website.demo_page_blocks
-msgid "STRUCTURE BLOCKS"
-msgstr "STRUCTURE BLOCKS"
 
 #. module: website
 #: view:website:website.snippets
@@ -2903,11 +2374,6 @@ msgid "Second List"
 msgstr "Zweite Liste"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "See how it is easy to change the look of your page just by using an other background color."
-msgstr "See how it is easy to change the look of your page just by using an other background color."
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.snippets.xml:29
 #, python-format
@@ -2923,7 +2389,7 @@ msgstr "Wählen Sie ein Medium"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:242
+#: code:addons/website/static/src/xml/website.editor.xml:260
 #, python-format
 msgid "Select a Picture"
 msgstr "Wählen Sie hierzu ein Bild"
@@ -2946,16 +2412,6 @@ msgid "Sell Online. Easily."
 msgstr "Verkaufen Sie online. Sehr einfach."
 
 #. module: website
-#: view:website:website.template_partner_comment
-msgid "Send"
-msgstr "Senden"
-
-#. module: website
-#: view:website:website.template_partner_comment
-msgid "Send a Message to our Partners"
-msgstr "Sende eine Nachricht an alle Partner"
-
-#. module: website
 #: view:website:website.contactus
 msgid "Send us an email"
 msgstr "Senden Sie uns eine E-Mail"
@@ -2963,7 +2419,7 @@ msgstr "Senden Sie uns eine E-Mail"
 #. module: website
 #: view:website:website.snippets
 msgid "Separator"
-msgstr "Trennzeichen"
+msgstr "Trennlinie"
 
 #. module: website
 #: field:website.menu,sequence:0
@@ -2972,7 +2428,7 @@ msgstr "Reihenfolge"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:367
+#: code:addons/website/static/src/xml/website.editor.xml:414
 #, python-format
 msgid "Set a video URL"
 msgstr "Setzen Sie ene Video URL"
@@ -2998,11 +2454,6 @@ msgid "Show As Optional Inherit"
 msgstr "Inherit als Option anzeigen"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Showcase Your Services and Features"
-msgstr "Showcase Your Services and Features"
-
-#. module: website
 #: view:website:website.layout
 msgid "Sign in"
 msgstr "Anmelden"
@@ -3023,6 +2474,14 @@ msgstr "Simplex"
 #, python-format
 msgid "Size"
 msgstr "Größe"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:293
+#: code:addons/website/static/src/xml/website_files.editor.xml:59
+#, python-format
+msgid "Size (KB)"
+msgstr "Dateigröße (KB)"
 
 #. module: website
 #. openerp-web
@@ -3062,7 +2521,7 @@ msgstr "Spacelab"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:330
+#: code:addons/website/static/src/xml/website.editor.xml:377
 #: view:website:website.snippet_options
 #, python-format
 msgid "Spin"
@@ -3085,11 +2544,6 @@ msgstr ""
 "                            und informieren Sie ihn zu diesem Thema."
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Starter Paket"
-msgstr "Starter Paket"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Starter package"
 msgstr "Starter Paket"
@@ -3107,7 +2561,7 @@ msgstr "Struktur"
 #. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.editor.xml:81
-#: code:addons/website/static/src/xml/website.editor.xml:326
+#: code:addons/website/static/src/xml/website.editor.xml:373
 #: view:website:website.snippet_options
 #, python-format
 msgid "Style"
@@ -3146,24 +2600,9 @@ msgid "Sweet and cheery"
 msgstr "Süss und sauer"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "THEMES FEATURES"
-msgstr "THEMES FEATURES"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "TOOLS & OPTIONS"
-msgstr "TOOLS & OPTIONS"
-
-#. module: website
 #: view:website:website.info
 msgid "Technical name:"
 msgstr "Technische Bezeichnung"
-
-#. module: website
-#: view:website:website.homepage
-msgid "Teilen"
-msgstr "Teilen"
 
 #. module: website
 #: view:website:website.snippets
@@ -3197,17 +2636,12 @@ msgstr "Testen Sie die mobile Version"
 #. module: website
 #: view:website:website.snippets
 msgid "Text Block"
-msgstr "Textblöcke"
+msgstr "Textblock"
 
 #. module: website
 #: view:website:website.snippets
 msgid "Text-Image"
-msgstr "Textbilder"
-
-#. module: website
-#: view:website:website.template_partner_post
-msgid "Thank you for posting a message !"
-msgstr "Danke für den Versand einer Benachrichtigung!"
+msgstr "Text-Bild"
 
 #. module: website
 #. openerp-web
@@ -3233,6 +2667,17 @@ msgid "The error occured while rendering the template"
 msgstr "Der Fehler tritt bei der Benutzung der Vorlage auf"
 
 #. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:81
+#, python-format
+msgid ""
+"The file could not be deleted because it is used in the\n"
+"\t           following pages or views:"
+msgstr ""
+"The file could not be deleted because it is used in the\n"
+"\t           following pages or views:"
+
+#. module: website
 #: view:website:website.http_error_debug
 msgid "The following error was raised in the website controller"
 msgstr "Die Webseite meldete einen Fehler beim Aufrufen der Seite."
@@ -3244,7 +2689,7 @@ msgstr "Die komplette URL zum Zugriff auf die Server Aktion durch eine externe W
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:268
+#: code:addons/website/static/src/xml/website.editor.xml:315
 #, python-format
 msgid ""
 "The image could not be deleted because it is used in the\n"
@@ -3292,16 +2737,6 @@ msgid "Theme Changed!"
 msgstr "Das Template wurde geändert!"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "Theme Clean provides a modern and minimalistic flat design and makes you ride the trend"
-msgstr "Theme Clean provides a modern and minimalistic flat design and makes you ride the trend"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Theme Features"
-msgstr "Theme Features"
-
-#. module: website
 #: view:website:website.snippets
 msgid "Third Feature"
 msgstr "Drittes Feature"
@@ -3321,7 +2756,7 @@ msgstr "Diese Anleitung begleitet Sie durch den Prozess zur Erstellung einer Web
 #. module: website
 #: view:website:website.snippets
 msgid "Three Columns"
-msgstr "Drei Spalten"
+msgstr "3-spaltig"
 
 #. module: website
 #. openerp-web
@@ -3418,11 +2853,6 @@ msgid "Ubuntu orange and unique font"
 msgstr "Ubuntu Orange mit einheitlicher Schriftart"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Uneingeschränkter Support"
-msgstr "Uneingeschränkter Support"
-
-#. module: website
 #: view:website:website.snippet_options
 msgid "Uniform Color"
 msgstr "Einheitliche Farbe"
@@ -3443,35 +2873,38 @@ msgid "Unpublish"
 msgstr "Veröffentlichung aufheben"
 
 #. module: website
-#: view:website:website.beispiel
-msgid "Unsere Angebote"
-msgstr "Unsere Angebote"
-
-#. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:209
-#, python-format
-msgid "Upload an image from your computer"
-msgstr "Upload eines Bilds von Ihrem Rechner"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:215
+#: code:addons/website/static/src/xml/website.editor.xml:223
 #, python-format
 msgid "Upload image without optimization"
 msgstr "Hochgeladenes Bild ohne Optimierung"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:218
+#: code:addons/website/static/src/xml/website_files.editor.xml:32
+#, python-format
+msgid "Upload new file"
+msgstr "Neue Datei hochladen"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website.editor.xml:232
+#: code:addons/website/static/src/xml/website_files.editor.xml:33
 #, python-format
 msgid "Uploading..."
-msgstr "Uploading"
+msgstr "Hochladen…"
 
 #. module: website
 #: field:website.menu,url:0
 msgid "Url"
 msgstr "URL"
+
+#. module: website
+#. openerp-web
+#: code:addons/website/static/src/xml/website_files.editor.xml:61
+#, python-format
+msgid "Used"
+msgstr "Verwendet"
 
 #. module: website
 #: view:website:website.snippet_options
@@ -3485,7 +2918,7 @@ msgstr "Velour"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:332
+#: code:addons/website/static/src/xml/website.editor.xml:379
 #, python-format
 msgid "Vertical flip"
 msgstr "Vertikal spiegeln"
@@ -3562,7 +2995,7 @@ msgstr "Wir tun unser Bestes, um so schnell wie möglich auf Sie zurückzukommen
 #: code:addons/website/static/src/xml/website.backend.xml:18
 #: model:ir.actions.act_url,name:website.action_website
 #: view:ir.actions.server:website.view_server_action_search_website
-#: model:ir.model,name:website.model_website
+#: field:ir.attachment,website_file:0 model:ir.model,name:website.model_website
 #: model:ir.ui.menu,name:website.menu_website view:website:website.layout
 #: field:website.menu,website_id:0
 #, python-format
@@ -3591,24 +3024,9 @@ msgid "Website Name"
 msgstr "Website-Name"
 
 #. module: website
-#: model:ir.actions.server,name:website.action_partner_post
-msgid "Website Partner Post and Thanks Demo"
-msgstr "Webseite Partner Nachricht und Danke Demo"
-
-#. module: website
-#: model:ir.actions.server,name:website.action_partner_comment
-msgid "Website Partners Comment Form"
-msgstr "Webseite Partner Kommentarformular"
-
-#. module: website
 #: field:ir.actions.server,website_path:0
 msgid "Website Path"
 msgstr "Webseite Pfad"
-
-#. module: website
-#: model:crm.case.section,name:website.salesteam_website_sales
-msgid "Website Sales"
-msgstr "Webseite Verkäufe"
 
 #. module: website
 #: model:ir.actions.act_window,name:website.action_website_configuration
@@ -3692,7 +3110,7 @@ msgstr "Gut gemacht, Sie haben bereits eine Webseite erstellt."
 #. module: website
 #: view:website:website.snippets
 msgid "What a day it was yesterday - such a big day for us!"
-msgstr "What a day it was yesterday - such a big day for us!"
+msgstr "Was für ein Tag es gestern war - so ein großer Tag für uns!"
 
 #. module: website
 #: field:ir.ui.view,page:0
@@ -3713,16 +3131,6 @@ msgstr ""
 "Während eine Internetverbindung zum Starten der Kasse\n"
 "unbedingt erforderlich ist, bleibt es auch nach einem kompletten\n"
 "Verbindungsabbruch weiter nutzbar."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "Wide and Boxed Layout"
-msgstr "Wide and Boxed Layout"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "With Clean It is now easy to brand your web pages & blocks."
-msgstr "With Clean It is now easy to brand your web pages & blocks."
 
 #. module: website
 #: view:website:website.snippets
@@ -3803,7 +3211,10 @@ msgstr ""
 #. module: website
 #: view:website:website.snippets
 msgid "Write one sentence to convince visitor about your message."
-msgstr "Schreiben Sie einen Satz, um mit Ihrer Mitteilung Begeisterung zu entfachen."
+msgstr ""
+"Schreiben Sie einen kurzen Abschnitte zur Beschreibung\n"
+"Ihrer Produkte und Dienste. Um erfolgreich zu sein, sollte der Inhalt\n"
+"auch für andere Leser interessant sein."
 
 #. module: website
 #: view:website:website.snippets
@@ -3811,14 +3222,9 @@ msgid "Write what the customer would like to know,"
 msgstr "Schreiben Sie über die Inhalte,"
 
 #. module: website
-#: view:website:website.beispiel view:website:website.homepage
+#: view:website:website.homepage
 msgid "Wählen Sie ein dynamisches Bild aus und schreiben Sie einen ansprechenden Text. Der Text muss nicht lang sein, er sollte aber auch nicht die Wirkung des Bildes überlagern."
 msgstr "Wählen Sie ein dynamisches Bild aus und schreiben Sie einen ansprechenden Text. Der Text muss nicht lang sein, er sollte aber auch nicht die Wirkung des Bildes überlagern."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "YOU ARE THE DESIGNER"
-msgstr "YOU ARE THE DESIGNER"
 
 #. module: website
 #: view:website:website.snippet_options
@@ -3844,15 +3250,10 @@ msgstr "Sie treten in Kürze in den Übersetzungsmodus ein."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:305
+#: code:addons/website/static/src/xml/website.editor.xml:352
 #, python-format
 msgid "You can cancel to return to the edition mode."
 msgstr "Sie können durch Abbrechen in den Erfassungsmodus kommen."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "You can easily change the background, the colors and the font combination of your website or you a preset."
-msgstr "You can easily change the background, the colors and the font combination of your website or you a preset."
 
 #. module: website
 #: view:website:website.themes
@@ -3879,23 +3280,8 @@ msgid "Youtube Account"
 msgstr "Youtube Konto"
 
 #. module: website
-#: view:website:website.snippet_selector
-msgid "ZAP"
-msgstr "ZAP"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "ZAP THEME"
-msgstr "ZAP THEME"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "ZUY4OPLQ"
-msgstr "ZUY4OPLQ"
-
-#. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:302
+#: code:addons/website/static/src/xml/website.editor.xml:349
 #, python-format
 msgid "all"
 msgstr "alle"
@@ -3907,20 +3293,10 @@ msgstr "und entdecken die folgende Einschränkung:"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:335
+#: code:addons/website/static/src/xml/website.editor.xml:382
 #, python-format
 msgid "border"
 msgstr "Rahmen"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "built on the latest Bootstrap Framework."
-msgstr "built on the latest Bootstrap Framework."
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "card"
-msgstr "card"
 
 #. module: website
 #: view:website:website.snippets
@@ -3963,16 +3339,6 @@ msgid "feature, in clear words."
 msgstr "Funktion, in einfachen Worten"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "flat design & clean structure"
-msgstr "flat design & clean structure"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "from backgronds to fonts."
-msgstr "from backgronds to fonts."
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.seo.xml:57
 #, python-format
@@ -3981,7 +3347,7 @@ msgstr "Wie Ihre Seite in Google veröffentlicht wird."
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:224
+#: code:addons/website/static/src/xml/website.editor.xml:238
 #, python-format
 msgid "http://openerp.com/logo.png"
 msgstr "http://openerp.com/logo.png"
@@ -4073,16 +3439,11 @@ msgid "not what you want to show."
 msgstr "die ein Kunde wissen sollte."
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "off"
-msgstr "off"
-
-#. module: website
 #. openerp-web
 #: code:addons/website/static/src/xml/website.editor.xml:9
 #: code:addons/website/static/src/xml/website.editor.xml:28
 #: code:addons/website/static/src/xml/website.editor.xml:189
-#: code:addons/website/static/src/xml/website.editor.xml:308
+#: code:addons/website/static/src/xml/website.editor.xml:355
 #: code:addons/website/static/src/xml/website.seo.xml:69
 #: code:addons/website/static/src/xml/website.translator.xml:44
 #: view:website:website.view_website_form
@@ -4114,351 +3475,6 @@ msgid "rounded corner"
 msgstr "abgerundete"
 
 #. module: website
-#: view:website:website.snippet_selector
-msgid "s_1_column_text"
-msgstr "s_1_column_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_2_column_text"
-msgstr "s_2_column_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_3_column_text"
-msgstr "s_3_column_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_4_column_text"
-msgstr "s_4_column_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_animated_boxes"
-msgstr "s_animated_boxes"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_banner_2"
-msgstr "s_banner_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_banner_3"
-msgstr "s_banner_3"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_banner_parallax"
-msgstr "s_banner_parallax"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_big_icon_circle"
-msgstr "s_big_icon_circle"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_big_icon_square"
-msgstr "s_big_icon_square"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_big_image"
-msgstr "s_big_image"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_big_image_parallax"
-msgstr "s_big_image_parallax"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_big_picture_text"
-msgstr "s_big_picture_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_carousel_boxed"
-msgstr "s_carousel_boxed"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_collapse"
-msgstr "s_collapse"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_color_blocks_2"
-msgstr "s_color_blocks_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_color_blocks_4"
-msgstr "s_color_blocks_4"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_column"
-msgstr "s_column"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_cubes"
-msgstr "s_cubes"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_discount"
-msgstr "s_discount"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_event_list"
-msgstr "s_event_list"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_features_carousel"
-msgstr "s_features_carousel"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_features_circle"
-msgstr "s_features_circle"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_features_grid_circle"
-msgstr "s_features_grid_circle"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_four_columns_fw"
-msgstr "s_four_columns_fw"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_header_text_big_picture"
-msgstr "s_header_text_big_picture"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_icon_box"
-msgstr "s_icon_box"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_icon_box_circle"
-msgstr "s_icon_box_circle"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_icon_box_square"
-msgstr "s_icon_box_square"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_image_text_2"
-msgstr "s_image_text_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_image_text_fw"
-msgstr "s_image_text_fw"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_images_captions_fw"
-msgstr "s_images_captions_fw"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_lead_bar"
-msgstr "s_lead_bar"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_logo_bar"
-msgstr "s_logo_bar"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_media_block"
-msgstr "s_media_block"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_medias_list"
-msgstr "s_medias_list"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_news_carousel"
-msgstr "s_news_carousel"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_numbers"
-msgstr "s_numbers"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_page_header"
-msgstr "s_page_header"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_pricing"
-msgstr "s_pricing"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_process_step"
-msgstr "s_process_step"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_process_steps_2"
-msgstr "s_process_steps_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_product_list"
-msgstr "s_product_list"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_products_carousel"
-msgstr "s_products_carousel"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_profile"
-msgstr "s_profile"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_quotes_slider_2"
-msgstr "s_quotes_slider_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_references_2"
-msgstr "s_references_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_separator_block"
-msgstr "s_separator_block"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_separator_color"
-msgstr "s_separator_color"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_separator_shade"
-msgstr "s_separator_shade"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_showcase"
-msgstr "s_showcase"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_showcase_slider"
-msgstr "s_showcase_slider"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_slide_banner"
-msgstr "s_slide_banner"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_tabs"
-msgstr "s_tabs"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_team_profiles"
-msgstr "s_team_profiles"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_team_profiles_2"
-msgstr "s_team_profiles_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_testimonial_slider"
-msgstr "s_testimonial_slider"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text"
-msgstr "s_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text_big_picture"
-msgstr "s_text_big_picture"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text_block_image_fw"
-msgstr "s_text_block_image_fw"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text_image_2"
-msgstr "s_text_image_2"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text_image_fw"
-msgstr "s_text_image_fw"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_text_picture_text"
-msgstr "s_text_picture_text"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_three_columns_carousel"
-msgstr "s_three_columns_carousel"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_three_columns_circle"
-msgstr "s_three_columns_circle"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_timeline"
-msgstr "s_timeline"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_timeline_compact"
-msgstr "s_timeline_compact"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_title_small"
-msgstr "s_title_small"
-
-#. module: website
-#: view:website:website.snippet_selector
-msgid "s_two_columns"
-msgstr "s_two_columns"
-
-#. module: website
 #: view:website:website.sitemap_index_xml
 msgid "sitemap-"
 msgstr "Übersicht-"
@@ -4487,7 +3503,7 @@ msgstr "Unbekannt"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:302
+#: code:addons/website/static/src/xml/website.editor.xml:349
 #, python-format
 msgid "unsaved changes will be lost."
 msgstr "Ungesicherte Änderungen sind verloren."
@@ -4510,24 +3526,14 @@ msgid "yes"
 msgstr "Ja"
 
 #. module: website
-#: view:website:website.demo_page_home
-msgid "you get 6 color schemes and multiple combinations,"
-msgstr "you get 6 color schemes and multiple combinations,"
-
-#. module: website
-#: view:website:website.demo_page_home
-msgid "you want"
-msgstr "du willst"
-
-#. module: website
 #: view:website:website.themes
 msgid "your homepage"
 msgstr "Ihre Homepage"
 
 #. module: website
 #. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:221
-#: code:addons/website/static/src/xml/website.editor.xml:378
+#: code:addons/website/static/src/xml/website.editor.xml:235
+#: code:addons/website/static/src/xml/website.editor.xml:425
 #, python-format
 msgid "— or —"
 msgstr "-oder-"
@@ -4538,114 +3544,3 @@ msgstr "-oder-"
 #, python-format
 msgid "← Previous"
 msgstr "Zurück"
-
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:222
-#, python-format
-msgid "Max 1024x1024"
-msgstr "Upload groß mit Transparenz (verkleinert auf max 1024 Pixel)"
-
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:223
-#, python-format
-msgid "Max 600x600"
-msgstr "Upload normal mit Transparenz (verkleinert auf max 600 Pixel)"
-
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:220
-#, python-format
-msgid "Max 1024x1024 without transparent"
-msgstr "Upload groß (verkleinert auf max 1024 Pixel in JPG)"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:221
-#, python-format
-msgid "Max 600x600 with transparent"
-msgstr "Upload normal (verkleinert auf max 600 Pixel in JPG)"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:290
-#, python-format
-msgid "Size (KB)"
-msgstr "Dateigröße (KB)"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:288
-#, python-format
-msgid "Mini Image"
-msgstr "Bild"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:217
-#, python-format
-msgid "Click here to upload"
-msgstr "zur Bildauswahl hier anklicken"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:292
-#, python-format
-msgid "Filename"
-msgstr "Dateiname"
-
-#. modules: website, web, web_kanban, web_calendar, note, crm, sales_team, stock
-#. openerp-web
-#: view:crm.lead:crm.crm_case_kanban_view_leads
-#: view:note.note:note.view_note_note_kanban
-#: view:crm.case.section:sales_team.crm_case_section_salesteams_view_kanban
-#: view:stock.picking.type:stock.stock_picking_type_kanban
-#: code:addons/web/static/src/js/view_form.js:207
-#: code:addons/web/static/src/js/view_list.js:354
-#: code:addons/web/static/src/xml/base.xml:1912
-#: code:addons/web_calendar/static/src/js/web_calendar.js:846
-#: code:addons/web_kanban/static/src/xml/web_kanban.xml:49
-#: code:addons/website/static/src/xml/website.editor.xml:295
-#, python-format
-msgid "Delete"
-msgstr "Löschen"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website_files.editor.xml:32
-#, python-format
-msgid "Upload new file"
-msgstr "Neue Datei hochladen"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website_files.editor.xml:37
-#, python-format
-msgid "Overwrite existing file"
-msgstr "Existierende Datei überschreiben"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website_files.editor.xml:57
-#, python-format
-msgid "Upload"
-msgstr "Hochladen"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website_files.editor.xml:58
-#, python-format
-msgid "Used"
-msgstr "Verwendet"
-
-#. module: website
-#. openerp-web
-#: code:addons/website/static/src/xml/website.editor.xml:294
-#: code:addons/website/static/src/xml/website_files.editor.xml:57
-#, python-format
-msgid "Last update"
-msgstr "Letzte Änderung"
