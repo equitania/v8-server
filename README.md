@@ -1,10 +1,18 @@
-MyOdoo
+# Der MyOdoo Fork
 ----
+*Powered by Equitania Software GmbH* 
 
 MyOdoo ist ein "Fork" von Odoo, einem Browser gestützten Open Source Projekt für ERP, Warenwirtschaft, Lagerverwaltung, Webshop, CMS Anwendungen mit über 5.000 Zusatzmodule.
 
 MyOdoo ist für den deutschsprachigen Raum optimiert. Deshalb werden nur die Sprachen Deutsch und Englisch unterstützt.
 Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den Standardpaketen, da diese aus unserer Sicht teilweise falsch, mißverständlich oder gar nicht übersetzt sind.
+
+## Gute Gründe den MyOdoo Fork einzusetzen
+
+- Der MyOdoo Fork ist optimiert für den deutschsprachigen Raum (D-A-CH), d.h. verbesserte Übersetzungen und geringere Größe
+- Der MyOdoo Fork wird von einem deutschsprachigen Unternehmen betreut.
+- Der MyOdoo Fork beinhaltet einige Verbesserungen und Bugfixes, die im Odoo Haupt Branch fehlen. Dennoch wird der Fork wöchentlich abgeglichen. 
+- Der MyOdoo Fork wird über einen Release Manager verwaltet und ist bei vielen deutschen Unternehmen im Einsatz.
 
 **Bugfixes & Änderungen abweichend vom Hauptfork Stand April 2016**
 
