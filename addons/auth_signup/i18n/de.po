@@ -26,7 +26,7 @@ msgid "\n"
 msgstr "\n"
 "<p>Eine Passwortänderung wurde für das mit dieser E-Mail verbundene Odoo Konto beantragt.</p>\n"
 "\n"
-"<p>Sie können Ihr Passwort durch einen <a href=\"${object.signup_url}\">Klick</a>schnell ändern .</p>\n"
+"<p>Sie können Ihr Passwort durch einen <a href=\"${object.signup_url}\">Klick</a> schnell ändern.</p>\n"
 "\n"
 "<p>Hinweis: Ignorieren Sie diese E-Mail, wenn Sie keine E-Mail zur Passwortänderung erwarten.</p>"
 
@@ -174,7 +174,7 @@ msgstr "Passwort zurücksetzen"
 #: code:addons/auth_signup/res_users.py:267
 #, python-format
 msgid "Reset password: invalid username or email"
-msgstr "Reset password: invalid username or email"
+msgstr "Passwort zurücksetzen: ungültige Emailadresse"
 
 #. module: auth_signup
 #: view:res.users:auth_signup.res_users_form_view

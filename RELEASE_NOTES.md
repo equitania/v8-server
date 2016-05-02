@@ -1,3 +1,9 @@
+#### 02.05.2016
+#### auth_signup, 1.0.1
+##### Änderung
+- E-Mail Template Passwort-Zurücksetzen Fomratierungsfehler entfernt.
+
+
 #### 22.04.2016
 #### website, 1.0.15
 ##### Änderung
