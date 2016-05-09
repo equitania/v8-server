@@ -1872,7 +1872,7 @@ msgstr "Produkteigenschaften verwalten"
 #. module: product
 #: model:res.groups,name:product.group_uos
 msgid "Manage Secondary Unit of Measure"
-msgstr "Alternative Währung verwalten"
+msgstr "Sekundäre Mengeneinheit verwalten"
 
 #. module: product
 #: view:product.pricelist.item:product.product_pricelist_item_form_view
