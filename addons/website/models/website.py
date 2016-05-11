@@ -236,6 +236,16 @@ class website(osv.osv):
     def get_languages(self, cr, uid, ids, context=None):
         return self._get_languages(cr, uid, ids[0])
 
+    def get_google_index(self, cr, uid, ids, context=None):
+        res = self.pool.get('ir.config_parameter').get_param(cr, uid, 'eq.website.customerportal.activate.google.indexation')
+        if res == None:     # Flag existiert nicht - der Kunde hat eq_website_customerportal nicht im Einsatz             
+            return False
+        # eq_website_customerportal ist im Einsatz
+        if res == 'True':
+            return True     # Flag wurde gesetzt auf True
+        else:               # Flag existiert nicht - der Kunde hat eq_website_customerportal nicht im Einsatz
+            return False
+        
     def get_alternate_languages(self, cr, uid, ids, req=None, context=None):
         langs = []
         if req is None:

@@ -1,4 +1,10 @@
 #### 02.05.2016
+#### website, 1.0.16
+##### Änderung
+- Es wird nun überprüft ob das Modul eq_website_customerportal installiert ist, um dann mit Hilfe des Flags zur Google Indexierung bei Aktivierung den Meta-Tag <meta name="robots" content="noindex,nofollow" /> zu setzen.
+
+
+#### 02.05.2016
 #### auth_signup, 1.0.1
 ##### Änderung
 - E-Mail Template Passwort-Zurücksetzen Fomratierungsfehler entfernt.

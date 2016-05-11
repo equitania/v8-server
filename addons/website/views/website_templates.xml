@@ -73,7 +73,14 @@
             <t t-if="not title">
                 <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>
             </t>
+ 
+			<t t-set="google_index" t-value="website.get_google_index()"/>                        
+			<t t-if="google_index == True">
+				<meta name="robots" content="noindex,nofollow" />
+			</t>
 
+ 
+ 
             <meta name="viewport" content="initial-scale=1"/>
             <meta name="description" t-att-content="main_object and 'website_meta_description' in main_object
                 and main_object.website_meta_description or website_meta_description"/>
@@ -97,8 +104,9 @@
         <body>
             <div id="wrapwrap">
                 <header>
-                    <div class="navbar navbar-default navbar-static-top">
-                        <div class="container">
+                    <div class="navbar navbar-default navbar-static-top">                    
+                        <div class="container">                        
+		
                             <div class="navbar-header">
                                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-top-collapse">
                                     <span class="sr-only">Toggle navigation</span>
