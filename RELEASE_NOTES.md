@@ -1,4 +1,10 @@
-#### 02.05.2016
+#### 11.05.2016
+#### website, 1.0.17
+##### FIX
+- Durch die Google Indexierung wurde im Backend ein Fehler verursacht, welcher das Laden von E-Mail Vorlagen nicht mehr ermöglicht hat. Dies wurde nun behoben.
+
+
+#### 11.05.2016
 #### website, 1.0.16
 ##### Änderung
 - Es wird nun überprüft ob das Modul eq_website_customerportal installiert ist, um dann mit Hilfe des Flags zur Google Indexierung bei Aktivierung den Meta-Tag <meta name="robots" content="noindex,nofollow" /> zu setzen.

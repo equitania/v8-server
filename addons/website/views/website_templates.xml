@@ -74,7 +74,7 @@
                 <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>
             </t>
  
-			<t t-set="google_index" t-value="website.get_google_index()"/>                        
+			<t t-set="google_index" t-value="website.get_google_index() if website else None"/>                        
 			<t t-if="google_index == True">
 				<meta name="robots" content="noindex,nofollow" />
 			</t>
