@@ -78,6 +78,9 @@
 			<t t-if="google_index == True">
 				<meta name="robots" content="noindex,nofollow" />
 			</t>
+			<t t-if="google_index == False">
+				<meta name="robots" content="index,follow" />
+			</t>
 
  
  

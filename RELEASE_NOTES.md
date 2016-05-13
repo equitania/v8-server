@@ -1,4 +1,10 @@
 #### 11.05.2016
+#### website, 1.0.18
+##### ADD
+- Das Meta-Tag <meta name="robots" content="index,follow" /> wird nun gesetzt, wenn das Flag "Suchmaschinen davon abhalten, diese Webseite zu indexieren [eq_website_customerportal] " in den Einstellungen nicht gesetzt ist.
+
+
+#### 11.05.2016
 #### website, 1.0.17
 ##### FIX
 - Durch die Google Indexierung wurde im Backend ein Fehler verursacht, welcher das Laden von E-Mail Vorlagen nicht mehr ermöglicht hat. Dies wurde nun behoben.
