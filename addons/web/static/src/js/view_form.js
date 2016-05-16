@@ -735,7 +735,7 @@ instance.web.FormView = instance.web.View.extend(instance.web.form.FieldManagerM
                     menu.do_reload_needaction();
                 }
             });
-        }).always(function(){
+        }).fail(function(){
             $(e.target).attr("disabled", false);
         });
     },
