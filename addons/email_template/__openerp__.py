@@ -22,7 +22,7 @@
 
 {
     'name' : 'Email Templates',
-    'version' : '1.1',
+    'version' : '1.2',
     'author' : 'OpenERP SA',
     'website' : 'https://www.odoo.com/page/mailing',
     'category' : 'Marketing',

@@ -279,7 +279,7 @@ msgstr ""
 #. module: email_template
 #: field:res.partner,opt_out:0
 msgid "Opt-Out"
-msgstr "Newsletter-Empfang"
+msgstr "keine Serienmails"
 
 #. module: email_template
 #: help:email.template,mail_server_id:0 help:email_template.preview,mail_server_id:0
