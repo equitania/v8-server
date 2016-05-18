@@ -1100,4 +1100,4 @@ msgstr "Ihre E-Mail..."
 #: code:addons/mass_mailing/models/mail_mail.py:73
 #, python-format
 msgid "Click to unsubscribe"
-msgstr "Abmelden"
+msgstr "Newsletter abbestellen"
