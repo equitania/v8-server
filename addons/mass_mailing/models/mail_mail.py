@@ -23,8 +23,7 @@ import urlparse
 import werkzeug.urls
 import re
 
-from openerp.tools.translate import _
-from openerp import tools
+from openerp import tools, _
 from openerp import SUPERUSER_ID
 from openerp.osv import osv, fields
 
