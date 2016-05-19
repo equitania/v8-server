@@ -1,7 +1,8 @@
 
 import werkzeug
 
-from openerp import http, SUPERUSER_ID
+
+from openerp import http, SUPERUSER_ID, _
 from openerp.http import request
 
 
@@ -16,14 +17,15 @@ class MassMailController(http.Controller):
         response.mimetype = 'image/gif'
         response.data = 'R0lGODlhAQABAIAAANvf7wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=='.decode('base64')
         return response
-
-    @http.route(['/mail/mailing/<int:mailing_id>/unsubscribe'], type='http', auth='none')
+    
+    @http.route(['/mail/mailing/<int:mailing_id>/unsubscribe'], type='http', auth='public', website=True)
     def mailing(self, mailing_id, email=None, res_id=None, **post):
         cr, uid, context = request.cr, request.uid, request.context
         MassMailing = request.registry['mail.mass_mailing']
         mailing_ids = MassMailing.exists(cr, SUPERUSER_ID, [mailing_id], context=context)
         if not mailing_ids:
-            return 'KO'
+            unsubscribed = 'You have successfully unsubscribed the newsletter._'
+            return unsubscribed
         mailing = MassMailing.browse(cr, SUPERUSER_ID, mailing_ids[0], context=context)
         if mailing.mailing_model == 'mail.mass_mailing.contact':
             list_ids = [l.id for l in mailing.contact_list_ids]
@@ -40,7 +42,12 @@ class MassMailController(http.Controller):
                 record_ids = model.search(cr, SUPERUSER_ID, [('id', '=', res_id), (email_fname, 'ilike', email)], context=context)
             if 'opt_out' in model._fields:
                 model.write(cr, SUPERUSER_ID, record_ids, {'opt_out': True}, context=context)
-        return 'OK'
+        unsubscribed_string =_("You have successfully unsubscribed the newsletter.")
+        values = {}
+        values['unsubscribed_string'] = unsubscribed_string
+        # logout ?
+        #request.session.logout(keep_db=True)
+        return http.request.render('mass_mailing.unsubscribe_nw', values)
 
     @http.route(['/website_mass_mailing/is_subscriber'], type='json', auth="public", website=True)
     def is_subscriber(self, list_id, **post):

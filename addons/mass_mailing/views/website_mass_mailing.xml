@@ -12,5 +12,17 @@
                 <script type="text/javascript" src="/mass_mailing/static/src/js/website_mass_mailing.editor.js" groups="base.group_website_publisher"></script>
             </xpath>
         </template>
+        
+ <template id="unsubscribe_nw">
+  <t t-call="website.layout"> 
+      <div id="wrap">
+          <div class="oe_structure oe_empty">
+              <div class="container">
+                  <t t-esc="unsubscribed_string"/>
+              </div>
+          </div>
+      </div>
+   </t> 
+</template>
     </data>
 </openerp>

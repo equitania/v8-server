@@ -1,4 +1,10 @@
 #### 19.05.2016
+#### mass_mailing, 2.3
+##### ADD
+- Für die Weiterleitung bei dem Link "Newsletter abbestellen" wird jetzt das Layout der Webseite gerendert. Außerdem wurde eine Ansicht geschaffen, die jetzt vom Aussehen und von der Formatierung angepasst werden kann.
+
+
+#### 19.05.2016
 #### web, 1.0.1
 ##### FIX
 - Korrektur für das Problem mit dem Button "Speichern", der im Editmodus nicht aktiviert wurde
