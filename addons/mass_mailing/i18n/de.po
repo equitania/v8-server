@@ -565,7 +565,7 @@ msgstr "Empfängerliste Neuanmeldungen"
 #: view:mail.mass_mailing.list:mass_mailing.view_mail_mass_mailing_list_search
 #: view:mail.mass_mailing.list:mass_mailing.view_mail_mass_mailing_list_tree
 msgid "Mailing Lists"
-msgstr "E-Mailempängerlisten"
+msgstr "E-Mailempfängerlisten"
 
 #. module: mass_mailing
 #: view:mail.mass_mailing.contact:mass_mailing.view_mail_mass_mailing_contact_search

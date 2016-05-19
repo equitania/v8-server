@@ -27,7 +27,7 @@ Easily send mass mailing to your leads, opportunities or customers. Track
 marketing campaigns performance to improve conversion rates. Design
 professional emails and reuse templates in a few clicks.
     """,
-    'version': '2.1',
+    'version': '2.2',
     'author': 'OpenERP',
     'website': 'https://www.odoo.com/page/mailing',
     'category': 'Marketing',
