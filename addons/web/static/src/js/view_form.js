@@ -735,7 +735,8 @@ instance.web.FormView = instance.web.View.extend(instance.web.form.FieldManagerM
                     menu.do_reload_needaction();
                 }
             });
-        }).fail(function(){
+        //}).fail(function(){							// DEFAULT - new version
+        }).always(function(){							// EQUITANIA: we've added this line back because of missing setting of enabled state for SAVE button
             $(e.target).attr("disabled", false);
         });
     },

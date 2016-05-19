@@ -1,3 +1,8 @@
+#### 19.05.2016
+#### web, 1.0.1
+##### FIX
+- Korrektur für das Problem mit dem Button "Speichern", der im Editmodus nicht aktiviert wurde
+
 #### 11.05.2016
 #### website, 1.0.18
 ##### ADD
