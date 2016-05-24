@@ -1,4 +1,4 @@
-# Der MyOdoo Fork
+# Der MyOdoo Fork von Open Source ERP System Odoo
 ----
 *Powered by*
 *Equitania Software GmbH* 
@@ -17,9 +17,9 @@ Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den 
 
 Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
-`Aktuelle Buildversion: 160502`
+`Aktuelle Buildversion: 160503`
 
-`Letzer Abgleich: 20.05.2016`
+`Letzer Abgleich: 24.05.2016`
 
 Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 
@@ -30,52 +30,9 @@ Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU 
 - Der MyOdoo Fork beinhaltet einige Verbesserungen und Bugfixes, die im Odoo Haupt Branch fehlen. Dennoch wird der Fork wöchentlich abgeglichen. 
 - Der MyOdoo Fork wird über einen Release Manager verwaltet und ist bei vielen deutschen Unternehmen im Einsatz.
 
-**Bugfixes & Änderungen abweichend vom Hauptfork Stand April 2016**
+**Bugfixes & Änderungen abweichend vom Hauptfork Stand Mai 2016**
 
-## Kern
-
-- /odoo/openerp/tools/misc.py -> Beschränkung der Sprachen auf Deutsch & Englisch
-
-- /odoo/openerp/addons/base/res/res_config.py -> Erweiterung der Rechte-Gruppen um einen Managed Admin
-
-- /odoo/openerp/addons/base/res/images.py -> Bildoptimierungen Website verbessert
-
-## Addons
-
-- /odoo/addons/account/account_installer.xml > Installationsassistent nur einmal starten lassen
-
-- /odoo/addons/auth_signup/res_users.py > In Verbindung mit Auditlog kann es zu Endlosschleifen kommen
-
-- /odoo/addons/document/wizard/document_configuration_view.xml > Installationsassistent nur einmal starten lassen
-
-- /odoo/addons/product/product_data.xml -> Bessere deutsche Grundbegriffe für Lager und Preislisten
-
-- /odoo/addons/project/project_data.xml -> Projektstatt werden nicht mehr überschrieben bei Update
-
-- /odoo/addons/purchase/purchase_data.xml-> Bessere deutsche Grundbegriffe für Preislisten
-
-- /odoo/addons/stock/stock_data.xml -> Bessere deutsche Grundbegriffe für Lager
-
-- /odoo/addons/web/static/lib/underscore.string/lib.underscore.string.js -> Fehlerbeseitigung
-
-- /odoo/addons/web/static/src/js/search.js -> Fehlerbeseitigung in der Suche
-
-- /odoo/addons/web/static/src/js/view_form.js > Hilfevariable für Equitania Module ergänzt / Positionenrn. und Verkaufsaufträgen werden jetzt richtig hochgezählt
-
-- /odooaddons/website/data/data.xml -> Website Menü-Eintrag Kontakt wird beim Update nicht mehr geändert
-
-- /odoo/addons/website/static/src/js/website.editor.js > Website Bildverwaltung verbessert
-
-- /odoo/addons/website/static/src/xml/website.editor.xml > Website Bildverwaltung verbessert
-
-- /odoo/addons/website_blog/data/website_blog_data.xml > Website Menü-Eintrag Veranstaltung wird beim Update nicht mehr geändert
-
-- addons/website_event/data/event_data.xml -> Website Menü-Eintrag Veranstaltung wird beim Update nicht mehr geändert
-
-- addons/website_sale/data/data.xml -> Website Menü-Eintrag Shop wird beim Update nicht mehr geändert
-
-- /odoo/addons/website_sale_options/__openerp__.py -> Fehlerbeseitigung
-
+Siehe myodoo-server-fork-differences.png
 
 
 ![image](myodoo-server-fork-differences.png)
@@ -97,3 +54,4 @@ Zur Installation des Servers:
 
 
 Weitere Informationen unter <a href="https://www.myoodoo.de">Myodoo.de</a>
+oder <a href="https://leanpub.com/odoo-kochbuch</a>
