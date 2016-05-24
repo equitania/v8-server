@@ -276,7 +276,7 @@ msgstr "Konto entlasten (Haben)"
 #: view:account.voucher:account_voucher.view_vendor_receipt_form
 #: field:account.voucher,line_cr_ids:0
 msgid "Credits"
-msgstr "Rechnungskorrekturspositionen"
+msgstr "Rechnungskorrektur-/Gutschriftspositionen"
 
 #. module: account_voucher
 #: field:account.voucher,currency_id:0
