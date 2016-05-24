@@ -54,4 +54,4 @@ Zur Installation des Servers:
 
 
 Weitere Informationen unter <a href="https://www.myoodoo.de">Myodoo.de</a>
-oder <a href="https://leanpub.com/odoo-kochbuch>Das Odoo Kochbuch</a>
+oder <a href="https://leanpub.com/odoo-kochbuch">Das Odoo Kochbuch</a>
