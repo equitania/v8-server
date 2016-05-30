@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### auth_signup, 1.0.2
+##### CHG
+- Bei dem Email-Template zu Odoo Enterprise Connection ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### calendar, 1.2
 ##### CHG
 - Bei den 3 Email-Templates zu Meeting Invitation ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
