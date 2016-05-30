@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### email_template, 1.3
+##### CHG
+- Bei dem Email-Template zu Partner Mass Mail ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### auth_signup, 1.0.2
 ##### CHG
 - Bei dem Email-Template zu Odoo Enterprise Connection ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
