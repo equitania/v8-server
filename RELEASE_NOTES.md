@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### crm, 1.2
+##### CHG
+- Bei dem Email-Template zu Reminder to User ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### purchase, 1.2
 ##### CHG
 - Bei dem Email-Template zu Purchase Order - Send by Email ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
