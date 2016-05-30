@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### account, 1.1.2
+##### CHG
+- Bei dem Email-Template zu Invoice - Send by Email ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### website_quote, 1.1
 ##### Fix
 - Bei dem Email-Template zu Sales Order - Send by Email (Online Quote) ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
