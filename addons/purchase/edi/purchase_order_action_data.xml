@@ -91,7 +91,7 @@
 
 
         <!--Email template -->
-        <record id="email_template_edi_purchase_done" model="email.template">
+        <record id="email_template_edi_purchase_done" model="email.template" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete the email-template, it remain deleted if you update  -->
             <field name="name">Purchase Order - Send by Email</field>
             <field name="email_from">${object.validator.email or ''}</field>
             <field name="subject">${object.company_id.name} Order (Ref ${object.name or 'n/a' })</field>
