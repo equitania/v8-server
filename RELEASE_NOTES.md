@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### purchase, 1.3
+##### CHG
+- Bei dem Email-Template zu RFQ - Send by Email ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### auth_signup, 1.0.3
 ##### CHG
 - Bei dem Email-Template zu Reset Password ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
