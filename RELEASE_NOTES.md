@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### calendar, 1.2
+##### CHG
+- Bei den 3 Email-Templates zu Meeting Invitation ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
+
+#### 30.05.2016
 #### crm, 1.1
 ##### CHG
 - Bei dem Email-Template zu Lead/Opportunity Mass Mail ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
