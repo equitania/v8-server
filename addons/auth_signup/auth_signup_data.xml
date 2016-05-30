@@ -19,7 +19,7 @@
         </record>
 
         <!-- Email template for reset password -->
-        <record id="reset_password_email" model="email.template">
+        <record id="reset_password_email" model="email.template" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete the email-template, it remain deleted if you update  -->
             <field name="name">Reset Password</field>
             <field name="model_id" ref="base.model_res_users"/>
             <field name="email_from"><![CDATA[${object.company_id.name} <${(object.company_id.email or user.email)|safe}>]]></field>
