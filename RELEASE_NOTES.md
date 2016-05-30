@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### sale, 1.2
+##### Fix
+- Copy-Paste-Fehler entfernt.
+
+#### 30.05.2016
 #### sale, 1.1
 ##### CHG
 - Bei dem Email-Template zu Sales Order - Send by Email ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
