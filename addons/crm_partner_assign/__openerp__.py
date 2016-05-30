@@ -22,7 +22,7 @@
 
 {
     'name': 'Partner Assignation & Geolocation',
-    'version': '1.0',
+    'version': '1.1',
     'category': 'Customer Relationship Management',
     'description': """
 This is the module used by OpenERP SA to redirect customers to its partners, based on geolocation.
