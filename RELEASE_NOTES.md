@@ -1,3 +1,9 @@
+#### 31.05.2016
+#### web_analytics, 1.0.1
+##### ADD
+- Übersetzungsdatei de.po in Ordner i18n eingefügt
+
+
 #### 30.05.2016
 #### purchase, 1.3
 ##### CHG
