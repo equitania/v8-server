@@ -1,8 +1,13 @@
 #### 31.05.2016
+#### auth_signup, 1.0.4
+##### CHG
+- Bei dem Email-Template zu Reset Password und Odoo Enterprise Connection musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
+
+
+#### 31.05.2016
 #### crm_partner_assign, 1.2
 ##### CHG
-- Bei dem Email-Template zu Lead Mass Mail mustte um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
-
+- Bei dem Email-Template zu Lead Mass Mail musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
 
 #### 31.05.2016
 #### crm, 1.3

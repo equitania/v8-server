@@ -17,6 +17,8 @@
             <field name="key">auth_signup.template_user_id</field>
             <field name="value" ref="default_template_user"/>
         </record>
+     </data>
+     <data noupdate="1">  
 
         <!-- Email template for reset password -->
         <record id="reset_password_email" model="email.template" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete the email-template, it remain deleted if you update  -->
