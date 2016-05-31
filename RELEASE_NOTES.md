@@ -3,6 +3,24 @@
 ##### ADD
 - Übersetzungsdatei de.po in Ordner i18n eingefügt
 
+#### email_template, 1.4
+##### CHG
+- Bei dem Email-Template zu Partner Mass Mail musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden. Außerdem wurde die entsprechende Action act_window zu dem Template auskommentiert, um bei einem Löschen des Templates eine fehlende Referenzierung zu verhindern.
+
+#### 31.05.2016
+#### auth_signup, 1.0.4
+##### CHG
+- Bei dem Email-Template zu Reset Password und Odoo Enterprise Connection musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
+
+#### 31.05.2016
+#### crm_partner_assign, 1.2
+##### CHG
+- Bei dem Email-Template zu Lead Mass Mail musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
+
+#### 31.05.2016
+#### crm, 1.3
+##### CHG
+- Action act_window zu dem Template "Lead/Opportunity Mass Mail" auskommentiert, um bei einem Löschen des Templates eine fehlende Referenzierung zu verhindern.
 
 #### 30.05.2016
 #### purchase, 1.3

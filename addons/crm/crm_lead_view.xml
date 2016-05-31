@@ -578,7 +578,7 @@
         <!--
             MASS MAILING
         -->
-        <act_window name="Lead/Opportunity Mass Mail"
+<!--         <act_window name="Lead/Opportunity Mass Mail"
                 res_model="mail.compose.message"
                 src_model="crm.lead"
                 view_mode="form"
@@ -593,13 +593,13 @@
                             'default_template_id': ref('crm.email_template_opportunity_mail'),
                         }"
                 groups="base.group_sale_salesman"
-                />
+                /> -->
 
         <!--Update of email_template defined in crm_lead_data, to add ref_ir_act_window
             allowing to have a well formed email template (context action considered as set). -->
-        <record id="email_template_opportunity_mail" model="email.template">
+<!--         <record id="email_template_opportunity_mail" model="email.template">
             <field name="ref_ir_act_window" ref="crm.action_lead_mass_mail"/>
-        </record>
+        </record> -->
 
         <record id="action_mark_as_lost" model="ir.actions.server">
             <field name="name">Mark As Lost</field>
