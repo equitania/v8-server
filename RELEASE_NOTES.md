@@ -1,4 +1,9 @@
 #### 30.05.2016
+#### crm, 1.3
+##### CHG
+- Action act_window zu dem Template "Lead/Opportunity Mass Mail" auskommentiert, um bei einem Löschen des Templates eine fehlende Referenzierung zu verhindern.
+
+#### 30.05.2016
 #### purchase, 1.3
 ##### CHG
 - Bei dem Email-Template zu RFQ - Send by Email ein forcecreate="False" eingefügt. Dadurch bleibt bei einem Löschen des Templates das Template gelöscht.
