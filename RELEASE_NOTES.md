@@ -1,4 +1,9 @@
 #### 31.05.2016
+#### web, 1.0.2
+##### CHG
+- JavaScript Datei "view_form.js" so angepasst (Aufruf der Funktion "updateTextArea()" auskommentiert), dass bei einer Bearbeitung der Email-Templates im ersten Editor keine Auto-Verollständigung mehr stattfindet.
+
+#### 31.05.2016
 #### web_analytics, 1.0.1
 ##### ADD
 - Übersetzungsdatei de.po in Ordner i18n eingefügt

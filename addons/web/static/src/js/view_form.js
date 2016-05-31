@@ -2980,9 +2980,10 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
                             "margin:4px; color:#4c4c4c; font-size:13px; font-family:'Lucida Grande',Helvetica,Verdana,Arial,sans-serif; cursor:text"
             });
             this.$cleditor = this.$textarea.cleditor()[0];
-            this.$cleditor.change(function() {
+            this.$cleditor.change(function() {            	
                 if (! self._updating_editor) {
-                    self.$cleditor.updateTextArea();
+                	debugger;
+                    //self.$cleditor.updateTextArea();			// EQUITANIA: deactivated because of the problems with auto change of syntax if it losts focus
                     self.internal_set_value(self.$textarea.val());
                 }
             });
@@ -3008,6 +3009,19 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
         }
     },
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 instance.web.form.FieldBoolean = instance.web.form.AbstractField.extend({
     template: 'FieldBoolean',
