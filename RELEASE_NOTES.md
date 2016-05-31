@@ -1,4 +1,4 @@
-#### 30.05.2016
+#### 31.05.2016
 #### crm, 1.3
 ##### CHG
 - Action act_window zu dem Template "Lead/Opportunity Mass Mail" auskommentiert, um bei einem Löschen des Templates eine fehlende Referenzierung zu verhindern.
