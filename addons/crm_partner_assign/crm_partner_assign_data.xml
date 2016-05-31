@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <openerp>
-    <data>
+    <data noupdate="1">
         <record model="crm.case.stage" id="stage_portal_lead_assigned">
             <field name="name">Assigned</field>
             <field eval="1" name="case_default"/>
