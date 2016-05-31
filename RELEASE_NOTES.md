@@ -1,8 +1,12 @@
 #### 31.05.2016
+#### email_template, 1.4
+##### CHG
+- Bei dem Email-Template zu Partner Mass Mail musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden. Außerdem wurde die entsprechende Action act_window zu dem Template auskommentiert, um bei einem Löschen des Templates eine fehlende Referenzierung zu verhindern.
+
+#### 31.05.2016
 #### auth_signup, 1.0.4
 ##### CHG
 - Bei dem Email-Template zu Reset Password und Odoo Enterprise Connection musste um das dauerhafte Löschen zu gewährleisten noch ein noupdate="1" eingefügt werden.
-
 
 #### 31.05.2016
 #### crm_partner_assign, 1.2
