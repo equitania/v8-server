@@ -2982,7 +2982,6 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
             this.$cleditor = this.$textarea.cleditor()[0];
             this.$cleditor.change(function() {            	
                 if (! self._updating_editor) {
-                	debugger;
                     //self.$cleditor.updateTextArea();			// EQUITANIA: deactivated because of the problems with auto change of syntax if it losts focus
                     self.internal_set_value(self.$textarea.val());
                 }

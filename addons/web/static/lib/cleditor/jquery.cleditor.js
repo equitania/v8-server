@@ -195,8 +195,7 @@
   cleditor = function(area, options) {
 
     var editor = this;
-
-    // Get the defaults and override with options
+    //// Get the defaults and override with options
     editor.options = options = $.extend({}, $.cleditor.defaultOptions, options);
 
     // Hide the textarea and associate it with this editor
@@ -409,13 +408,13 @@
       return false;
 
     // Toggle source
-    if (buttonName === "source") {
-
+    if (buttonName === "source") {    
       // Show the iframe
       if (sourceMode(editor)) {
         delete editor.range;
         editor.$area.hide();
         editor.$frame.show();
+        
         buttonDiv.title = button.title;
       }
 
@@ -588,6 +587,7 @@
     // Hide the popup and focus the editor
     hidePopups();
     focus(editor);
+    
 
   }
 
@@ -1148,8 +1148,8 @@
     }
 
   }
-
-  // updateTextArea - updates the textarea with the iframe contents
+//
+//  // updateTextArea - updates the textarea with the iframe contents
   function updateTextArea(editor, checkForChange) {
 
     var html = $(editor.doc.body).html(),
@@ -1174,10 +1174,10 @@
       editor.areaChecksum = checksum(code);
 
     // Update the textarea and trigger the change event
-    if (code !== $area.val()) {
-      $area.val(code);
-      $(editor).triggerHandler(CHANGE);
-    }
+//    if (code !== $area.val()) {
+//      $area.val(code);
+//      $(editor).triggerHandler(CHANGE);					//Equitania: Solve the problem with the autocompletion in the CLEditor. 
+//    }
 
   }
 

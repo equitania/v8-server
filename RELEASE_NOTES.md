@@ -1,3 +1,13 @@
+#### 01.06.2016
+#### web, 1.0.4
+##### FIX
+- Die JavaScript-Datei jquery.cleditor.js dementsprechend angepasst, sodass keine Autovervollständigung mehr stattfindet.
+
+#### 31.05.2016
+#### web, 1.0.3
+##### FIX
+- JavaScript debugger entfernt.
+
 #### 31.05.2016
 #### web, 1.0.2
 ##### CHG
