@@ -74,6 +74,7 @@
                 <t t-set="title"><t t-if="additional_title"><t t-raw="additional_title"/> | </t><t t-esc="(website or res_company).name"/></t>
             </t>
  
+ 			<!-- 
 			<t t-set="google_index" t-value="website.get_google_index() if website else None"/>                        
 			<t t-if="google_index == True">
 				<meta name="robots" content="noindex,nofollow" />
@@ -81,6 +82,7 @@
 			<t t-if="google_index == False">
 				<meta name="robots" content="index,follow" />
 			</t>
+			 -->
 
  
  
@@ -89,6 +91,12 @@
                 and main_object.website_meta_description or website_meta_description"/>
             <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object
                 and main_object.website_meta_keywords or website_meta_keywords"/>
+                
+            <!-- Equitania: Support for Robots -->
+            <meta name="robots" t-att-content="main_object and 'website_meta_robots' in main_object
+                and main_object.website_meta_robots or website_meta_robots"/>
+                
+                
             <meta name="generator" content="Odoo"/>
             <title><t t-esc="title"/></title>
 

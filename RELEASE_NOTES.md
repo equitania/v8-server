@@ -1,3 +1,8 @@
+#### 03.06.2016
+#### web, 1.0.19
+##### CHG
+- Änderung in Generierung von Meta-Tag "Robots" auf den Seiten. Der Wert wird ab jetzt aus der Tabelle ir_ui_view.website_meta_robots geholt
+
 #### 01.06.2016
 #### web, 1.0.4
 ##### FIX
