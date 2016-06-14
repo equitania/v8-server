@@ -37,7 +37,22 @@ function openerp_pos_basewidget(instance, module){ //module is instance.point_of
             } else {
                 return (currency.symbol || '') + ' ' + amount;
             }
+        },        
+        eq_format_without_currency: function(amount,precision){
+            var currency = (this.pos && this.pos.currency) ? this.pos.currency : {symbol:'$', position: 'after', rounding: 0.01, decimals: 2};
+            var decimals = currency.decimals;
+
+            if (precision && (typeof this.pos.dp[precision]) !== undefined) {
+                decimals = this.pos.dp[precision];
+            }
+
+            if (typeof amount === 'number') {
+                amount = round_di(amount,decimals).toFixed(decimals);
+                amount = openerp.instances[this.session.name].web.format_value(round_di(amount, decimals), { type: 'float', digits: [69, decimals]});
+            }
+            return amount;            
         },
+        
         show: function(){
             this.$el.removeClass('oe_hidden');
         },
