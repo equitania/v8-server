@@ -464,6 +464,18 @@ msgid "AllDay , %s"
 msgstr "Ganztägig, %s"
 
 #. module: calendar
+#: code:addons/calendar/calendar.py:800
+#, python-format
+msgid "%s at (%s To %s) (%s)"
+msgstr "%s von (%s bis %s) (%s)"
+
+#. module: calendar
+#: code:addons/calendar/calendar.py:802
+#, python-format
+msgid "%s at %s To\n %s at %s (%s)"
+msgstr "%s von %s bis\n %s at %s (%s)"
+
+#. module: calendar
 #: field:calendar.alarm,duration:0
 msgid "Amount"
 msgstr "Dauer"

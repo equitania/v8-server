@@ -1,3 +1,8 @@
+#### 16.06.2016
+#### calendar, 1.3
+##### ADD
+- Deutsche Übersetzung für at...To (von...bis) für das Email-Template "Meeting Invitation - Change Date" hinzugefügt.
+
 #### 03.06.2016
 #### web, 1.0.19
 ##### CHG
