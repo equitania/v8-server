@@ -1,4 +1,9 @@
 #### 20.06.2016
+#### account_analytic_analysis, 1.2
+##### ADD
+- Noupdate="1" und forcecreate="False" beim Email Template "Contract expiration reminder" eingefügt, sodass das Template nach einem Löschvorgang auch gelöscht bleibt.
+
+#### 20.06.2016
 #### calendar, 1.4
 ##### CHG
 - Übersetzung der Email-Templates zu "Meeting Invitation", "Meeting Invitation - Reminder" und "Meeting Invitation - Change Date" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über die importierten Template geladen.

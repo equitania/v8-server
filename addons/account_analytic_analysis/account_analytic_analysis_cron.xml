@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding='UTF-8'?>
 <openerp>
-    <data>
+    <data noupdate="1">
 
-        <record id="account_analytic_cron_email_template" model="email.template">
+        <record id="account_analytic_cron_email_template" model="email.template" forcecreate="False"> <!-- EQUITANIA: Add forcecreate="False" --> <!-- now if you delete the email-template, it remain deleted if you update  -->
             <field name="name">Contract expiration reminder</field>
             <field name="email_from">${(object.email or '')|safe}</field>
             <field name="subject">Contract expiration reminder ${user.company_id.name}</field>
