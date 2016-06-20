@@ -1,3 +1,33 @@
+#### 20.06.2016
+#### calendar, 1.4
+##### CHG
+- Übersetzung der Email-Templates zu "Meeting Invitation", "Meeting Invitation - Reminder" und "Meeting Invitation - Change Date" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über die importierten Template geladen.
+
+#### 20.06.2016
+#### crm, 1.4
+##### CHG
+- Übersetzung des Email-Templates zu "Reminder to User" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über das importierte Template geladen.
+
+#### 20.06.2016
+#### auth_signup, 1.0.5
+##### CHG
+- Übersetzung des Email-Templates zu "Password Reset" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über das importierte Template geladen.
+
+#### 20.06.2016
+#### purchase, 1.4
+##### CHG
+- Übersetzung der Email-Templates zu "RFQ - Send by Email" und "Purchase Order - Send by Email" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über das importierte Template geladen.
+
+#### 20.06.2016
+#### account, 1.1.3
+##### CHG
+- Übersetzung des Email-Templates zu "Invoice - Send by Email" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über das importierte Template geladen.
+
+#### 20.06.2016
+#### sale, 1.3
+##### CHG
+- Übersetzung des Email-Templates zu "Sales Order - Send by Email" aus der .po-Datei entfernt. Dadurch wird die Übersetzung nicht mehr über das importierte Template geladen.
+
 #### 16.06.2016
 #### calendar, 1.3
 ##### ADD

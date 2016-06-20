@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name' : 'eInvoicing',
-    'version' : '1.1.2',
+    'version' : '1.1.3',
     'author' : 'OpenERP SA',
     'category' : 'Accounting & Finance',
     'description' : """

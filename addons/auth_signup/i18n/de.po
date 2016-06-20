@@ -16,21 +16,6 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: auth_signup
-#: model:email.template,body_html:auth_signup.reset_password_email
-msgid "\n"
-"<p>A password reset was requested for the Odoo account linked to this email.</p>\n"
-"\n"
-"<p>You may change your password by following <a href=\"${object.signup_url}\">this link</a>.</p>\n"
-"\n"
-"<p>Note: If you do not expect this, you can safely ignore this email.</p>"
-msgstr "\n"
-"<p>Eine Passwortänderung wurde für das mit dieser E-Mail verbundene Odoo Konto beantragt.</p>\n"
-"\n"
-"<p>Sie können Ihr Passwort durch einen <a href=\"${object.signup_url}\">Klick</a> schnell ändern.</p>\n"
-"\n"
-"<p>Hinweis: Ignorieren Sie diese E-Mail, wenn Sie keine E-Mail zur Passwortänderung erwarten.</p>"
-
-#. module: auth_signup
 #: model:email.template,subject:auth_signup.set_password_email
 msgid "${object.company_id.name} invitation to connect on our System"
 msgstr "${object.company_id.name} Einladung zur Registrierung auf unserem System"
@@ -154,11 +139,6 @@ msgstr "Partner"
 #: view:website:auth_signup.fields
 msgid "Password"
 msgstr "Passwort"
-
-#. module: auth_signup
-#: model:email.template,subject:auth_signup.reset_password_email
-msgid "Password reset"
-msgstr "Passwort zurücksetzen"
 
 #. module: auth_signup
 #: view:website:web.login
