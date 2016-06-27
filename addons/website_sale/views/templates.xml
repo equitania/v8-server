@@ -393,9 +393,10 @@
 
                 <hr t-if="product.description_sale"/>
                 <div><p t-field="product.description_sale" class="text-muted"/></div>
-                <hr/>
--                <p class="text-muted">
-				</p>
+                <!-- EQUITANIA: Deactivated unused hr and p 27 june 2016 -->
+                <!-- <hr/>
+                <p class="text-muted">
+				</p>-->
                 <!-- EQUITANIA: Deactivated unused guarantee block with following content  -->
                 <!-- 
                     30-day money-back guarantee
