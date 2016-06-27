@@ -1,10 +1,3 @@
-
-#### 27.06.2016
-#### website_sale, 1.0.1
-##### IMP
-- Eine Linie und ein unnötiger Container in der Produktdetailseite auskommentiert
-
-
 #### 20.06.2016
 #### account_analytic_analysis, 1.2
 ##### ADD
