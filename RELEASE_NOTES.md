@@ -1,3 +1,8 @@
+#### 28.06.2016
+#### website_sale, 1.0.1
+##### IMP
+- Ein unnötiger Bindestrich wurde entfernt
+
 #### 20.06.2016
 #### account_analytic_analysis, 1.2
 ##### ADD
