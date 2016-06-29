@@ -1,3 +1,8 @@
+#### 29.06.2016
+#### account, 1.1.4
+##### CHG
+- Das Feld attachment bei dem Bericht "Rechnungen" wird nun nicht mehr gesetzt (auskommentiert).
+
 #### 28.06.2016
 #### website_sale, 1.0.1
 ##### IMP

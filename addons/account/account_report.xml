@@ -36,9 +36,10 @@
             report_type="qweb-pdf"
             name="account.report_invoice"
             file="account.report_invoice"
-            attachment_use="True"
-            attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
-        />
+            attachment_use="True" />
+            <!-- attachment="(object.state in ('open','paid')) and ('INV'+(object.number or '').replace('/','')+'.pdf')"
+        /> -->
+        	<!-- EQUITANIA (29.06.2016): field attachment were commented out, so the field attachment will not be set in the report "Invoices" (dt. Rechnungen)  -->
 
         <report 
             id="action_report_trial_balance"
