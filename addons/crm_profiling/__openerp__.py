@@ -22,7 +22,7 @@
 
 {
     'name': 'Customer Profiling',
-    'version': '1.3',
+    'version': '1.3.1',
     'category': 'Marketing',
     'description': """
 This module allows users to perform segmentation within partners.
