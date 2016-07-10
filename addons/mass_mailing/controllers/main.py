@@ -1,8 +1,7 @@
 
 import werkzeug
 
-
-from openerp import http, SUPERUSER_ID, _
+from openerp import http, SUPERUSER_ID
 from openerp.http import request
 
 
@@ -72,8 +71,12 @@ class MassMailController(http.Controller):
     def subscribe(self, list_id, email, **post):
         cr, uid, context = request.cr, request.uid, request.context
         Contacts = request.registry['mail.mass_mailing.contact']
+        parsed_email = Contacts.get_name_email(email, context=context)[1]
 
-        contact_ids = Contacts.search_read(cr, SUPERUSER_ID, [('list_id', '=', int(list_id)), ('email', '=', email)], ['opt_out'], context=context)
+        contact_ids = Contacts.search_read(
+            cr, SUPERUSER_ID,
+            [('list_id', '=', int(list_id)), ('email', '=', parsed_email)],
+            ['opt_out'], context=context)
         if not contact_ids:
             Contacts.add_to_list(cr, SUPERUSER_ID, email, int(list_id), context=context)
         else:

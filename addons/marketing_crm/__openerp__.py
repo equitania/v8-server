@@ -2,7 +2,7 @@
 
 {
     'name': 'Marketing in CRM',
-    'version': '1.0',
+    'version': '1.0.1',
     'depends': ['marketing', 'crm'],
     'author': 'OpenERP SA',
     'category': 'Hidden/Dependency',
