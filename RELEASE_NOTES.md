@@ -1,4 +1,10 @@
 #### 29.06.2016
+#### point_of_sale, 1.0.3
+##### FIX
+- Tippfehler in der Versionsnummer korrigiert, damit man Odoo wieder starten kann
+
+
+#### 29.06.2016
 #### account, 1.1.4
 ##### CHG
 - Das Feld attachment bei dem Bericht "Rechnungen" wird nun nicht mehr gesetzt (auskommentiert).
