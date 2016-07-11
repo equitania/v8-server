@@ -76,6 +76,7 @@ class report_rappel(report_sxw.rml_parse):
         return [{'line': lines, 'currency': currency} for currency, lines in lines_per_currency.items()]
 
     def _get_text(self, stat_line, followup_id, context=None):
+        
         context = dict(context or {}, lang=stat_line.partner_id.lang)
         fp_obj = self.pool['account_followup.followup']
         fp_line = fp_obj.browse(self.cr, self.uid, followup_id, context=context).followup_line
@@ -103,12 +104,19 @@ class report_rappel(report_sxw.rml_parse):
             lang_obj = self.pool['res.lang']
             lang_ids = lang_obj.search(self.cr, self.uid, [('code', '=', stat_line.partner_id.lang)], context=context)
             date_format = lang_ids and lang_obj.browse(self.cr, self.uid, lang_ids[0], context=context).date_format or '%Y-%m-%d'
-            text = text % {
+
+            text = text % {       
                 'partner_name': stat_line.partner_id.name,
                 'date': time.strftime(date_format),
                 'company_name': stat_line.company_id.name,
                 'user_signature': self.pool['res.users'].browse(self.cr, self.uid, self.uid, context).signature or '',
             }
+            
+            #signature = self.pool['res.users'].browse(self.cr, self.uid, self.uid, context).signature or ''
+            #text = text.replace("%(partner_name)", stat_line.partner_id.name + ", " + time.strftime(date_format) + ", " + stat_line.company_id.name + ", " + signature)       
+            
+            #text = text.replace("%(partner_name)", stat_line.partner_id.name + ", " + time.strftime(date_format) + ", " + stat_line.company_id.name)
+            
         return text
 
 

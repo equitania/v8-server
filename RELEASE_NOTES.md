@@ -1,3 +1,9 @@
+#### 11.07.2016
+#### account_followup, 1.0.2
+##### FIX
+- de.po Datei korrigiert, sodass beim Aufruf des Parameters partner_name dieser auch als String angesehen wird (Beispiel: %(partner_name)s ). Das "s" fehlte in der kompletten de.po Datei nach dem Aufruf des jeweiligen Parameters.
+
+
 #### 29.06.2016
 #### point_of_sale, 1.0.3
 ##### FIX
