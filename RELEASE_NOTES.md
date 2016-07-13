@@ -1,3 +1,9 @@
+#### 13.07.2016
+#### account_followup, 1.0.3
+##### IMP
+- Übersetzungsdatei, und passende Texte angepasst
+
+
 #### 11.07.2016
 #### account_followup, 1.0.2
 ##### FIX
