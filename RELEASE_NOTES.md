@@ -1,3 +1,9 @@
+#### 15.07.2016
+#### product, 1.1.3
+##### CHG
+- Anpassungen für Setzen des Preises
+
+
 #### 13.07.2016
 #### account_followup, 1.0.3
 ##### IMP

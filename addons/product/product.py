@@ -919,7 +919,13 @@ class product_product(osv.osv):
             uom = product.uos_id or product.uom_id
             value = product_uom_obj._compute_price(cr, uid,
                     context['uom'], value, uom.id)
-        value =  value - product.price_extra
+        
+            value =  value - product.price_extra
+        else:#Workarond
+            value = product.list_price
+        
+        #alt: führte zu Fehler falls value leerer String ist    
+        #value =  value - product.price_extra
         
         return product.write({'list_price': value})
 
