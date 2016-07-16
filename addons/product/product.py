@@ -921,9 +921,9 @@ class product_product(osv.osv):
                     context['uom'], value, uom.id)
         
             value =  value - product.price_extra
-        else:#Workarond
+        else:#Workarond Equitania
             value = product.list_price
-        
+        # Equitania
         #alt: führte zu Fehler falls value leerer String ist    
         #value =  value - product.price_extra
         
