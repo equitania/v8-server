@@ -1,3 +1,8 @@
+#### 18.07.2016
+#### website_sale, 1.0.4
+##### CHG
+- Deutsche Übersetzung „Jetzt Kaufen“ in "Jetzt kaufen" geändert.
+
 #### 15.07.2016
 #### product, 1.1.3
 ##### CHG
