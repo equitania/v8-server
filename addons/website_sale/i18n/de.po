@@ -520,7 +520,7 @@ msgstr "Oberkategorie"
 #: view:website:website_sale.payment
 #, python-format
 msgid "Pay Now"
-msgstr "Jetzt Kaufen"
+msgstr "Jetzt kaufen"
 
 #. module: website_sale
 #: view:website:website_sale.cart view:website:website_sale.checkout
