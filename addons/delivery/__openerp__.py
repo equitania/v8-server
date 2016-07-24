@@ -22,7 +22,7 @@
 
 {
     'name': 'Delivery Costs',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Sales Management',
     'description': """
 Allows you to add delivery methods in sale orders and picking.
