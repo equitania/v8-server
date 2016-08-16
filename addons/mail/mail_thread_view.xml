@@ -5,13 +5,13 @@
             <field name="name">Inbox</field>
             <field name="tag">mail.wall</field>
             <field name="res_model">mail.message</field>
-            <field name="context">{
+            <!-- <field name="context">{
               'default_model': 'res.users',
               'default_res_id': uid,
               'thread_model': 'res.partner',
               'needaction_menu_ref': ['mail.mail_tomefeeds', 'mail.mail_starfeeds']
-            }</field>
-            <field name="params" eval="&quot;{
+            }</field> --> <!-- commented out by Equitania Software GmBh, because of Module eq_office365. This Part blocks a notification of mail.messages in inbox  -->
+           <field name="params" eval="&quot;{
                 'domain': [
                   ('to_read', '=', True),
                   ('starred', '=', False),

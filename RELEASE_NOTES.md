@@ -1,3 +1,8 @@
+#### 16.08.2016
+#### mail, 1.0.2
+##### CHG
+- Kontext vom Posteingang auskommentiert. Dieser hat die Anzeige von zugeordneten mail.messages blockiert.
+
 #### 18.07.2016
 #### website_sale, 1.0.4
 ##### CHG
