@@ -1456,7 +1456,7 @@ msgstr "Empfangen"
 #: view:mail.compose.message:mail.email_compose_message_wizard_form
 #: field:mail.message,partner_ids:0 field:mail.wizard.invite,partner_ids:0
 msgid "Recipients"
-msgstr "Empfänger"
+msgstr "Zugeordneter Partner"
 
 #. module: mail
 #: field:mail.alias,alias_force_thread_id:0

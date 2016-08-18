@@ -1,3 +1,8 @@
+#### 18.08.2016
+#### mail, 1.0.3
+##### CHG
+- Änderung der Übersetzung von "Empfänger" zu "Zugeordneter Partner".
+
 #### 16.08.2016
 #### mail, 1.0.2
 ##### CHG
