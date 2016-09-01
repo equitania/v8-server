@@ -9,15 +9,15 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2015-08-13 22:06+0200\n"
-"Last-Translator: Martin Schmid <m.schmid@equitania.de>\n"
+"PO-Revision-Date: 2016-09-01 21:24+0200\n"
+"Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: de\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.8\n"
 
 #. module: stock_account
 #: view:stock.history:stock_account.view_stock_history_report_tree
@@ -66,7 +66,9 @@ msgid "Calculate landed costs on products"
 msgstr "Kalkuliere den Einstandspreis bei Produkten"
 
 #. module: stock_account
-#: view:stock.change.standard.price:stock_account.view_change_standard_price view:stock.invoice.onshipping:stock_account.view_stock_invoice_onshipping view:wizard.valuation.history:stock_account.view_wizard_valuation_history
+#: view:stock.change.standard.price:stock_account.view_change_standard_price
+#: view:stock.invoice.onshipping:stock_account.view_stock_invoice_onshipping
+#: view:wizard.valuation.history:stock_account.view_wizard_valuation_history
 msgid "Cancel"
 msgstr "Abbrechen"
 
@@ -76,7 +78,9 @@ msgid "Change Price"
 msgstr "Ändere Preis"
 
 #. module: stock_account
-#: model:ir.actions.act_window,name:stock_account.action_view_change_standard_price model:ir.model,name:stock_account.model_stock_change_standard_price view:stock.change.standard.price:stock_account.view_change_standard_price
+#: model:ir.actions.act_window,name:stock_account.action_view_change_standard_price
+#: model:ir.model,name:stock_account.model_stock_change_standard_price
+#: view:stock.change.standard.price:stock_account.view_change_standard_price
 msgid "Change Standard Price"
 msgstr "Ändere Einstandspreis"
 
@@ -109,14 +113,16 @@ msgid "Choose your date"
 msgstr "Wählen Sie ein Datum"
 
 #. module: stock_account
-#: view:stock.history:stock_account.view_stock_history_report_search field:stock.history,company_id:0
+#: view:stock.history:stock_account.view_stock_history_report_search
+#: field:stock.history,company_id:0
 msgid "Company"
 msgstr "Unternehmen"
 
 #. module: stock_account
-#: view:product.template:stock_account.view_template_property_form view:stock.change.standard.price:stock_account.view_change_standard_price
+#: view:product.template:stock_account.view_template_property_form
+#: view:stock.change.standard.price:stock_account.view_change_standard_price
 msgid "Cost Price"
-msgstr "Einstandspreis"
+msgstr "Einkaufspreis"
 
 #. module: stock_account
 #: field:product.template,cost_method:0
@@ -159,17 +165,22 @@ msgid "Create invoice"
 msgstr "Erzeuge Rechnung"
 
 #. module: stock_account
-#: field:stock.change.standard.price,create_uid:0 field:stock.invoice.onshipping,create_uid:0 field:wizard.valuation.history,create_uid:0
+#: field:stock.change.standard.price,create_uid:0
+#: field:stock.invoice.onshipping,create_uid:0
+#: field:wizard.valuation.history,create_uid:0
 msgid "Created by"
 msgstr "Erstellt von"
 
 #. module: stock_account
-#: field:stock.change.standard.price,create_date:0 field:stock.invoice.onshipping,create_date:0 field:wizard.valuation.history,create_date:0
+#: field:stock.change.standard.price,create_date:0
+#: field:stock.invoice.onshipping,create_date:0
+#: field:wizard.valuation.history,create_date:0
 msgid "Created on"
 msgstr "Erstellt am"
 
 #. module: stock_account
-#: model:ir.actions.act_window,name:stock_account.action_history_tree model:ir.ui.menu,name:stock_account.menu_action_history_tree
+#: model:ir.actions.act_window,name:stock_account.action_history_tree
+#: model:ir.ui.menu,name:stock_account.menu_action_history_tree
 msgid "Current Inventory Valuation"
 msgstr "Aktuelle Bestandsbewertung"
 
@@ -184,7 +195,9 @@ msgid "Destination Journal"
 msgstr "Zieljournal"
 
 #. module: stock_account
-#: code:addons/stock_account/product.py:83 code:addons/stock_account/product.py:116 code:addons/stock_account/wizard/stock_invoice_onshipping.py:91
+#: code:addons/stock_account/product.py:83
+#: code:addons/stock_account/product.py:116
+#: code:addons/stock_account/wizard/stock_invoice_onshipping.py:91
 #, python-format
 msgid "Error!"
 msgstr "Fehler!"
@@ -210,7 +223,8 @@ msgid "Group by partner"
 msgstr "Gruppiert nach Partner"
 
 #. module: stock_account
-#: field:stock.change.standard.price,id:0 field:stock.history,id:0 field:stock.invoice.onshipping,id:0 field:wizard.valuation.history,id:0
+#: field:stock.change.standard.price,id:0 field:stock.history,id:0
+#: field:stock.invoice.onshipping,id:0 field:wizard.valuation.history,id:0
 msgid "ID"
 msgstr "ID"
 
@@ -227,7 +241,7 @@ msgstr ""
 #. module: stock_account
 #: help:product.template,valuation:0
 msgid "If real-time valuation is enabled for a product, the system will automatically write journal entries corresponding to stock moves, with product price as specified by the 'Costing Method'The inventory variation account set on the product category will represent the current inventory value, and the stock input and stock output account will hold the counterpart moves for incoming and outgoing products."
-msgstr "Bei Aktivierung der Echtzeitbewertung für ein Produkt, erstellt das System automatisch Buchungen mit dem Bewertungspreis auf Basis der beim Produkt hinterlegten Kalkulationsmethode. In der Produktkategorie repäsentiert das  Bestandsveränderungskonto den aktuellen Lagerbestandswert, wobei das Warenversand / Wareneingang Konto für die Gegenbuchung bei der Wareneingangs- und Warenausgangslieferung vorgesehen ist."
+msgstr "Bei Aktivierung der Echtzeitbewertung für ein Produkt, erstellt das System automatisch Buchungen mit dem Bewertungspreis auf Basis der beim Produkt hinterlegten Kalkulationsmethode. In der Produktkategorie repräsentiert das  Bestandsveränderungskonto den aktuellen Lagerbestandswert, wobei das Warenversand / Wareneingang Konto für die Gegenbuchung bei der Wareneingangs- und Warenausgangslieferung vorgesehen ist."
 
 #. module: stock_account
 #: help:stock.config.settings,module_stock_landed_costs:0
@@ -245,7 +259,8 @@ msgid "Inventory Locations"
 msgstr "Inventurlager"
 
 #. module: stock_account
-#: view:product.template:stock_account.view_template_property_form field:product.template,valuation:0
+#: view:product.template:stock_account.view_template_property_form
+#: field:product.template,valuation:0
 msgid "Inventory Valuation"
 msgstr "Inventurbewertung"
 
@@ -255,7 +270,8 @@ msgid "Inventory Value"
 msgstr "Inventurbestandswert"
 
 #. module: stock_account
-#: field:procurement.order,invoice_state:0 field:stock.move,invoice_state:0 field:stock.picking,invoice_state:0
+#: field:procurement.order,invoice_state:0 field:stock.move,invoice_state:0
+#: field:stock.picking,invoice_state:0
 msgid "Invoice Control"
 msgstr "Rechnungserstellung"
 
@@ -265,12 +281,16 @@ msgid "Invoice Date"
 msgstr "Rechnungsdatum"
 
 #. module: stock_account
-#: field:procurement.rule,invoice_state:0 field:stock.location.path,invoice_state:0
+#: field:procurement.rule,invoice_state:0
+#: field:stock.location.path,invoice_state:0
 msgid "Invoice Status"
 msgstr "Rechnungsstatus"
 
 #. module: stock_account
-#: selection:procurement.order,invoice_state:0 selection:procurement.rule,invoice_state:0 selection:stock.location.path,invoice_state:0 selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
+#: selection:procurement.order,invoice_state:0
+#: selection:procurement.rule,invoice_state:0
+#: selection:stock.location.path,invoice_state:0
+#: selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
 msgid "Invoiced"
 msgstr "Abgerechnet"
 
@@ -285,17 +305,22 @@ msgid "Journal Type"
 msgstr "Journaltyp"
 
 #. module: stock_account
-#: field:stock.change.standard.price,write_uid:0 field:stock.invoice.onshipping,write_uid:0 field:wizard.valuation.history,write_uid:0
+#: field:stock.change.standard.price,write_uid:0
+#: field:stock.invoice.onshipping,write_uid:0
+#: field:wizard.valuation.history,write_uid:0
 msgid "Last Updated by"
 msgstr "Zuletzt aktualisiert durch"
 
 #. module: stock_account
-#: field:stock.change.standard.price,write_date:0 field:stock.invoice.onshipping,write_date:0 field:wizard.valuation.history,write_date:0
+#: field:stock.change.standard.price,write_date:0
+#: field:stock.invoice.onshipping,write_date:0
+#: field:wizard.valuation.history,write_date:0
 msgid "Last Updated on"
 msgstr "Zuletzt aktualisiert am"
 
 #. module: stock_account
-#: view:stock.history:stock_account.view_stock_history_report_search field:stock.history,location_id:0
+#: view:stock.history:stock_account.view_stock_history_report_search
+#: field:stock.history,location_id:0
 msgid "Location"
 msgstr "Ort"
 
@@ -333,7 +358,10 @@ msgid "None of these picking lists require invoicing."
 msgstr "Keiner dieser Lieferscheine erfordert eine Abrechnung."
 
 #. module: stock_account
-#: selection:procurement.order,invoice_state:0 selection:procurement.rule,invoice_state:0 selection:stock.location.path,invoice_state:0 selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
+#: selection:procurement.order,invoice_state:0
+#: selection:procurement.rule,invoice_state:0
+#: selection:stock.location.path,invoice_state:0
+#: selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
 msgid "Not Applicable"
 msgstr "Nicht abzurechnen"
 
@@ -360,7 +388,7 @@ msgstr ""
 #. module: stock_account
 #: field:stock.history,date:0
 msgid "Operation Date"
-msgstr "Datum"
+msgstr "Datum der Buchung"
 
 #. module: stock_account
 #: selection:product.template,valuation:0
@@ -388,12 +416,15 @@ msgid "Procurement Rule"
 msgstr "Beschaffungsregel"
 
 #. module: stock_account
-#: view:stock.history:stock_account.view_stock_history_report_search field:stock.history,product_id:0
+#: view:stock.history:stock_account.view_stock_history_report_search
+#: field:stock.history,product_id:0
 msgid "Product"
 msgstr "Produkt"
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_product_category view:stock.history:stock_account.view_stock_history_report_search field:stock.history,product_categ_id:0
+#: model:ir.model,name:stock_account.model_product_category
+#: view:stock.history:stock_account.view_stock_history_report_search
+#: field:stock.history,product_categ_id:0
 msgid "Product Category"
 msgstr "Produktkategorie"
 
@@ -415,12 +446,12 @@ msgstr "Durch Push Regel erstellte Vorgänge"
 #. module: stock_account
 #: model:ir.model,name:stock_account.model_stock_quant
 msgid "Quants"
-msgstr "Quants"
+msgstr "Lagerdetailbestände (Quants)"
 
 #. module: stock_account
 #: selection:product.template,cost_method:0
 msgid "Real Price"
-msgstr "Einkaufspreis"
+msgstr "FIFO Preis"
 
 #. module: stock_account
 #: selection:product.template,valuation:0
@@ -460,13 +491,14 @@ msgstr "Herkunft"
 #. module: stock_account
 #: selection:product.template,cost_method:0
 msgid "Standard Price"
-msgstr "Standardpreis"
+msgstr "Manueller Einkaufspreis"
 
 #. module: stock_account
-#: code:addons/stock_account/product.py:137 code:addons/stock_account/product.py:144
+#: code:addons/stock_account/product.py:137
+#: code:addons/stock_account/product.py:144
 #, python-format
 msgid "Standard Price changed"
-msgstr "Geänderter Standardpreis"
+msgstr "Geänderter manueller Einkaufspreis"
 
 #. module: stock_account
 #: help:product.template,cost_method:0
@@ -475,12 +507,13 @@ msgid ""
 "                    Average Price: The cost price is recomputed at each incoming shipment and used for the product valuation.\n"
 "                    Real Price: The cost price displayed is the price of the last outgoing product (will be use in case of inventory loss for example)."
 msgstr ""
-"Standardpreis: Der Einstandspreis wird zum Ende einer Abrechnungsperiode automatisch aktualisiert (normalerweise jährlich).\n"
-"                      Durchschnittspreis: Der Einstandspreis wird bei jeder eingehenden Lieferung und Bewertung aktualisiert und genutzt.\n"
-"                      Tatsächlicher Preis: Der angezeigte Einstandspreis entspricht dem tatsächlichen Preis der letzten Auslieferung (z.B. für den Fall der Buchung von Bestandsverlust)"
+"Manueller Einkaufspreis: Hiermit legen Sie Ihren Einstandpreis für das Produkt manuell fest.\n"
+"                      Durchschnittspreis: Der Einkaufpreis wird bei jeder eingehenden Lieferung neu berechnet und dient dann als Grundlage genutzt.\n"
+"                      FIFO Preis: Der angezeigte Preis entspricht dem tatsächlichen Preis der letzten Auslieferung (z.B. für den Fall der Buchung von Bestandsverlust)"
 
 #. module: stock_account
-#: field:product.category,property_stock_account_input_categ:0 field:product.template,property_stock_account_input:0
+#: field:product.category,property_stock_account_input_categ:0
+#: field:product.template,property_stock_account_input:0
 msgid "Stock Input Account"
 msgstr "Konto Wareneingang"
 
@@ -495,17 +528,20 @@ msgid "Stock Journal"
 msgstr "Lagerjournal"
 
 #. module: stock_account
-#: model:ir.model,name:stock_account.model_stock_move field:stock.history,move_id:0
+#: model:ir.model,name:stock_account.model_stock_move
+#: field:stock.history,move_id:0
 msgid "Stock Move"
 msgstr "Bestandsbuchung"
 
 #. module: stock_account
-#: field:product.category,property_stock_account_output_categ:0 field:product.template,property_stock_account_output:0
+#: field:product.category,property_stock_account_output_categ:0
+#: field:product.template,property_stock_account_output:0
 msgid "Stock Output Account"
 msgstr "Warenversand Konto"
 
 #. module: stock_account
-#: model:ir.actions.act_window,name:stock_account.action_wizard_stock_valuation_history model:ir.ui.menu,name:stock_account.menu_action_wizard_valuation_history
+#: model:ir.actions.act_window,name:stock_account.action_wizard_stock_valuation_history
+#: model:ir.ui.menu,name:stock_account.menu_action_wizard_valuation_history
 msgid "Stock Valuation"
 msgstr "Bestandsbewertung"
 
@@ -525,7 +561,10 @@ msgid "Stock Valuation Account (Outgoing)"
 msgstr "Lagerbewertungskonto (Ausgehend)"
 
 #. module: stock_account
-#: code:addons/stock_account/wizard/stock_valuation_history.py:30 view:stock.history:stock_account.view_stock_history_report_graph view:stock.history:stock_account.view_stock_history_report_search view:stock.history:stock_account.view_stock_history_report_tree
+#: code:addons/stock_account/wizard/stock_valuation_history.py:30
+#: view:stock.history:stock_account.view_stock_history_report_graph
+#: view:stock.history:stock_account.view_stock_history_report_search
+#: view:stock.history:stock_account.view_stock_history_report_tree
 #, python-format
 msgid "Stock Value At Date"
 msgstr "Lagerbestandshistorie"
@@ -540,7 +579,10 @@ msgstr ""
 "- Es wird das Modul stock_invoice_directly installiert."
 
 #. module: stock_account
-#: selection:procurement.order,invoice_state:0 selection:procurement.rule,invoice_state:0 selection:stock.location.path,invoice_state:0 selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
+#: selection:procurement.order,invoice_state:0
+#: selection:procurement.rule,invoice_state:0
+#: selection:stock.location.path,invoice_state:0
+#: selection:stock.move,invoice_state:0 selection:stock.picking,invoice_state:0
 msgid "To Be Invoiced"
 msgstr "Abzurechnen"
 
@@ -616,6 +658,8 @@ msgid "_Apply"
 msgstr "_Anwenden"
 
 #. module: stock_account
-#: view:stock.change.standard.price:stock_account.view_change_standard_price view:stock.invoice.onshipping:stock_account.view_stock_invoice_onshipping view:wizard.valuation.history:stock_account.view_wizard_valuation_history
+#: view:stock.change.standard.price:stock_account.view_change_standard_price
+#: view:stock.invoice.onshipping:stock_account.view_stock_invoice_onshipping
+#: view:wizard.valuation.history:stock_account.view_wizard_valuation_history
 msgid "or"
 msgstr "oder"
