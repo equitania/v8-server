@@ -22,7 +22,7 @@
 
 {
     'name': 'Purchase Analytic Plans',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Purchase Management',
     'description': """
 The base module to manage analytic distribution and purchase orders.

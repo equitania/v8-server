@@ -21,7 +21,7 @@
 
 {
     'name' : 'Double Validation on Purchases',
-    'version' : '1.1',
+    'version' : '1.1.1',
     'category': 'Purchase Management',
     'depends' : ['base','purchase'],
     'author' : 'OpenERP SA',

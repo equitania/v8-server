@@ -22,7 +22,7 @@
 
 {
     'name': 'Survey CRM',
-    'version': '2.0',
+    'version': '2.0.1',
     'category': 'Marketing',
     'complexity': 'easy',
     'website': 'https://www.odoo.com/page/survey',
