@@ -2038,19 +2038,19 @@ msgstr "Lagerbestand"
 #. module: stock
 #: view:stock.inventory:stock.view_inventory_form
 msgid "Inventory Adjustment"
-msgstr "Bestandsabgleich"
+msgstr "Inventur-Einstellungen"
 
 #. module: stock
 #: model:ir.actions.act_window,name:stock.action_inventory_form
 #: model:ir.ui.menu,name:stock.menu_action_inventory_form
 #: view:stock.inventory:stock.view_inventory_form
 msgid "Inventory Adjustments"
-msgstr "Bestandsabgleich"
+msgstr "Inventur-Einstellungen"
 
 #. module: stock
 #: model:ir.ui.menu,name:stock.menu_stock_inventory_control
 msgid "Inventory Control"
-msgstr "Bestandsverwaltung"
+msgstr "Inventurverwaltung"
 
 #. module: stock
 #: field:stock.inventory,date:0
