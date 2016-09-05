@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: Odoo 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-01-21 14:07+0000\n"
-"PO-Revision-Date: 2016-09-01 21:24+0200\n"
+"PO-Revision-Date: 2016-09-05 11:33+0200\n"
 "Last-Translator: Martin Schmid <m.schmid@equitania.com>\n"
 "Language-Team: German (http://www.transifex.com/p/odoo-8/language/de/)\n"
 "MIME-Version: 1.0\n"
@@ -451,7 +451,7 @@ msgstr "Lagerdetailbestände (Quants)"
 #. module: stock_account
 #: selection:product.template,cost_method:0
 msgid "Real Price"
-msgstr "FIFO Preis"
+msgstr "Letzter EK-Preis"
 
 #. module: stock_account
 #: selection:product.template,valuation:0
@@ -509,7 +509,7 @@ msgid ""
 msgstr ""
 "Manueller Einkaufspreis: Hiermit legen Sie Ihren Einstandpreis für das Produkt manuell fest.\n"
 "                      Durchschnittspreis: Der Einkaufpreis wird bei jeder eingehenden Lieferung neu berechnet und dient dann als Grundlage genutzt.\n"
-"                      FIFO Preis: Der angezeigte Preis entspricht dem tatsächlichen Preis der letzten Auslieferung (z.B. für den Fall der Buchung von Bestandsverlust)"
+"                      Letzter EK-Preis: Der angezeigte Preis entspricht dem tatsächlichen Preis der letzten Auslieferung (z.B. für den Fall der Buchung von Bestandsverlust)"
 
 #. module: stock_account
 #: field:product.category,property_stock_account_input_categ:0

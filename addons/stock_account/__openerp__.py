@@ -21,7 +21,7 @@
 
 {
     'name': 'WMS Accounting',
-    'version': '1.1.3',
+    'version': '1.1.4',
     'author': 'OpenERP SA',
     'summary': 'Inventory, Logistic, Valuation, Accounting',
     'description': """
