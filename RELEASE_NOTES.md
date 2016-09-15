@@ -1,3 +1,8 @@
+#### 15.09.2016
+#### website, 1.0.21
+##### FIX
+- SEO: hreflang if-abfrage auskommentiert damit die hreflang wieder funktioniert
+
 #### 18.08.2016
 #### mail, 1.0.3
 ##### CHG
