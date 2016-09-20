@@ -1174,10 +1174,10 @@
       editor.areaChecksum = checksum(code);
 
     // Update the textarea and trigger the change event
-//    if (code !== $area.val()) {
-//      $area.val(code);
-//      $(editor).triggerHandler(CHANGE);					//Equitania: Solve the problem with the autocompletion in the CLEditor. 
-//    }
+    if (code !== $area.val()) {							//EQUITANIA: this lines have to be deactivated, if you want to have a preview in the email-templates
+      $area.val(code);									//
+      $(editor).triggerHandler(CHANGE);					//Equitania: Solve the problem with the autocompletion in the CLEditor. 
+    }
 
   }
 
