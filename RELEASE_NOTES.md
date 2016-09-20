@@ -1,7 +1,7 @@
 #### 20.09.2016
 #### web, 1.0.7
 ##### CHG
-- In der JavaScript-Datei jquery.cleditor.js Zeile 124-127 wieder einkomentiert, sodass eine Bearbeitung von multilingualen Texten (Kopf- und Fußtexten) wieder möglich ist.
+- In der JavaScript-Datei jquery.cleditor.js Zeile 1177-1180 wieder einkomentiert, sodass eine Bearbeitung von multilingualen Texten (Kopf- und Fußtexten) wieder möglich ist.
 
 #### 15.09.2016
 #### website, 1.0.21
