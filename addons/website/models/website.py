@@ -245,6 +245,15 @@ class website(osv.osv):
             return True     # Flag wurde gesetzt auf True
         else:               # Flag existiert nicht - der Kunde hat eq_website_customerportal nicht im Einsatz
             return False
+      
+    def get_url_localized(router, lang):
+        arguments = dict(request.endpoint_arguments)
+        for k, v in arguments.items():
+            if isinstance(v, orm.browse_record):
+                arguments[k] = v.with_context(lang=lang)
+        return router.build(request.endpoint, arguments) 
+      
+      
         
     def get_alternate_languages(self, cr, uid, ids, req=None, context=None):
         langs = []
@@ -253,12 +262,7 @@ class website(osv.osv):
         default = self.get_current_website(cr, uid, context=context).default_lang_code
         shorts = []
 
-        def get_url_localized(router, lang):
-            arguments = dict(request.endpoint_arguments)
-            for k, v in arguments.items():
-                if isinstance(v, orm.browse_record):
-                    arguments[k] = v.with_context(lang=lang)
-            return router.build(request.endpoint, arguments)
+        
         router = request.httprequest.app.get_db_router(request.db).bind('')
         for code, name in self.get_languages(cr, uid, ids, context=context):
             lg_path = ('/' + code) if code != default else ''

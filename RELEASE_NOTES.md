@@ -1,3 +1,8 @@
+#### 23.09.2016
+#### website, 1.0.23
+##### FIX
+- Anpassung vom 15.09.2016 rückgängig gemacht, nun können Angebote wieder gedruckt werden (SEO: hreflang if-abfrage auskommentiert damit die hreflang wieder funktioniert).
+
 #### 20.09.2016
 #### web, 1.0.7
 ##### CHG
