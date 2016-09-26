@@ -1,3 +1,8 @@
+#### 26.09.2016
+#### website, 1.0.25
+##### FIX
+- HREFLANG wurde nun in der IF Abfrage angepasst, so dass es nur greift bei mehrsprachigen Websites. Der Druck wurde geprüft.
+
 #### 23.09.2016
 #### website, 1.0.23
 ##### FIX
