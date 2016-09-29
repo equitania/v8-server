@@ -1174,11 +1174,16 @@
       editor.areaChecksum = checksum(code);
 
     // Update the textarea and trigger the change event
-    if (code !== $area.val()) {							//EQUITANIA: this lines have to be deactivated, if you want to have a preview in the email-templates
-      $area.val(code);									//
-      $(editor).triggerHandler(CHANGE);					//Equitania: Solve the problem with the autocompletion in the CLEditor. 
+    if (code !== $area.val()) {							// EQUITANIA: (old state: this lines have to be deactivated, if you want to have a preview in the email-templates)
+    	var START_TAG = "% for line in";			// EQUITANIA: Added query. If the string "% for line in" is not in the textarea, the update function will executed
+        var allText = $area.val();				// EQUITANIA: Otherwise the update function will not executed
+        var startIndex = allText.indexOf(START_TAG);// EQUITANIA: 
+        if (startIndex == -1) {						// EQUITANIA: 
+    	
+        	$area.val(code);									// EQUITANIA: (old state: this lines have to be deactivated, if you want to have a preview in the email-templates)
+        	$(editor).triggerHandler(CHANGE);					// Equitania: Solve the problem with the autocompletion in the CLEditor. 
     }
-
+    }
   }
 
 })(jQuery);

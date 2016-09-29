@@ -2982,7 +2982,12 @@ instance.web.form.FieldTextHtml = instance.web.form.AbstractField.extend(instanc
             this.$cleditor = this.$textarea.cleditor()[0];
             this.$cleditor.change(function() {            	
                 if (! self._updating_editor) {
-                    //self.$cleditor.updateTextArea();			// EQUITANIA: deactivated because of the problems with auto change of syntax if it losts focus
+                	var START_TAG = "% for line in";			// EQUITANIA: Added query. If the string "% for line in" is not in the textarea, the update function will executed
+                    var allText = $textarea.val();				// EQUITANIA: Otherwise the update function will not executed
+                    var startIndex = allText.indexOf(START_TAG);// EQUITANIA: 
+                    if (startIndex == -1) {						// EQUITANIA: 
+                    self.$cleditor.updateTextArea();			// EQUITANIA: (old state:deactivated because of the problems with auto change of syntax if it losts focus)
+                    }											// EQUITANIA: 
                     self.internal_set_value(self.$textarea.val());
                 }
             });

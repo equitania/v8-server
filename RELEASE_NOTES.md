@@ -1,3 +1,8 @@
+#### 29.09.2016
+#### web, 1.0.8
+##### CHG
+- Abfrage hinzugefügt, welche eine Autokorrektur des Editors verhindert sobald eine Schleife sich im Text befindet.
+
 #### 26.09.2016
 #### website, 1.0.25
 ##### FIX

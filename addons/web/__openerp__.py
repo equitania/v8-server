@@ -1,7 +1,7 @@
 {
     'name': 'Web',
     'category': 'Hidden',
-    'version': '1.0.7',
+    'version': '1.0.8',
     'description':
         """
 OpenERP Web core module.
