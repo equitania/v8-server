@@ -21,7 +21,7 @@
 
 {
     'name': 'Social Network',
-    'version': '1.0.3',
+    'version': '1.0.4',
     'category': 'Social Network',
     'sequence': 2,
     'summary': 'Discussions, Mailing Lists, News',

@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Worldline SIPS Payment Acquiring  for online payments',
-    'version': '1.0',
+    'version': '1.0.1',
     'author': 'Eezee-It',
     'category': 'Hidden',
     'description': """

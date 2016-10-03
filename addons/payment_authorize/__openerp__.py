@@ -4,7 +4,7 @@
     'name': 'Authorize.Net Payment Acquirer',
     'category': 'Hidden',
     'summary': 'Payment Acquirer: Authorize.net Implementation',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """Authorize.Net Payment Acquirer""",
     'author': 'Odoo SA',
     'depends': ['payment'],

@@ -122,7 +122,7 @@
 
 {
     'name': 'Deutschland - Accounting',
-    'version': '1.0',
+    'version': '1.0.1',
     'author': 'openbig.org',
     'website': 'http://www.openbig.org',
     'category': 'Localization/Account Charts',
