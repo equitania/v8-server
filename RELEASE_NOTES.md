@@ -1,3 +1,14 @@
+#### 18.10.2016
+#### payment_tranfer, 1.0.1
+##### CHG
+- Deutsche Übersetzung angepasst
+
+#### 26.09.2016
+#### website, 1.0.25
+##### FIX
+- HREFLANG wurde nun in der IF Abfrage angepasst, so dass es nur greift bei mehrsprachigen Websites. Der Druck wurde geprüft.
+
+
 #### 29.09.2016
 #### web, 1.0.8
 ##### CHG

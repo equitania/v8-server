@@ -4,7 +4,7 @@
     'name': 'Transfer Payment Acquirer',
     'category': 'Hidden',
     'summary': 'Payment Acquirer: Transfer Implementation',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """Transfer Payment Acquirer""",
     'author': 'OpenERP SA',
     'depends': ['payment'],

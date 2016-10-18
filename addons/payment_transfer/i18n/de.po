@@ -20,10 +20,8 @@ msgstr ""
 
 #. module: payment_transfer
 #: model:payment.acquirer,pre_msg:payment_transfer.payment_acquirer_transfer
-msgid ""
-"<p>Transfer information will be provided after choosing the payment mode.</p>\n"
-"            "
-msgstr "<p>Transferinformationen werden nach Auswahl der Zahlungsmethode angezeigt.</p>\n            "
+msgid "Transfer information will be provided after choosing the payment mode."
+msgstr "Transferinformationen werden nach Auswahl der Zahlungsmethode angezeigt."
 
 #. module: payment_transfer
 #: code:addons/payment_transfer/models/payment_acquirer.py:30
