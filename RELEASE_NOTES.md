@@ -1,3 +1,8 @@
+#### 26.10.2016
+#### website_quote, 1.1.2
+##### CHG
+- Feld im Template "Angebot gültig bis" entfernt, da wir das an dieser Stelle nirgendwo im Einsatz haben
+
 #### 18.10.2016
 #### payment_tranfer, 1.0.1
 ##### CHG
