@@ -49,10 +49,6 @@
 ##### CHG
 - Kontext vom Posteingang auskommentiert. Dieser hat die Anzeige von zugeordneten mail.messages blockiert.
 
-#### 18.07.2016
-#### website_sale, 1.0.4
-##### CHG
-- Deutsche Übersetzung „Jetzt Kaufen“ in "Jetzt kaufen" geändert.
 
 #### 15.07.2016
 #### product, 1.1.3
@@ -83,10 +79,6 @@
 ##### CHG
 - Das Feld attachment bei dem Bericht "Rechnungen" wird nun nicht mehr gesetzt (auskommentiert).
 
-#### 28.06.2016
-#### website_sale, 1.0.1
-##### IMP
-- Ein unnötiger Bindestrich wurde entfernt
 
 #### 20.06.2016
 #### account_analytic_analysis, 1.2
