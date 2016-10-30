@@ -10,6 +10,7 @@ for customization purpose.
     'category': 'Uncategorized',
     'website': 'https://www.odoo.com',
     'author': 'OpenERP SA',
+    'version' : '1.8.0',
     'depends': ['web'],
     'installable': True,
     'auto_install': False,
