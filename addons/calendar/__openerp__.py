@@ -21,7 +21,7 @@
 
 {
     'name': 'Calendar',
-    'version': '1.4.1',
+    'version': '1.4.2',
     'depends': ['base', 'mail', 'base_action_rule', 'web_calendar'],
     'summary': 'Personal & Shared Calendar',
     'description': """
