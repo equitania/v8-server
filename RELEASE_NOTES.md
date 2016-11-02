@@ -1,3 +1,8 @@
+#### 02.11.2016
+#### portal, 1.0.2
+##### CHG
+- automatischen Link in Email-Templates zum Partner entfernt
+
 #### 26.10.2016
 #### website_quote, 1.1.2
 ##### CHG
