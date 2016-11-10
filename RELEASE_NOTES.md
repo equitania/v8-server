@@ -1,3 +1,8 @@
+#### 10.11.2016
+#### website, 1.1.1
+##### CHG
+- Der "Automatic Footer" wird nun nichtmehr im "Anpassen"-Dropdown von der Website mit aufgelistet
+
 #### 02.11.2016
 #### portal, 1.0.2
 ##### CHG

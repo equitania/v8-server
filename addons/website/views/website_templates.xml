@@ -306,7 +306,7 @@
     </xpath>
 </template>
 
-<template id="footer_default" inherit_id="website.footer_custom" customize_show="True" name="Automatic Footer">
+<template id="footer_default" inherit_id="website.footer_custom" customize_show="False" name="Automatic Footer">
     <xpath expr="//div[@id='footer']" position="replace">
         <div class="container hidden-print">
             <div class="row">
