@@ -65,7 +65,7 @@ msgstr "Nettobetrag"
 
 #. module: website_sale_delivery
 #: help:sale.order,amount_delivery:0
-msgid "No shipping method is available for your current order and shipping address. Please contact us for more information.."
+msgid "No shipping method is available for your current order and shipping address. Please contact us for more information."
 msgstr "Es ist keine Versandmethode für Ihre Bestellung verfügbar. Bitte kontaktieren Sie uns für mehr Informationen."
 
 #. module: website_sale_delivery
