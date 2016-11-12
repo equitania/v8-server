@@ -1,6 +1,6 @@
 {
     'name' : 'Instant Messaging',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'summary': 'OpenERP Chat',
     'author': 'OpenERP SA',
     'sequence': '18',

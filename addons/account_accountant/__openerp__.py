@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name' : 'Accounting and Finance',
-    'version' : '1.1',
+    'version' : ‘1.1.1’,
     'author' : 'OpenERP SA',
     'category': 'Accounting & Finance',
     'sequence': 10,

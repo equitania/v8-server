@@ -21,7 +21,7 @@
 
 {
     'name' : 'Resource',
-    'version' : '1.1',
+    'version' : '1.1.1',
     'author' : 'OpenERP SA',
     'category' : 'Hidden/Dependency',
     'website' : 'http://www.openerp.com',

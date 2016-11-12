@@ -22,7 +22,7 @@
 
 {
     'name': 'Contracts Management: hr_expense link',
-    'version': '1.1',
+    'version': ‘1.1.1’,
     'category': 'Hidden',
     'description': """
 This module is for modifying account analytic view to show some data related to the hr_expense module.

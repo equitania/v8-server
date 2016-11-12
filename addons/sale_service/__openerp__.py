@@ -22,7 +22,7 @@
 
 {
     'name': 'Create Tasks on SO',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Project Management',
     'description': """
 Automatically creates project tasks from procurement lines.

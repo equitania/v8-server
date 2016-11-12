@@ -4,7 +4,7 @@
     'name': 'Ogone Payment Acquirer',
     'category': 'Hidden',
     'summary': 'Payment Acquirer: Ogone Implementation',
-    'version': '1.0.1',
+    'version': ‘1.0.2’,
     'description': """Ogone Payment Acquirer""",
     'author': 'OpenERP SA',
     'depends': ['payment'],

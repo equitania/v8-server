@@ -23,7 +23,7 @@
 
 {
     'name' : 'Share any Document',
-    'version' : '2.0',
+    'version' : '2.0.1',
     'depends' : ['base', 'mail'],
     'author' : 'OpenERP SA',
     'category': 'Tools',

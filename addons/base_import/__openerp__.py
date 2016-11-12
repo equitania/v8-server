@@ -24,7 +24,7 @@ Re-implement openerp's file import system:
     'category': 'Uncategorized',
     'website': 'https://www.odoo.com',
     'author': 'OpenERP SA',
-    'version' : '1.8.0',
+    'version' : ‘1.8.1’,
     'depends': ['web'],
     'installable': True,
     'auto_install': True,

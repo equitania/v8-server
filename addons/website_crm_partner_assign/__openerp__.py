@@ -3,7 +3,7 @@
     'category': 'Website',
     'website': 'https://www.odoo.com/page/website-builder',
     'summary': 'Publish Your Channel of Resellers',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 Publish and Assign Partner
 ==========================

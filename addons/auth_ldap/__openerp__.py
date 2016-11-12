@@ -20,7 +20,7 @@
 
 {
     'name' : 'Authentication via LDAP',
-    'version' : '1.0.1',
+    'version' : ‘1.0.2’,
     'depends' : ['base'],
     'author' : 'OpenERP SA',
     #'description': < auto-loaded from README file

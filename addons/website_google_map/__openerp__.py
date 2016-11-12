@@ -2,7 +2,7 @@
     'name': 'Website Google Map',
     'category': 'Hidden',
     'summary': '',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'description': """
 OpenERP Website Google Map
 ==========================

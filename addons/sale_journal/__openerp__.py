@@ -21,7 +21,7 @@
 
 {
     'name': 'Invoicing Journals',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Sales Management',
     'description': """
 The sales journal modules allows you to categorise your sales and deliveries (picking lists) between different journals.

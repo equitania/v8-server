@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name': 'Prices Visible Discounts',
-    'version': '1.0',
+    'version': '1.0.1',
     'author': 'OpenERP SA',
     'category': 'Sales Management',
     'website': 'https://www.odoo.com',

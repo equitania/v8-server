@@ -22,7 +22,7 @@
 
 {
     'name' : 'Knowledge Management System',
-    'version' : '1.0',
+    'version' : ‘1.0.1’,
     'depends' : ['base','base_setup'],
     'author' : 'OpenERP SA',
     'category': 'Hidden/Dependency',

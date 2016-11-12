@@ -22,7 +22,7 @@
 
 {
     'name': 'Dashboards',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Hidden',
     'description': """
 Lets the user create a custom dashboard.

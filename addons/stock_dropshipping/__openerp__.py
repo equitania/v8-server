@@ -21,7 +21,7 @@
 
 {
     'name': 'Drop Shipping',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Warehouse Management',
     'summary': 'Drop Shipping',
     'description': """

@@ -21,7 +21,7 @@
 
 {
     'name': 'Employee Appraisals',
-    'version': '0.1',
+    'version': ’1.0.1’,
     'author': 'OpenERP SA',
     'category': 'Human Resources',
     'sequence': 31,

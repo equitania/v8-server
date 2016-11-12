@@ -22,7 +22,7 @@
 
 {
     'name': 'Marketing Campaign - Demo',
-    'version': '1.0.1',
+    'version': ‘1.0.2’,
     'depends': ['marketing_campaign',
                  'crm',
     ],

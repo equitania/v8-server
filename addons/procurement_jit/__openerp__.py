@@ -22,7 +22,7 @@
 
 {
     'name': 'Just In Time Scheduling',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Base',
     'description': """
 This module allows Just In Time computation of procurement orders.

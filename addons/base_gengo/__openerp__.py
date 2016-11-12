@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Automated Translations through Gengo API',
-    'version': '0.1',
+    'version': ’1.0.1’,
     'category': 'Tools',
     'description': """
 Automated Translations through Gengo API

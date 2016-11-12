@@ -22,7 +22,7 @@
 
 {
     'name' : 'Procurements',
-    'version' : '1.0',
+    'version' : ‘1.0.1’,
     'author' : 'OpenERP SA',
     'website': 'https://www.odoo.com/page/manufacturing',
     'category' : 'Hidden/Dependency',

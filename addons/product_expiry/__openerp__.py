@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name' : 'Products Expiry Date',
-    'version' : '1.0',
+    'version' : '1.0.1',
     'author' : 'OpenERP SA',
     'category' : 'Specific Industry Applications',
     'website': 'https://www.odoo.com',

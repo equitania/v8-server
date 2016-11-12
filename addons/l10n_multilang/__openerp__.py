@@ -21,7 +21,7 @@
 
 {
     'name': 'Multi Language Chart of Accounts',
-    'version': '1.1',
+    'version': ‘1.1.1’,
     'author': 'OpenERP SA',
     'category': 'Hidden/Dependency',
     'description': """

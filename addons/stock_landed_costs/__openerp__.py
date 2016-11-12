@@ -21,7 +21,7 @@
 
 {
     'name': 'WMS Landed Costs',
-    'version': '1.1',
+    'version': '1.1.1',
     'author': 'OpenERP SA',
     'summary': 'Landed Costs',
     'description': """

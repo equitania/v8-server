@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Events Organisation',
-    'version': '0.1',
+    'version': ‘1.0.1’,
     'website' : 'https://www.odoo.com/page/events',
     'category': 'Tools',
     'summary': 'Trainings, Conferences, Meetings, Exhibitions, Registrations',

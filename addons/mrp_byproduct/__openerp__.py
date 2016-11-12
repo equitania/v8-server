@@ -22,7 +22,7 @@
 
 {
     'name': 'MRP Byproducts',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Manufacturing',
     'description': """
 This module allows you to produce several products from one production order.

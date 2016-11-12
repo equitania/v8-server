@@ -22,7 +22,7 @@
 
 {
     'name': 'Leave Management',
-    'version': '1.5',
+    'version': ‘1.5.1’,
     'author': 'OpenERP SA',
     'category': 'Human Resources',
     'sequence': 27,

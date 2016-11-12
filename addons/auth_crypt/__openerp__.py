@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Password Encryption',
-    'version': '2.0',
+    'version': ‘2.0.1’,
     'author': ['OpenERP SA', 'FS3'],
     'maintainer': 'OpenERP SA',
     'website': 'https://www.odoo.com',

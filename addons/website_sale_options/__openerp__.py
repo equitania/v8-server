@@ -1,7 +1,7 @@
 {
     'name': 'eCommerce Optional Products',
     'category': 'Website',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'website': 'https://www.odoo.com/page/e-commerce',
     'description': """
 OpenERP E-Commerce

@@ -2,7 +2,7 @@
     'name': 'Team Page',
     'category': 'Website',
     'summary': 'Present Your Team',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 Our Team Page
 =============

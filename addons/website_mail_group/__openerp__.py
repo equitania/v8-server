@@ -2,7 +2,7 @@
     'name': 'Mailing List Archive',
     'category': 'Website',
     'summary': '',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 OpenERP Mail Group : Mailing List Archives
 ==========================================

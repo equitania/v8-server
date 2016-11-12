@@ -6,7 +6,7 @@ Openerp Web Diagram view.
 =========================
 
 """,
-    'version': '2.0',
+    'version': '2.0.1',
     'depends': ['web'],
     'data' : [
         'views/web_diagram.xml',

@@ -1,7 +1,7 @@
 {
     'name' : 'Live Chat',
     'author': 'OpenERP SA',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'summary': 'Live Chat with Visitors/Customers',
     'category': 'Tools',
     'complexity': 'easy',

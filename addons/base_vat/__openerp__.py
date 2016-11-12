@@ -21,7 +21,7 @@
 
 {
     'name': 'VAT Number Validation',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Hidden/Dependency',
     'description': """
 VAT validation for Partner's VAT numbers.

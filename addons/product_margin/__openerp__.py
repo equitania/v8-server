@@ -22,7 +22,7 @@
 
 {
     'name': 'Margins by Products',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Sales Management',
     'website': 'https://www.odoo.com',
     'description': """

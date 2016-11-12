@@ -19,7 +19,7 @@
 ##############################################################################
 {
     'name' : 'Claim on Deliveries',
-    'version' : '1.0',
+    'version' : ‘1.0.1’,
     'author' : 'OpenERP SA',
     'category' : 'Warehouse Management',
     'depends' : ['base', 'crm_claim', 'stock'],

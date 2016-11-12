@@ -22,7 +22,7 @@
 
 {
     'name': 'Document Management System',
-    'version': '2.1.2',
+    'version': '2.1.3',
     'category': 'Knowledge Management',
     'description': """
 This is a complete document management system.

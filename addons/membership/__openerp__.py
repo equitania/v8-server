@@ -22,7 +22,7 @@
 
 {
     'name': 'Membership Management',
-    'version': '0.1',
+    'version': ’1.0.1’,
     'category': 'Association',
     'description': """
 This module allows you to manage all operations for managing memberships.

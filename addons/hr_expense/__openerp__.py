@@ -22,7 +22,7 @@
 
 {
     'name': 'Expense Tracker',
-    'version': '1.0.1',
+    'version': ‘1.0.2’,
     'category': 'Human Resources',
     'sequence': 29,
     'summary': 'Expenses Validation, Invoicing',

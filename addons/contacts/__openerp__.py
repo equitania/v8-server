@@ -21,7 +21,7 @@
 
 {
     'name': 'Address Book',
-    'version': '1.0',
+    'version': ‘1.0.1’,
     'category': 'Tools',
     'description': """
 This module gives you a quick view of your address book, accessible from your home page.
