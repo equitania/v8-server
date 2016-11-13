@@ -22,7 +22,7 @@
 
 {
     'name': 'Initial Setup Tools',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Hidden',
     'description': """
 This module helps to configure the system at the installation of a new database.

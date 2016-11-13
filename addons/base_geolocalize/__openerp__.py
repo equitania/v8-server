@@ -22,7 +22,7 @@
 
 {
     'name': 'Partners Geo-Localization',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Customer Relationship Management',
     'description': """
 Partners geolocalization

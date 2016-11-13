@@ -21,7 +21,7 @@
 
 {
     'name': 'Assets Management',
-    'version': ‘1.0.2’,
+    'version': '1.0.2',
     'depends': ['account'],
     'author': 'OpenERP S.A.',
     'description': """

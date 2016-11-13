@@ -54,7 +54,7 @@ The swiss localization addons are organized this way:
 ``l10n_ch`` is located in the core Odoo modules. The other modules are in:
 https://github.com/OCA/l10n-switzerland
 """,
- 'version': ’1.0.1’,
+ 'version': '1.0.1',
  'author': 'Camptocamp',
  'category': 'Localization/Account Charts',
  'website': 'http://www.camptocamp.com',

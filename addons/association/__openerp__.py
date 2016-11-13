@@ -22,7 +22,7 @@
 
 {
     'name': 'Associations Management',
-    'version': ’1.0.1’,
+    'version': '1.0.1',
     'category': 'Specific Industry Applications',
     'description': """
 This module is to configure modules related to an association.

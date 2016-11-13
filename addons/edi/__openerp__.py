@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'Electronic Data Interchange (EDI)',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Tools',
     'description': """
 Provides a common EDI platform that other Applications can use.

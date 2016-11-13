@@ -21,7 +21,7 @@
 
 {
     'name': 'Account Analytic Defaults',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Accounting & Finance',
     'description': """
 Set default values for your analytic accounts.

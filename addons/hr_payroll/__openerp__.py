@@ -22,7 +22,7 @@
 
 {
     'name': 'Payroll',
-    'version': ‘1.0.3’,
+    'version': '1.0.3',
     'category': 'Human Resources',
     'sequence': 38,
     'description': """

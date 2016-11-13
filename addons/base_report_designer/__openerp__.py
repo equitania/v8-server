@@ -22,7 +22,7 @@
 
 {
     'name': 'OpenOffice Report Designer',
-    'version': ’1.0.1’,
+    'version': '1.0.1',
     'category': 'Reporting',
     'description': """
 This module is used along with OpenERP OpenOffice Plugin.

@@ -21,7 +21,7 @@
 
 {
     'name': 'Pad on tasks',
-    'version': ‘1.0.2’,
+    'version': '1.0.2',
     'category': 'Project Management',
     'description': """
 This module adds a PAD in all project kanban views.

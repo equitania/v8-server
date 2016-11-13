@@ -22,7 +22,7 @@
 
 {
     'name': 'Invoice on Timesheets',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Sales Management',
     'description': """
 Generate your Invoices from Expenses, Timesheet Entries.

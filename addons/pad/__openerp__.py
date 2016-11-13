@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Collaborative Pads',
-    'version': ‘2.0.1’,
+    'version': '2.0.1',
     'category': 'Project Management',
     'description': """
 Adds enhanced support for (Ether)Pad attachments in the web client.

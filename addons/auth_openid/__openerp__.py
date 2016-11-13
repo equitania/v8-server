@@ -22,7 +22,7 @@
 
 {
     'name': 'OpenID Authentification',
-    'version': ‘2.0.1’,
+    'version': '2.0.1',
     'category': 'Tools',
     'description': """
 Allow users to login through OpenID.

@@ -22,7 +22,7 @@
 
 {
     'name': 'Jobs on Contracts',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Sales Management',
     'description': """
 This module allows you to define what is the default function of a specific user on a given account.

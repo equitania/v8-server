@@ -2,7 +2,7 @@
 
 {
     'name': 'Applicant Resumes and Letters',
-    'version': ‘1.0.1’,
+    'version': '1.0.1',
     'category': 'Human Resources',
     'sequence': 25,
     'summary': 'Search job applications by Index content.',
