@@ -1,3 +1,8 @@
+#### 14.11.2016
+#### web, 1.10.2
+##### CHG
+- maximale Größe eines Uploads auf 50 MB erhöht.
+
 #### 10.11.2016
 #### website, 1.1.1
 ##### CHG
