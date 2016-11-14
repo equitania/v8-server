@@ -1,6 +1,5 @@
 #### 14.11.2016
-<<<<<<< HEAD
-#### hr, 1.1.2
+#### hr, 1.1.3
 ##### CHG
 - Typecast der Felder expected_employees und no_of_employee auf Float, da die Datenbank ein Numeric erwartet. Diese Änderung bereinigt folgende Warning:WARNING basis_skr03 openerp.models.schema: Table hr_job: column has changed type (DB=numeric, def=integer), data moved to column `expected_employees_moved10` etc.
 
@@ -11,7 +10,6 @@
 
 #### 10.11.2016
 #### website, 1.1.1
-=======
 #### RELEASE NOTES
 >>>>>>> branch 'develop' of git@github.com:equitania/myodoo-server.git
 ##### CHG

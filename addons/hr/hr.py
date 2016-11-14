@@ -103,13 +103,13 @@ class hr_job(osv.Model):
             store = {
                 'hr.job': (lambda self,cr,uid,ids,c=None: ids, ['no_of_recruitment'], 10),
                 'hr.employee': (_get_job_position, ['job_id'], 10),
-            }, type='integer',
+            }, 
             multi='_get_nbr_employees'),
         'no_of_employee': fields.function(_get_nbr_employees, string="Current Number of Employees",
             help='Number of employees currently occupying this job position.',
             store = {
                 'hr.employee': (_get_job_position, ['job_id'], 10),
-            }, type='integer',
+            }, 
             multi='_get_nbr_employees'),
         'no_of_recruitment': fields.integer('Expected New Employees', copy=False,
                                             help='Number of new employees you expect to recruit.'),
