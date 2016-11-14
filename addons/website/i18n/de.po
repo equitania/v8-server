@@ -115,7 +115,7 @@ msgstr "404: Seite wurde nicht gefunden!"
 #. module: website
 #: view:website:website.snippets
 msgid "50,000+ companies run Odoo to grow their businesses."
-msgstr "Über 50.000 Unternehmen nutzen MyOdoo, um ihr Business weiterzuentwickeln"
+msgstr "Über 50.000 Unternehmen nutzen MyOdoo, um ihr Business weiter zu entwickeln"
 
 #. module: website
 #: model:ir.actions.act_window,help:website.action_module_website
@@ -2267,7 +2267,7 @@ msgstr "Link entfernen"
 #. module: website
 #: view:website:website.snippet_options
 msgid "Remove Slide"
-msgstr "Foie entfernen"
+msgstr "Folie entfernen"
 
 #. module: website
 #: view:website:website.snippet_options
