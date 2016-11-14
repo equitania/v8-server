@@ -80,8 +80,8 @@ class hr_job(osv.Model):
         for job in self.browse(cr, uid, ids, context=context):
             nb_employees = len(job.employee_ids or [])
             res[job.id] = {
-                'no_of_employee': nb_employees,
-                'expected_employees': nb_employees + job.no_of_recruitment,
+                'no_of_employee': float(nb_employees),
+                'expected_employees': float(nb_employees + job.no_of_recruitment),
             }
         return res
 

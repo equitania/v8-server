@@ -1,4 +1,9 @@
 #### 14.11.2016
+#### hr, 1.1.2
+##### CHG
+- Typecast der Felder expected_employees und no_of_employee auf Float, da die Datenbank ein Numeric erwartet. Diese Änderung bereinigt folgende Warning:WARNING basis_skr03 openerp.models.schema: Table hr_job: column has changed type (DB=numeric, def=integer), data moved to column `expected_employees_moved10` etc.
+
+#### 14.11.2016
 #### web, 1.10.2
 ##### CHG
 - maximale Größe eines Uploads auf 50 MB erhöht.
