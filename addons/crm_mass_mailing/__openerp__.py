@@ -1,6 +1,6 @@
 {
     'name': 'Campaign in Mass Mailing',
-    'version': '1.0',
+    'version': '1.0.1',
     'summary': 'This module allow to specify a campaign, a source and a channel for a mass mailing campaign.',
     'author': 'OpenERP SA',
     'description': """

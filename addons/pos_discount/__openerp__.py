@@ -22,7 +22,7 @@
 
 {
     'name': 'Point of Sale Discounts',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Point of Sale',
     'sequence': 6,
     'summary': 'Simple Discounts in the Point of Sale ',

@@ -22,7 +22,7 @@
 
 {
     'name': 'Multi-Company',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Tools',
     'description': """
 This module is for managing a multicompany environment.

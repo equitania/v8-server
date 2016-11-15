@@ -3,7 +3,7 @@
     'name': 'Public Projects',
     'category': 'Website',
     'summary': 'Publish Your Public Projects',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 OpenERP Projects
 ================

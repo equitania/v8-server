@@ -27,7 +27,7 @@
 ##############################################################################
 {
     'name': 'France - Accounting',
-    'version': '1.1',
+    'version': '1.1.1',
     'author': 'OpenERP SA',
     'website': 'http://www.openerp.com',
     'category': 'Localization/Account Charts',

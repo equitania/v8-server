@@ -22,7 +22,7 @@
 
 {
     'name': 'Portal Project',
-    'version': '0.1',
+    'version': '1.0.1',
     'category': 'Tools',
     'complexity': 'easy',
     'description': """

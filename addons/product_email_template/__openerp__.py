@@ -5,6 +5,7 @@
     'depends': ['account'],
     'author': 'OpenERP SA',
     'category': 'Accounting & Finance',
+    'version': '1.1.5',
     'description': """
 Add email templates to products to be send on invoice confirmation
 ==================================================================

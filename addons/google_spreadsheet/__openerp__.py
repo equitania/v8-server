@@ -22,7 +22,7 @@
 
 {
     'name': 'Google Spreadsheet',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Tools',
     'description': """
 The module adds the possibility to display data from OpenERP in Google Spreadsheets in real time.

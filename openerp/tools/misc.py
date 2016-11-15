@@ -486,6 +486,7 @@ ALL_LANGUAGES = {
         'en_US': u'English (US)',
 
         'fr_FR': u'French / Français',
+        'it_IT': u'Italian / Italiano',
     }
 
 def scan_languages():

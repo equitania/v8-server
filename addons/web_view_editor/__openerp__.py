@@ -6,7 +6,7 @@ OpenERP Web to edit views.
 ==========================
 
         """,
-    'version': '2.0',
+    'version': '2.0.1',
     'depends':['web'],
     'data' : [
         'views/web_view_editor.xml',

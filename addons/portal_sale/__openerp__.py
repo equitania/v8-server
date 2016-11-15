@@ -22,7 +22,7 @@
 
 {
     'name': 'Portal Sale',
-    'version': '0.4',
+    'version': '1.0.4',
     'category': 'Tools',
     'complexity': 'easy',
     'description': """

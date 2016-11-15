@@ -22,7 +22,7 @@
 
 {
     'name': 'Attendances',
-    'version': '1.1',
+    'version': '1.1.1',
     'category': 'Human Resources',
     'description': """
 This module aims to manage employee's attendances.

@@ -1,6 +1,6 @@
 {
     'name': 'Lead to Issue',
-    'version': '1.0',
+    'version': '1.0.1',
     'summary': 'Create Issues from Leads',
     'sequence': '19',
     'category': 'Project Management',

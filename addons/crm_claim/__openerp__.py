@@ -22,7 +22,7 @@
 
 {
     'name': 'Claims Management',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Customer Relationship Management',
     'description': """
 

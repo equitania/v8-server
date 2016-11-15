@@ -21,7 +21,7 @@
 ##############################################################################
 {
     'name': 'Bank Statement Extensions to Support e-banking',
-    'version': '0.3',
+    'version': '1.0.4',
     'license': 'AGPL-3',
     'author': 'Noviat',
     'category': 'Generic Modules/Accounting',

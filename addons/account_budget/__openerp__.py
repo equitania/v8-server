@@ -21,7 +21,7 @@
 
 {
     'name': 'Budgets Management',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Accounting & Finance',
     'description': """
 This module allows accountants to manage analytic and crossovered budgets.

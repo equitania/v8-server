@@ -7,6 +7,7 @@ OpenERP Web demo of a test suite
 
 Test suite example, same code as that used in the testing documentation.
     """,
+    'version': '2.0',
     'depends': ['web'],
     'data' : [
         'views/web_tests_demo.xml',

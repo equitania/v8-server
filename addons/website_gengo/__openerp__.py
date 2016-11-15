@@ -22,7 +22,7 @@
 {
     'name': 'Website Gengo Translator',
     'category': 'Website',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 Website Gengo Translator
 ========================

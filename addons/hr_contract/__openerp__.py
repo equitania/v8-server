@@ -22,7 +22,7 @@
 
 {
     'name': 'Employee Contracts',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Human Resources',
     'description': """
 Add all information on the employee form to manage contracts.

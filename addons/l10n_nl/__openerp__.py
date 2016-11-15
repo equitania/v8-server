@@ -87,7 +87,7 @@
 
 {
     'name' : 'Netherlands - Accounting',
-    'version' : '1.5',
+    'version' : '1.5.1',
     'category': 'Localization/Account Charts',
     'description': """
 This is the module to manage the accounting chart for Netherlands in OpenERP.

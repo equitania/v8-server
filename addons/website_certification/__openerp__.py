@@ -24,7 +24,7 @@
     'category': 'Website',
     'website': 'https://www.odoo.com/page/website-builder',
     'summary': 'Display your network of certified people on your website',
-    'version': '1.0',
+    'version': '1.0.1',
     'author': 'OpenERP S.A.',
     'depends': ['marketing', 'website'],
     'description': """

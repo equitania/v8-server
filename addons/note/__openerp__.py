@@ -21,7 +21,7 @@
 
 {
     'name': 'Notes',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Tools',
     'description': """
 This module allows users to create their own notes inside OpenERP

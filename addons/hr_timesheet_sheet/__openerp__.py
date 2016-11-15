@@ -22,7 +22,7 @@
 
 {
     'name': 'Timesheets',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Human Resources',
     'sequence': 24,
     'summary': 'Timesheets, Attendances, Activities',

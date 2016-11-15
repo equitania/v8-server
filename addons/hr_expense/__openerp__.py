@@ -22,7 +22,7 @@
 
 {
     'name': 'Expense Tracker',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Human Resources',
     'sequence': 29,
     'summary': 'Expenses Validation, Invoicing',
@@ -30,7 +30,7 @@
 Manage expenses by Employees
 ============================
 
-This application allows you to manage your employees' daily expenses. It gives you access to your employees’ fee notes and give you the right to complete and validate or refuse the notes. After validation it creates an invoice for the employee.
+This application allows you to manage your employees' daily expenses. It gives you access to your employees' fee notes and give you the right to complete and validate or refuse the notes. After validation it creates an invoice for the employee.
 Employee can encode their own expenses and the validation flow puts it automatically in the accounting after validation by managers.
 
 

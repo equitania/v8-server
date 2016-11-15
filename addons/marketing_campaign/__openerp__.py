@@ -22,7 +22,7 @@
 
 {
     'name': 'Marketing Campaigns',
-    'version': '1.1.1',
+    'version': '1.1.2',
     'depends': ['marketing',
                  'document',
                  'email_template',

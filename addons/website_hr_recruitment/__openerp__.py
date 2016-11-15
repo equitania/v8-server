@@ -1,7 +1,7 @@
 {
     'name': 'Jobs',
     'category': 'Website',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'summary': 'Job Descriptions And Application Forms',
     'description': """
 OpenERP Contact Form

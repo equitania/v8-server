@@ -4,7 +4,7 @@
     'name': 'Payment Acquirer',
     'category': 'Hidden',
     'summary': 'Payment Acquirer Base Module',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'description': """Payment Acquirer Base Module""",
     'author': 'OpenERP SA',
     'depends': ['account'],

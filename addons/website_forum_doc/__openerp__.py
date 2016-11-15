@@ -23,7 +23,7 @@
     'name': 'Documentation',
     'category': 'Website',
     'summary': 'Forum, Documentation',
-    'version': '1.0',
+    'version': '1.0.1',
     'description': """
 Documentation based on question and pertinent answers of Forum
         """,

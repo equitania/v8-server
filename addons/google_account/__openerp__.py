@@ -22,7 +22,7 @@
 
 {
     'name': 'Google Users',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Tools',
     'description': """
 The module adds google user in res user.

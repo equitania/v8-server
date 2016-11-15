@@ -2,7 +2,7 @@
 
 {
     'name': 'Marketing',
-    'version': '1.1.1',
+    'version': '1.1.2',
     'depends': ['base', 'base_setup'],
     'author': 'OpenERP SA',
     'category': 'Hidden/Dependency',

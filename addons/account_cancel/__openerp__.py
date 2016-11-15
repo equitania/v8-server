@@ -21,7 +21,7 @@
 
 {
     'name': 'Cancel Journal Entries',
-    'version': '1.1',
+    'version': '1.1.1',
     'author': 'OpenERP SA',
     'category': 'Accounting & Finance',
     'description': """

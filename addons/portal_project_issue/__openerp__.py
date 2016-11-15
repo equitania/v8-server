@@ -22,7 +22,7 @@
 
 {
     'name': 'Portal Issue',
-    'version': '0.3',
+    'version': '1.0.3',
     'category': 'Tools',
     'complexity': 'easy',
     'description': """

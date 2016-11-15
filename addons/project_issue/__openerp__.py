@@ -22,7 +22,7 @@
 
 {
     'name': 'Issue Tracking',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Project Management',
     'sequence': 9,
     'summary': 'Support, Bug Tracker, Helpdesk',

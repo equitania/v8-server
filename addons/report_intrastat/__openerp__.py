@@ -21,7 +21,7 @@
 
 {
     'name': 'Intrastat Reporting',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Accounting & Finance',
     'description': """
 A module that adds intrastat reports.

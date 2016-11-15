@@ -20,7 +20,7 @@
 ##############################################################################
 {
     'name': 'IBAN Bank Accounts',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Hidden/Dependency',
     'description': """
 This module installs the base for IBAN (International Bank Account Number) bank accounts and checks for it's validity.

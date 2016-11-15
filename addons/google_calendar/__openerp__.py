@@ -22,7 +22,7 @@
 
 {
     'name': 'Google Calendar',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Tools',
     'description': """
 The module adds the possibility to synchronize Google Calendar with OpenERP

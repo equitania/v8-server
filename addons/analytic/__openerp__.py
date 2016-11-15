@@ -21,7 +21,7 @@
 
 {
     'name' : 'Analytic Accounting',
-    'version': '1.1.1',
+    'version': '1.1.2',
     'author' : 'OpenERP SA',
     'website' : 'https://www.odoo.com/page/accounting',
     'category': 'Hidden/Dependency',

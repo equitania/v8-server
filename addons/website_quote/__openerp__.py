@@ -3,7 +3,7 @@
     'category': 'Website',
     'summary': 'Send Professional Quotations',
     'website': 'https://www.odoo.com/page/quote-builder',
-    'version': '1.1.2',
+    'version': '1.1.3',
     'description': """
 OpenERP Sale Quote Roller
 =========================
