@@ -1,4 +1,9 @@
 #### 10.11.2016
+#### website_sale_delivery, 1.1.2
+##### FIX
+- Korrektur der Übersetzung
+
+#### 10.11.2016
 #### website, 1.1.1
 ##### CHG
 - Der "Automatic Footer" wird nun nichtmehr im "Anpassen"-Dropdown von der Website mit aufgelistet
