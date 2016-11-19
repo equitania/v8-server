@@ -2,7 +2,7 @@
 # Part of Odoo. See LICENSE file for full copyright and licensing details.
 {
     'name': 'Blackbox Hardware Driver',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Hardware Drivers',
     'sequence': 6,
     'summary': 'Hardware Driver for Belgian Fiscal Data Modules',

@@ -4,7 +4,7 @@
     'name': 'Paypal Payment Acquirer',
     'category': 'Hidden',
     'summary': 'Payment Acquirer: Paypal Implementation',
-    'version': '1.0.3',
+    'version': '1.0.4',
     'description': """Paypal Payment Acquirer""",
     'author': 'OpenERP SA',
     'depends': ['payment'],

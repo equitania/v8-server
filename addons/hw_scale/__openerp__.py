@@ -22,7 +22,7 @@
 
 {
     'name': 'Weighting Scale Hardware Driver',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Hardware Drivers',
     'sequence': 6,
     'summary': 'Hardware Driver for Weighting Scales',

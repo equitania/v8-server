@@ -21,7 +21,7 @@
 
 {
     'name': 'Employee Directory',
-    'version': '1.1.3',
+    'version': '1.1.4',
     'author': 'OpenERP SA',
     'category': 'Human Resources',
     'sequence': 21,

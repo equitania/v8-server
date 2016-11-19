@@ -21,7 +21,7 @@
 
 {
     'name': 'Warehouse Management',
-    'version': '1.1.8',
+    'version': '1.1.9',
     'author': 'OpenERP SA',
     'summary': 'Inventory, Logistic, Storage',
     'description': """

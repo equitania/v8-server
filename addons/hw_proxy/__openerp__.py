@@ -22,7 +22,7 @@
 
 {
     'name': 'Hardware Proxy',
-    'version': '1.0',
+    'version': '1.0.1',
     'category': 'Point Of Sale',
     'sequence': 6,
     'summary': 'Connect the Web Client to Hardware Peripherals',
