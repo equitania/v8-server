@@ -1,3 +1,8 @@
+#### 21.11.2016
+#### crm, 1.4.5
+##### CHG
+- forcecreate bei dem Template "Lead/Opportunity Mass Mail" entfernt, dieses Template wird nicht via Equitania-Skript eingefügt.
+
 #### 14.11.2016
 #### hr, 1.1.3
 ##### CHG
