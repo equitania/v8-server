@@ -1,7 +1,7 @@
 
 import werkzeug
 
-from openerp import http, SUPERUSER_ID
+from openerp import http, SUPERUSER_ID, _
 from openerp.http import request
 
 

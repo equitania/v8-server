@@ -1,3 +1,8 @@
+#### 22.11.2016
+#### mass_mailing, 2.3.4
+##### FIX
+- Korrektur in Referenzierung der Basisfunktion "_" für dyn. Lokalisierung aus dem SourceCode
+
 #### 21.11.2016
 #### crm, 1.4.6
 ##### CHG
