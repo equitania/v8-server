@@ -588,8 +588,9 @@ class mrp_production(osv.osv):
             domain=[('state', 'in', ('done', 'cancel'))], readonly=True),
         'product_lines': fields.one2many('mrp.production.product.line', 'production_id', 'Scheduled goods',
             readonly=True),
-        'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation',
-            readonly=True, states={'draft': [('readonly', False)]}),
+        #'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation',
+        #    readonly=True, states={'draft': [('readonly', False)]}),
+        'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation'),
         'state': fields.selection(
             [('draft', 'New'), ('cancel', 'Cancelled'), ('confirmed', 'Awaiting Raw Materials'),
                 ('ready', 'Ready to Produce'), ('in_production', 'Production Started'), ('done', 'Done')],

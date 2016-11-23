@@ -790,11 +790,11 @@
                             <field name="workcenter_lines" options="{'reload_on_button': true}">
                                 <form string="Production Work Centers">
                                     <group col="4">
-                                        <field colspan="4" name="name"/>
-                                        <field name="workcenter_id"/>
-                                        <field name="sequence"/>
-                                        <field name="cycle"/>
-                                        <field name="hour" widget="float_time"/>
+                                        <field colspan="4" name="name" readonly="1"/>
+                                        <field name="workcenter_id" readonly="1"/>
+                                        <field name="sequence" readonly="1"/>
+                                        <field name="cycle" readonly="1"/>
+                                        <field name="hour" widget="float_time" readonly="1"/>
                                     </group>
                                 </form>
                                 <tree string="Production Work Centers">

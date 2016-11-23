@@ -1,3 +1,8 @@
+#### 23.11.2016
+#### mrp, 1.1.3
+##### CHG
+- Feld "workcenter_lines" wird jetzt nicht mehr Über Python Code als readonly definiert. Jetzt werden die einzelnen Felder der "workcenter_lines" in der View als readonly definiert, dies ermöglicht eine nachträgliche Bearbeitung der readonly Funktion (z.B vorhandene View überschreiben und readonly auf false setzen).
+
 #### 22.11.2016
 #### mass_mailing, 2.3.4
 ##### FIX
