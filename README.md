@@ -19,7 +19,7 @@ Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
 `Aktuelle Buildversion: 161103`
 
-`Letzer Abgleich: 22.11.2016`
+`Letzer Abgleich: 27.11.2016`
 
 Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 
@@ -30,7 +30,7 @@ Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU 
 - Der MyOdoo Fork beinhaltet einige Verbesserungen und Bugfixes, die im Odoo Haupt Branch fehlen. Dennoch wird der Fork wöchentlich abgeglichen. 
 - Der MyOdoo Fork wird über einen Release Manager verwaltet und ist bei vielen deutschen Unternehmen im Einsatz.
 
-**Bugfixes & Änderungen abweichend vom Hauptfork Stand Mai 2016**
+**Bugfixes & Änderungen abweichend vom Hauptfork Stand November 2016**
 
 Siehe myodoo-server-fork-differences.png
 
