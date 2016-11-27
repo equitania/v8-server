@@ -22,7 +22,7 @@
 
 {
     'name': 'MRP',
-    'version': '1.1.3',
+    'version': '1.1.4',
     'author': 'OpenERP SA',
     'website': 'https://www.odoo.com/page/manufacturing',
     'category': 'Manufacturing',

@@ -63,7 +63,7 @@ msgid ""
 "                customer or not.\n"
 "              </p>\n"
 "            "
-msgstr "<p class=\"oe_view_nocontent_create\">\n                Klicken Sie zur Erstellung eines neuen Reparaturauftrags.\n              </p><p>\n                Mit einem Reparaturauftrag können Sie die ausgetauschten und\n                reparierten Komponenten, sowie die zur Reparatur benötigten Zeiten\n                erfassen.\n              </p><p>\n                Ein Reparaturauftrag nutzt ebenso das Garantiedatum der bekannten\n                Seriennummer, um hierüber zu erkennen, inwieweit möglicherweise\n                die Reparatur berechnet wird. \n              </p>\n            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n                Klicken Sie zur Erstellung eines neuen Reparaturauftrags.\n              </p><p>\n                Mit einem Reparaturauftrag können Sie die ausgetauschten und\n                reparierten Komponenten, sowie die zur Reparatur benötigten Zeiten\n                erfassen.\n              </p><p>\n                Ein Reparaturauftrag nutzt ebenso das Garantiedatum der bekannten\n                Charge (Mehrfach-Nummer), um hierüber zu erkennen, inwieweit möglicherweise\n                die Reparatur berechnet wird. \n              </p>\n            "
 
 #. module: mrp_repair
 #: code:addons/mrp_repair/wizard/cancel_repair.py:41
@@ -394,12 +394,12 @@ msgstr "Zuletzt aktualisiert am"
 #. module: mrp_repair
 #: field:mrp.repair.line,lot_id:0
 msgid "Lot"
-msgstr "Seriennummer"
+msgstr "Charge (Mehrfach-Nummer)"
 
 #. module: mrp_repair
 #: view:website:mrp_repair.report_mrprepairorder
 msgid "Lot Number"
-msgstr "Losnummer"
+msgstr "Charge (Mehrfach-Nummer)"
 
 #. module: mrp_repair
 #: model:ir.model,name:mrp_repair.model_mrp_repair_make_invoice
@@ -693,7 +693,7 @@ msgstr "Durch Auswahl der Einstellung 'Vor Reparatur' oder 'Nach Reparatur' kön
 #: code:addons/mrp_repair/mrp_repair.py:289
 #, python-format
 msgid "Serial number is required for operation line with product '%s'"
-msgstr "Eine Seriennummer ist erforderlich für Auftragsposition mit Produkt '%s'"
+msgstr "Eine Charge (Mehrfach-Nummer) ist erforderlich für Auftragsposition mit Produkt '%s'"
 
 #. module: mrp_repair
 #: view:mrp.repair:mrp_repair.view_repair_order_form

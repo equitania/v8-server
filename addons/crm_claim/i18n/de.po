@@ -46,7 +46,7 @@ msgid ""
 "                    Record and track your customers' claims. Claims may be linked to a sales order or a lot.You can send emails with attachments and keep the full history for a claim (emails sent, intervention type and so on).Claims may automatically be linked to an email address using the mail gateway module.\n"
 "                </p>\n"
 "            "
-msgstr "<p class=\"oe_view_nocontent_create\">\n                    Erfassen und verfolgen Sie die Reklamationen Ihrer Kunden. Eine Reklamation kann sowohl mit einem\n                    Auftrag als auch mit einer Losnummer verbunden sein. Sie können per E-Mail mit dem Kunden korrespondieren sowie durch Dateianhänge die gesamte Vorgangshistorie verfolgen. Die E-Mail Korrespondenz zu Reklamationen kann über das Mail-Gateway automatisch zum Vorgang zugeordnet werden. \n                </p>\n            "
+msgstr "<p class=\"oe_view_nocontent_create\">\n                    Erfassen und verfolgen Sie die Reklamationen Ihrer Kunden. Eine Reklamation kann sowohl mit einem\n                    Auftrag als auch mit einer Charge (Mehrfach-Nummer) verbunden sein. Sie können per E-Mail mit dem Kunden korrespondieren sowie durch Dateianhänge die gesamte Vorgangshistorie verfolgen. Die E-Mail Korrespondenz zu Reklamationen kann über das Mail-Gateway automatisch zum Vorgang zugeordnet werden. \n                </p>\n            "
 
 #. module: crm_claim
 #: model:ir.actions.act_window,help:crm_claim.crm_claim_categ_action
