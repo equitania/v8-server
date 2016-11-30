@@ -69,7 +69,8 @@
     website.snippet.animationRegistry.slider = website.snippet.Animation.extend({
         selector: ".carousel",
         start: function () {
-            this.$target.carousel({interval: 10000});
+            //this.$target.carousel({interval: 10000});
+            this.$target.carousel({interval: 5000});        // EQ: Änderung der Zeit auf 5 Sekunden
         },
         stop: function () {
             this.$target.carousel('pause');

@@ -1,5 +1,10 @@
 ## Modul website
 
+#### 30.11.2016
+#### Version 1.1.4
+##### CHG
+- Änderung des Timeouts für den Sliders von 10 Sek auf 5 Sek
+
 #### 14.11.2016
 #### Version 1.1.3
 ##### CHG
