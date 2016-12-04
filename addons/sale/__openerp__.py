@@ -21,7 +21,7 @@
 
 {
     'name': 'Sales Management',
-    'version': '1.3.3',
+    'version': '1.3.4',
     'category': 'Sales Management',
     'sequence': 14,
     'summary': 'Quotations, Sales Orders, Invoicing',
