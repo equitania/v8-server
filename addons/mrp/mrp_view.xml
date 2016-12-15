@@ -687,7 +687,7 @@
                             <label for="product_qty"/>
                             <div>
                                 <field name="product_qty" class="oe_inline" on_change="product_id_change(product_id, product_qty)"/>
-                                <field name="product_uom" groups="product.group_uom" class="oe_inline"/>
+                                <field name="product_uom" groups="product.group_uom" class="oe_inline" style="margin-left:5px"/>
                                 <button type="action"
                                     name="%(mrp.action_change_production_qty)d"
                                     string="Update" states="confirmed" class="oe_edit_only oe_link"/>

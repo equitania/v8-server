@@ -1,3 +1,9 @@
+#### 15.12.2016
+#### mrp, 1.1.5
+##### ADD/CHG
+- In der Form-Ansicht eines Fertigungauftrags wurde zwischen Produktmenge und Produkteinheit ein margin-left 5px eingefügt.
+- Übersetzung "Anfangsdatum" zu "Startdatum" geändert.
+
 #### 23.11.2016
 #### mrp, 1.1.3
 ##### CHG

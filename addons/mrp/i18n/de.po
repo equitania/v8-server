@@ -1813,7 +1813,7 @@ msgstr "Geben Sie die Anzahl zu produzierender oder einzukaufender Produkte an. 
 #. module: mrp
 #: field:mrp.production,date_start:0
 msgid "Start Date"
-msgstr "Anfangsdatum"
+msgstr "Startdatum"
 
 #. module: mrp
 #: view:mrp.production:mrp.view_mrp_production_filter
