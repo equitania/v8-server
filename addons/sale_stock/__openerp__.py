@@ -21,7 +21,7 @@
 
 {
     'name': 'Sales and Warehouse Management',
-    'version': '1.0.4',
+    'version': '1.0.5',
     'category': 'Hidden',
     'summary': 'Quotation, Sale Orders, Delivery & Invoicing Control',
     'description': """

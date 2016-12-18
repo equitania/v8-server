@@ -22,7 +22,7 @@
 
 {
     'name': 'Accounting Consistency Tests',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'author': 'OpenERP',
     'category': 'Accounting & Finance',
     'website': 'https://www.odoo.com/page/accounting',
