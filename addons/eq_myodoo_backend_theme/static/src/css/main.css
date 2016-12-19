@@ -1507,3 +1507,10 @@ button.ui-state-default:hover,
 .openerp ul.oe_form_status_clickable li > .label {
     color: #6092c7;
 }
+
+/* ========== About Seite anpassen  */
+
+.openerp .oe_about .user-details .user-image .img-circle {border-radius: 0;}
+.openerp .oe_about .label { background-color: #1d4c7d;}
+.openerp .oe_about a {color: #1d4c7d;}
+.openerp .oe_about .user-details .user-info-block .navigation li.active a {background-color: #1d4c7d;}

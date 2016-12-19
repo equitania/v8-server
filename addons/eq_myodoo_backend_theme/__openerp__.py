@@ -3,7 +3,7 @@
     'name' : 'MyOdoo Backend Theme v8',
     'license': 'AGPL-3',
     'category' : 'Theme/Backend',
-    'version' : '1.1.2',
+    'version' : '1.1.3',
     'summary': 'Backend, Theme, Equitania, MyOdoo',
     'description': """
     MyOdoo Backend Theme v8
