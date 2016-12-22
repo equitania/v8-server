@@ -83,7 +83,7 @@ body,
 .navbar-inverse .navbar-nav>.active>a,
 .navbar-inverse .navbar-nav>.active>a:hover,
 .navbar-inverse .navbar-nav>.active>a:focus {
-    background: #1d4c7d!important;
+    background: #1d4c7d;
     font-weight: 700!important;
 }
 
@@ -1374,7 +1374,7 @@ button.ui-state-default:hover,
 .ui-datepicker td:hover {
     color: #000;
     font-weight: bold;
-    cursor: normal;
+    cursor: default;
 }
 .ui-datepicker {
     width: auto;

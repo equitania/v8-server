@@ -1,11 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <openerp>
     <data>
-        <template id="assets_backend" name="material backend theme assets" inherit_id="web.assets_backend">
+        <template id="assets_backend_theme" name="material backend theme assets" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
                 <link rel="stylesheet" href="/eq_myodoo_backend_theme/static/src/css/main.css"/>
                 <script type="text/javascript" src="/eq_myodoo_backend_theme/static/src/js/main.js"/>
             </xpath>
         </template>
+
+
+
+        <!-- Load css for ribbons -->
+        <template id="assets_backend_ribbon" name="ribbon_test assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/eq_myodoo_backend_theme/static/src/css/ribbon.css"/>
+                <script type="text/javascript" src="/eq_myodoo_backend_theme/static/src/js/ribbon.js"/>
+            </xpath>
+        </template>
+
+        <!-- Add ribbon to page -->
+        <template id="body_with_ribbon_test" name="ribbon_test web.webclient_bootstrap" inherit_id="web.webclient_bootstrap">
+            <xpath expr="//div[@class='openerp openerp_webclient_container']" position="before">
+                <div class="test-ribbon"/>
+            </xpath>
+        </template>
+
     </data>
 </openerp>

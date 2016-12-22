@@ -1,6 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
 
+### 22.12.2016
+#### Version 1.1.4
+##### ADD
+- Ribbon Funktionalität hinzugefügt. Diese kann nun über die Systemparameter eingestellt werden.
+
+
 ### 19.12.2016
 #### Version 1.1.3
 ##### CHG

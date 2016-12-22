@@ -3,7 +3,7 @@
     'name' : 'MyOdoo Backend Theme v8',
     'license': 'AGPL-3',
     'category' : 'Theme/Backend',
-    'version' : '1.1.3',
+    'version' : '1.1.4',
     'summary': 'Backend, Theme, Equitania, MyOdoo',
     'description': """
     MyOdoo Backend Theme v8
@@ -19,7 +19,8 @@
 
     # Views
     'data': [
-	   'views/backend.xml'
+	    'views/backend.xml',
+        'data/ribbon_data.xml',
     ],
 
     # Author
