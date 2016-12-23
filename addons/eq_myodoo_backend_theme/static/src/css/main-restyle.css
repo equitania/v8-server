@@ -1,0 +1,97 @@
+
+
+/* Primärfarbe - alter Wert: 4a7aad
+Variable zu ersetzen: primarycolor
+_____________________________*/
+.openerp .oe_stat_button:hover { background: primarycolor;}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { background: primarycolor; }
+.text-core .text-wrap .text-dropdown .text-list .text-suggestion.text-selected { background: primarycolor;}
+.openerp .oe_searchview_drawer .oe_searchview_section li.badge { background-color: primarycolor; }
+.openerp .badge { background-color: primarycolor;}
+#oe_main_menu_navbar { background: primarycolor!important;}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { background: primarycolor;}
+.text-core .text-wrap .text-dropdown .text-list .text-suggestion.text-selected { background: primarycolor;}
+.openerp .oe_stat_button:hover { background: primarycolor;}
+.openerp .oe_searchview_drawer .oe_searchview_section li.badge { background-color: primarycolor;}
+.openerp .badge { background-color: primarycolor;}
+/* Schriftfarbe*/
+.oe_breadcrumb_title span { color: primarycolor!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row h2 { color: primarycolor!important;}
+.openerp .oe_searchview_drawer dt { color: primarycolor;}
+.openerp .oe_stat_button .stat_button_icon { color: primarycolor;}
+.openerp .oe_horizontal_separator { color: primarycolor;}
+.oe_breadcrumb_title span { color: primarycolor!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row h2 { color: primarycolor!important;}
+.openerp .oe_searchview_drawer dt { color: primarycolor;}
+.openerp .oe_stat_button .stat_button_icon { color: primarycolor;}
+.openerp .oe_horizontal_separator { color: primarycolor;}
+
+
+
+
+/* Highlightfarbe - alter Wert: 1d4c7d
+Variable zu ersetzen: highlightcolor 
+_____________________________*/
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: highlightcolor;}
+.btn-primary, .oe_suggestion_follow { background: highlightcolor!important;}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {background: highlightcolor;}
+.openerp .oe_application .ui-datepicker-calendar .ui-state-active { background: highlightcolor;}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus, .oe_application_menu_placeholder>li.active a:hover, .oe_application_menu_placeholder>li:hover { background: highlightcolor!important;}
+.openerp .oe_followers button.oe_follower.oe_following, .openerp .oe_followers button.btn.btn-default.dropdown-toggle { background: highlightcolor;}
+.ui-datepicker td .ui-state-active { background: highlightcolor;}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus { background-color: highlightcolor;}
+.openerp .oe_about .label { background-color: highlightcolor;}
+.openerp .oe_about .user-details .user-info-block .navigation li.active a {background-color: highlightcolor;}
+/* Schriftfarben Highlightfarbe */
+.oe_form_field_status .oe_active .label { color: highlightcolor!important;}
+.oe_secondary_submenu li.active a { color: highlightcolor!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group .active a { color: highlightcolor!important;}
+.openerp .oe_tag_dark, .oe_facet_category, .oe_facet_values {color: highlightcolor!important;}
+.openerp .oe_application .ui-datepicker-calendar a { color: highlightcolor;}
+.openerp .oe_list_content>tbody>tr>td>button:hover { color: highlightcolor!important;}
+.openerp .oe_about a {color: highlightcolor;}
+/* Bordercolor Highlightfarbe */
+.openerp ul.oe_form_status li.oe_active > .arrow span, .openerp ul.oe_form_status_clickable li.oe_active > .arrow span { border-color: highlightcolor!important;}
+
+
+/* Button Standards  - alter Wert: bc7261
+Variable zu ersetzen: buttoncolors 
+_____________________________*/
+
+.btn.oe_follower.oe_notfollow { background: buttoncolors!important;}
+.openerp a.button:link, .openerp a.button:visited, .openerp button, .openerp .oe_button, .openerp input[type='submit'] { background: buttoncolors;}
+
+.openerp .oe_searchview_drawer .button { color: buttoncolors!important; }
+.openerp .oe_button.oe_link { color: buttoncolors; }
+
+.oe_searchview.oe_focused,
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus { border-bottom-color: buttoncolors!important;}
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field input:focus,
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus { border-color: buttoncolors;}
+.openerp input[type="textarea"]:focus, .openerp input[type="text"]:focus, .openerp textarea:focus, .openerp select:focus { border-color: buttoncolors; }
+.openerp .oe_form .oe_form_required input:not([disabled]):not([readonly]):focus,
+.openerp .oe_form .oe_form_required select:not([disabled]):not([readonly]):focus,
+.openerp .oe_form .oe_form_required textarea:not([disabled]):not([readonly]):focus { border-color: buttoncolors!important; }
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus {  border-bottom-color: buttoncolors!important; }
+.oe_im_chatview .oe_im_chatview_input:focus { border-bottom-color: buttoncolors!important;}
+.oe_im .oe_im_frame_header .oe_im_searchbox:focus { border-bottom-color: buttoncolors!important; }
+
+
+
+
+/* Button Highlights  - alter Wert: a3442f
+Variable zu ersetzen: buttonhighlights
+_____________________________*/
+
+.openerp a.button:focus, .openerp button:focus, .openerp .oe_button:focus, .openerp input[type='submit']:focus { background: buttonhighlights;}
+.openerp a.button:hover, .openerp button:hover, .openerp .oe_button:hover, .openerp input[type='submit']:hover { background: buttonhighlights;}
+.openerp .oe_view_manager_current .oe_form_editable button.oe_highlight { background: buttonhighlights;}
+
+/* Textlinks  - alter Wert: a3442f
+Variable zu ersetzen: textlinkcolor
+_____________________________*/
+.openerp .oe_application a { color: textlinkcolor;}
+
+
+/* Unbekannte, noch nicht zugeordnete blautöne 2196f3 */
