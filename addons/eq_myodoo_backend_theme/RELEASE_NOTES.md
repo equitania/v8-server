@@ -1,6 +1,11 @@
 ## Modul eq_myodoo_backend_theme
 
 ### 23.12.2016
+#### Version 1.1.6
+##### IMP
+- Weitere Anpassungen für die spätere Backend-theme-templating
+
+### 23.12.2016
 #### Version 1.1.5
 ##### ADD
 - Template Replace Datei(CSS) für das Ersetzen der Farben hinzugefügt

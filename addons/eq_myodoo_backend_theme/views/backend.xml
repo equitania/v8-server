@@ -5,6 +5,8 @@
             <xpath expr="." position="inside">
                 <link rel="stylesheet" href="/eq_myodoo_backend_theme/static/src/css/main.css"/>
                 <script type="text/javascript" src="/eq_myodoo_backend_theme/static/src/js/main.js"/>
+                <!-- DYNMISCH ERZEUGTE CSS DATEI AUS DEN SYSTEMPARAMETERN -->
+                <link rel="stylesheet" href="/eq_myodoo_backend_theme/static/src/css/main-manual-theme.css"/>
             </xpath>
         </template>
 

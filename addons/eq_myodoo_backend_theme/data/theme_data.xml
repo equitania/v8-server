@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+<!-- Vorschlag: die Systemparameter können z.B. wie folgt lauten
+theme.backend.primarycolor
+theme.backend.highlightcolor
+theme.backend.buttoncolors
+theme.backend.buttonhighlights
+theme.backend.textlinkcolor
+-->
+
+
+    </data>
+</openerp>
