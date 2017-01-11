@@ -14,3 +14,126 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
+
+
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Apply"
+msgstr "Bestätigen"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Backend theme customization"
+msgstr "Backend-Theme konfigurieren"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_buttoncolors:0
+msgid "Button color"
+msgstr "Farbe Schaltflächen"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_buttonhighlights:0
+msgid "Button highlight color"
+msgstr "Farbe Schaltflächen-Hover"
+
+#. module: eq_myodoo_backend_theme
+#: view:base.config.settings:eq_myodoo_backend_theme.eq_theme_base_config_settings_view
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Configure Backend-Theme"
+msgstr "Backend-Theme konfigurieren"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Configure Ribbon"
+msgstr "Ribbon konfigurieren"
+
+#. module: eq_myodoo_backend_theme
+#: view:base.config.settings:eq_myodoo_backend_theme.eq_theme_base_config_settings_view
+msgid "Configure backend theme"
+msgstr "Backend-Theme konfigurieren"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,create_uid:0
+msgid "Created by"
+msgstr "Created by"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,create_date:0
+msgid "Created on"
+msgstr "Created on"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Define the colors..."
+msgstr "Define the colors..."
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,display_name:0
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_highlightcolor:0
+msgid "Highlight color"
+msgstr "Farbe Highlights"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,__last_update:0
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,write_uid:0
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,write_date:0
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_primary_color:0
+msgid "Primary color"
+msgstr "Primärfarbe"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_theme_ribbon_background_color:0
+msgid "Ribbon background color"
+msgstr "Farbe Hintergrund"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_theme_ribbon_color:0
+msgid "Ribbon color"
+msgstr "Farbe Schrift"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_theme_ribbon_name:0
+msgid "Ribbon name"
+msgstr "Titel"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Settings for the ribbon"
+msgstr "Settings for the ribbon"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_textlinkcolor:0
+msgid "Textlink color"
+msgstr "Farbe Textlink"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "or"
+msgstr "or"

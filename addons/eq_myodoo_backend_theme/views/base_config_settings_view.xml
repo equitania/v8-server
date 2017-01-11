@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <record id="eq_theme_base_config_settings_view" model="ir.ui.view">
+            <field name="name">eq.theme.base.config.settings.view</field>
+            <field name="model">base.config.settings</field>
+            <field name="inherit_id" ref="base_setup.view_general_configuration"/>
+            <field name="arch" type="xml">
+
+                <xpath expr="//form/group[last()]" position="after">
+                    <button name="action_open_theme_customization" type="object" string="Configure backend theme" />
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</openerp>

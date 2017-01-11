@@ -19,5 +19,29 @@
 #
 ##############################################################################
 
-import base_config_settings
-import eq_theme_customization
+from openerp import models, fields, api, _
+
+class eq_base_config_settings(models.Model):
+    _inherit = 'base.config.settings'
+
+
+    @api.multi
+    def action_open_theme_customization(self):
+        """
+        Opens the form for changing the theme
+        @return:
+        """
+
+        # res = self._context.copy()
+        config_form = self.env.ref('eq_myodoo_backend_theme.eq_theme_customization_form')
+
+        return {
+            'type': 'ir.actions.act_window',
+            'res_model': 'eq.theme.customization',
+            'view_type': 'form',
+            'view_mode': 'form',
+            'view_id': config_form.id,
+            'target': 'new',
+            'flags': {'initial_mode': 'edit'},
+            'context': "{}",
+        }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<openerp>
+    <data>
+
+        <record id="eq_theme_customization_form" model="ir.ui.view">
+			<field name="name">eq.theme.customization.form</field>
+			<field name="model">eq.theme.customization</field>
+			<field name="arch" type="xml">
+				<form string="Backend theme customization" class="oe_form_configuration">
+					<header>
+                        <button string="Apply" type="object" name="execute" class="oe_highlight"/>
+                        or
+                        <button string="Cancel" type="object" name="cancel" class="oe_link"/>
+                    </header>
+
+					<separator string="Configure Backend-Theme"/>
+					<div>
+						<p>
+							Define the colors...
+						</p>
+					</div>
+
+					<group col="2">
+						<field name="eq_primary_color" widget="color"/>
+						<field name="eq_highlightcolor"  widget="color"/>
+						<field name="eq_buttoncolors"  widget="color"/>
+						<field name="eq_buttonhighlights"  widget="color"/>
+						<field name="eq_textlinkcolor" widget="color"/>
+					</group>
+
+					<separator string="Configure Ribbon"/>
+					<div>
+						<p>
+							Settings for the ribbon
+						</p>
+					</div>
+					<group col="2">
+                            <!--<group col="2">-->
+								<field name="eq_theme_ribbon_name" />
+                                <field name="eq_theme_ribbon_color" widget="color"/>
+								<field name="eq_theme_ribbon_background_color" widget="color"/>
+
+                            <!--</group>-->
+                    </group>
+
+				</form>
+
+			</field>
+		</record>
+
+    </data>
+</openerp>

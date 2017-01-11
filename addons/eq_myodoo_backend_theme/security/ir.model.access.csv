@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_eq_theme_customization_user,eq.theme.customization_user,model_eq_theme_customization,base.group_user,1,0,0,0
+access_eq_theme_customization_manager,eq.theme.customization_manager,model_eq_theme_customization,base.group_sale_manager,1,1,1,1

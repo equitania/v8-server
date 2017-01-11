@@ -1,5 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
+
+### 11.01.2017
+#### Version 1.1.7
+##### CHG
+- Erweiterungen für Anpassungen des Themes
+
+
 ### 23.12.2016
 #### Version 1.1.6
 ##### IMP
