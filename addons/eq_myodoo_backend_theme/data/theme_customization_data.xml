@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+
+        <record id="eq_theme_primarycolor" model="ir.config_parameter">
+            <field name="key">eq_theme_primarycolor</field>
+            <field name="value">4a7aad</field>
+        </record>
+
+        <record id="eq_theme_highlightcolor" model="ir.config_parameter">
+            <field name="key">eq_theme_highlightcolor</field>
+            <field name="value">1d4c7d</field>
+        </record>
+
+        <record id="eq_theme_buttoncolors" model="ir.config_parameter">
+            <field name="key">eq_theme_buttoncolors</field>
+            <field name="value">bc7261</field>
+        </record>
+
+        <record id="eq_theme_buttonhighlights" model="ir.config_parameter">
+            <field name="key">eq_theme_buttonhighlights</field>
+            <field name="value">a3442f</field>
+        </record>
+
+        <record id="eq_theme_textlinkcolor" model="ir.config_parameter">
+            <field name="key">eq_theme_textlinkcolor</field>
+            <field name="value">a3442f</field>
+        </record>
+
+    </data>
+</openerp>

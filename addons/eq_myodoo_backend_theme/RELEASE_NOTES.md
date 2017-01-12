@@ -1,6 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
 
+### 12.01.2017
+#### Version 1.1.8
+##### CHG
+- Anpassungen für Updatelogik und für Setzen der Parameter
+
+
 ### 11.01.2017
 #### Version 1.1.7
 ##### CHG

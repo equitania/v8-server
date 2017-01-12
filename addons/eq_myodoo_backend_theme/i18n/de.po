@@ -125,8 +125,8 @@ msgstr "Titel"
 
 #. module: eq_myodoo_backend_theme
 #: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
-msgid "Settings for the ribbon"
-msgstr "Settings for the ribbon"
+msgid "If you don't want to use a ribbon, leave the title empty"
+msgstr "Wenn Sie kein Ribbon verwenden wollen, dann lassen sie das Feld für den Titel leer"
 
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_textlinkcolor:0
@@ -137,3 +137,8 @@ msgstr "Farbe Textlink"
 #: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
 msgid "or"
 msgstr "or"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Leave a field empty to use the default settings."
+msgstr "Wenn Sie ein Feld leer lassen wird die Standardfarbe verwendet"

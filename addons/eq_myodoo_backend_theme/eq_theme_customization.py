@@ -47,11 +47,11 @@ class eq_theme_customization(models.TransientModel):
         @return:
         """
         config_parameters = self.env["ir.config_parameter"]
-        primary_color = config_parameters.get_param("primarycolor")
-        eq_highlightcolor = config_parameters.get_param("highlightcolor")
-        eq_buttoncolors = config_parameters.get_param("buttoncolors")
-        eq_buttonhighlights = config_parameters.get_param("buttonhighlights")
-        eq_textlinkcolor = config_parameters.get_param("textlinkcolor")
+        primary_color = config_parameters.get_param("eq_theme_primarycolor")
+        eq_highlightcolor = config_parameters.get_param("eq_theme_highlightcolor")
+        eq_buttoncolors = config_parameters.get_param("eq_theme_buttoncolors")
+        eq_buttonhighlights = config_parameters.get_param("eq_theme_buttonhighlights")
+        eq_textlinkcolor = config_parameters.get_param("eq_theme_textlinkcolor")
 
         eq_theme_ribbon_name = config_parameters.get_param("theme.ribbon.name")
         eq_theme_ribbon_color = config_parameters.get_param("theme.ribbon.color")
@@ -67,7 +67,6 @@ class eq_theme_customization(models.TransientModel):
             'eq_theme_ribbon_background_color': eq_theme_ribbon_background_color,
         }
 
-    """ Ebid set function  """
 
     @api.multi
     def set_eq_ebid_data(self):
@@ -77,11 +76,11 @@ class eq_theme_customization(models.TransientModel):
         """
         config_parameters = self.env["ir.config_parameter"]
         for record in self:
-            config_parameters.set_param("primarycolor", record.eq_primary_color or '', )
-            config_parameters.set_param("highlightcolor", record.eq_highlightcolor or '', )
-            config_parameters.set_param("buttoncolors", record.eq_buttoncolors or '', )
-            config_parameters.set_param("buttonhighlights", record.eq_buttonhighlights or '', )
-            config_parameters.set_param("textlinkcolor", record.eq_textlinkcolor or '', )
+            config_parameters.set_param("eq_theme_primarycolor", record.eq_primary_color or '', )
+            config_parameters.set_param("eq_theme_highlightcolor", record.eq_highlightcolor or '', )
+            config_parameters.set_param("eq_theme_buttoncolors", record.eq_buttoncolors or '', )
+            config_parameters.set_param("eq_theme_buttonhighlights", record.eq_buttonhighlights or '', )
+            config_parameters.set_param("eq_theme_textlinkcolor", record.eq_textlinkcolor or '', )
             config_parameters.set_param("theme.ribbon.name", record.eq_theme_ribbon_name or '', )
             config_parameters.set_param("theme.ribbon.color", record.eq_theme_ribbon_color or '', )
             config_parameters.set_param("theme.ribbon.background.color", record.eq_theme_ribbon_background_color or '', )
@@ -89,7 +88,7 @@ class eq_theme_customization(models.TransientModel):
 
         self.update_data()
 
-
+    @api.model
     def update_data(self):
         """
         Replace the placeholders of the main-manual-theme-template.css with the actual parameter values
