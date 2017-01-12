@@ -16,6 +16,21 @@
                         <button string="Cancel" type="object" name="cancel" class="oe_link"/>
                     </header>
 
+					<separator string="Configure Ribbon"/>
+					<div>
+						<p>
+							If you don't want to use a ribbon, leave the title empty
+						</p>
+					</div>
+					<group col="2">
+                            <!--<group col="2">-->
+								<field name="eq_theme_ribbon_name" />
+                                <field name="eq_theme_ribbon_color" widget="color"/>
+								<field name="eq_theme_ribbon_background_color" widget="color"/>
+
+                            <!--</group>-->
+                    </group>
+
 					<separator string="Configure Backend-Theme"/>
 					<div>
 						<p>
@@ -31,21 +46,6 @@
 						<field name="eq_buttonhighlights"  widget="color"/>
 						<field name="eq_textlinkcolor" widget="color"/>
 					</group>
-
-					<separator string="Configure Ribbon"/>
-					<div>
-						<p>
-							If you don't want to use a ribbon, leave the title empty
-						</p>
-					</div>
-					<group col="2">
-                            <!--<group col="2">-->
-								<field name="eq_theme_ribbon_name" />
-                                <field name="eq_theme_ribbon_color" widget="color"/>
-								<field name="eq_theme_ribbon_background_color" widget="color"/>
-
-                            <!--</group>-->
-                    </group>
 
 				</form>
 
