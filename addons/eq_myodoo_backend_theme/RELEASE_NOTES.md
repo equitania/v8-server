@@ -2,6 +2,12 @@
 
 
 ### 12.01.2017
+#### Version 1.1.10
+##### CHG
+- Defaultparameter für Ribbon geändert
+
+
+### 12.01.2017
 #### Version 1.1.9
 ##### CHG
 - Formular für Themebearbeitung angepasst

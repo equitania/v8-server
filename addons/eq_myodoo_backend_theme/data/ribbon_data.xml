@@ -11,13 +11,13 @@
         <!-- Add ribbon color configuration parameter -->
         <record id="set_ribbon_color" model="ir.config_parameter">
             <field name="key">theme.ribbon.color</field>
-            <field name="value">#f0f0f0</field>
+            <field name="value">#F0D66C</field>
         </record>
 
         <!-- Add ribbon background color configuration parameter -->
         <record id="set_ribbon_background_color" model="ir.config_parameter">
             <field name="key">theme.ribbon.background.color</field>
-            <field name="value">rgba(255,0,0,.6)</field>
+            <field name="value">#FF582E</field>
         </record>
 
     </data>
