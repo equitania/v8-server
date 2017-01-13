@@ -1,1 +1,61 @@
-/* DIESE DATEI BITTE LEER LASSEN - DA SIE DYNAMISCH BEFÜLLT WIRD */
+.openerp .oe_application a { color: a3442f;}
+
+.openerp .oe_stat_button:hover { background: 4a7aad;}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { background: 4a7aad; }
+.text-core .text-wrap .text-dropdown .text-list .text-suggestion.text-selected { background: 4a7aad;}
+.openerp .oe_searchview_drawer .oe_searchview_section li.badge { background-color: 4a7aad; }
+.openerp .badge { background-color: 4a7aad;}
+#oe_main_menu_navbar { background: 4a7aad!important;}
+.ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { background: 4a7aad;}
+.text-core .text-wrap .text-dropdown .text-list .text-suggestion.text-selected { background: 4a7aad;}
+.openerp .oe_stat_button:hover { background: 4a7aad;}
+.openerp .oe_searchview_drawer .oe_searchview_section li.badge { background-color: 4a7aad;}
+.openerp .badge { background-color: 4a7aad;}
+.oe_breadcrumb_title span { color: 4a7aad!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row h2 { color: 4a7aad!important;}
+.openerp .oe_searchview_drawer dt { color: 4a7aad;}
+.openerp .oe_stat_button .stat_button_icon { color: 4a7aad;}
+.openerp .oe_horizontal_separator { color: 4a7aad;}
+.oe_breadcrumb_title span { color: 4a7aad!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_header_row h2 { color: 4a7aad!important;}
+.openerp .oe_searchview_drawer dt { color: 4a7aad;}
+.openerp .oe_stat_button .stat_button_icon { color: 4a7aad;}
+.openerp .oe_horizontal_separator { color: 4a7aad;}
+
+.btn.oe_follower.oe_notfollow { background: bc7261!important;}
+.openerp a.button:link, .openerp a.button:visited, .openerp button, .openerp .oe_button, .openerp input[type='submit'] { background: bc7261;}
+.openerp .oe_searchview_drawer .button { color: bc7261!important; }
+.openerp .oe_button.oe_link { color: bc7261; }
+.oe_searchview.oe_focused, .openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus { border-bottom-color: bc7261!important;}
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field input:focus,
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus { border-color: bc7261;}
+.openerp input[type="textarea"]:focus, .openerp input[type="text"]:focus, .openerp textarea:focus, .openerp select:focus { border-color: bc7261; }
+.openerp .oe_form .oe_form_required input:not([disabled]):not([readonly]):focus,
+.openerp .oe_form .oe_form_required select:not([disabled]):not([readonly]):focus,
+.openerp .oe_form .oe_form_required textarea:not([disabled]):not([readonly]):focus { border-color: bc7261!important; }
+.openerp .oe_list.oe_list_editable.oe_editing .oe_form_field textarea:focus {  border-bottom-color: bc7261!important; }
+.oe_im_chatview .oe_im_chatview_input:focus { border-bottom-color: bc7261!important;}
+.oe_im .oe_im_frame_header .oe_im_searchbox:focus { border-bottom-color: bc7261!important; }
+
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: 1d4c7d;}
+.btn-primary, .oe_suggestion_follow { background: 1d4c7d!important;}
+.navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus {background: 1d4c7d;}
+.openerp .oe_application .ui-datepicker-calendar .ui-state-active { background: 1d4c7d;}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus, .oe_application_menu_placeholder>li.active a:hover, .oe_application_menu_placeholder>li:hover { background: 1d4c7d!important;}
+.openerp .oe_followers button.oe_follower.oe_following, .openerp .oe_followers button.btn.btn-default.dropdown-toggle { background: 1d4c7d;}
+.ui-datepicker td .ui-state-active { background: 1d4c7d;}
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus { background-color: 1d4c7d;}
+.openerp .oe_about .label { background-color: 1d4c7d;}
+.openerp .oe_about .user-details .user-info-block .navigation li.active a {background-color: 1d4c7d;}
+.oe_form_field_status .oe_active .label { color: 1d4c7d!important;}
+.oe_secondary_submenu li.active a { color: 1d4c7d!important;}
+.openerp .oe_view_manager table.oe_view_manager_header .oe_button_group .active a { color: 1d4c7d!important;}
+.openerp .oe_tag_dark, .oe_facet_category, .oe_facet_values {color: 1d4c7d!important;}
+.openerp .oe_application .ui-datepicker-calendar a { color: 1d4c7d;}
+.openerp .oe_list_content>tbody>tr>td>button:hover { color: 1d4c7d!important;}
+.openerp .oe_about a {color: 1d4c7d;}
+.openerp ul.oe_form_status li.oe_active > .arrow span, .openerp ul.oe_form_status_clickable li.oe_active > .arrow span { border-color: 1d4c7d!important;}
+
+.openerp a.button:focus, .openerp button:focus, .openerp .oe_button:focus, .openerp input[type='submit']:focus { background: a3442f;}
+.openerp a.button:hover, .openerp button:hover, .openerp .oe_button:hover, .openerp input[type='submit']:hover { background: a3442f;}
+.openerp .oe_view_manager_current .oe_form_editable button.oe_highlight { background: a3442f;}

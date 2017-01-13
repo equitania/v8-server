@@ -1,5 +1,9 @@
 ## Modul eq_myodoo_backend_theme
 
+### 13.01.2017
+#### Version 1.1.11
+##### FIX
+- Kleine CSS Korrekturen für das eq_web_search Modul
 
 ### 12.01.2017
 #### Version 1.1.10

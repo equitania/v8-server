@@ -44,7 +44,7 @@ body,
 #oe_main_menu_navbar li button {
     font-size: 14px!important;
     margin-top: 0!important;
-    padding: 18px 15px!important;
+    padding: 18px 15px;
 }
 
 /* ========== Allgemein - Buttons  */
@@ -558,7 +558,7 @@ button.btn.oe_follower.oe_notfollow {
 .navbar-inverse .navbar-nav>.open>a:focus,
 .oe_application_menu_placeholder>li.active a:hover,
 .oe_application_menu_placeholder>li:hover {
-    background: #1d4c7d!important;
+    background: #1d4c7d;
 }
 .oe_breadcrumb_title a.oe_breadcrumb_item {
     color: #888!important;
