@@ -27,12 +27,16 @@ class eq_theme_customization(models.TransientModel):
     _name = 'eq.theme.customization'
     _inherit = 'res.config.settings'
 
-
+    eq_fontsize = fields.Char(string="Fontsize")
     eq_primary_color = fields.Char(string="Primary color")
     eq_highlightcolor = fields.Char(string="Highlight color")
     eq_buttoncolors = fields.Char(string="Button color")
     eq_buttonhighlights = fields.Char(string="Button highlight color")
-    eq_textlinkcolor = fields.Char(string="Textlink color")
+    eq_textlinkcolor = fields.Char(string="Textlink")
+    eq_mainmenu_padding = fields.Char(string="Padding")
+    eq_mainmenu_fontsize = fields.Char(string="Fontsize")
+    eq_submenu_padding = fields.Char(string="Padding")
+    eq_submenu_fontsize = fields.Char(string="Fontsize")
 
     eq_theme_ribbon_name = fields.Char(string="Ribbon name")
     eq_theme_ribbon_color = fields.Char(string="Ribbon color")
@@ -47,21 +51,31 @@ class eq_theme_customization(models.TransientModel):
         @return:
         """
         config_parameters = self.env["ir.config_parameter"]
+        eq_fontsize = config_parameters.get_param("eq_theme_fontsize")
         primary_color = config_parameters.get_param("eq_theme_primarycolor")
         eq_highlightcolor = config_parameters.get_param("eq_theme_highlightcolor")
         eq_buttoncolors = config_parameters.get_param("eq_theme_buttoncolors")
         eq_buttonhighlights = config_parameters.get_param("eq_theme_buttonhighlights")
         eq_textlinkcolor = config_parameters.get_param("eq_theme_textlinkcolor")
+        eq_mainmenu_padding = config_parameters.get_param("eq_theme_mainmenu_padding")
+        eq_mainmenu_fontsize = config_parameters.get_param("eq_theme_mainmenu_fontsize")
+        eq_submenu_padding = config_parameters.get_param("eq_theme_submenu_padding")
+        eq_submenu_fontsize = config_parameters.get_param("eq_theme_submenu_fontsize")
 
         eq_theme_ribbon_name = config_parameters.get_param("theme.ribbon.name")
         eq_theme_ribbon_color = config_parameters.get_param("theme.ribbon.color")
         eq_theme_ribbon_background_color = config_parameters.get_param("theme.ribbon.background.color")
         return {
+            'eq_fontsize': eq_fontsize,
             'eq_primary_color': primary_color,
             'eq_highlightcolor': eq_highlightcolor,
             'eq_buttoncolors': eq_buttoncolors,
             'eq_buttonhighlights': eq_buttonhighlights,
             'eq_textlinkcolor': eq_textlinkcolor,
+            'eq_mainmenu_padding': eq_mainmenu_padding,
+            'eq_mainmenu_fontsize': eq_mainmenu_fontsize,
+            'eq_submenu_padding': eq_submenu_padding,
+            'eq_submenu_fontsize': eq_submenu_fontsize,
             'eq_theme_ribbon_name': eq_theme_ribbon_name,
             'eq_theme_ribbon_color': eq_theme_ribbon_color,
             'eq_theme_ribbon_background_color': eq_theme_ribbon_background_color,
@@ -76,11 +90,16 @@ class eq_theme_customization(models.TransientModel):
         """
         config_parameters = self.env["ir.config_parameter"]
         for record in self:
+            config_parameters.set_param("eq_theme_fontsize", record.eq_fontsize or '', )
             config_parameters.set_param("eq_theme_primarycolor", record.eq_primary_color or '', )
             config_parameters.set_param("eq_theme_highlightcolor", record.eq_highlightcolor or '', )
             config_parameters.set_param("eq_theme_buttoncolors", record.eq_buttoncolors or '', )
             config_parameters.set_param("eq_theme_buttonhighlights", record.eq_buttonhighlights or '', )
             config_parameters.set_param("eq_theme_textlinkcolor", record.eq_textlinkcolor or '', )
+            config_parameters.set_param("eq_theme_mainmenu_padding", record.eq_mainmenu_padding or '', )
+            config_parameters.set_param("eq_theme_mainmenu_fontsize", record.eq_mainmenu_fontsize or '', )
+            config_parameters.set_param("eq_theme_submenu_padding", record.eq_submenu_padding or '', )
+            config_parameters.set_param("eq_theme_submenu_fontsize", record.eq_submenu_fontsize or '', )
             config_parameters.set_param("theme.ribbon.name", record.eq_theme_ribbon_name or '', )
             config_parameters.set_param("theme.ribbon.color", record.eq_theme_ribbon_color or '', )
             config_parameters.set_param("theme.ribbon.background.color", record.eq_theme_ribbon_background_color or '', )

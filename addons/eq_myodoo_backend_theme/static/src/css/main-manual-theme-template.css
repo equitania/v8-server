@@ -1,7 +1,14 @@
 
+/* Primäre Schriftgröße - alter Wert: 13px
+Variable zu ersetzen: eq_theme_fontsize _____________________________*/
+/* eq_theme_fontsize START */
+.openerp { font-size: eq_theme_fontsize;}
+.openerp a.button:link, .openerp a.button:visited, .openerp button, .openerp .oe_button, .openerp input[type='submit'] { font-size: eq_theme_fontsize;}
+/* eq_theme_fontsize END */
+
+
 /* Primärfarbe - alter Wert: 4a7aad
-Variable zu ersetzen: eq_theme_primarycolor
-_____________________________*/
+Variable zu ersetzen: eq_theme_primarycolor _____________________________*/
 /* eq_theme_primarycolor START */
 .openerp .oe_stat_button:hover { background: eq_theme_primarycolor;}
 .ui-menu .ui-menu-item a.ui-state-focus, .ui-menu .ui-menu-item a.ui-state-active { background: eq_theme_primarycolor; }
@@ -30,8 +37,7 @@ _____________________________*/
 
 
 /* eq_theme_highlightcolor - alter Wert: 1d4c7d
-Variable zu ersetzen: eq_theme_highlightcolor
-_____________________________*/
+Variable zu ersetzen: eq_theme_highlightcolor _____________________________*/
 /* eq_theme_highlightcolor START */
 .navbar-inverse .navbar-nav>.active>a, .navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus{background: eq_theme_highlightcolor;}
 .btn-primary, .oe_suggestion_follow { background: eq_theme_highlightcolor!important;}
@@ -43,6 +49,7 @@ _____________________________*/
 .navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus { background-color: eq_theme_highlightcolor;}
 .openerp .oe_about .label { background-color: eq_theme_highlightcolor;}
 .openerp .oe_about .user-details .user-info-block .navigation li.active a {background-color: eq_theme_highlightcolor;}
+input[type="checkbox"]:checked:after { background-color: eq_theme_highlightcolor; border-color: eq_theme_highlightcolor; }
 /* Schriftfarben Highlightfarbe */
 .oe_form_field_status .oe_active .label { color: eq_theme_highlightcolor!important;}
 .oe_secondary_submenu li.active a { color: eq_theme_highlightcolor!important;}
@@ -51,6 +58,7 @@ _____________________________*/
 .openerp .oe_application .ui-datepicker-calendar a { color: eq_theme_highlightcolor;}
 .openerp .oe_list_content>tbody>tr>td>button:hover { color: eq_theme_highlightcolor!important;}
 .openerp .oe_about a {color: eq_theme_highlightcolor;}
+.ui-tabs .ui-tabs-nav li:hover, .ui-tabs .ui-tabs-nav li a:hover {color: eq_theme_highlightcolor;}
 /* Bordercolor Highlightfarbe */
 .openerp ul.oe_form_status li.oe_active > .arrow span, .openerp ul.oe_form_status_clickable li.oe_active > .arrow span { border-color: eq_theme_highlightcolor!important;}
 /* eq_theme_highlightcolor END */
@@ -59,8 +67,7 @@ _____________________________*/
 
 
 /* Button Standards  - alter Wert: bc7261
-Variable zu ersetzen: eq_theme_buttoncolors
-_____________________________*/
+Variable zu ersetzen: eq_theme_buttoncolors _____________________________*/
 /* eq_theme_buttoncolors START */
 .btn.oe_follower.oe_notfollow { background: eq_theme_buttoncolors!important;}
 .openerp a.button:link, .openerp a.button:visited, .openerp button, .openerp .oe_button, .openerp input[type='submit'] { background: eq_theme_buttoncolors;}
@@ -83,8 +90,7 @@ _____________________________*/
 
 
 /* Button Highlights - alter Wert: a3442f
-Variable zu ersetzen: eq_theme_buttonhighlights
-_____________________________*/
+Variable zu ersetzen: eq_theme_buttonhighlights _____________________________*/
 /* eq_theme_buttonhighlights START */
 .openerp a.button:focus, .openerp button:focus, .openerp .oe_button:focus, .openerp input[type='submit']:focus { background: eq_theme_buttonhighlights;}
 .openerp a.button:hover, .openerp button:hover, .openerp .oe_button:hover, .openerp input[type='submit']:hover { background: eq_theme_buttonhighlights;}
@@ -94,11 +100,45 @@ _____________________________*/
 
 
 /* Textlinks  - alter Wert: a3442f
-Variable zu ersetzen: eq_theme_textlinkcolor
-_____________________________*/
+Variable zu ersetzen: eq_theme_textlinkcolor _____________________________*/
 /* eq_theme_textlinkcolor START */
 .openerp .oe_application a { color: eq_theme_textlinkcolor;}
 /* eq_theme_textlinkcolor END */
+
+
+/* Hauptmenü Abstände - alter Wert: 18px 15px
+Variable zu ersetzen: eq_theme_mainmenu_padding _____________________________*/
+/* eq_theme_mainmenu_padding START */
+#oe_main_menu_navbar li a, #oe_main_menu_navbar li button { padding: eq_theme_mainmenu_padding; }
+/* eq_theme_mainmenu_padding END */
+
+
+
+
+/* Hauptmenü Schriftgröße - alter Wert: 14px
+Variable zu ersetzen: eq_theme_mainmenu_fontsize _____________________________*/
+/* eq_theme_mainmenu_fontsize START */
+#oe_main_menu_navbar li a, #oe_main_menu_navbar li button { font-size: eq_theme_mainmenu_fontsize!important; }
+/* eq_theme_mainmenu_fontsize END */
+
+
+
+
+
+/* Seitenmenü Abstände - alter Wert: 6px 0px 4px 36px
+Variable zu ersetzen: eq_theme_submenu_padding _____________________________*/
+/* eq_theme_submenu_padding START */
+.oe_secondary_submenu .oe_menu_leaf { padding: eq_theme_submenu_padding !important; }
+/* eq_theme_submenu_padding END */
+
+
+
+/* Seitenmenü Schriftgröße - alter Wert: 13px
+Variable zu ersetzen: eq_theme_submenu_fontsize _____________________________*/
+/* eq_theme_submenu_fontsize START */
+.oe_secondary_menu_section { font-size: eq_theme_submenu_fontsize!important; }
+/* eq_theme_submenu_fontsize END */
+
 
 
 /* Unbekannte, noch nicht zugeordnete blautöne 2196f3 */

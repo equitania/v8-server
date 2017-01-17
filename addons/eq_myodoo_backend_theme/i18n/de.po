@@ -45,8 +45,19 @@ msgstr "Abbrechen"
 
 #. module: eq_myodoo_backend_theme
 #: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
-msgid "Configure Backend-Theme"
-msgstr "Backend-Theme konfigurieren"
+msgid "Theme Basics"
+msgstr "Design Grundlagen"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Mainmenu"
+msgstr "Hauptnavigation"
+
+#. module: eq_myodoo_backend_theme
+#: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
+msgid "Submenu"
+msgstr "Seitennavigation"
+
 
 #. module: eq_myodoo_backend_theme
 #: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form
@@ -74,6 +85,19 @@ msgid "Define the colors..."
 msgstr "Define the colors..."
 
 #. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_fontsize:0
+#: field:eq.theme.customization,eq_mainmenu_fontsize:0
+#: field:eq.theme.customization,eq_submenu_fontsize:0
+msgid "Fontsize"
+msgstr "Schriftgröße"
+
+#. module: eq_myodoo_backend_theme
+#: field:eq.theme.customization,eq_mainmenu_padding:0
+#: field:eq.theme.customization,eq_submenu_padding:0
+msgid "Padding"
+msgstr "Abstände"
+
+#. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,display_name:0
 msgid "Display Name"
 msgstr "Display Name"
@@ -81,7 +105,7 @@ msgstr "Display Name"
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_highlightcolor:0
 msgid "Highlight color"
-msgstr "Farbe Highlights"
+msgstr "Highlightfarbe"
 
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,id:0
@@ -111,12 +135,12 @@ msgstr "Primärfarbe"
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_theme_ribbon_background_color:0
 msgid "Ribbon background color"
-msgstr "Farbe Hintergrund"
+msgstr "Hintergrund"
 
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_theme_ribbon_color:0
 msgid "Ribbon color"
-msgstr "Farbe Schrift"
+msgstr "Schrift"
 
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_theme_ribbon_name:0
@@ -130,8 +154,8 @@ msgstr "Wenn Sie kein Ribbon verwenden wollen, dann lassen sie das Feld für den
 
 #. module: eq_myodoo_backend_theme
 #: field:eq.theme.customization,eq_textlinkcolor:0
-msgid "Textlink color"
-msgstr "Farbe Textlink"
+msgid "Textlink"
+msgstr "Textlink"
 
 #. module: eq_myodoo_backend_theme
 #: view:eq.theme.customization:eq_myodoo_backend_theme.eq_theme_customization_form

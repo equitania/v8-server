@@ -2,6 +2,10 @@
 
 <openerp>
     <data>
+    	<!-- Support for our localization  -->
+		<function model="eq_install_func" name="_load_translation" eval="[('eq_myodoo_backend_theme')]"/>
+
+
 
 		<function model="eq.theme.customization" name="update_data"/>
 
@@ -15,6 +19,54 @@
                         or
                         <button string="Cancel" type="object" name="cancel" class="oe_link"/>
                     </header>
+
+					<separator string="Theme Basics"/>
+					<div>
+						<p>
+							Leave a field empty to use the default settings.
+						</p>
+					</div>
+
+					<!--<separator />-->
+					<group col="2">
+						<field name="eq_fontsize" placeholder="13px"/>
+						<field name="eq_primary_color" widget="color"/>
+						<field name="eq_highlightcolor"  widget="color"/>
+						<field name="eq_buttoncolors"  widget="color"/>
+						<field name="eq_buttonhighlights"  widget="color"/>
+						<field name="eq_textlinkcolor" widget="color"/>
+					</group>
+
+					<hr></hr>
+
+					<div class="row">
+						<div class="col-sm-6">
+							<separator string="Mainmenu"/>
+							<group col="2">
+								<field name="eq_mainmenu_fontsize" placeholder="14px"/>
+								<field name="eq_mainmenu_padding" placeholder="18px 15px"/>
+							</group>
+						</div>
+						<div class="col-sm-6">
+							<separator string="Submenu"/>
+							<group col="2">
+								<field name="eq_submenu_fontsize" placeholder="13px"/>
+								<field name="eq_submenu_padding" placeholder="6px 0px 4px 36px"/>
+							</group>
+						</div>
+					</div>
+					<table>
+						<tr>
+							<td><strong>Abstände</strong></td>
+							<td>werden mit 4 Werten definiert: Oben - Rechts - Unten - Links.</td>
+						</tr>
+						<tr>
+							<td style="padding-right:10px;"><strong>Schriftgrößen</strong></td>
+							<td>sollten zwischen einem Wert von 12 - 16px liegen.</td>
+						</tr>
+					</table>
+
+					<hr></hr>
 
 					<separator string="Configure Ribbon"/>
 					<div>
@@ -30,23 +82,6 @@
 
                             <!--</group>-->
                     </group>
-
-					<separator string="Configure Backend-Theme"/>
-					<div>
-						<p>
-							Leave a field empty to use the default settings.
-						</p>
-					</div>
-
-					<!--<separator />-->
-					<group col="2">
-						<field name="eq_primary_color" widget="color"/>
-						<field name="eq_highlightcolor"  widget="color"/>
-						<field name="eq_buttoncolors"  widget="color"/>
-						<field name="eq_buttonhighlights"  widget="color"/>
-						<field name="eq_textlinkcolor" widget="color"/>
-					</group>
-
 				</form>
 
 			</field>

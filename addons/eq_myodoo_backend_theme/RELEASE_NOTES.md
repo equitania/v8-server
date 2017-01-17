@@ -1,6 +1,14 @@
 ## Modul eq_myodoo_backend_theme
 
 ### 13.01.2017
+#### Version 1.1.13
+##### CHG
+- Mehrere Anpassungen:
+- Umbau der Maske
+- Hinzufügen von Schriftgröße allgemein
+- Hinzufügen von Schriftgröße und Abstände der Navigationen 
+
+### 13.01.2017
 #### Version 1.1.11
 ##### FIX
 - Kleine CSS Korrekturen für das eq_web_search Modul

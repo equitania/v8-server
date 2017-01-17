@@ -2,30 +2,51 @@
 <openerp>
     <data noupdate="1">
 
+        <record id="eq_theme_fontsize" model="ir.config_parameter">
+            <field name="key">eq_theme_fontsize</field>
+            <field name="value">13px</field>
+        </record>
         <record id="eq_theme_primarycolor" model="ir.config_parameter">
             <field name="key">eq_theme_primarycolor</field>
             <field name="value">4a7aad</field>
         </record>
-
         <record id="eq_theme_highlightcolor" model="ir.config_parameter">
             <field name="key">eq_theme_highlightcolor</field>
             <field name="value">1d4c7d</field>
         </record>
-
         <record id="eq_theme_buttoncolors" model="ir.config_parameter">
             <field name="key">eq_theme_buttoncolors</field>
             <field name="value">bc7261</field>
         </record>
-
         <record id="eq_theme_buttonhighlights" model="ir.config_parameter">
             <field name="key">eq_theme_buttonhighlights</field>
             <field name="value">a3442f</field>
         </record>
-
         <record id="eq_theme_textlinkcolor" model="ir.config_parameter">
             <field name="key">eq_theme_textlinkcolor</field>
             <field name="value">a3442f</field>
         </record>
+
+
+        <record id="eq_theme_mainmenu_fontsize" model="ir.config_parameter">
+            <field name="key">eq_theme_mainmenu_fontsize</field>
+            <field name="value">14px</field>
+        </record>
+        <record id="eq_theme_mainmenu_padding" model="ir.config_parameter">
+            <field name="key">eq_theme_mainmenu_padding</field>
+            <field name="value">18px 15px</field>
+        </record>
+
+
+        <record id="eq_theme_submenu_fontsize" model="ir.config_parameter">
+            <field name="key">eq_theme_submenu_fontsize</field>
+            <field name="value">13px</field>
+        </record>
+        <record id="eq_theme_submenu_padding" model="ir.config_parameter">
+            <field name="key">eq_theme_submenu_padding</field>
+            <field name="value">6px 0px 4px 36px</field>
+        </record>
+
 
     </data>
 </openerp>
