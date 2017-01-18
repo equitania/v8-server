@@ -22,6 +22,9 @@
 from openerp import models, fields, api, _
 import re
 import os.path
+# from openerp.addons.eq_myodoo_backend_theme import eq_log
+import logging
+_logger = logging.getLogger(__name__)
 
 class eq_theme_customization(models.TransientModel):
     _name = 'eq.theme.customization'
@@ -118,7 +121,13 @@ class eq_theme_customization(models.TransientModel):
         template_file = base_path + "main-manual-theme-template.css"
         target_css_file = base_path + "main-manual-theme.css"
 
+        # eq_log.log("Path to Templatefile: " + target_css_file)
+
+        _logger.info("Path to Templatefile: " + target_css_file)
+
         if not os.path.isfile(template_file) or not os.path.isfile(target_css_file):
+            # eq_log.log("Theme cannot be set: Templatefiles not found.")
+            _logger.exception("Theme cannot be written to file: Templatefiles not found.")
             return
 
         config_params_obj = self.env['ir.config_parameter']
@@ -129,6 +138,8 @@ class eq_theme_customization(models.TransientModel):
             file_content = myfile.readlines()
 
         if not file_content:
+            # eq_log.log("Theme cannot be saved: no content in Templatefile found")
+            _logger.exception("Theme cannot be saved: no content in Templatefile found")
             return
 
         replace_pattern = re.compile(re.escape('start'), re.I)
@@ -166,5 +177,9 @@ class eq_theme_customization(models.TransientModel):
                 param_settings = param_settings.replace(key, replace_value)
                 new_theme_css.append(param_settings)
 
-        with open(target_css_file, "w") as myfile:
-            myfile.write('\n'.join(new_theme_css))
+        try:
+            with open(target_css_file, "w") as myfile:
+                myfile.write('\n'.join(new_theme_css))
+        except Exception as ex:
+            # eq_log.log("Error while writing to templatefile: " + ex.message)
+            _logger.exception("Error while writing to templatefile: " + ex.message)
