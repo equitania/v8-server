@@ -1,5 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
+
+### 13.01.2017
+#### Version 1.1.14
+##### FIX
+- Korrektur: lokale Theme-Datei geleert
+
+
 ### 13.01.2017
 #### Version 1.1.13
 ##### CHG
