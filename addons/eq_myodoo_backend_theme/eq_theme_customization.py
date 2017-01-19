@@ -21,10 +21,15 @@
 
 from openerp import models, fields, api, _
 import re
+import openerp.tools as tools
 import os.path
 # from openerp.addons.eq_myodoo_backend_theme import eq_log
 import logging
 _logger = logging.getLogger(__name__)
+
+
+module_name = 'eq_myodoo_backend_theme'
+
 
 class eq_theme_customization(models.TransientModel):
     _name = 'eq.theme.customization'
@@ -48,7 +53,7 @@ class eq_theme_customization(models.TransientModel):
 
 
     @api.multi
-    def get_default_eq_ebid_data(self):
+    def get_default_eq_theme_data(self):
         """
         Load the values from ir.config_parameter
         @return:
@@ -86,7 +91,7 @@ class eq_theme_customization(models.TransientModel):
 
 
     @api.multi
-    def set_eq_ebid_data(self):
+    def set_eq_theme_data(self):
         """
         Write params back to ir.config_parameter and update the css for the theme
         @return:
@@ -110,6 +115,29 @@ class eq_theme_customization(models.TransientModel):
 
         self.update_data()
 
+    def _get_root_path(self):
+        """
+        Find the directory for the module
+        @return:
+        """
+        config_paths = tools.config['addons_path'].split(',')
+        found_addons_path = ''
+        for mod_path in config_paths:
+            # find directory path/eq_myodoo_backend_theme
+            mod_dir = os.path.join(mod_path, module_name)
+            if os.path.isdir(mod_dir):
+                found_addons_path = mod_path
+                print 'found directory for module:',found_addons_path
+                break
+
+            # if mod_path.ends_with('myodoo-server/addons'):
+            #     found_addons_path = mod_path
+
+        if not found_addons_path:
+            _logger.exception("Directory for module eq_myodoo_backendtheme could not be found")
+        return found_addons_path
+
+
     @api.model
     def update_data(self):
         """
@@ -117,7 +145,14 @@ class eq_theme_customization(models.TransientModel):
         @return:
         """
 
-        base_path = 'addons/eq_myodoo_backend_theme/static/src/css/'
+        base_path = self._get_root_path()
+        if not base_path:
+            base_path = 'addons/eq_myodoo_backend_theme/static/src/css/'
+        else:
+            base_path = os.path.join(base_path, 'eq_myodoo_backend_theme/static/src/css/')
+
+        # print 'base_path:', base_path
+
         template_file = base_path + "main-manual-theme-template.css"
         target_css_file = base_path + "main-manual-theme.css"
 
@@ -126,7 +161,6 @@ class eq_theme_customization(models.TransientModel):
         if not os.path.isfile(template_file):
             _logger.exception("Theme cannot be written to file: Templatefile not found: " + template_file)
             return
-
 
         if not os.path.isfile(target_css_file):
             _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
@@ -158,7 +192,6 @@ class eq_theme_customization(models.TransientModel):
                 if line.startswith('/*'):
                     continue
                 theme_settings[cur_param].append(line)
-
             else:
                 # Start tag found?
                 # Example: /* primarycolor  START * /

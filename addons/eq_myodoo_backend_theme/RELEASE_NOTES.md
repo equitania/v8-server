@@ -2,6 +2,12 @@
 
 
 ### 19.01.2017
+#### Version 1.1.17
+##### CHG
+- Umstellung auf absolute Pfade
+
+
+### 19.01.2017
 #### Version 1.1.16
 ##### CHG
 - Loggingnachrichten erweitert
