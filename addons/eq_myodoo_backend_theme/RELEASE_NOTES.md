@@ -1,6 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
 
+### 19.01.2017
+#### Version 1.1.16
+##### CHG
+- Loggingnachrichten erweitert
+
+
 ### 18.01.2017
 #### Version 1.1.15
 ##### CHG

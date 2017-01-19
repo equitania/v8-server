@@ -121,13 +121,15 @@ class eq_theme_customization(models.TransientModel):
         template_file = base_path + "main-manual-theme-template.css"
         target_css_file = base_path + "main-manual-theme.css"
 
-        # eq_log.log("Path to Templatefile: " + target_css_file)
-
         _logger.info("Path to Templatefile: " + target_css_file)
 
-        if not os.path.isfile(template_file) or not os.path.isfile(target_css_file):
-            # eq_log.log("Theme cannot be set: Templatefiles not found.")
-            _logger.exception("Theme cannot be written to file: Templatefiles not found.")
+        if not os.path.isfile(template_file):
+            _logger.exception("Theme cannot be written to file: Templatefile not found: " + template_file)
+            return
+
+
+        if not os.path.isfile(target_css_file):
+            _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
             return
 
         config_params_obj = self.env['ir.config_parameter']
@@ -139,7 +141,7 @@ class eq_theme_customization(models.TransientModel):
 
         if not file_content:
             # eq_log.log("Theme cannot be saved: no content in Templatefile found")
-            _logger.exception("Theme cannot be saved: no content in Templatefile found")
+            _logger.exception("Theme cannot be saved: no content in Templatefile '" + template_file + "' found")
             return
 
         replace_pattern = re.compile(re.escape('start'), re.I)
@@ -182,4 +184,4 @@ class eq_theme_customization(models.TransientModel):
                 myfile.write('\n'.join(new_theme_css))
         except Exception as ex:
             # eq_log.log("Error while writing to templatefile: " + ex.message)
-            _logger.exception("Error while writing to templatefile: " + ex.message)
+            _logger.exception("Error while writing to target templatefile " + target_css_file + '; ' + ex.message)
