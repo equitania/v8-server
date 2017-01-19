@@ -1,8 +1,12 @@
+#### 19.01.2017
+#### website_sale, 1.0.8
+##### CHG
+- Deutsche Übersetzung für "Transaction" zu "Ursprung" angepasst.
+
 #### 27.10.2016
 #### website_sale, 1.0.6
 ##### CHG
 - Deutsche Übersetzung für "Total To Pay:" in "Rechnungsbetrag:" geändert & eigene Release notes erstellt
-
 
 #### 18.07.2016
 #### website_sale, 1.0.4

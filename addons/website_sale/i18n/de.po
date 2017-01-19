@@ -967,7 +967,7 @@ msgstr "Summe:"
 #. module: website_sale
 #: field:sale.order,payment_tx_id:0
 msgid "Transaction"
-msgstr "Geschäftsvorfall"
+msgstr "Ursprung"
 
 #. module: website_sale
 #: field:product.attribute,type:0
