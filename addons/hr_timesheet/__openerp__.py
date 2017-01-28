@@ -22,7 +22,7 @@
 
 {
     'name': 'Time Tracking',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'category': 'Human Resources',
     'sequence': 23,
     'description': """

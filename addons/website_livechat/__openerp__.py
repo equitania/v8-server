@@ -2,7 +2,7 @@
     'name': 'Website Live Support',
     'category': 'Website',
     'summary': 'Chat With Your Website Visitors',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'description': """
 Odoo Website LiveChat
 ========================

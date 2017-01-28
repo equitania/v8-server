@@ -21,7 +21,7 @@
 
 {
     'name' : 'Portal',
-    'version': '1.0.3',
+    'version': '1.0.4',
     'depends': [
         'base',
         'share',

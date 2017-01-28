@@ -22,7 +22,7 @@
 
 {
     'name': 'Recruitment Process',
-    'version': '1.0.3',
+    'version': '1.0.4',
     'category': 'Human Resources',
     'sequence': 25,
     'summary': 'Jobs, Recruitment, Applications, Job Interviews, Surveys',

@@ -5,7 +5,7 @@
     'category': 'Hidden',
     'summary': "Sell Your Event's Tickets",
     'website': 'https://www.odoo.com/page/events',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'description': """
 Online Event's Tickets
 ======================

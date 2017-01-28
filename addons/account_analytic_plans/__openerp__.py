@@ -21,7 +21,7 @@
 
 {
     'name': 'Multiple Analytic Plans',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Accounting & Finance',
     'description': """
 This module allows to use several analytic plans according to the general journal.

@@ -22,7 +22,7 @@
 
 {
     'name': 'Products & Pricelists',
-    'version': '1.1.7',
+    'version': '1.1.8',
     'author': 'OpenERP SA',
     'category': 'Sales Management',
     'depends': ['base', 'decimal_precision', 'mail', 'report'],

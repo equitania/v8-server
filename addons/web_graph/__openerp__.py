@@ -12,7 +12,7 @@ Graph Views for Web Client.
     * Features: download as PNG or CSV, browse data grid, switch orientation
     * Unlimited "Group By" levels (not stacked), two cross level analysis (stacked)
 """,
-    'version': '3.0.3',
+    'version': '3.0.4',
     'depends': ['web'],
     'data' : [
         'views/web_graph.xml',
