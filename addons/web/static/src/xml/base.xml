@@ -691,7 +691,7 @@
     <t t-set="children" t-value="record[children_field]"/>
     <t t-set="class" t-value="children and children.length ? 'treeview-tr' : 'treeview-td'"/>
     <t t-set="rank" t-value="'oe-treeview-first'"/>
-    <t t-set="style" t-value="'background-position: ' + 19*(level) + 'px; padding-left: ' + (4 + 19*(level)) + 'px;'"/>
+    <t t-set="style" t-value="'background-position: ' + 19*(level) + 'px; padding-left: ' + (4 + 19*(level)) + 'px !important;'"/>
 
     <td t-foreach="fields_view" t-as="field"
         t-if="!field.attrs.modifiers.tree_invisible"

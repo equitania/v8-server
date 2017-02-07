@@ -1,3 +1,8 @@
+#### 07.02.2017
+#### web, 1.10.3
+##### FIX
+- Die Einrückung der BoM - Treeview war nicht korrekt.   
+
 #### 15.12.2016
 #### mrp, 1.1.5
 ##### ADD/CHG
