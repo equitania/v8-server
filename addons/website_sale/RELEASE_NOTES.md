@@ -1,3 +1,8 @@
+#### 13.02.2017
+#### website_sale, 1.0.10
+##### IMP
+- Erweiterung von suggested_products_list um ID, damit wir es im eq_website_customerportal referenzieren können
+
 #### 19.01.2017
 #### website_sale, 1.0.8
 ##### CHG
