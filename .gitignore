@@ -33,4 +33,5 @@ install/win32/meta.py
 /src/
 /.settings/
 
-
+# PyCharm
+.idea/
