@@ -1031,6 +1031,10 @@ class mail_thread(osv.AbstractModel):
                                 ('message_id', '=', in_reply_to),
                                 '!', ('message_id', 'ilike', 'reply_to')
                             ], limit=1, context=context)
+
+            # mail_message_ids = mail_msg_obj.search(cr, uid, [
+            #     ('message_id', '=', in_reply_to)], limit=1, context=context)
+
             if mail_message_ids:
                 mail_message = mail_msg_obj.browse(cr, uid, mail_message_ids[0], context=context)
                 route = self.message_route_verify(cr, uid, message, message_dict,
@@ -1043,6 +1047,51 @@ class mail_thread(osv.AbstractModel):
                     return [route]
                 elif route is False:
                     return []
+
+
+        #EQUITANIA: Suche in partner und leads nach der E-Mailadresse
+        #_find_partner_from_emails: gibt teilweise [False] zurück, falls Suche kein  Ergebnis zurückliefert
+        if email_from:
+            partner_ids = self._find_partner_from_emails(cr, uid, 0, [email_from], model='res.partner', context=context)
+            if partner_ids and partner_ids[0]:
+                thread_id = partner_ids[0]
+                message_dict['author_id'] = thread_id
+                model = 'res.partner'
+                route = self.message_route_verify(cr, uid, message, message_dict,
+                                                  (model, thread_id, custom_values, uid, None),
+                                                  update_author=True, assert_model=True, create_fallback=True,
+                                                  allow_private=True, context=context)
+
+                if route:
+                    _logger.info(
+                        'Routing mail from %s to %s with Message-Id %s: mail to partner: %s, custom_values: %s, uid: %s',
+                        email_from, email_to, message_id, thread_id, custom_values, uid)
+                    return [route]
+            else:
+                #Falls mail im Lead gefunden wurde: Partner erstellen und mit Lead verlinken
+                lead_ids = self.pool.get('crm.lead').search(cr, uid, [('email_from','=',email_from)], context=context)
+                if lead_ids and lead_ids[0]:
+                    lead_id = lead_ids[0]
+
+                    new_partner_id = self.eq_create_partner_from_mail(cr, uid, email_from, context=context)
+                    if new_partner_id:
+                        thread_id = new_partner_id
+                        message_dict['author_id'] = new_partner_id
+                        model = 'res.partner'
+                        self.pool.get('crm.lead').write(cr, uid, lead_id, {'partner_id':new_partner_id}, context=context)
+
+                        route = self.message_route_verify(cr, uid, message, message_dict,
+                                                          (model, thread_id, custom_values, uid, None),
+                                                          update_author=True, assert_model=True, create_fallback=True,
+                                                          allow_private=True, context=context)
+                        if route:
+                            _logger.info(
+                                'Routing mail from %s to %s with Message-Id %s: mail to lead: %s, custom_values: %s, uid: %s',
+                                email_from, email_to, message_id, thread_id, custom_values, uid)
+                            return [route]
+
+        #Ende EQUITANIA
+
 
         # no route found for a matching reference (or reply), so parent is invalid
         message_dict.pop('parent_id', None)
@@ -1081,6 +1130,27 @@ class mail_thread(osv.AbstractModel):
                         routes.append(route)
                 return routes
 
+
+
+        #Equitania: E-Mail nicht in Partnern und Leads -> Partner erzeugen
+        if email_from:
+            new_partner_id = self.eq_create_partner_from_mail(cr, uid, email_from, context=context)
+            if new_partner_id:
+                model = 'res.partner'
+                thread_id = new_partner_id
+
+                route = self.message_route_verify(cr, uid, message, message_dict,
+                                                  (model, thread_id, custom_values, uid, None),
+                                                  update_author=True, assert_model=True, create_fallback=True,
+                                                  allow_private=True, context=context)
+
+                if route:
+                    _logger.info(
+                        'Routing mail from %s to %s with Message-Id %s: new partner for mail created: %s, custom_values: %s, uid: %s',
+                        email_from, email_to, message_id, thread_id, custom_values, uid)
+                    return [route]
+        #Ende Equitania
+
         # 5. Fallback to the provided parameters, if they work
         if not thread_id:
             # Legacy: fallback to matching [ID] in the Subject
@@ -1092,13 +1162,15 @@ class mail_thread(osv.AbstractModel):
             except:
                 thread_id = False
         route = self.message_route_verify(cr, uid, message, message_dict,
-                        (fallback_model, thread_id, custom_values, uid, None),
-                        update_author=True, assert_model=True, context=context)
+                                          (fallback_model, thread_id, custom_values, uid, None),
+                                          update_author=True, assert_model=True, context=context)
         if route:
             _logger.info(
                 'Routing mail from %s to %s with Message-Id %s: fallback to model:%s, thread_id:%s, custom_values:%s, uid:%s',
                 email_from, email_to, message_id, fallback_model, thread_id, custom_values, uid)
             return [route]
+
+
 
         # ValueError if no routes found and if no bounce occured
         raise ValueError(
@@ -1106,6 +1178,33 @@ class mail_thread(osv.AbstractModel):
                 'Create an appropriate mail.alias or force the destination model.' %
                 (email_from, email_to, message_id)
             )
+
+    def eq_create_partner_from_mail(self, cr, uid, email, context=None):
+        """
+        Equitania
+        Hilfsmethode für die Erstellung eines Partners über die E-Mailadresse
+        @param cr:
+        @param uid:
+        @param email:
+        @param context:
+        @return:
+        """
+        partner_obj = self.pool.get('res.partner')
+        mail_part = email
+        mail_part_res = tools.email_split(email)
+        if mail_part_res:
+            mail_part = mail_part_res[0]
+
+        name_part = email
+        if '<' in email:
+            name_part = email.split('<')[0].strip()
+
+        new_partner = {
+            'email': mail_part,
+            'name': name_part
+        }
+        new_partner_id = partner_obj.create(cr, uid, new_partner, context=context)
+        return new_partner_id
 
     def message_route_process(self, cr, uid, message, message_dict, routes, context=None):
         # postpone setting message_dict.partner_ids after message_post, to avoid double notifications
