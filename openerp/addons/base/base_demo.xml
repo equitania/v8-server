@@ -3,29 +3,29 @@
     <data noupdate="1">
 
         <record id="partner_demo" model="res.partner">
-            <field name="name">Demo User</field>
+            <field name="name">Demo Benutzer</field>
             <field name="company_id" ref="main_company"/>
             <field name="customer" eval="False"/>
-            <field name="email">demo@yourcompany.example.com</field>
-            <field name="street">Avenue des Dessus-de-Lives, 2</field>
-            <field name="city">Namur (Loyers)</field>
-            <field name="zip">5101</field>
-            <field name="country_id" ref="be"/>
+            <field name="email">demo@ihre-firma-beispiel.de</field>
+            <field name="street">Weiherstrasse 13</field>
+            <field name="city">Pforzheim</field>
+            <field name="zip">75173</field>
+            <field name="country_id" ref="de"/>
         </record>
 
         <record id="main_partner" model="res.partner">
-            <field name="name">YourCompany</field>
-            <field name="street">1725 Slough Ave.</field>
-            <field name="city">Scranton</field>
-            <field name="zip">18540</field>
-            <field name="phone">+1 555 123 8069</field>
-            <field name="email">info@yourcompany.example.com</field>
-            <field name="website">www.example.com</field>
+            <field name="name">Ihre Firma</field>
+            <field name="street">Weiherstrasse 13</field>
+            <field name="city">Pforzheim</field>
+            <field name="zip">75173</field>
+            <field name="phone">+49 7231 16604 0</field>
+            <field name="email">info@ihre-firma-beispiel.de</field>
+            <field name="website">www.myodoo.de</field>
             <field name="image" type="base64" file="base/static/img/main_partner-image.png"/>
         </record>
 
         <record id="main_company" model="res.company">
-            <field name="name">YourCompany</field>
+            <field name="name">IhrUnternehmen</field>
         </record>
 
 
@@ -41,14 +41,14 @@ Mr Demo</field>
         </record>
 
         <record model="res.partner" id="base.partner_root">
-            <field name="email">admin@yourcompany.example.com</field>
-            <field name="tz">Europe/Brussels</field>
+            <field name="email">admin@ihre-firma-beispiel.de</field>
+            <field name="tz">Europe/Berlin</field>
             <field name="image" type="base64" file="base/static/img/partner_root-image.jpg"/>
         </record>
 
         <!-- new rate for demo transactions in multi currency -->
         <record id="rateUSDbis" model="res.currency.rate">
-            <field name="rate">1.5289</field>
+            <field name="rate">1.08</field>
             <field name="currency_id" ref="USD"/>
             <field eval="time.strftime('%Y-06-06')" name="name"/>
         </record>

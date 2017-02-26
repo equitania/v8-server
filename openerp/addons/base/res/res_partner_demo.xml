@@ -66,31 +66,31 @@
         -->
 
         <record id="res_partner_1" model="res.partner">
-            <field name="name">ASUSTeK</field>
+            <field name="name">Equitania Software GmbH</field>
             <field eval="[(6, 0, [ref('res_partner_category_13'), ref('res_partner_category_12')])]" name="category_id"/>
             <field name="supplier">1</field>
             <field eval="0" name="customer"/>
             <field name="is_company">1</field>
-            <field name="city">Taipei</field>
-            <field name="zip">106</field>
-            <field name="country_id" ref="base.tw"/>
-            <field name="street">31 Hong Kong street</field>
-            <field name="email">asusteK@yourcompany.example.com</field>
-            <field name="phone">(+886) (02) 4162 2023</field>
-            <field name="website">http://www.asustek.com</field>
+            <field name="city">Pforzheim</field>
+            <field name="zip">75173</field>
+            <field name="country_id" ref="base.de"/>
+            <field name="street">Weiherstrasse 13</field>
+            <field name="email">info@equitania.de</field>
+            <field name="phone">+49 7231 16604 0</field>
+            <field name="website">http://www.equitania.de</field>
             <field name="image" type="base64" file="base/static/img/res_partner_1-image.jpg"/>
         </record>
         <record id="res_partner_2" model="res.partner">
-            <field name="name">Agrolait</field>
-            <field eval="[(6, 0, [ref('base.res_partner_category_7'), ref('base.res_partner_category_9')])]" name="category_id"/>
+            <field name="name">CMC Klebetechnik GmbH</field>
+            <field eval="[(6, 0, [ref('base.res_partner_category_14'), ref('base.res_partner_category_14')])]" name="category_id"/>
             <field name="is_company">1</field>
-            <field name="city">Wavre</field>
-            <field name="zip">1300</field>
-            <field name="country_id" ref="base.be"/>
-            <field name="street">69 rue de Namur</field>
-            <field name="email">agrolait@yourcompany.example.com</field>
-            <field name="phone">+32 10 588 558</field>
-            <field name="website">http://www.agrolait.com</field>
+            <field name="city">Frankenthal</field>
+            <field name="zip">67227</field>
+            <field name="country_id" ref="base.de"/>
+            <field name="street">Rudolf-Diesel-Straße 4</field>
+            <field name="email">info@cmc.de</field>
+            <field name="phone">+49 6233 872 300</field>
+            <field name="website">http://www.cmc.de</field>
             <field name="image" type="base64" file="base/static/img/res_partner_2-image.jpg"/>
         </record>
         <record id="res_partner_3" model="res.partner">
@@ -455,13 +455,28 @@
             <field name="website">http://www.federal.com</field>
         </record>
         <record id="res_partner_address_1" model="res.partner">
-            <field name="name">Tang Tsui</field>
+            <field name="name">Martin Schmid</field>
             <field name="parent_id" eval="ref('res_partner_1')"/>
             <field name="use_parent_address">1</field>
-            <field name="function">Service Manager</field>
-            <field name="email">tang@asustek.com</field>
+            <field name="function">Geschäftsführer</field>
+            <field name="email">m.schmid@equitania.de</field>
+            <field name="phone">+49 7231 16604 120</field>
+            <field name="mobile">+49 175 5730590</field>
             <field name="supplier">1</field>
             <field eval="0" name="customer"/>
+            <field name="image" type="base64" file="base/static/img/partner_root-image.jpg"/>
+        </record>
+        <record id="res_partner_address_1" model="res.partner">
+            <field name="name">Uwe Kinkel</field>
+            <field name="parent_id" eval="ref('res_partner_1')"/>
+            <field name="use_parent_address">1</field>
+            <field name="function">Leiter Vertrieb</field>
+            <field name="email">u.kinkel@equitania.de</field>
+            <field name="phone">+49 2761 969596</field>
+            <field name="mobile">+49 173 8935500</field>
+            <field name="supplier">1</field>
+            <field eval="0" name="customer"/>
+            <field name="image" type="base64" file="base/static/img/uwe_kinkel.jpg"/>
         </record>
         <record id="res_partner_address_2" model="res.partner">
             <field name="name">Joseph Walters</field>
