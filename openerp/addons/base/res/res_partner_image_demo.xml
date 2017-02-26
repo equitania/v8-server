@@ -3,11 +3,11 @@
     <data noupdate="0">
 
         <record id="base.res_partner_address_1" model="res.partner">
-            <field name="image" type="base64" file="base/static/img/res_partner_address_1-image.png"/>
+            <field name="image" type="base64" file="base/static/img/partner_root-image.jpg"/>
         </record>
 
         <record id="base.res_partner_address_2" model="res.partner">
-            <field name="image" type="base64" file="base/static/img/res_partner_address_2-image.png"/>
+            <field name="image" type="base64" file="base/static/img/uwe_kinkel.jpg"/>
         </record>
 
         <record id="base.res_partner_address_4" model="res.partner">

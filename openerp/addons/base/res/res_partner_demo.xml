@@ -68,8 +68,8 @@
         <record id="res_partner_1" model="res.partner">
             <field name="name">Equitania Software GmbH</field>
             <field eval="[(6, 0, [ref('res_partner_category_13'), ref('res_partner_category_12')])]" name="category_id"/>
-            <field name="supplier">1</field>
-            <field eval="0" name="customer"/>
+            <field eval="1" name="customer"/>
+            <field eval="1" name="supplier"/>
             <field name="is_company">1</field>
             <field name="city">Pforzheim</field>
             <field name="zip">75173</field>
@@ -463,10 +463,9 @@
             <field name="phone">+49 7231 16604 120</field>
             <field name="mobile">+49 175 5730590</field>
             <field name="supplier">1</field>
-            <field eval="0" name="customer"/>
-            <field name="image" type="base64" file="base/static/img/partner_root-image.jpg"/>
+            <field eval="1" name="customer"/>
         </record>
-        <record id="res_partner_address_1" model="res.partner">
+        <record id="res_partner_address_2" model="res.partner">
             <field name="name">Uwe Kinkel</field>
             <field name="parent_id" eval="ref('res_partner_1')"/>
             <field name="use_parent_address">1</field>
@@ -477,15 +476,6 @@
             <field name="supplier">1</field>
             <field eval="0" name="customer"/>
             <field name="image" type="base64" file="base/static/img/uwe_kinkel.jpg"/>
-        </record>
-        <record id="res_partner_address_2" model="res.partner">
-            <field name="name">Joseph Walters</field>
-            <field name="parent_id" eval="ref('res_partner_1')"/>
-            <field name="use_parent_address">1</field>
-            <field name="function">Store Manager</field>
-            <field name="email">joseph.walters@asustek.com</field>
-            <field name="supplier">1</field>
-            <field eval="0" name="customer"/>
         </record>
         <record id="res_partner_address_7" model="res.partner">
             <field name="name">Richard Ellis</field>
