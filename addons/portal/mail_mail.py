@@ -33,9 +33,6 @@ class mail_mail(osv.Model):
             - partner is not an user: signup_url
             - partner is an user: fallback on classic URL
         """
-        #print "****** check ********"
-        return ""
-        
         if context is None:
             context = {}
         partner_obj = self.pool.get('res.partner')

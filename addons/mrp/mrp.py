@@ -588,9 +588,8 @@ class mrp_production(osv.osv):
             domain=[('state', 'in', ('done', 'cancel'))], readonly=True),
         'product_lines': fields.one2many('mrp.production.product.line', 'production_id', 'Scheduled goods',
             readonly=True),
-        #'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation',
-        #    readonly=True, states={'draft': [('readonly', False)]}),
-        'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation'),
+        'workcenter_lines': fields.one2many('mrp.production.workcenter.line', 'production_id', 'Work Centers Utilisation',
+            readonly=True, states={'draft': [('readonly', False)]}),
         'state': fields.selection(
             [('draft', 'New'), ('cancel', 'Cancelled'), ('confirmed', 'Awaiting Raw Materials'),
                 ('ready', 'Ready to Produce'), ('in_production', 'Production Started'), ('done', 'Done')],
@@ -785,7 +784,8 @@ class mrp_production(osv.osv):
         proc_obj = self.pool.get("procurement.order")
         procs = proc_obj.search(cr, uid, [('production_id', 'in', ids)], context=context)
         if procs:
-            proc_obj.message_post(cr, uid, procs, body=_('Manufacturing order cancelled.'), context=context)
+            for proc in procs:
+                proc_obj.message_post(cr, uid, proc, body=_('Manufacturing order cancelled.'), context=context)
             proc_obj.write(cr, uid, procs, {'state': 'exception'}, context=context)
         return True
 
