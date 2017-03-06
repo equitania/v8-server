@@ -1,5 +1,10 @@
 ## Modul website
 
+#### 06.03.2017
+#### Version 1.1.5
+##### CHG
+- Eintrag alternate von den HTML-Seiten entfern
+
 #### 30.11.2016
 #### Version 1.1.4
 ##### CHG
