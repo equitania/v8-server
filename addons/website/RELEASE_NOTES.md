@@ -5,6 +5,10 @@
 ##### CHG
 - Eintrag alternate von den HTML-Seiten entfern
 
+#####Wichtig - vor dem Update das ausführen: <br/>
+delete  from ir_attachment where url like '%sitemap.xml%'
+
+
 #### 30.11.2016
 #### Version 1.1.4
 ##### CHG
