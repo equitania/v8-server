@@ -1,8 +1,12 @@
+#### 16.03.2017
+#### mrp, 1.1.8
+##### CHG
+- Feld "Referenz" (code) auf size=64 (vorher 16) geändert.
+
 #### 18.08.2016
 #### mail, 1.0.7
 ##### CHG
 - Anpassungen für die Verarbeitung eingehender E-Mails
-
 
 #### 07.02.2017
 #### web, 1.10.3
