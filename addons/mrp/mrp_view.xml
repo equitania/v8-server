@@ -516,23 +516,24 @@
             </field>
         </record>
 
-        <record id="mrp_bom_form_action2" model="ir.actions.act_window">
-            <field name="name">Bill of Material Components</field>
-            <field name="type">ir.actions.act_window</field>
-            <field name="res_model">mrp.bom.line</field>
-            <field name="view_type">tree</field>
-            <field name="view_mode">tree</field>
-            <field name="view_id" eval="False"/> <!-- Force empty -->
-            <field name="help" type="html">
-              <p class="oe_view_nocontent_create">
-                Click to add a component to a bill of material.
-              </p><p>
-                Bills of materials components are components and by-products
-                used to create master bills of materials.  Use this menu to
-                search in which BoM a specific component is used.
-              </p>
-            </field>
-        </record>
+        <!-- Deaktivierung des Menüpunkts "Stückliste Komponenten" 27.03.2017-->
+        <!-- <record id="mrp_bom_form_action2" model="ir.actions.act_window">-->
+            <!--<field name="name">Bill of Material Components</field>-->
+            <!--<field name="type">ir.actions.act_window</field>-->
+            <!--<field name="res_model">mrp.bom.line</field>-->
+            <!--<field name="view_type">tree</field>-->
+            <!--<field name="view_mode">tree</field>-->
+            <!--<field name="view_id" eval="False"/> &lt;!&ndash; Force empty &ndash;&gt;-->
+            <!--<field name="help" type="html">-->
+              <!--<p class="oe_view_nocontent_create">-->
+                <!--Click to add a component to a bill of material.-->
+              <!--</p><p>-->
+                <!--Bills of materials components are components and by-products-->
+                <!--used to create master bills of materials.  Use this menu to-->
+                <!--search in which BoM a specific component is used.-->
+              <!--</p>-->
+            <!--</field>-->
+        <!--</record>-->
 
         <record id="product_template_search_view_procurment" model="ir.ui.view">
              <field name="name">product.template.search.bom</field>
@@ -581,11 +582,11 @@
             id="menu_mrp_product_form" 
             action="product_template_action"
             parent="menu_mrp_bom"/>
-        <menuitem
-            action="mrp_bom_form_action2"
-            id="menu_mrp_bom_form_action2"
-            parent="menu_mrp_configuration"
-            sequence="20"/>
+        <!--<menuitem-->
+            <!--action="mrp_bom_form_action2"-->
+            <!--id="menu_mrp_bom_form_action2"-->
+            <!--parent="menu_mrp_configuration"-->
+            <!--sequence="20"/>-->
 
         <record id="action2" model="ir.actions.act_window">
             <field name="name">Bill of Materials Structure</field>

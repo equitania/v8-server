@@ -1,4 +1,9 @@
 #### 27.03.2017
+#### mrp, 1.1.10
+##### CHG
+- Menüpunkt "Stückliste Komponenten" wurde entfernt (auskommentiert).
+
+#### 27.03.2017
 #### mrp, 1.1.9
 ##### CHG
 - Anpassung Übersetzungen.
