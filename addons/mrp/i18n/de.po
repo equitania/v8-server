@@ -1111,7 +1111,7 @@ msgstr "Arbeitsplatz"
 #: field:mrp.routing,name:0 field:mrp.routing.workcenter,name:0
 #: view:website:mrp.report_mrporder
 msgid "Name"
-msgstr "Bezeichnung"
+msgstr "Tätigkeit"
 
 #. module: mrp
 #: selection:mrp.production,state:0
@@ -1618,7 +1618,7 @@ msgstr "Ressource"
 #. module: mrp
 #: model:ir.ui.menu,name:mrp.menu_view_resource_calendar_leaves_search_mrp
 msgid "Resource Leaves"
-msgstr "Abwesenheiten"
+msgstr "Standzeiten"
 
 #. module: mrp
 #: model:ir.ui.menu,name:mrp.menu_pm_resources_config
@@ -2175,7 +2175,7 @@ msgstr "Arbeitsplätzeauslastung"
 #. module: mrp
 #: view:mrp.routing:mrp.mrp_routing_form_view
 msgid "Work Center Operations"
-msgstr "Arbeitsplatzvorgänge"
+msgstr "Arbeitsplan"
 
 #. module: mrp
 #: field:mrp.workcenter,product_id:0
@@ -2209,7 +2209,7 @@ msgstr "Arbeitsplätze"
 #. module: mrp
 #: field:mrp.production,workcenter_lines:0
 msgid "Work Centers Utilisation"
-msgstr "Arbeitsplätzeauslastung"
+msgstr "Tätigkeit"
 
 #. module: mrp
 #: code:addons/mrp/report/price.py:132
@@ -2227,13 +2227,13 @@ msgstr "Arbeitskosten %s %s"
 #: model:ir.model,name:mrp.model_mrp_production_workcenter_line
 #: field:mrp.production.workcenter.line,name:0
 msgid "Work Order"
-msgstr "Arbeitsauftrag"
+msgstr "Tätigkeit"
 
 #. module: mrp
 #: view:mrp.production:mrp.mrp_production_form_view
 #: view:website:mrp.report_mrporder
 msgid "Work Orders"
-msgstr "Arbeitsaufträge"
+msgstr "Fertigungstätigkeit"
 
 #. module: mrp
 #: view:website:mrp.report_mrporder
@@ -2243,7 +2243,7 @@ msgstr "Arbeitsplatz"
 #. module: mrp
 #: model:ir.ui.menu,name:mrp.menu_view_resource_calendar_search_mrp
 msgid "Working Time"
-msgstr "Arbeitszeit"
+msgstr "Fertigungszeit"
 
 #. module: mrp
 #: help:mrp.config.settings,module_mrp_byproduct:0
