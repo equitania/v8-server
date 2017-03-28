@@ -348,7 +348,7 @@
         <field name="model">mrp.production</field>
         <field name="arch" type="xml">
             <field name="date_finished" position="after">
-                <field name="allow_reorder"/>
+                <field name="allow_reorder" invisible="1"/>
             </field>
         </field>
     </record>

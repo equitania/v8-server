@@ -1,3 +1,13 @@
+#### 28.03.2017
+#### mrp, 1.1.11
+##### CHG
+- Übersetzungen angepasst.
+
+#### 28.03.2017
+#### mrp_operations, 1.1.2
+##### CHG
+- Übersetzung angepasst + Feld "Zwingende Abfolge" auf unsichtbar gesetzt.
+
 #### 27.03.2017
 #### mrp, 1.1.10
 ##### CHG

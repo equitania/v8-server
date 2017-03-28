@@ -618,7 +618,7 @@ msgstr "Arbeitsaufträge-Bericht"
 #: view:mrp.production.workcenter.line:mrp_operations.view_mrp_production_workcenter_form_view_filter
 #: view:mrp.workorder:mrp_operations.view_report_mrp_workorder_graph
 msgid "Work Orders"
-msgstr "Arbeitsaufträge"
+msgstr "Fertigungstätigkeiten"
 
 #. module: mrp_operations
 #: model:ir.ui.menu,name:mrp_operations.menu_mrp_production_wc_action_planning
