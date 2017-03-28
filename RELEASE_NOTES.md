@@ -1,4 +1,9 @@
 #### 28.03.2017
+#### mrp, 1.1.12
+##### CHG
+- Übersetzungen  "Anzahl Zyklen" in "Anzahl Teile".
+
+#### 28.03.2017
 #### mrp, 1.1.11
 ##### CHG
 - Übersetzungen angepasst.

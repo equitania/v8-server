@@ -1127,7 +1127,7 @@ msgstr "Es gibt keine Stückliste für dieses Produkt!"
 #. module: mrp
 #: view:website:mrp.report_mrporder
 msgid "No. Of Cycles"
-msgstr "Anzahl Zyklen"
+msgstr "Anzahl Teile"
 
 #. module: mrp
 #: view:website:mrp.report_mrporder
@@ -1160,7 +1160,7 @@ msgstr "Notizen"
 #: field:mrp.routing.workcenter,cycle_nbr:0
 #: field:report.workcenter.load,cycle:0
 msgid "Number of Cycles"
-msgstr "Anzahl Zyklen"
+msgstr "Anzahl Teile"
 
 #. module: mrp
 #: field:mrp.production.workcenter.line,hour:0
