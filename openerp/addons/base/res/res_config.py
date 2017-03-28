@@ -537,7 +537,7 @@ class res_config_settings(osv.osv_memory, res_config_module_installation_mixin):
             context = {}
 
         context = dict(context, active_test=False)
-        if uid != SUPERUSER_ID and not self.pool['res.users'].has_group(cr, uid, 'base.group_erp_manager') and not self.pool['res.users'].has_group(cr, uid, 'equitania.group_managed_admin'):
+        if uid != SUPERUSER_ID and not self.pool['res.users'].has_group(cr, uid, 'base.group_erp_manager'):
             raise openerp.exceptions.AccessError(_("Only administrators can change the settings"))
 
         ir_values = self.pool['ir.values']
