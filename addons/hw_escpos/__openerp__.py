@@ -22,7 +22,7 @@
 
 {
     'name': 'ESC/POS Hardware Driver',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'category': 'Hardware Drivers',
     'sequence': 6,
     'website': 'https://www.odoo.com/page/point-of-sale',

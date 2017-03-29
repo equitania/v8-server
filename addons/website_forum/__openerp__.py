@@ -23,7 +23,7 @@
     'name': 'Forum',
     'category': 'Website',
     'summary': 'Forum, FAQ, Q&A',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'description': """
 Ask questions, get answers, no distractions
         """,

@@ -22,7 +22,7 @@
 
 {
     'name': 'Warning Messages and Alerts',
-    'version': '1.0.1',
+    'version': '1.0.2',
     'category': 'Tools',
     'description': """
 Module to trigger warnings in OpenERP objects.

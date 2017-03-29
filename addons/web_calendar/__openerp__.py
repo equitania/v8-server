@@ -7,7 +7,7 @@ OpenERP Web Calendar view.
 
 """,
     'author': 'OpenERP SA, Valentino Lab (Kalysto)',
-    'version': '2.0.2',
+    'version': '2.0.3',
     'depends': ['web'],
     'data' : [
         'views/web_calendar.xml',
