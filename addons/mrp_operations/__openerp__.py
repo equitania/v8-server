@@ -22,7 +22,7 @@
 
 {
     'name': 'Manufacturing Operations',
-    'version': '1.0.2',
+    'version': '1.0.3',
     'category': 'Manufacturing',
     'description': """
 This module adds state, date_start, date_stop in manufacturing order operation lines (in the 'Work Orders' tab).

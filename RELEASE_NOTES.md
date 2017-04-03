@@ -1,3 +1,8 @@
+#### 03.04.2017
+#### mrp_operations, 1.0.3
+##### CHG
+- Feld 'date_planned_end' als store=True definiert. 
+
 #### 28.03.2017
 #### mrp, 1.1.12
 ##### CHG
