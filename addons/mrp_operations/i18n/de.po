@@ -176,7 +176,7 @@ msgstr "Dauer"
 #: field:mrp.production.workcenter.line,date_planned_end:0
 #: field:mrp_operations.operation,date_finished:0
 msgid "End Date"
-msgstr "Enddatum"
+msgstr "Fertigstellungszeitpunkt"
 
 #. module: mrp_operations
 #: code:addons/mrp_operations/mrp_operations.py:122

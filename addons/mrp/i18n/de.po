@@ -1166,7 +1166,7 @@ msgstr "Anzahl Teile"
 #: field:mrp.production.workcenter.line,hour:0
 #: field:mrp.routing.workcenter,hour_nbr:0 field:report.workcenter.load,hour:0
 msgid "Number of Hours"
-msgstr "Gesamte Stunden"
+msgstr "Gesamtstunden Netto"
 
 #. module: mrp
 #: help:mrp.routing.workcenter,cycle_nbr:0

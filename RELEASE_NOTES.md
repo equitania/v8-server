@@ -1,3 +1,13 @@
+#### 04.04.2017
+#### mrp, 1.1.13
+##### CHG
+- Übersetzung angepasst
+
+#### 04.04.2017
+#### mrp_operations, 1.0.4
+##### CHG
+- Übersetzung angepasst
+
 #### 03.04.2017
 #### mrp_operations, 1.0.3
 ##### CHG
