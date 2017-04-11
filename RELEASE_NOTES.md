@@ -1,3 +1,8 @@
+#### 11.04.2017
+#### product, 1.1.9
+##### CHG
+- Übersetzung angepasst "Mininale Menge" in "Mindestbestellmenge"
+
 #### 04.04.2017
 #### mrp, 1.1.13
 ##### CHG
