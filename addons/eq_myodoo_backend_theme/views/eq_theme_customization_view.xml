@@ -82,6 +82,9 @@
 
                             <!--</group>-->
                     </group>
+					<group>
+                    <field name="eq_backend_theme_log" class="oe inline"/>
+					</group>
 				</form>
 
 			</field>

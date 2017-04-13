@@ -4,6 +4,13 @@
 ### 19.01.2017
 #### Version 1.1.17
 ##### CHG
+- Loggingnachrichten erweitert werden nun in Odoo-Datenbank unter "Protokollierung" geschrieben.
+- Flag "Backend Theme Log" eingebaut (Unter Einstellungen -> Grundeinstellungen -> Button "Backend-Theme konfigurieren" betätigen -> ganz unten im neuen Fenster)
+- Errors werden zunächst immer ausgegeben
+
+### 19.01.2017
+#### Version 1.1.17
+##### CHG
 - Umstellung auf absolute Pfade
 
 
