@@ -77,12 +77,13 @@
             <field name="street">Weiherstrasse 13</field>
             <field name="email">info@equitania.de</field>
             <field name="phone">+49 7231 16604 0</field>
+            <field name="fax">+49 7231 16604 200</field>
             <field name="website">http://www.equitania.de</field>
             <field name="image" type="base64" file="base/static/img/res_partner_1-image.jpg"/>
         </record>
         <record id="res_partner_2" model="res.partner">
             <field name="name">CMC Klebetechnik GmbH</field>
-            <field eval="[(6, 0, [ref('base.res_partner_category_14'), ref('base.res_partner_category_14')])]" name="category_id"/>
+            <field eval="[(6, 0, [ref('base.res_partner_category_15'), ref('base.res_partner_category_14')])]" name="category_id"/>
             <field name="is_company">1</field>
             <field name="city">Frankenthal</field>
             <field name="zip">67227</field>
@@ -90,22 +91,23 @@
             <field name="street">Rudolf-Diesel-Straße 4</field>
             <field name="email">info@cmc.de</field>
             <field name="phone">+49 6233 872 300</field>
+            <field name="fax">+49 6233 872 390</field>
             <field name="website">http://www.cmc.de</field>
             <field name="image" type="base64" file="base/static/img/res_partner_2-image.jpg"/>
         </record>
         <record id="res_partner_3" model="res.partner">
-            <field name="name">China Export</field>
+            <field name="name">ID Ausweissysteme GmbH</field>
             <field name="supplier">1</field>
-            <field eval="[(6, 0, [ref('res_partner_category_8'), ref('res_partner_category_14')])]" name="category_id"/>
+            <field eval="[(6, 0, [ref('res_partner_category_15'), ref('res_partner_category_16')])]" name="category_id"/>
             <field name="is_company">1</field>
-            <field name="city">Shanghai</field>
-            <field name="zip">200000</field>
-            <field model="res.country" name="country_id" search="[('name','=','China')]"/>
-            <field name="country_id" ref="base.cn"/>
-            <field name="street">52 Chop Suey street</field>
-            <field name="email">chinaexport@yourcompany.example.com</field>
-            <field name="phone">+86 21 6484 5671</field>
-            <field name="website">http://www.chinaexport.com/</field>
+            <field name="city">Düsseldorf</field>
+            <field name="zip">40599</field>
+            <field name="country_id" ref="base.de"/>
+            <field name="street">Kappeler Straße 145</field>
+            <field name="email">info@idausweissysteme.com</field>
+            <field name="phone">+49 211 97756-0</field>
+            <field name="fax">+49 211 97756-0</field>
+            <field name="website">http://www.idausweissysteme.com/</field>
             <field name="image" type="base64" file="base/static/img/res_partner_3-image.png"/>
         </record>
         
