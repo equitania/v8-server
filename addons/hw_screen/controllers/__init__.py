@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2004-2010 Tiny SPRL (<http://tiny.be>).
+#    Copyright (C) 2004-2015 Tiny SPRL (<http://tiny.be>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,26 +19,4 @@
 #
 ##############################################################################
 
-{
-    'name': 'Warehouse Management: Waves',
-    'version': '1.0.160417',
-    'category': 'Stock Management',
-    'description': """
-This module adds the picking wave option in warehouse management.
-=================================================================
-    """,
-    'author': 'OpenERP SA',
-    'website': 'https://www.odoo.com/page/warehouse',
-    'depends': ['stock'],
-    'data': ['security/ir.model.access.csv',
-            'stock_picking_wave_view.xml',
-            'stock_picking_wave_sequence.xml',
-            'wizard/picking_to_wave_view.xml',
-            ],
-    'demo': [
-            'stock_picking_wave_demo.xml',
-             ],
-    'installable': True,
-    'auto_install': False,
-}
-# vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:
+import main

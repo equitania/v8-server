@@ -45,3 +45,4 @@ class eq_base_config_settings(models.Model):
             'flags': {'initial_mode': 'edit'},
             'context': "{}",
         }
+

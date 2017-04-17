@@ -1933,7 +1933,7 @@ msgstr "Min. Bestellmenge"
 #. module: product
 #: field:product.supplierinfo,min_qty:0
 msgid "Minimal Quantity"
-msgstr "Mininale Menge"
+msgstr "Mindestbestellmenge"
 
 #. module: product
 #: model:product.public.category,name:product.Modem_Router

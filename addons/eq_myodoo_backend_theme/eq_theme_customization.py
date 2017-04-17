@@ -23,9 +23,12 @@ from openerp import models, fields, api, _
 import re
 import openerp.tools as tools
 import os.path
-# from openerp.addons.eq_myodoo_backend_theme import eq_log
 import logging
 _logger = logging.getLogger(__name__)
+from openerp import SUPERUSER_ID
+
+
+
 
 
 module_name = 'eq_myodoo_backend_theme'
@@ -34,6 +37,25 @@ module_name = 'eq_myodoo_backend_theme'
 class eq_theme_customization(models.TransientModel):
     _name = 'eq.theme.customization'
     _inherit = 'res.config.settings'
+
+    def _create_odoo_log(self, cr, name, func, path, message):
+        """
+            Erstellt Logeintrag direkt im Odoo
+            @cr: Kursor
+            @message: Logeintrag mit allen Daten
+        """
+
+        logger_vals = {
+            'name': name,
+            'func': func,
+            'path': path,
+            'line': '/',
+            'type': 'server',
+            'level': 'INFO',
+            'message': message
+        }
+        logging_pool = self.pool.get('ir.logging')
+        logging_pool.create(cr, SUPERUSER_ID, logger_vals)
 
     eq_fontsize = fields.Char(string="Fontsize")
     eq_primary_color = fields.Char(string="Primary color")
@@ -49,6 +71,8 @@ class eq_theme_customization(models.TransientModel):
     eq_theme_ribbon_name = fields.Char(string="Ribbon name")
     eq_theme_ribbon_color = fields.Char(string="Ribbon color")
     eq_theme_ribbon_background_color = fields.Char(string="Ribbon background color")
+
+    eq_backend_theme_log = fields.Boolean('Backend Theme Log', default = False)
 
 
 
@@ -73,6 +97,10 @@ class eq_theme_customization(models.TransientModel):
         eq_theme_ribbon_name = config_parameters.get_param("theme.ribbon.name")
         eq_theme_ribbon_color = config_parameters.get_param("theme.ribbon.color")
         eq_theme_ribbon_background_color = config_parameters.get_param("theme.ribbon.background.color")
+
+        eq_backend_theme_log = config_parameters.get_param("backend.theme.log")
+
+
         return {
             'eq_fontsize': eq_fontsize,
             'eq_primary_color': primary_color,
@@ -87,6 +115,7 @@ class eq_theme_customization(models.TransientModel):
             'eq_theme_ribbon_name': eq_theme_ribbon_name,
             'eq_theme_ribbon_color': eq_theme_ribbon_color,
             'eq_theme_ribbon_background_color': eq_theme_ribbon_background_color,
+            'eq_backend_theme_log': eq_backend_theme_log,
         }
 
 
@@ -112,6 +141,8 @@ class eq_theme_customization(models.TransientModel):
             config_parameters.set_param("theme.ribbon.color", record.eq_theme_ribbon_color or '', )
             config_parameters.set_param("theme.ribbon.background.color", record.eq_theme_ribbon_background_color or '', )
 
+            config_parameters.set_param("backend.theme.log", record.eq_backend_theme_log or '', )
+
 
         self.update_data()
 
@@ -135,6 +166,10 @@ class eq_theme_customization(models.TransientModel):
 
         if not found_addons_path:
             _logger.exception("Directory for module eq_myodoo_backendtheme could not be found")
+            if self.eq_backend_theme_log == True:
+                message = "Directory for module eq_myodoo_backendtheme could not be found"
+                self._create_odoo_log("Directory for module eq_myodoo_backendtheme could not be found", "ERROR","eq_myodoo_backend_theme", message)
+            else: pass
         return found_addons_path
 
 
@@ -160,10 +195,20 @@ class eq_theme_customization(models.TransientModel):
 
         if not os.path.isfile(template_file):
             _logger.exception("Theme cannot be written to file: Templatefile not found: " + template_file)
+            if self.eq_backend_theme_log == True:
+                message = "Theme cannot be written to file: Templatefile not found: " + template_file
+                self._create_odoo_log("Theme cannot be written to file: Templatefile not found", "ERROR","eq_myodoo_backend_theme", message)
+            else:
+                pass
             return
 
         if not os.path.isfile(target_css_file):
             _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
+            if self.eq_backend_theme_log == True:
+                message = "Theme cannot be written to file: Targetfile for template not found: " + target_css_file
+                self._create_odoo_log("Theme cannot be written to file: Targetfile for template not found", "ERROR","eq_myodoo_backend_theme", message)
+            else:
+                pass
             return
 
         config_params_obj = self.env['ir.config_parameter']
@@ -176,6 +221,11 @@ class eq_theme_customization(models.TransientModel):
         if not file_content:
             # eq_log.log("Theme cannot be saved: no content in Templatefile found")
             _logger.exception("Theme cannot be saved: no content in Templatefile '" + template_file + "' found")
+            if self.eq_backend_theme_log == True:
+                message = "Theme cannot be saved: no content in Templatefile '" + template_file + "' found"
+                self._create_odoo_log("Theme cannot be saved: no content in Templatefile", "ERROR", "eq_myodoo_backend_theme",message)
+            else:
+                pass
             return
 
         replace_pattern = re.compile(re.escape('start'), re.I)
@@ -215,6 +265,14 @@ class eq_theme_customization(models.TransientModel):
         try:
             with open(target_css_file, "w") as myfile:
                 myfile.write('\n'.join(new_theme_css))
+                if self.eq_backend_theme_log == True:
+                    message = 'Templatepfad: '+ template_file + '\n' + 'Zielpfad: ' + target_css_file + '\n' + 'Neuer Inhalt: ' + '\n' + str(new_theme_css)
+                    self._create_odoo_log("Update", "Update","eq_myodoo_backend_theme", message)
+                else:
+                    pass
+
         except Exception as ex:
             # eq_log.log("Error while writing to templatefile: " + ex.message)
             _logger.exception("Error while writing to target templatefile " + target_css_file + '; ' + ex.message)
+            message = target_css_file + '; ' + ex.message
+            self._create_odoo_log("Error while writing to target templatefile", "ERROR", "eq_myodoo_backend_theme", message)

@@ -1,3 +1,23 @@
+#### 11.04.2017
+#### product, 1.1.9
+##### CHG
+- Übersetzung angepasst "Mininale Menge" in "Mindestbestellmenge"
+
+#### 04.04.2017
+#### mrp, 1.1.13
+##### CHG
+- Übersetzung angepasst
+
+#### 04.04.2017
+#### mrp_operations, 1.0.4
+##### CHG
+- Übersetzung angepasst
+
+#### 03.04.2017
+#### mrp_operations, 1.0.3
+##### CHG
+- Feld 'date_planned_end' als store=True definiert. 
+
 #### 28.03.2017
 #### mrp, 1.1.12
 ##### CHG
