@@ -151,6 +151,11 @@ class eq_theme_customization(models.TransientModel):
         Find the directory for the module
         @return:
         """
+        config_parameters = self.env["ir.config_parameter"]
+        eq_backend_theme_log = config_parameters.get_param("backend.theme.log")
+        eq_backend_theme_log = bool(eq_backend_theme_log)
+
+
         config_paths = tools.config['addons_path'].split(',')
         found_addons_path = ''
         for mod_path in config_paths:
@@ -166,7 +171,7 @@ class eq_theme_customization(models.TransientModel):
 
         if not found_addons_path:
             _logger.exception("Directory for module eq_myodoo_backendtheme could not be found")
-            if self.eq_backend_theme_log == True:
+            if eq_backend_theme_log == True:
                 message = "Directory for module eq_myodoo_backendtheme could not be found"
                 self._create_odoo_log("Directory for module eq_myodoo_backendtheme could not be found", "ERROR","eq_myodoo_backend_theme", message)
             else: pass
@@ -179,6 +184,11 @@ class eq_theme_customization(models.TransientModel):
         Replace the placeholders of the main-manual-theme-template.css with the actual parameter values
         @return:
         """
+
+        config_parameters = self.env["ir.config_parameter"]
+        eq_backend_theme_log = config_parameters.get_param("backend.theme.log")
+        eq_backend_theme_log = bool(eq_backend_theme_log)
+
 
         base_path = self._get_root_path()
         if not base_path:
@@ -195,7 +205,7 @@ class eq_theme_customization(models.TransientModel):
 
         if not os.path.isfile(template_file):
             _logger.exception("Theme cannot be written to file: Templatefile not found: " + template_file)
-            if self.eq_backend_theme_log == True:
+            if eq_backend_theme_log == True:
                 message = "Theme cannot be written to file: Templatefile not found: " + template_file
                 self._create_odoo_log("Theme cannot be written to file: Templatefile not found", "ERROR","eq_myodoo_backend_theme", message)
             else:
@@ -204,7 +214,7 @@ class eq_theme_customization(models.TransientModel):
 
         if not os.path.isfile(target_css_file):
             _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
-            if self.eq_backend_theme_log == True:
+            if eq_backend_theme_log == True:
                 message = "Theme cannot be written to file: Targetfile for template not found: " + target_css_file
                 self._create_odoo_log("Theme cannot be written to file: Targetfile for template not found", "ERROR","eq_myodoo_backend_theme", message)
             else:
@@ -221,7 +231,7 @@ class eq_theme_customization(models.TransientModel):
         if not file_content:
             # eq_log.log("Theme cannot be saved: no content in Templatefile found")
             _logger.exception("Theme cannot be saved: no content in Templatefile '" + template_file + "' found")
-            if self.eq_backend_theme_log == True:
+            if eq_backend_theme_log == True:
                 message = "Theme cannot be saved: no content in Templatefile '" + template_file + "' found"
                 self._create_odoo_log("Theme cannot be saved: no content in Templatefile", "ERROR", "eq_myodoo_backend_theme",message)
             else:
@@ -265,7 +275,7 @@ class eq_theme_customization(models.TransientModel):
         try:
             with open(target_css_file, "w") as myfile:
                 myfile.write('\n'.join(new_theme_css))
-                if self.eq_backend_theme_log == True:
+                if eq_backend_theme_log == True:
                     message = 'Templatepfad: '+ template_file + '\n' + 'Zielpfad: ' + target_css_file + '\n' + 'Neuer Inhalt: ' + '\n' + str(new_theme_css)
                     self._create_odoo_log("Update", "Update","eq_myodoo_backend_theme", message)
                 else:
