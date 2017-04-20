@@ -212,14 +212,14 @@ class eq_theme_customization(models.TransientModel):
                 pass
             return
 
-        # if not os.path.isfile(target_css_file):
-        #     _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
-        #     if eq_backend_theme_log == True:
-        #         message = "Theme cannot be written to file: Targetfile for template not found: " + target_css_file
-        #         self._create_odoo_log("Theme cannot be written to file: Targetfile for template not found", "ERROR","eq_myodoo_backend_theme", message)
-        #     else:
-        #         pass
-        #     return
+        if not os.path.isfile(target_css_file):
+            _logger.exception("Theme cannot be written to file: Targetfile for template not found: " + target_css_file)
+            if eq_backend_theme_log == True:
+                message = "Theme cannot be written to file: Targetfile for template not found: " + target_css_file
+                self._create_odoo_log("Theme cannot be written to file: Targetfile for template not found", "ERROR","eq_myodoo_backend_theme", message)
+            else:
+                pass
+            return
 
         config_params_obj = self.env['ir.config_parameter']
 

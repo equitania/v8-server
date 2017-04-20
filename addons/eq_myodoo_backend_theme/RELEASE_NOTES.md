@@ -1,5 +1,9 @@
 ## Modul eq_myodoo_backend_theme
 
+#### Version 1.1.21
+##### CHG
+- zuvor gelöschte main-manual-theme.css wieder leer eingefügt.
+
 ### 20.04.2017
 #### Version 1.1.20
 ##### CHG
