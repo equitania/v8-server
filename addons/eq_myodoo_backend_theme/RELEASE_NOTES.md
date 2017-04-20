@@ -1,5 +1,10 @@
 ## Modul eq_myodoo_backend_theme
 
+### 20.04.2017
+#### Version 1.1.20
+##### CHG
+- Logausgabe bei keiner vorhandenen main-manual-theme.css verhindert, sodass diese Datei erstellt wird.
+
 ### 18.04.2017
 #### Version 1.1.19
 ##### ADD
