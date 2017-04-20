@@ -1,3 +1,8 @@
+#### 20.04.2017
+#### mrp, 1.1.14
+##### CHG
+- Feld "code" auf size = 64 geändert (vorher 8)
+
 #### 11.04.2017
 #### product, 1.1.9
 ##### CHG

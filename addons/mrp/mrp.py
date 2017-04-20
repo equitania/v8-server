@@ -116,7 +116,7 @@ class mrp_routing(osv.osv):
     _columns = {
         'name': fields.char('Name', required=True),
         'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the routing without removing it."),
-        'code': fields.char('Code', size=8),
+        'code': fields.char('Code', size=64),
 
         'note': fields.text('Description'),
         'workcenter_lines': fields.one2many('mrp.routing.workcenter', 'routing_id', 'Work Centers', copy=True),
