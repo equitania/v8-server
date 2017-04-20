@@ -1,8 +1,12 @@
 ## Modul eq_myodoo_backend_theme
 
+### 18.04.2017
+#### Version 1.1.19
+##### ADD
+- Loggingnachrichten werden jetzt auch während eines Updates ind die Odoo-Datenbank ausgegeben.
 
-### 19.01.2017
-#### Version 1.1.17
+### 13.04.2017
+#### Version 1.1.18
 ##### CHG
 - Loggingnachrichten erweitert werden nun in Odoo-Datenbank unter "Protokollierung" geschrieben.
 - Flag "Backend Theme Log" eingebaut (Unter Einstellungen -> Grundeinstellungen -> Button "Backend-Theme konfigurieren" betätigen -> ganz unten im neuen Fenster)
