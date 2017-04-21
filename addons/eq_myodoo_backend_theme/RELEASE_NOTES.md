@@ -1,5 +1,9 @@
 ## Modul eq_myodoo_backend_theme
 
+#### Version 1.1.22
+##### ADD
+- in das Logging eine Rechteabfrage eingebaut.
+
 #### Version 1.1.21
 ##### CHG
 - zuvor gelöschte main-manual-theme.css wieder leer eingefügt.

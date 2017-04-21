@@ -163,7 +163,7 @@ class eq_theme_customization(models.TransientModel):
             mod_dir = os.path.join(mod_path, module_name)
             if os.path.isdir(mod_dir):
                 found_addons_path = mod_path
-                print 'found directory for module:',found_addons_path
+                #print 'found directory for module:',found_addons_path
                 break
 
             # if mod_path.ends_with('myodoo-server/addons'):
@@ -274,9 +274,19 @@ class eq_theme_customization(models.TransientModel):
 
         try:
             with open(target_css_file, "w") as myfile:
+                write_mode = os.F_OK
+                write_output = os.access(target_css_file,write_mode)
+                exe_mode = os.X_OK
+                exe_output = os.access(target_css_file, exe_mode)
+                read_mode = os.R_OK
+                read_output = os.access(target_css_file, read_mode)
+                is_mode = os.R_OK
+                is_output = os.access(target_css_file, is_mode)
+                #os.chmod(target_css_file,os.X_OK)
+                #print"Ausfuehrbar: ", os.access(target_css_file,exe_mode)
                 myfile.write('\n'.join(new_theme_css))
                 if eq_backend_theme_log == True:
-                    message = 'Templatepfad: '+ template_file + '\n' + 'Zielpfad: ' + target_css_file + '\n' + 'Neuer Inhalt: ' + '\n' + str(new_theme_css)
+                    message = 'Templatepfad: '+ template_file + '\n' + 'Zielpfad: ' + target_css_file + '\n' + 'Neuer Inhalt: ' + '\n' + str(new_theme_css) + '\n' + 'Schreibrechte: ' + str(write_output) + '\n' + 'Ausfuehrbar: ' + str(exe_output) + '\n' + 'Leserechte: ' + str(read_output) + '\n' + 'Exisitert Pfad: ' + str(is_output)
                     self._create_odoo_log("Update", "Update","eq_myodoo_backend_theme", message)
                 else:
                     pass
