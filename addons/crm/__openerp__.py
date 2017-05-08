@@ -22,7 +22,7 @@
 
 {
     'name': 'CRM',
-    'version': '1.4.6',
+    'version': '1.4.080517',
     'category': 'Customer Relationship Management',
     'sequence': 2,
     'summary': 'Leads, Opportunities, Phone Calls',

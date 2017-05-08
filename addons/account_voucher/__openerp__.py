@@ -21,7 +21,7 @@
 
 {
     'name' : 'Online Billing',
-    'version' : '1.0.160417',
+    'version' : '1.0.080517',
     'author' : 'OpenERP SA',
     'summary': 'Send Invoices and Track Payments',
     'description': """

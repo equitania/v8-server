@@ -22,7 +22,7 @@
 
 {
     'name': 'Purchase Management',
-    'version': '1.4.5',
+    'version': '1.4.080517',
     'category': 'Purchase Management',
     'sequence': 19,
     'summary': 'Purchase Orders, Receipts, Supplier Invoices',
