@@ -1,5 +1,10 @@
 ## Modul website
 
+#### 09.05.2017
+#### Version 1.1.6
+##### ADD
+- Google Analytics um den anonymen Teil (anonymizeIP) erweitert.
+
 #### 06.03.2017
 #### Version 1.1.5
 ##### CHG
