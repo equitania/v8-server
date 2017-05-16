@@ -1,5 +1,10 @@
 ## Modul website
 
+#### 16.05.2017
+#### Version 1.1.7
+##### CHG
+- Änderung der Datei website_templates.xml damit wir die SEO Erweiterungen von PR1 verwenden können 
+
 #### 09.05.2017
 #### Version 1.1.6
 ##### ADD
