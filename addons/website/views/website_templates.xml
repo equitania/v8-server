@@ -92,24 +92,22 @@
             <meta name="keywords" t-att-content="main_object and 'website_meta_keywords' in main_object
                 and main_object.website_meta_keywords or website_meta_keywords"/>
 
-            <!-- Deaktiviert am 16.5.2017 - wir brauchen es nicht. Diese Funktionalität ist im PR1 Modul -->
             <!-- Equitania: Support for Robots -->
-            <!--
             <meta name="robots" t-att-content="main_object and 'website_meta_robots' in main_object
                 and main_object.website_meta_robots or website_meta_robots"/>
-             -->
 
             <meta name="generator" content="Odoo"/>
             <title><t t-esc="title"/></title>
 
             <t t-set="languages" t-value="website.get_languages() if website else None"/>
 
-            <!-- Aktiviert am 16.5.2017 - diese Funktionalität ist nämlich im PR1 Module verwendet -->
+            <!--
             <t t-if="request and request.website_multilang and website">
                 <t t-foreach="website.get_alternate_languages(request.httprequest)" t-as="lg">
                     <link rel="alternate" t-att-hreflang="lg['hreflang']" t-att-href="lg['href']"/>
                 </t>
             </t>
+            -->
 
             <!-- FUNKTIONIERT - DRUCK UND HREFLANG (bei multilingualen seiten) plus: setzt auch die alternate bei singularen websites -->
             <!-- Equitania - wurde nach Absprache mit Maddin am 06.03.2017 deaktiviert -->

@@ -1,5 +1,10 @@
 ## Modul website
 
+#### 17.05.2017
+#### Version 1.1.8
+##### CHG
+- Änderung der Datei website_templates.xml. Unsere urspr. Version wiederhergestellt damit wir die ROBOTS wieder generieren können
+
 #### 16.05.2017
 #### Version 1.1.7
 ##### CHG
