@@ -1107,11 +1107,16 @@ msgstr "Arbeitsplatz"
 
 #. module: mrp
 #: field:mrp.bom,name:0 field:mrp.production.product.line,name:0
+#: field:mrp.routing.workcenter,name:0
 #: view:mrp.property:mrp.view_mrp_property_search field:mrp.property,name:0
-#: field:mrp.routing,name:0 field:mrp.routing.workcenter,name:0
 #: view:website:mrp.report_mrporder
 msgid "Name"
 msgstr "Tätigkeit"
+
+#. module: mrp
+#: field:mrp.routing,name:0
+msgid "Name"
+msgstr "Arbeitsplan"
 
 #. module: mrp
 #: selection:mrp.production,state:0

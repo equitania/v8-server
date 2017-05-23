@@ -1,3 +1,8 @@
+#### 23.05.2017
+#### mrp, 1.1.15
+##### CHG
+- Übersetzung geändert: Im Arbeitsplan "Tätigkeit" zu "Arbeitsplan" geändert.
+
 #### 20.04.2017
 #### mrp, 1.1.14
 ##### CHG
