@@ -1,3 +1,9 @@
+#### 29.05.2017
+#### sale, 1.3.7
+##### CHG/FIX
+- Ticket #4252: Bei prozentualer Abrechnung wird jetzt eine Umsatzsteuer für die prozentuale Anzahlung erzeugt. (FIX aus https://github.com/odoo/odoo/pull/6073/commits/2ba5e58b6fafa24ffffb233057824074f79f1515)
+
+
 #### 23.05.2017
 #### mrp, 1.1.15
 ##### CHG
