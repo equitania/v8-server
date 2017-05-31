@@ -4,7 +4,7 @@
     'description': """
 This widget allows to display gauges using justgage library.
 """,
-    'version': '1.0.1',
+    'version': '1.0.2',
     'depends': ['web_kanban'],
     'data' : [
         'views/web_kanban_gauge.xml',

@@ -875,18 +875,19 @@ function cutHex(str) {
 }
 
 /**  Human friendly number suffix - From: http://stackoverflow.com/questions/2692323/code-golf-friendly-number-abbreviator */
+/** Auskommentiert Equitania Software GmbH RP 31.05.17 Anzeige 2k -> 2000*/
 function humanFriendlyNumber( n, d ) {
-  var p, d2, i, s;
-
-  p = Math.pow;
-  d2 = p(10, d);
-  i = 7;
-  while( i ) {
-    s = p(10,i--*3);
-    if( s <= n ) {
-     n = Math.round(n*d2/s)/d2+"KMGTPE"[i];
-   }
- }
+ //  var p, d2, i, s;
+ //
+ //  p = Math.pow;
+ //  d2 = p(10, d);
+ //  i = 7;
+ //  while( i ) {
+ //    s = p(10,i--*3);
+ //    if( s <= n ) {
+ //     n = Math.round(n*d2/s)/d2+"KMGTPE"[i];
+ //   }
+ // }
  return n;
 }
 
