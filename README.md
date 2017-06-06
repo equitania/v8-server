@@ -17,9 +17,9 @@ Unsere **deutschen Sprachübersetzungen unterscheiden** sich in Details von den 
 
 Unser Fork wird regelmäßig mit dem Hauptodoo Fork abgeglichen.
 
-`Aktuelle Buildversion: 08.05.2017`
+`Aktuelle Buildversion: 20170601`
 
-`Letzer Abgleich: 08.05.2017`
+`Letzer Abgleich: 06.06.2017`
 
 Dieser Fork obliegt der <a href="http://www.gnu.org/licenses/licenses.html">GNU Affero General Public License</a> wie das Ursprungssystem <a href="https://www.odoo.com">Odoo</a> selbst.
 

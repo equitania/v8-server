@@ -22,7 +22,7 @@
 
 {
     'name': 'Barcode Scanner Hardware Driver',
-    'version': '1.0',
+    'version': '1.0.060617',
     'category': 'Hardware Drivers',
     'sequence': 6,
     'summary': 'Hardware Driver for Barcode Scanners',

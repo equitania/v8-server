@@ -5,7 +5,7 @@
     'category': 'Website',
     'summary': 'Schedule, Promote and Sell Events',
     'website': 'https://www.odoo.com/page/website-builder',
-    'version': '1.0.2',
+    'version': '1.0.060617',
     'description': """
 Online Events
         """,

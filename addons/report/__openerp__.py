@@ -2,7 +2,7 @@
     'name': 'Report',
     'category': 'Base',
     'summary': 'Report',
-    'version': '1.0.1',
+    'version': '1.0.060617',
     'description': """
 Report
         """,

@@ -6,7 +6,7 @@ OpenERP Web Gantt chart view.
 =============================
 
 """,
-    'version': '2.0.2',
+    'version': '2.0.060617',
     'depends': ['web'],
     'data' : [
         'views/web_gantt.xml',

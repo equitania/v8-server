@@ -116,7 +116,7 @@ class mrp_routing(osv.osv):
     _columns = {
         'name': fields.char('Name', required=True),
         'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the routing without removing it."),
-        'code': fields.char('Code', size=64),
+        'code': fields.char('Code', size=8),
 
         'note': fields.text('Description'),
         'workcenter_lines': fields.one2many('mrp.routing.workcenter', 'routing_id', 'Work Centers', copy=True),
@@ -168,7 +168,7 @@ class mrp_bom(osv.osv):
 
     _columns = {
         'name': fields.char('Name'),
-        'code': fields.char('Reference', size=64),
+        'code': fields.char('Reference', size=16),
         'active': fields.boolean('Active', help="If the active field is set to False, it will allow you to hide the bills of material without removing it."),
         'type': fields.selection([('normal', 'Normal'), ('phantom', 'Set')], 'BoM Type', required=True,
                 help= "Set: When processing a sales order for this product, the delivery order will contain the raw materials, instead of the finished product."),
@@ -1197,8 +1197,13 @@ class mrp_production(osv.osv):
         source_location_id = production.location_src_id.id
         prod_location_id = source_location_id
         prev_move= False
-        if production.bom_id.routing_id and production.bom_id.routing_id.location_id and production.bom_id.routing_id.location_id.id != source_location_id:
-            source_location_id = production.bom_id.routing_id.location_id.id
+        if production.routing_id:
+            routing = production.routing_id
+        else:
+            routing = production.bom_id.routing_id
+
+        if routing and routing.location_id and routing.location_id.id != source_location_id:
+            source_location_id = routing.location_id.id
             prev_move = True
 
         destination_location_id = production.product_id.property_stock_production.id

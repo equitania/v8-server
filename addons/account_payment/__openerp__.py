@@ -21,7 +21,7 @@
 
 {
     'name': 'Suppliers Payment Management',
-    'version': '1.1.2',
+    'version': '1.1.060617',
     'author': 'OpenERP SA',
     'category': 'Accounting & Finance',
     'description': """
