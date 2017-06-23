@@ -21,7 +21,7 @@
 
 {
     'name': 'Survey',
-    'version': '2.0.5',
+    'version': '2.0.170623',
     'category': 'Marketing',
     'description': """
 Create beautiful web surveys and visualize answers
