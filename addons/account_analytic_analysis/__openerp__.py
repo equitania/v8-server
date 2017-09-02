@@ -22,7 +22,7 @@
 
 {
     'name': 'Contracts Management',
-    'version': '1.2.2',
+    'version': '1.2.170901',
     'category': 'Sales Management',
     'description': """
 This module is for modifying account analytic view to show important data to project manager of services companies.
