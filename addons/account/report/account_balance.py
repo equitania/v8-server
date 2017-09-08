@@ -112,15 +112,29 @@ class account_balance(report_sxw.rml_parse, common_report_header):
         ctx['state'] = form['target_move']
         parents = ids
         child_ids = obj_account._get_children_and_consol(self.cr, self.uid, ids, ctx)
-        if child_ids:
-            ids = child_ids
-        accounts = obj_account.read(self.cr, self.uid, ids, ['type','code','name','debit','credit','balance','parent_id','level','child_id'], ctx)
+
+        ###Equitania 08.09.2017 Ticket 4736: account trialbalance report brachte Memory exhausted Fehler wodurch die jeweiligen ids nun in 1000er Schritte durchlaufen werden PE/RP
+
+        i = 0
+        part_ids = []
+        accounts = []
+        iRunCount = (len(child_ids) / 1000) +1
+        for i in range(iRunCount):
+            n = 0
+            part_ids = []
+            for n in range(1000):
+                if i*1000 + n < len(child_ids):
+                    part_ids.append(child_ids[i*1000 + n])
+            part_accounts = obj_account.read(self.cr, self.uid, part_ids, ['type','code','name','debit','credit','balance','parent_id','level','child_id'], ctx)
+            accounts.extend(part_accounts)
+
+        #####
 
         for parent in parents:
-                if parent in done:
-                    continue
-                done[parent] = 1
-                _process_child(accounts,form['display_account'],parent)
+            if parent in done:
+                continue
+            done[parent] = 1
+            _process_child(accounts,form['display_account'],parent)
         return self.result_acc
 
 
